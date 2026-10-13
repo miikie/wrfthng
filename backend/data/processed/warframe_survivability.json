@@ -1,0 +1,3298 @@
+{
+  "_about": "Built by scripts/build_warframe_data.py. Ability values are max rank, from the wiki ability pages.",
+  "warframes": {
+    "Ash": {
+      "name": "Ash",
+      "rank0": {
+        "health": 455,
+        "shields": 270,
+        "armor": 105,
+        "energy": 100
+      },
+      "rank30": {
+        "health": 555,
+        "shields": 370,
+        "armor": 105,
+        "energy": 150
+      },
+      "statsNote": "",
+      "abilities": [],
+      "special": []
+    },
+    "Ash Prime": {
+      "name": "Ash Prime",
+      "rank0": {
+        "health": 455,
+        "shields": 365,
+        "armor": 185,
+        "energy": 100
+      },
+      "rank30": {
+        "health": 555,
+        "shields": 465,
+        "armor": 185,
+        "energy": 150
+      },
+      "statsNote": "",
+      "abilities": [],
+      "special": []
+    },
+    "Atlas": {
+      "name": "Atlas",
+      "rank0": {
+        "health": 270,
+        "shields": 270,
+        "armor": 475,
+        "energy": 175
+      },
+      "rank30": {
+        "health": 370,
+        "shields": 370,
+        "armor": 475,
+        "energy": 225
+      },
+      "statsNote": "",
+      "abilities": [],
+      "special": []
+    },
+    "Atlas Prime": {
+      "name": "Atlas Prime",
+      "rank0": {
+        "health": 550,
+        "shields": 455,
+        "armor": 500,
+        "energy": 215
+      },
+      "rank30": {
+        "health": 650,
+        "shields": 555,
+        "armor": 500,
+        "energy": 265
+      },
+      "statsNote": "",
+      "abilities": [],
+      "special": []
+    },
+    "Banshee": {
+      "name": "Banshee",
+      "rank0": {
+        "health": 270,
+        "shields": 270,
+        "armor": 105,
+        "energy": 175
+      },
+      "rank30": {
+        "health": 370,
+        "shields": 370,
+        "armor": 105,
+        "energy": 225
+      },
+      "statsNote": "",
+      "abilities": [],
+      "special": []
+    },
+    "Banshee Prime": {
+      "name": "Banshee Prime",
+      "rank0": {
+        "health": 270,
+        "shields": 270,
+        "armor": 135,
+        "energy": 215
+      },
+      "rank30": {
+        "health": 370,
+        "shields": 370,
+        "armor": 135,
+        "energy": 265
+      },
+      "statsNote": "",
+      "abilities": [],
+      "special": []
+    },
+    "Baruuk": {
+      "name": "Baruuk",
+      "rank0": {
+        "health": 180,
+        "shields": 270,
+        "armor": 185,
+        "energy": 200
+      },
+      "rank30": {
+        "health": 280,
+        "shields": 370,
+        "armor": 185,
+        "energy": 300
+      },
+      "statsNote": "",
+      "abilities": [
+        {
+          "kind": "dr",
+          "name": "Desolate Hands",
+          "value": 0.0,
+          "cap": 0.9,
+          "scalesWithStrength": false,
+          "stacks": {
+            "label": "Daggers",
+            "max": 9,
+            "default": 8
+          },
+          "perStack": 0.1,
+          "level": null,
+          "low": null,
+          "note": "10% per dagger in the ring. 8 daggers at base; Ability Strength adds daggers, not strength per dagger.",
+          "applies": "all"
+        },
+        {
+          "kind": "dr",
+          "name": "Serene Storm",
+          "value": 0.25,
+          "cap": 0.4,
+          "scalesWithStrength": true,
+          "stacks": null,
+          "perStack": null,
+          "level": null,
+          "low": null,
+          "note": "While Serene Storm is active.",
+          "applies": "all"
+        }
+      ],
+      "special": [
+        "Elude: 100% dodge chance against projectiles and melee within a 180° arc in front, only while not attacking. It is evasion, not damage reduction."
+      ]
+    },
+    "Baruuk Prime": {
+      "name": "Baruuk Prime",
+      "rank0": {
+        "health": 180,
+        "shields": 365,
+        "armor": 240,
+        "energy": 200
+      },
+      "rank30": {
+        "health": 280,
+        "shields": 465,
+        "armor": 240,
+        "energy": 300
+      },
+      "statsNote": "",
+      "abilities": [
+        {
+          "kind": "dr",
+          "name": "Desolate Hands",
+          "value": 0.0,
+          "cap": 0.9,
+          "scalesWithStrength": false,
+          "stacks": {
+            "label": "Daggers",
+            "max": 9,
+            "default": 8
+          },
+          "perStack": 0.1,
+          "level": null,
+          "low": null,
+          "note": "10% per dagger in the ring. 8 daggers at base; Ability Strength adds daggers, not strength per dagger.",
+          "applies": "all"
+        },
+        {
+          "kind": "dr",
+          "name": "Serene Storm",
+          "value": 0.25,
+          "cap": 0.4,
+          "scalesWithStrength": true,
+          "stacks": null,
+          "perStack": null,
+          "level": null,
+          "low": null,
+          "note": "While Serene Storm is active.",
+          "applies": "all"
+        }
+      ],
+      "special": [
+        "Elude: 100% dodge chance against projectiles and melee within a 180° arc in front, only while not attacking. It is evasion, not damage reduction."
+      ]
+    },
+    "Bonewidow": {
+      "name": "Bonewidow",
+      "rank0": {
+        "health": 1880,
+        "shields": 430,
+        "armor": 480,
+        "energy": 175
+      },
+      "rank30": {
+        "health": 1880,
+        "shields": 430,
+        "armor": 480,
+        "energy": 175
+      },
+      "statsNote": "Rank 30 stats are not on the wiki for this unit; the game export's base values are used.",
+      "abilities": [],
+      "special": []
+    },
+    "Caliban": {
+      "name": "Caliban",
+      "rank0": {
+        "health": 270,
+        "shields": 550,
+        "armor": 290,
+        "energy": 140
+      },
+      "rank30": {
+        "health": 370,
+        "shields": 650,
+        "armor": 290,
+        "energy": 190
+      },
+      "statsNote": "",
+      "abilities": [],
+      "special": []
+    },
+    "Caliban Prime": {
+      "name": "Caliban Prime",
+      "rank0": {
+        "health": 270,
+        "shields": 640,
+        "armor": 290,
+        "energy": 175
+      },
+      "rank30": {
+        "health": 370,
+        "shields": 740,
+        "armor": 290,
+        "energy": 225
+      },
+      "statsNote": "",
+      "abilities": [],
+      "special": []
+    },
+    "Chroma": {
+      "name": "Chroma",
+      "rank0": {
+        "health": 270,
+        "shields": 270,
+        "armor": 370,
+        "energy": 175
+      },
+      "rank30": {
+        "health": 370,
+        "shields": 370,
+        "armor": 370,
+        "energy": 225
+      },
+      "statsNote": "",
+      "abilities": [
+        {
+          "kind": "armor",
+          "name": "Elemental Ward (Cold)",
+          "value": 1.45,
+          "mode": "percent",
+          "cap": null,
+          "scalesWithStrength": true,
+          "stacks": null,
+          "perStack": null,
+          "level": null,
+          "low": null,
+          "note": "Cold energy colour only.",
+          "applies": "all"
+        },
+        {
+          "kind": "armor",
+          "name": "Vex Armor (Scorn)",
+          "value": 3.5,
+          "mode": "percent",
+          "cap": null,
+          "scalesWithStrength": true,
+          "stacks": null,
+          "perStack": null,
+          "level": {
+            "label": "Scorn built up",
+            "default": 1.0
+          },
+          "low": null,
+          "note": "Builds as shields are hit or on melee kills, up to 350% x Ability Strength.",
+          "applies": "all"
+        }
+      ],
+      "special": []
+    },
+    "Chroma Prime": {
+      "name": "Chroma Prime",
+      "rank0": {
+        "health": 270,
+        "shields": 270,
+        "armor": 450,
+        "energy": 200
+      },
+      "rank30": {
+        "health": 370,
+        "shields": 370,
+        "armor": 450,
+        "energy": 300
+      },
+      "statsNote": "",
+      "abilities": [
+        {
+          "kind": "armor",
+          "name": "Elemental Ward (Cold)",
+          "value": 1.45,
+          "mode": "percent",
+          "cap": null,
+          "scalesWithStrength": true,
+          "stacks": null,
+          "perStack": null,
+          "level": null,
+          "low": null,
+          "note": "Cold energy colour only.",
+          "applies": "all"
+        },
+        {
+          "kind": "armor",
+          "name": "Vex Armor (Scorn)",
+          "value": 3.5,
+          "mode": "percent",
+          "cap": null,
+          "scalesWithStrength": true,
+          "stacks": null,
+          "perStack": null,
+          "level": {
+            "label": "Scorn built up",
+            "default": 1.0
+          },
+          "low": null,
+          "note": "Builds as shields are hit or on melee kills, up to 350% x Ability Strength.",
+          "applies": "all"
+        }
+      ],
+      "special": []
+    },
+    "Citrine": {
+      "name": "Citrine",
+      "rank0": {
+        "health": 400,
+        "shields": 270,
+        "armor": 265,
+        "energy": 130
+      },
+      "rank30": {
+        "health": 500,
+        "shields": 370,
+        "armor": 265,
+        "energy": 180
+      },
+      "statsNote": "",
+      "abilities": [
+        {
+          "kind": "dr",
+          "name": "Preserving Shell",
+          "value": 0.4,
+          "cap": 0.9,
+          "scalesWithStrength": true,
+          "stacks": {
+            "label": "Kills since cast",
+            "max": 30,
+            "default": 0
+          },
+          "perStack": 0.03,
+          "level": null,
+          "low": null,
+          "note": "Starts at 40% and decays toward 25%; each kill adds 3%. Shown without decay.",
+          "applies": "all"
+        }
+      ],
+      "special": []
+    },
+    "Citrine Prime": {
+      "name": "Citrine Prime",
+      "rank0": {
+        "health": 400,
+        "shields": 270,
+        "armor": 325,
+        "energy": 150
+      },
+      "rank30": {
+        "health": 500,
+        "shields": 370,
+        "armor": 325,
+        "energy": 200
+      },
+      "statsNote": "",
+      "abilities": [
+        {
+          "kind": "dr",
+          "name": "Preserving Shell",
+          "value": 0.4,
+          "cap": 0.9,
+          "scalesWithStrength": true,
+          "stacks": {
+            "label": "Kills since cast",
+            "max": 30,
+            "default": 0
+          },
+          "perStack": 0.03,
+          "level": null,
+          "low": null,
+          "note": "Starts at 40% and decays toward 25%; each kill adds 3%. Shown without decay.",
+          "applies": "all"
+        }
+      ],
+      "special": []
+    },
+    "Cyte-09": {
+      "name": "Cyte-09",
+      "rank0": {
+        "health": 225,
+        "shields": 135,
+        "armor": 150,
+        "energy": 180
+      },
+      "rank30": {
+        "health": 325,
+        "shields": 235,
+        "armor": 150,
+        "energy": 230
+      },
+      "statsNote": "",
+      "abilities": [],
+      "special": []
+    },
+    "Dagath": {
+      "name": "Dagath",
+      "rank0": {
+        "health": 566,
+        "shields": 150,
+        "armor": 125,
+        "energy": 175
+      },
+      "rank30": {
+        "health": 666,
+        "shields": 250,
+        "armor": 125,
+        "energy": 225
+      },
+      "statsNote": "",
+      "abilities": [],
+      "special": []
+    },
+    "Dante": {
+      "name": "Dante",
+      "rank0": {
+        "health": 300,
+        "shields": 150,
+        "armor": 145,
+        "energy": 200
+      },
+      "rank30": {
+        "health": 390,
+        "shields": 240,
+        "armor": 145,
+        "energy": 270
+      },
+      "statsNote": "",
+      "abilities": [
+        {
+          "kind": "pool",
+          "name": "Light Verse Overguard",
+          "value": 15000,
+          "armorMultiplier": 0.0,
+          "cap": null,
+          "scalesWithStrength": true,
+          "stacks": null,
+          "perStack": null,
+          "level": null,
+          "low": null,
+          "note": "Overguard cap; each cast adds 350 x Ability Strength.",
+          "applies": "all"
+        }
+      ],
+      "special": []
+    },
+    "Ember": {
+      "name": "Ember",
+      "rank0": {
+        "health": 270,
+        "shields": 270,
+        "armor": 135,
+        "energy": 175
+      },
+      "rank30": {
+        "health": 370,
+        "shields": 370,
+        "armor": 135,
+        "energy": 225
+      },
+      "statsNote": "",
+      "abilities": [
+        {
+          "kind": "dr",
+          "name": "Immolation",
+          "value": 0.85,
+          "cap": 0.9,
+          "scalesWithStrength": true,
+          "stacks": null,
+          "perStack": null,
+          "level": {
+            "label": "Heat meter",
+            "default": 1.0
+          },
+          "low": 0.4,
+          "note": "40% on cast rising to 85% at full heat, before Ability Strength.",
+          "applies": "all"
+        }
+      ],
+      "special": []
+    },
+    "Ember Prime": {
+      "name": "Ember Prime",
+      "rank0": {
+        "health": 270,
+        "shields": 365,
+        "armor": 160,
+        "energy": 175
+      },
+      "rank30": {
+        "health": 370,
+        "shields": 465,
+        "armor": 160,
+        "energy": 225
+      },
+      "statsNote": "",
+      "abilities": [
+        {
+          "kind": "dr",
+          "name": "Immolation",
+          "value": 0.85,
+          "cap": 0.9,
+          "scalesWithStrength": true,
+          "stacks": null,
+          "perStack": null,
+          "level": {
+            "label": "Heat meter",
+            "default": 1.0
+          },
+          "low": 0.4,
+          "note": "40% on cast rising to 85% at full heat, before Ability Strength.",
+          "applies": "all"
+        }
+      ],
+      "special": []
+    },
+    "Equinox": {
+      "name": "Equinox",
+      "rank0": {
+        "health": 270,
+        "shields": 270,
+        "armor": 135,
+        "energy": 175
+      },
+      "rank30": {
+        "health": 370,
+        "shields": 370,
+        "armor": 135,
+        "energy": 225
+      },
+      "statsNote": "",
+      "abilities": [],
+      "special": []
+    },
+    "Equinox Prime": {
+      "name": "Equinox Prime",
+      "rank0": {
+        "health": 365,
+        "shields": 270,
+        "armor": 160,
+        "energy": 200
+      },
+      "rank30": {
+        "health": 465,
+        "shields": 370,
+        "armor": 160,
+        "energy": 250
+      },
+      "statsNote": "",
+      "abilities": [],
+      "special": []
+    },
+    "Excalibur": {
+      "name": "Excalibur",
+      "rank0": {
+        "health": 270,
+        "shields": 270,
+        "armor": 240,
+        "energy": 100
+      },
+      "rank30": {
+        "health": 370,
+        "shields": 370,
+        "armor": 240,
+        "energy": 150
+      },
+      "statsNote": "",
+      "abilities": [],
+      "special": []
+    },
+    "Excalibur Prime": {
+      "name": "Excalibur Prime",
+      "rank0": {
+        "health": 270,
+        "shields": 270,
+        "armor": 315,
+        "energy": 175
+      },
+      "rank30": {
+        "health": 370,
+        "shields": 370,
+        "armor": 315,
+        "energy": 225
+      },
+      "statsNote": "",
+      "abilities": [],
+      "special": []
+    },
+    "Excalibur Umbra": {
+      "name": "Excalibur Umbra",
+      "rank0": {
+        "health": 270,
+        "shields": 270,
+        "armor": 315,
+        "energy": 175
+      },
+      "rank30": {
+        "health": 370,
+        "shields": 370,
+        "armor": 315,
+        "energy": 225
+      },
+      "statsNote": "",
+      "abilities": [],
+      "special": []
+    },
+    "Follie": {
+      "name": "Follie",
+      "rank0": {
+        "health": 485,
+        "shields": 225,
+        "armor": 325,
+        "energy": 175
+      },
+      "rank30": {
+        "health": 585,
+        "shields": 325,
+        "armor": 325,
+        "energy": 225
+      },
+      "statsNote": "",
+      "abilities": [
+        {
+          "kind": "dr",
+          "name": "Self Portrait",
+          "value": 0.5,
+          "cap": 0.9,
+          "scalesWithStrength": true,
+          "stacks": null,
+          "perStack": null,
+          "level": {
+            "label": "Effigy growth",
+            "default": 1.0
+          },
+          "low": 0.1,
+          "note": "Starts at 10% and grows to its maximum as the effigy grows.",
+          "applies": "all"
+        }
+      ],
+      "special": []
+    },
+    "Frost": {
+      "name": "Frost",
+      "rank0": {
+        "health": 270,
+        "shields": 455,
+        "armor": 315,
+        "energy": 100
+      },
+      "rank30": {
+        "health": 370,
+        "shields": 555,
+        "armor": 315,
+        "energy": 150
+      },
+      "statsNote": "",
+      "abilities": [],
+      "special": [
+        "Snow Globe blocks ranged fire from outside; it protects an area, not Frost's own health pool."
+      ]
+    },
+    "Frost Prime": {
+      "name": "Frost Prime",
+      "rank0": {
+        "health": 270,
+        "shields": 550,
+        "armor": 315,
+        "energy": 100
+      },
+      "rank30": {
+        "health": 370,
+        "shields": 650,
+        "armor": 315,
+        "energy": 150
+      },
+      "statsNote": "",
+      "abilities": [],
+      "special": [
+        "Snow Globe blocks ranged fire from outside; it protects an area, not Frost's own health pool."
+      ]
+    },
+    "Gara": {
+      "name": "Gara",
+      "rank0": {
+        "health": 270,
+        "shields": 270,
+        "armor": 160,
+        "energy": 175
+      },
+      "rank30": {
+        "health": 370,
+        "shields": 370,
+        "armor": 160,
+        "energy": 225
+      },
+      "statsNote": "",
+      "abilities": [
+        {
+          "kind": "dr",
+          "name": "Splinter Storm",
+          "value": 0.7,
+          "cap": 0.9,
+          "scalesWithStrength": true,
+          "stacks": null,
+          "perStack": null,
+          "level": null,
+          "low": null,
+          "note": "The 90% cap is the wiki's stated limit for Splinter Storm.",
+          "applies": "all"
+        }
+      ],
+      "special": []
+    },
+    "Gara Prime": {
+      "name": "Gara Prime",
+      "rank0": {
+        "health": 345,
+        "shields": 270,
+        "armor": 200,
+        "energy": 175
+      },
+      "rank30": {
+        "health": 445,
+        "shields": 370,
+        "armor": 200,
+        "energy": 225
+      },
+      "statsNote": "",
+      "abilities": [
+        {
+          "kind": "dr",
+          "name": "Splinter Storm",
+          "value": 0.7,
+          "cap": 0.9,
+          "scalesWithStrength": true,
+          "stacks": null,
+          "perStack": null,
+          "level": null,
+          "low": null,
+          "note": "The 90% cap is the wiki's stated limit for Splinter Storm.",
+          "applies": "all"
+        }
+      ],
+      "special": []
+    },
+    "Garuda": {
+      "name": "Garuda",
+      "rank0": {
+        "health": 270,
+        "shields": 270,
+        "armor": 315,
+        "energy": 140
+      },
+      "rank30": {
+        "health": 370,
+        "shields": 370,
+        "armor": 315,
+        "energy": 240
+      },
+      "statsNote": "",
+      "abilities": [],
+      "special": [
+        "Dread Mirror blocks frontal damage while held."
+      ]
+    },
+    "Garuda Prime": {
+      "name": "Garuda Prime",
+      "rank0": {
+        "health": 270,
+        "shields": 270,
+        "armor": 420,
+        "energy": 220
+      },
+      "rank30": {
+        "health": 370,
+        "shields": 370,
+        "armor": 420,
+        "energy": 320
+      },
+      "statsNote": "",
+      "abilities": [],
+      "special": [
+        "Dread Mirror blocks frontal damage while held."
+      ]
+    },
+    "Gauss": {
+      "name": "Gauss",
+      "rank0": {
+        "health": 270,
+        "shields": 455,
+        "armor": 185,
+        "energy": 175
+      },
+      "rank30": {
+        "health": 370,
+        "shields": 555,
+        "armor": 185,
+        "energy": 225
+      },
+      "statsNote": "",
+      "abilities": [
+        {
+          "kind": "dr",
+          "name": "Kinetic Plating",
+          "value": 1.0,
+          "cap": 1.0,
+          "scalesWithStrength": true,
+          "stacks": null,
+          "perStack": null,
+          "level": {
+            "label": "Battery",
+            "default": 0.8
+          },
+          "low": 0.2,
+          "note": "20% at empty battery to 100% at full, capped at 50% when empty. Only against Impact, Puncture, Slash, Heat, Cold and Blast.",
+          "applies": "kinetic"
+        }
+      ],
+      "special": []
+    },
+    "Gauss Prime": {
+      "name": "Gauss Prime",
+      "rank0": {
+        "health": 270,
+        "shields": 550,
+        "armor": 185,
+        "energy": 175
+      },
+      "rank30": {
+        "health": 370,
+        "shields": 650,
+        "armor": 185,
+        "energy": 225
+      },
+      "statsNote": "",
+      "abilities": [
+        {
+          "kind": "dr",
+          "name": "Kinetic Plating",
+          "value": 1.0,
+          "cap": 1.0,
+          "scalesWithStrength": true,
+          "stacks": null,
+          "perStack": null,
+          "level": {
+            "label": "Battery",
+            "default": 0.8
+          },
+          "low": 0.2,
+          "note": "20% at empty battery to 100% at full, capped at 50% when empty. Only against Impact, Puncture, Slash, Heat, Cold and Blast.",
+          "applies": "kinetic"
+        }
+      ],
+      "special": []
+    },
+    "Grendel": {
+      "name": "Grendel",
+      "rank0": {
+        "health": 1095,
+        "shields": 95,
+        "armor": 370,
+        "energy": 175
+      },
+      "rank30": {
+        "health": 1295,
+        "shields": 95,
+        "armor": 370,
+        "energy": 225
+      },
+      "statsNote": "",
+      "abilities": [],
+      "special": []
+    },
+    "Grendel Prime": {
+      "name": "Grendel Prime",
+      "rank0": {
+        "health": 1095,
+        "shields": 95,
+        "armor": 400,
+        "energy": 200
+      },
+      "rank30": {
+        "health": 1295,
+        "shields": 95,
+        "armor": 400,
+        "energy": 250
+      },
+      "statsNote": "",
+      "abilities": [],
+      "special": []
+    },
+    "Gyre": {
+      "name": "Gyre",
+      "rank0": {
+        "health": 270,
+        "shields": 550,
+        "armor": 105,
+        "energy": 190
+      },
+      "rank30": {
+        "health": 370,
+        "shields": 650,
+        "armor": 105,
+        "energy": 240
+      },
+      "statsNote": "",
+      "abilities": [],
+      "special": []
+    },
+    "Gyre Prime": {
+      "name": "Gyre Prime",
+      "rank0": {
+        "health": 345,
+        "shields": 640,
+        "armor": 105,
+        "energy": 190
+      },
+      "rank30": {
+        "health": 445,
+        "shields": 740,
+        "armor": 105,
+        "energy": 240
+      },
+      "statsNote": "",
+      "abilities": [],
+      "special": []
+    },
+    "Harrow": {
+      "name": "Harrow",
+      "rank0": {
+        "health": 270,
+        "shields": 455,
+        "armor": 185,
+        "energy": 100
+      },
+      "rank30": {
+        "health": 370,
+        "shields": 555,
+        "armor": 185,
+        "energy": 150
+      },
+      "statsNote": "",
+      "abilities": [],
+      "special": [
+        "Covenant: 6s of invulnerability for the squad (x Ability Duration). Passive: overshield capacity doubled."
+      ]
+    },
+    "Harrow Prime": {
+      "name": "Harrow Prime",
+      "rank0": {
+        "health": 270,
+        "shields": 640,
+        "armor": 185,
+        "energy": 140
+      },
+      "rank30": {
+        "health": 370,
+        "shields": 740,
+        "armor": 185,
+        "energy": 190
+      },
+      "statsNote": "",
+      "abilities": [],
+      "special": [
+        "Covenant: 6s of invulnerability for the squad (x Ability Duration). Passive: overshield capacity doubled."
+      ]
+    },
+    "Hildryn": {
+      "name": "Hildryn",
+      "rank0": {
+        "health": 180,
+        "shields": 1280,
+        "armor": 315,
+        "energy": 0
+      },
+      "rank30": {
+        "health": 280,
+        "shields": 1780,
+        "armor": 315,
+        "energy": 0
+      },
+      "statsNote": "",
+      "abilities": [],
+      "special": [
+        "Passive: full shield gate lasts 3.5s. Abilities spend shields, not energy."
+      ]
+    },
+    "Hildryn Prime": {
+      "name": "Hildryn Prime",
+      "rank0": {
+        "health": 270,
+        "shields": 1380,
+        "armor": 315,
+        "energy": 0
+      },
+      "rank30": {
+        "health": 370,
+        "shields": 1880,
+        "armor": 315,
+        "energy": 0
+      },
+      "statsNote": "",
+      "abilities": [],
+      "special": [
+        "Passive: full shield gate lasts 3.5s. Abilities spend shields, not energy."
+      ]
+    },
+    "Hydroid": {
+      "name": "Hydroid",
+      "rank0": {
+        "health": 365,
+        "shields": 270,
+        "armor": 240,
+        "energy": 140
+      },
+      "rank30": {
+        "health": 465,
+        "shields": 370,
+        "armor": 240,
+        "energy": 190
+      },
+      "statsNote": "",
+      "abilities": [
+        {
+          "kind": "armor",
+          "name": "Plunder",
+          "value": 40,
+          "mode": "flat",
+          "cap": null,
+          "scalesWithStrength": true,
+          "stacks": {
+            "label": "Corrosive statuses",
+            "max": 50,
+            "default": 10
+          },
+          "perStack": 40,
+          "level": null,
+          "low": null,
+          "note": "",
+          "applies": "all"
+        }
+      ],
+      "special": []
+    },
+    "Hydroid Prime": {
+      "name": "Hydroid Prime",
+      "rank0": {
+        "health": 550,
+        "shields": 270,
+        "armor": 290,
+        "energy": 175
+      },
+      "rank30": {
+        "health": 650,
+        "shields": 370,
+        "armor": 290,
+        "energy": 225
+      },
+      "statsNote": "",
+      "abilities": [
+        {
+          "kind": "armor",
+          "name": "Plunder",
+          "value": 40,
+          "mode": "flat",
+          "cap": null,
+          "scalesWithStrength": true,
+          "stacks": {
+            "label": "Corrosive statuses",
+            "max": 50,
+            "default": 10
+          },
+          "perStack": 40,
+          "level": null,
+          "low": null,
+          "note": "",
+          "applies": "all"
+        }
+      ],
+      "special": []
+    },
+    "Inaros": {
+      "name": "Inaros",
+      "rank0": {
+        "health": 2110,
+        "shields": 0,
+        "armor": 240,
+        "energy": 100
+      },
+      "rank30": {
+        "health": 2310,
+        "shields": 0,
+        "armor": 240,
+        "energy": 150
+      },
+      "statsNote": "",
+      "abilities": [
+        {
+          "kind": "armor",
+          "name": "Scarab Shell",
+          "value": 350,
+          "mode": "flat",
+          "cap": null,
+          "scalesWithStrength": true,
+          "stacks": null,
+          "perStack": null,
+          "level": {
+            "label": "Shell charge",
+            "default": 1.0
+          },
+          "low": null,
+          "note": "",
+          "applies": "all"
+        }
+      ],
+      "special": [
+        "Passive: lethal damage puts Inaros in a sarcophagus from which he can revive himself."
+      ]
+    },
+    "Inaros Prime": {
+      "name": "Inaros Prime",
+      "rank0": {
+        "health": 2215,
+        "shields": 0,
+        "armor": 240,
+        "energy": 140
+      },
+      "rank30": {
+        "health": 2415,
+        "shields": 0,
+        "armor": 240,
+        "energy": 190
+      },
+      "statsNote": "",
+      "abilities": [
+        {
+          "kind": "armor",
+          "name": "Scarab Shell",
+          "value": 350,
+          "mode": "flat",
+          "cap": null,
+          "scalesWithStrength": true,
+          "stacks": null,
+          "perStack": null,
+          "level": {
+            "label": "Shell charge",
+            "default": 1.0
+          },
+          "low": null,
+          "note": "",
+          "applies": "all"
+        }
+      ],
+      "special": [
+        "Passive: lethal damage puts Inaros in a sarcophagus from which he can revive himself."
+      ]
+    },
+    "Ivara": {
+      "name": "Ivara",
+      "rank0": {
+        "health": 180,
+        "shields": 270,
+        "armor": 105,
+        "energy": 215
+      },
+      "rank30": {
+        "health": 280,
+        "shields": 370,
+        "armor": 105,
+        "energy": 265
+      },
+      "statsNote": "",
+      "abilities": [],
+      "special": []
+    },
+    "Ivara Prime": {
+      "name": "Ivara Prime",
+      "rank0": {
+        "health": 180,
+        "shields": 455,
+        "armor": 135,
+        "energy": 250
+      },
+      "rank30": {
+        "health": 280,
+        "shields": 555,
+        "armor": 135,
+        "energy": 300
+      },
+      "statsNote": "",
+      "abilities": [],
+      "special": []
+    },
+    "Jade": {
+      "name": "Jade",
+      "rank0": {
+        "health": 365,
+        "shields": 450,
+        "armor": 135,
+        "energy": 150
+      },
+      "rank30": {
+        "health": 465,
+        "shields": 550,
+        "armor": 135,
+        "energy": 200
+      },
+      "statsNote": "",
+      "abilities": [
+        {
+          "kind": "dr",
+          "name": "Glory on High",
+          "value": 0.35,
+          "cap": 0.5,
+          "scalesWithStrength": true,
+          "stacks": null,
+          "perStack": null,
+          "level": null,
+          "low": null,
+          "note": "While airborne in Glory on High.",
+          "applies": "all"
+        }
+      ],
+      "special": []
+    },
+    "Khora": {
+      "name": "Khora",
+      "rank0": {
+        "health": 365,
+        "shields": 270,
+        "armor": 290,
+        "energy": 140
+      },
+      "rank30": {
+        "health": 465,
+        "shields": 370,
+        "armor": 290,
+        "energy": 190
+      },
+      "statsNote": "",
+      "abilities": [],
+      "special": []
+    },
+    "Khora Prime": {
+      "name": "Khora Prime",
+      "rank0": {
+        "health": 365,
+        "shields": 365,
+        "armor": 345,
+        "energy": 175
+      },
+      "rank30": {
+        "health": 465,
+        "shields": 465,
+        "armor": 345,
+        "energy": 225
+      },
+      "statsNote": "",
+      "abilities": [],
+      "special": []
+    },
+    "Koumei": {
+      "name": "Koumei",
+      "rank0": {
+        "health": 344,
+        "shields": 122,
+        "armor": 444,
+        "energy": 122
+      },
+      "rank30": {
+        "health": 444,
+        "shields": 222,
+        "armor": 444,
+        "energy": 222
+      },
+      "statsNote": "",
+      "abilities": [],
+      "special": []
+    },
+    "Kullervo": {
+      "name": "Kullervo",
+      "rank0": {
+        "health": 1005,
+        "shields": 0,
+        "armor": 550,
+        "energy": 175
+      },
+      "rank30": {
+        "health": 1205,
+        "shields": 0,
+        "armor": 650,
+        "energy": 225
+      },
+      "statsNote": "",
+      "abilities": [
+        {
+          "kind": "dr",
+          "name": "Collective Curse",
+          "value": 0.5,
+          "cap": null,
+          "scalesWithStrength": true,
+          "stacks": null,
+          "perStack": null,
+          "level": null,
+          "low": null,
+          "note": "Share of damage redirected to cursed enemies while any are alive.",
+          "applies": "all"
+        },
+        {
+          "kind": "pool",
+          "name": "Recompense Overguard",
+          "value": 10000,
+          "armorMultiplier": 0.0,
+          "cap": null,
+          "scalesWithStrength": true,
+          "stacks": null,
+          "perStack": null,
+          "level": null,
+          "low": null,
+          "note": "Overguard cap; 350 per dagger hit.",
+          "applies": "all"
+        }
+      ],
+      "special": []
+    },
+    "Lavos": {
+      "name": "Lavos",
+      "rank0": {
+        "health": 540,
+        "shields": 270,
+        "armor": 575,
+        "energy": 0
+      },
+      "rank30": {
+        "health": 740,
+        "shields": 370,
+        "armor": 675,
+        "energy": 0
+      },
+      "statsNote": "",
+      "abilities": [],
+      "special": []
+    },
+    "Lavos Prime": {
+      "name": "Lavos Prime",
+      "rank0": {
+        "health": 600,
+        "shields": 310,
+        "armor": 575,
+        "energy": 0
+      },
+      "rank30": {
+        "health": 800,
+        "shields": 410,
+        "armor": 675,
+        "energy": 0
+      },
+      "statsNote": "",
+      "abilities": [],
+      "special": []
+    },
+    "Limbo": {
+      "name": "Limbo",
+      "rank0": {
+        "health": 270,
+        "shields": 180,
+        "armor": 105,
+        "energy": 175
+      },
+      "rank30": {
+        "health": 370,
+        "shields": 280,
+        "armor": 105,
+        "energy": 225
+      },
+      "statsNote": "",
+      "abilities": [],
+      "special": []
+    },
+    "Limbo Prime": {
+      "name": "Limbo Prime",
+      "rank0": {
+        "health": 270,
+        "shields": 270,
+        "armor": 135,
+        "energy": 215
+      },
+      "rank30": {
+        "health": 370,
+        "shields": 370,
+        "armor": 135,
+        "energy": 265
+      },
+      "statsNote": "",
+      "abilities": [],
+      "special": []
+    },
+    "Loki": {
+      "name": "Loki",
+      "rank0": {
+        "health": 180,
+        "shields": 180,
+        "armor": 105,
+        "energy": 175
+      },
+      "rank30": {
+        "health": 280,
+        "shields": 280,
+        "armor": 105,
+        "energy": 225
+      },
+      "statsNote": "",
+      "abilities": [],
+      "special": []
+    },
+    "Loki Prime": {
+      "name": "Loki Prime",
+      "rank0": {
+        "health": 180,
+        "shields": 180,
+        "armor": 135,
+        "energy": 215
+      },
+      "rank30": {
+        "health": 280,
+        "shields": 280,
+        "armor": 135,
+        "energy": 265
+      },
+      "statsNote": "",
+      "abilities": [],
+      "special": []
+    },
+    "Mag": {
+      "name": "Mag",
+      "rank0": {
+        "health": 180,
+        "shields": 455,
+        "armor": 105,
+        "energy": 140
+      },
+      "rank30": {
+        "health": 280,
+        "shields": 555,
+        "armor": 105,
+        "energy": 190
+      },
+      "statsNote": "",
+      "abilities": [],
+      "special": []
+    },
+    "Mag Prime": {
+      "name": "Mag Prime",
+      "rank0": {
+        "health": 270,
+        "shields": 455,
+        "armor": 135,
+        "energy": 215
+      },
+      "rank30": {
+        "health": 370,
+        "shields": 555,
+        "armor": 135,
+        "energy": 265
+      },
+      "statsNote": "",
+      "abilities": [],
+      "special": []
+    },
+    "Mesa": {
+      "name": "Mesa",
+      "rank0": {
+        "health": 365,
+        "shields": 180,
+        "armor": 105,
+        "energy": 100
+      },
+      "rank30": {
+        "health": 465,
+        "shields": 280,
+        "armor": 105,
+        "energy": 150
+      },
+      "statsNote": "",
+      "abilities": [
+        {
+          "kind": "dr",
+          "name": "Shatter Shield",
+          "value": 0.8,
+          "cap": 0.95,
+          "scalesWithStrength": true,
+          "stacks": null,
+          "perStack": null,
+          "level": null,
+          "low": null,
+          "note": "Only against enemy gunfire, not melee or area damage.",
+          "applies": "ranged"
+        }
+      ],
+      "special": [
+        "Shatter Shield does nothing against melee or area damage."
+      ]
+    },
+    "Mesa Prime": {
+      "name": "Mesa Prime",
+      "rank0": {
+        "health": 400,
+        "shields": 180,
+        "armor": 135,
+        "energy": 140
+      },
+      "rank30": {
+        "health": 500,
+        "shields": 280,
+        "armor": 135,
+        "energy": 190
+      },
+      "statsNote": "",
+      "abilities": [
+        {
+          "kind": "dr",
+          "name": "Shatter Shield",
+          "value": 0.8,
+          "cap": 0.95,
+          "scalesWithStrength": true,
+          "stacks": null,
+          "perStack": null,
+          "level": null,
+          "low": null,
+          "note": "Only against enemy gunfire, not melee or area damage.",
+          "applies": "ranged"
+        }
+      ],
+      "special": [
+        "Shatter Shield does nothing against melee or area damage."
+      ]
+    },
+    "Mirage": {
+      "name": "Mirage",
+      "rank0": {
+        "health": 200,
+        "shields": 200,
+        "armor": 105,
+        "energy": 175
+      },
+      "rank30": {
+        "health": 300,
+        "shields": 300,
+        "armor": 105,
+        "energy": 225
+      },
+      "statsNote": "",
+      "abilities": [
+        {
+          "kind": "dr",
+          "name": "Eclipse (Lunar)",
+          "value": 0.75,
+          "cap": 0.9,
+          "scalesWithStrength": true,
+          "stacks": null,
+          "perStack": null,
+          "level": null,
+          "low": null,
+          "note": "Tap cast. The hold cast gives a damage bonus instead.",
+          "applies": "all"
+        }
+      ],
+      "special": []
+    },
+    "Mirage Prime": {
+      "name": "Mirage Prime",
+      "rank0": {
+        "health": 200,
+        "shields": 310,
+        "armor": 185,
+        "energy": 175
+      },
+      "rank30": {
+        "health": 300,
+        "shields": 410,
+        "armor": 185,
+        "energy": 225
+      },
+      "statsNote": "",
+      "abilities": [
+        {
+          "kind": "dr",
+          "name": "Eclipse (Lunar)",
+          "value": 0.75,
+          "cap": 0.9,
+          "scalesWithStrength": true,
+          "stacks": null,
+          "perStack": null,
+          "level": null,
+          "low": null,
+          "note": "Tap cast. The hold cast gives a damage bonus instead.",
+          "applies": "all"
+        }
+      ],
+      "special": []
+    },
+    "Narin": {
+      "name": "Narin",
+      "rank0": {
+        "health": 270,
+        "shields": 550,
+        "armor": 165,
+        "energy": 200
+      },
+      "rank30": {
+        "health": 370,
+        "shields": 650,
+        "armor": 165,
+        "energy": 290
+      },
+      "statsNote": "",
+      "abilities": [
+        {
+          "kind": "pool",
+          "name": "Naraemagi Overguard",
+          "value": 15000,
+          "armorMultiplier": 0.0,
+          "cap": null,
+          "scalesWithStrength": true,
+          "stacks": null,
+          "perStack": null,
+          "level": null,
+          "low": null,
+          "note": "Overguard cap; built by absorbing Cold statuses at full shields.",
+          "applies": "all"
+        }
+      ],
+      "special": []
+    },
+    "Nekros": {
+      "name": "Nekros",
+      "rank0": {
+        "health": 270,
+        "shields": 235,
+        "armor": 105,
+        "energy": 100
+      },
+      "rank30": {
+        "health": 370,
+        "shields": 335,
+        "armor": 105,
+        "energy": 150
+      },
+      "statsNote": "",
+      "abilities": [],
+      "special": []
+    },
+    "Nekros Prime": {
+      "name": "Nekros Prime",
+      "rank0": {
+        "health": 270,
+        "shields": 455,
+        "armor": 135,
+        "energy": 140
+      },
+      "rank30": {
+        "health": 370,
+        "shields": 555,
+        "armor": 135,
+        "energy": 190
+      },
+      "statsNote": "",
+      "abilities": [],
+      "special": []
+    },
+    "Nezha": {
+      "name": "Nezha",
+      "rank0": {
+        "health": 365,
+        "shields": 135,
+        "armor": 200,
+        "energy": 175
+      },
+      "rank30": {
+        "health": 465,
+        "shields": 185,
+        "armor": 200,
+        "energy": 225
+      },
+      "statsNote": "",
+      "abilities": [
+        {
+          "kind": "dr",
+          "name": "Warding Halo",
+          "value": 0.9,
+          "cap": 0.9,
+          "scalesWithStrength": false,
+          "stacks": null,
+          "perStack": null,
+          "level": null,
+          "low": null,
+          "note": "90% of damage is redirected to the halo while it lasts.",
+          "applies": "all"
+        },
+        {
+          "kind": "pool",
+          "name": "Warding Halo ring",
+          "value": 1000,
+          "armorMultiplier": 2.5,
+          "cap": null,
+          "scalesWithStrength": true,
+          "stacks": null,
+          "perStack": null,
+          "level": null,
+          "low": null,
+          "note": "Ring health = (1,000 + 250% of armor) x Ability Strength. Damage absorbed during the 3s cast adds more.",
+          "applies": "all"
+        }
+      ],
+      "special": []
+    },
+    "Nezha Prime": {
+      "name": "Nezha Prime",
+      "rank0": {
+        "health": 365,
+        "shields": 135,
+        "armor": 265,
+        "energy": 175
+      },
+      "rank30": {
+        "health": 465,
+        "shields": 185,
+        "armor": 265,
+        "energy": 225
+      },
+      "statsNote": "",
+      "abilities": [
+        {
+          "kind": "dr",
+          "name": "Warding Halo",
+          "value": 0.9,
+          "cap": 0.9,
+          "scalesWithStrength": false,
+          "stacks": null,
+          "perStack": null,
+          "level": null,
+          "low": null,
+          "note": "90% of damage is redirected to the halo while it lasts.",
+          "applies": "all"
+        },
+        {
+          "kind": "pool",
+          "name": "Warding Halo ring",
+          "value": 1000,
+          "armorMultiplier": 2.5,
+          "cap": null,
+          "scalesWithStrength": true,
+          "stacks": null,
+          "perStack": null,
+          "level": null,
+          "low": null,
+          "note": "Ring health = (1,000 + 250% of armor) x Ability Strength. Damage absorbed during the 3s cast adds more.",
+          "applies": "all"
+        }
+      ],
+      "special": []
+    },
+    "Nidus": {
+      "name": "Nidus",
+      "rank0": {
+        "health": 675,
+        "shields": 0,
+        "armor": 350,
+        "energy": 100
+      },
+      "rank30": {
+        "health": 775,
+        "shields": 0,
+        "armor": 450,
+        "energy": 150
+      },
+      "statsNote": "",
+      "abilities": [
+        {
+          "kind": "dr",
+          "name": "Parasitic Link",
+          "value": 0.5,
+          "cap": null,
+          "scalesWithStrength": true,
+          "stacks": null,
+          "perStack": null,
+          "level": null,
+          "low": null,
+          "note": "Share of damage redirected to the linked enemy.",
+          "applies": "all"
+        }
+      ],
+      "special": [
+        "Passive: dying with 15 Mutation stacks consumes them for 5s of invulnerability and 50% health."
+      ]
+    },
+    "Nidus Prime": {
+      "name": "Nidus Prime",
+      "rank0": {
+        "health": 825,
+        "shields": 0,
+        "armor": 425,
+        "energy": 140
+      },
+      "rank30": {
+        "health": 925,
+        "shields": 0,
+        "armor": 525,
+        "energy": 190
+      },
+      "statsNote": "",
+      "abilities": [
+        {
+          "kind": "dr",
+          "name": "Parasitic Link",
+          "value": 0.5,
+          "cap": null,
+          "scalesWithStrength": true,
+          "stacks": null,
+          "perStack": null,
+          "level": null,
+          "low": null,
+          "note": "Share of damage redirected to the linked enemy.",
+          "applies": "all"
+        }
+      ],
+      "special": [
+        "Passive: dying with 15 Mutation stacks consumes them for 5s of invulnerability and 50% health."
+      ]
+    },
+    "Nokko": {
+      "name": "Nokko",
+      "rank0": {
+        "health": 150,
+        "shields": 300,
+        "armor": 135,
+        "energy": 130
+      },
+      "rank30": {
+        "health": 250,
+        "shields": 400,
+        "armor": 135,
+        "energy": 180
+      },
+      "statsNote": "",
+      "abilities": [],
+      "special": []
+    },
+    "Nova": {
+      "name": "Nova",
+      "rank0": {
+        "health": 270,
+        "shields": 180,
+        "armor": 105,
+        "energy": 175
+      },
+      "rank30": {
+        "health": 370,
+        "shields": 280,
+        "armor": 105,
+        "energy": 225
+      },
+      "statsNote": "",
+      "abilities": [
+        {
+          "kind": "dr",
+          "name": "Null Star",
+          "value": 0.0,
+          "cap": 0.9,
+          "scalesWithStrength": true,
+          "stacks": {
+            "label": "Particles",
+            "max": 18,
+            "default": 12
+          },
+          "perStack": 0.05,
+          "level": null,
+          "low": null,
+          "note": "5% per orbiting particle (scaled by Ability Strength), 12 particles at base.",
+          "applies": "all"
+        }
+      ],
+      "special": []
+    },
+    "Nova Prime": {
+      "name": "Nova Prime",
+      "rank0": {
+        "health": 270,
+        "shields": 270,
+        "armor": 135,
+        "energy": 215
+      },
+      "rank30": {
+        "health": 370,
+        "shields": 370,
+        "armor": 135,
+        "energy": 265
+      },
+      "statsNote": "",
+      "abilities": [
+        {
+          "kind": "dr",
+          "name": "Null Star",
+          "value": 0.0,
+          "cap": 0.9,
+          "scalesWithStrength": true,
+          "stacks": {
+            "label": "Particles",
+            "max": 18,
+            "default": 12
+          },
+          "perStack": 0.05,
+          "level": null,
+          "low": null,
+          "note": "5% per orbiting particle (scaled by Ability Strength), 12 particles at base.",
+          "applies": "all"
+        }
+      ],
+      "special": []
+    },
+    "Nyx": {
+      "name": "Nyx",
+      "rank0": {
+        "health": 270,
+        "shields": 270,
+        "armor": 105,
+        "energy": 175
+      },
+      "rank30": {
+        "health": 370,
+        "shields": 370,
+        "armor": 105,
+        "energy": 225
+      },
+      "statsNote": "",
+      "abilities": [
+        {
+          "kind": "pool",
+          "name": "Psychic Bolts Overguard",
+          "value": 7500,
+          "armorMultiplier": 0.0,
+          "cap": null,
+          "scalesWithStrength": true,
+          "stacks": null,
+          "perStack": null,
+          "level": null,
+          "low": null,
+          "note": "Overguard stolen from enemies, up to the cap.",
+          "applies": "all"
+        }
+      ],
+      "special": []
+    },
+    "Nyx Prime": {
+      "name": "Nyx Prime",
+      "rank0": {
+        "health": 270,
+        "shields": 365,
+        "armor": 135,
+        "energy": 175
+      },
+      "rank30": {
+        "health": 370,
+        "shields": 465,
+        "armor": 135,
+        "energy": 225
+      },
+      "statsNote": "",
+      "abilities": [
+        {
+          "kind": "pool",
+          "name": "Psychic Bolts Overguard",
+          "value": 7500,
+          "armorMultiplier": 0.0,
+          "cap": null,
+          "scalesWithStrength": true,
+          "stacks": null,
+          "perStack": null,
+          "level": null,
+          "low": null,
+          "note": "Overguard stolen from enemies, up to the cap.",
+          "applies": "all"
+        }
+      ],
+      "special": []
+    },
+    "Oberon": {
+      "name": "Oberon",
+      "rank0": {
+        "health": 365,
+        "shields": 270,
+        "armor": 385,
+        "energy": 175
+      },
+      "rank30": {
+        "health": 465,
+        "shields": 370,
+        "armor": 385,
+        "energy": 225
+      },
+      "statsNote": "",
+      "abilities": [
+        {
+          "kind": "armor",
+          "name": "Reckoning",
+          "value": 5,
+          "mode": "flat",
+          "cap": 1000,
+          "scalesWithStrength": true,
+          "stacks": {
+            "label": "Radiation procs",
+            "max": 200,
+            "default": 50
+          },
+          "perStack": 5,
+          "level": null,
+          "low": null,
+          "note": "5 armor per Radiation status applied, capped at 1,000.",
+          "applies": "all"
+        }
+      ],
+      "special": [
+        "Passive: Health Orbs grant charges that each block one instance of damage (up to 3)."
+      ]
+    },
+    "Oberon Prime": {
+      "name": "Oberon Prime",
+      "rank0": {
+        "health": 365,
+        "shields": 270,
+        "armor": 450,
+        "energy": 215
+      },
+      "rank30": {
+        "health": 465,
+        "shields": 370,
+        "armor": 450,
+        "energy": 265
+      },
+      "statsNote": "",
+      "abilities": [
+        {
+          "kind": "armor",
+          "name": "Reckoning",
+          "value": 5,
+          "mode": "flat",
+          "cap": 1000,
+          "scalesWithStrength": true,
+          "stacks": {
+            "label": "Radiation procs",
+            "max": 200,
+            "default": 50
+          },
+          "perStack": 5,
+          "level": null,
+          "low": null,
+          "note": "5 armor per Radiation status applied, capped at 1,000.",
+          "applies": "all"
+        }
+      ],
+      "special": [
+        "Passive: Health Orbs grant charges that each block one instance of damage (up to 3)."
+      ]
+    },
+    "Octavia": {
+      "name": "Octavia",
+      "rank0": {
+        "health": 270,
+        "shields": 180,
+        "armor": 160,
+        "energy": 175
+      },
+      "rank30": {
+        "health": 370,
+        "shields": 280,
+        "armor": 160,
+        "energy": 225
+      },
+      "statsNote": "",
+      "abilities": [
+        {
+          "kind": "armor",
+          "name": "Metronome (Nocturne)",
+          "value": 0.35,
+          "mode": "percent",
+          "cap": null,
+          "scalesWithStrength": true,
+          "stacks": null,
+          "perStack": null,
+          "level": null,
+          "low": null,
+          "note": "",
+          "applies": "all"
+        }
+      ],
+      "special": [
+        "Metronome's Nocturne grants invisibility, which stops most damage at the source."
+      ]
+    },
+    "Octavia Prime": {
+      "name": "Octavia Prime",
+      "rank0": {
+        "health": 270,
+        "shields": 270,
+        "armor": 160,
+        "energy": 215
+      },
+      "rank30": {
+        "health": 370,
+        "shields": 370,
+        "armor": 160,
+        "energy": 265
+      },
+      "statsNote": "",
+      "abilities": [
+        {
+          "kind": "armor",
+          "name": "Metronome (Nocturne)",
+          "value": 0.35,
+          "mode": "percent",
+          "cap": null,
+          "scalesWithStrength": true,
+          "stacks": null,
+          "perStack": null,
+          "level": null,
+          "low": null,
+          "note": "",
+          "applies": "all"
+        }
+      ],
+      "special": [
+        "Metronome's Nocturne grants invisibility, which stops most damage at the source."
+      ]
+    },
+    "Oraxia": {
+      "name": "Oraxia",
+      "rank0": {
+        "health": 575,
+        "shields": 125,
+        "armor": 125,
+        "energy": 150
+      },
+      "rank30": {
+        "health": 675,
+        "shields": 225,
+        "armor": 125,
+        "energy": 200
+      },
+      "statsNote": "",
+      "abilities": [],
+      "special": []
+    },
+    "Orion & Sirius": {
+      "name": "Orion & Sirius",
+      "rank0": {
+        "health": 350,
+        "shields": 270,
+        "armor": 300,
+        "energy": 200
+      },
+      "rank30": {
+        "health": 350,
+        "shields": 270,
+        "armor": 300,
+        "energy": 200
+      },
+      "statsNote": "Rank 30 stats are not on the wiki for this unit; the game export's base values are used.",
+      "abilities": [
+        {
+          "kind": "dr",
+          "name": "Light's Sanctuary",
+          "value": 0.45,
+          "cap": 0.75,
+          "scalesWithStrength": true,
+          "stacks": null,
+          "perStack": null,
+          "level": {
+            "label": "Charge",
+            "default": 1.0
+          },
+          "low": 0.15,
+          "note": "",
+          "applies": "all"
+        }
+      ],
+      "special": []
+    },
+    "Protea": {
+      "name": "Protea",
+      "rank0": {
+        "health": 270,
+        "shields": 455,
+        "armor": 135,
+        "energy": 175
+      },
+      "rank30": {
+        "health": 370,
+        "shields": 555,
+        "armor": 135,
+        "energy": 225
+      },
+      "statsNote": "",
+      "abilities": [],
+      "special": [
+        "Temporal Anchor rewinds health, shields and energy. Shield Satellites restore shields."
+      ]
+    },
+    "Protea Prime": {
+      "name": "Protea Prime",
+      "rank0": {
+        "health": 270,
+        "shields": 455,
+        "armor": 185,
+        "energy": 200
+      },
+      "rank30": {
+        "health": 370,
+        "shields": 555,
+        "armor": 185,
+        "energy": 250
+      },
+      "statsNote": "",
+      "abilities": [],
+      "special": [
+        "Temporal Anchor rewinds health, shields and energy. Shield Satellites restore shields."
+      ]
+    },
+    "Qorvex": {
+      "name": "Qorvex",
+      "rank0": {
+        "health": 600,
+        "shields": 200,
+        "armor": 875,
+        "energy": 150
+      },
+      "rank30": {
+        "health": 700,
+        "shields": 300,
+        "armor": 875,
+        "energy": 200
+      },
+      "statsNote": "",
+      "abilities": [],
+      "special": []
+    },
+    "Revenant": {
+      "name": "Revenant",
+      "rank0": {
+        "health": 270,
+        "shields": 635,
+        "armor": 135,
+        "energy": 140
+      },
+      "rank30": {
+        "health": 370,
+        "shields": 735,
+        "armor": 135,
+        "energy": 190
+      },
+      "statsNote": "",
+      "abilities": [],
+      "special": [
+        "Mesmer Skin: 6 charges at base (x Ability Strength, rounded up). Each charge blocks one hit completely, so damage reduction doesn't describe it."
+      ]
+    },
+    "Revenant Prime": {
+      "name": "Revenant Prime",
+      "rank0": {
+        "health": 270,
+        "shields": 825,
+        "armor": 135,
+        "energy": 175
+      },
+      "rank30": {
+        "health": 370,
+        "shields": 925,
+        "armor": 135,
+        "energy": 225
+      },
+      "statsNote": "",
+      "abilities": [],
+      "special": [
+        "Mesmer Skin: 6 charges at base (x Ability Strength, rounded up). Each charge blocks one hit completely, so damage reduction doesn't describe it."
+      ]
+    },
+    "Rhino": {
+      "name": "Rhino",
+      "rank0": {
+        "health": 270,
+        "shields": 455,
+        "armor": 240,
+        "energy": 100
+      },
+      "rank30": {
+        "health": 370,
+        "shields": 555,
+        "armor": 240,
+        "energy": 150
+      },
+      "statsNote": "",
+      "abilities": [
+        {
+          "kind": "pool",
+          "name": "Iron Skin",
+          "value": 1200,
+          "armorMultiplier": 2.5,
+          "cap": null,
+          "scalesWithStrength": true,
+          "stacks": null,
+          "perStack": null,
+          "level": null,
+          "low": null,
+          "note": "Overguard = (1,200 + 250% of armor) x Ability Strength. Damage absorbed in the 3s after casting adds more.",
+          "applies": "all"
+        }
+      ],
+      "special": [
+        "While Iron Skin's Overguard holds, health and shields are untouched and status effects are blocked."
+      ]
+    },
+    "Rhino Prime": {
+      "name": "Rhino Prime",
+      "rank0": {
+        "health": 270,
+        "shields": 455,
+        "armor": 290,
+        "energy": 100
+      },
+      "rank30": {
+        "health": 370,
+        "shields": 555,
+        "armor": 290,
+        "energy": 150
+      },
+      "statsNote": "",
+      "abilities": [
+        {
+          "kind": "pool",
+          "name": "Iron Skin",
+          "value": 1200,
+          "armorMultiplier": 2.5,
+          "cap": null,
+          "scalesWithStrength": true,
+          "stacks": null,
+          "perStack": null,
+          "level": null,
+          "low": null,
+          "note": "Overguard = (1,200 + 250% of armor) x Ability Strength. Damage absorbed in the 3s after casting adds more.",
+          "applies": "all"
+        }
+      ],
+      "special": [
+        "While Iron Skin's Overguard holds, health and shields are untouched and status effects are blocked."
+      ]
+    },
+    "Saryn": {
+      "name": "Saryn",
+      "rank0": {
+        "health": 365,
+        "shields": 270,
+        "armor": 240,
+        "energy": 175
+      },
+      "rank30": {
+        "health": 465,
+        "shields": 370,
+        "armor": 240,
+        "energy": 225
+      },
+      "statsNote": "",
+      "abilities": [],
+      "special": []
+    },
+    "Saryn Prime": {
+      "name": "Saryn Prime",
+      "rank0": {
+        "health": 365,
+        "shields": 270,
+        "armor": 315,
+        "energy": 200
+      },
+      "rank30": {
+        "health": 465,
+        "shields": 370,
+        "armor": 315,
+        "energy": 300
+      },
+      "statsNote": "",
+      "abilities": [],
+      "special": []
+    },
+    "Sevagoth": {
+      "name": "Sevagoth",
+      "rank0": {
+        "health": 270,
+        "shields": 235,
+        "armor": 160,
+        "energy": 140
+      },
+      "rank30": {
+        "health": 370,
+        "shields": 335,
+        "armor": 160,
+        "energy": 190
+      },
+      "statsNote": "",
+      "abilities": [],
+      "special": [
+        "Passive: on death, fight as the Shadow to revive."
+      ]
+    },
+    "Sevagoth Prime": {
+      "name": "Sevagoth Prime",
+      "rank0": {
+        "health": 270,
+        "shields": 270,
+        "armor": 185,
+        "energy": 175
+      },
+      "rank30": {
+        "health": 370,
+        "shields": 370,
+        "armor": 185,
+        "energy": 225
+      },
+      "statsNote": "",
+      "abilities": [],
+      "special": [
+        "Passive: on death, fight as the Shadow to revive."
+      ]
+    },
+    "Sirius & Orion": {
+      "name": "Sirius & Orion",
+      "rank0": {
+        "health": 475,
+        "shields": 355,
+        "armor": 160,
+        "energy": 200
+      },
+      "rank30": {
+        "health": 575,
+        "shields": 455,
+        "armor": 160,
+        "energy": 250
+      },
+      "statsNote": "",
+      "abilities": [
+        {
+          "kind": "dr",
+          "name": "Light's Sanctuary",
+          "value": 0.45,
+          "cap": 0.75,
+          "scalesWithStrength": true,
+          "stacks": null,
+          "perStack": null,
+          "level": {
+            "label": "Charge",
+            "default": 1.0
+          },
+          "low": 0.15,
+          "note": "",
+          "applies": "all"
+        }
+      ],
+      "special": []
+    },
+    "Styanax": {
+      "name": "Styanax",
+      "rank0": {
+        "health": 270,
+        "shields": 825,
+        "armor": 265,
+        "energy": 175
+      },
+      "rank30": {
+        "health": 370,
+        "shields": 925,
+        "armor": 265,
+        "energy": 225
+      },
+      "statsNote": "",
+      "abilities": [],
+      "special": []
+    },
+    "Styanax Prime": {
+      "name": "Styanax Prime",
+      "rank0": {
+        "health": 270,
+        "shields": 925,
+        "armor": 265,
+        "energy": 215
+      },
+      "rank30": {
+        "health": 370,
+        "shields": 1025,
+        "armor": 265,
+        "energy": 265
+      },
+      "statsNote": "",
+      "abilities": [],
+      "special": []
+    },
+    "Temple": {
+      "name": "Temple",
+      "rank0": {
+        "health": 405,
+        "shields": 225,
+        "armor": 325,
+        "energy": 165
+      },
+      "rank30": {
+        "health": 505,
+        "shields": 325,
+        "armor": 325,
+        "energy": 215
+      },
+      "statsNote": "",
+      "abilities": [],
+      "special": []
+    },
+    "Titania": {
+      "name": "Titania",
+      "rank0": {
+        "health": 270,
+        "shields": 270,
+        "armor": 105,
+        "energy": 175
+      },
+      "rank30": {
+        "health": 370,
+        "shields": 370,
+        "armor": 105,
+        "energy": 225
+      },
+      "statsNote": "",
+      "abilities": [],
+      "special": []
+    },
+    "Titania Prime": {
+      "name": "Titania Prime",
+      "rank0": {
+        "health": 365,
+        "shields": 270,
+        "armor": 135,
+        "energy": 215
+      },
+      "rank30": {
+        "health": 465,
+        "shields": 370,
+        "armor": 135,
+        "energy": 265
+      },
+      "statsNote": "",
+      "abilities": [],
+      "special": []
+    },
+    "Trinity": {
+      "name": "Trinity",
+      "rank0": {
+        "health": 270,
+        "shields": 270,
+        "armor": 105,
+        "energy": 175
+      },
+      "rank30": {
+        "health": 370,
+        "shields": 370,
+        "armor": 105,
+        "energy": 225
+      },
+      "statsNote": "",
+      "abilities": [
+        {
+          "kind": "dr",
+          "name": "Blessing",
+          "value": 0.5,
+          "cap": 0.75,
+          "scalesWithStrength": true,
+          "stacks": null,
+          "perStack": null,
+          "level": null,
+          "low": null,
+          "note": "",
+          "applies": "all"
+        },
+        {
+          "kind": "dr",
+          "name": "Link",
+          "value": 0.75,
+          "cap": 0.75,
+          "scalesWithStrength": false,
+          "stacks": null,
+          "perStack": null,
+          "level": null,
+          "low": null,
+          "note": "Share of damage redirected to linked enemies.",
+          "applies": "all"
+        }
+      ],
+      "special": []
+    },
+    "Trinity Prime": {
+      "name": "Trinity Prime",
+      "rank0": {
+        "health": 270,
+        "shields": 455,
+        "armor": 135,
+        "energy": 175
+      },
+      "rank30": {
+        "health": 370,
+        "shields": 555,
+        "armor": 135,
+        "energy": 225
+      },
+      "statsNote": "",
+      "abilities": [
+        {
+          "kind": "dr",
+          "name": "Blessing",
+          "value": 0.5,
+          "cap": 0.75,
+          "scalesWithStrength": true,
+          "stacks": null,
+          "perStack": null,
+          "level": null,
+          "low": null,
+          "note": "",
+          "applies": "all"
+        },
+        {
+          "kind": "dr",
+          "name": "Link",
+          "value": 0.75,
+          "cap": 0.75,
+          "scalesWithStrength": false,
+          "stacks": null,
+          "perStack": null,
+          "level": null,
+          "low": null,
+          "note": "Share of damage redirected to linked enemies.",
+          "applies": "all"
+        }
+      ],
+      "special": []
+    },
+    "Uriel": {
+      "name": "Uriel",
+      "rank0": {
+        "health": 566,
+        "shields": 566,
+        "armor": 105,
+        "energy": 100
+      },
+      "rank30": {
+        "health": 666,
+        "shields": 666,
+        "armor": 105,
+        "energy": 150
+      },
+      "statsNote": "",
+      "abilities": [],
+      "special": []
+    },
+    "Valkyr": {
+      "name": "Valkyr",
+      "rank0": {
+        "health": 650,
+        "shields": 135,
+        "armor": 855,
+        "energy": 100
+      },
+      "rank30": {
+        "health": 750,
+        "shields": 185,
+        "armor": 855,
+        "energy": 150
+      },
+      "statsNote": "",
+      "abilities": [
+        {
+          "kind": "armor",
+          "name": "Warcry",
+          "value": 0.5,
+          "mode": "percent",
+          "cap": null,
+          "scalesWithStrength": true,
+          "stacks": null,
+          "perStack": null,
+          "level": null,
+          "low": null,
+          "note": "Tripled while Hysteria is active (not modelled).",
+          "applies": "all"
+        }
+      ],
+      "special": [
+        "Passive: fatal damage with the Rage meter above 150% is prevented and gives 5s of invulnerability."
+      ]
+    },
+    "Valkyr Prime": {
+      "name": "Valkyr Prime",
+      "rank0": {
+        "health": 650,
+        "shields": 135,
+        "armor": 1000,
+        "energy": 175
+      },
+      "rank30": {
+        "health": 750,
+        "shields": 185,
+        "armor": 1000,
+        "energy": 225
+      },
+      "statsNote": "",
+      "abilities": [
+        {
+          "kind": "armor",
+          "name": "Warcry",
+          "value": 0.5,
+          "mode": "percent",
+          "cap": null,
+          "scalesWithStrength": true,
+          "stacks": null,
+          "perStack": null,
+          "level": null,
+          "low": null,
+          "note": "Tripled while Hysteria is active (not modelled).",
+          "applies": "all"
+        }
+      ],
+      "special": [
+        "Passive: fatal damage with the Rage meter above 150% is prevented and gives 5s of invulnerability."
+      ]
+    },
+    "Vauban": {
+      "name": "Vauban",
+      "rank0": {
+        "health": 270,
+        "shields": 180,
+        "armor": 160,
+        "energy": 175
+      },
+      "rank30": {
+        "health": 370,
+        "shields": 280,
+        "armor": 160,
+        "energy": 225
+      },
+      "statsNote": "",
+      "abilities": [
+        {
+          "kind": "armor",
+          "name": "Bastille",
+          "value": 1500,
+          "mode": "flat",
+          "cap": 1500,
+          "scalesWithStrength": false,
+          "stacks": null,
+          "perStack": null,
+          "level": {
+            "label": "Armor stolen",
+            "default": 1.0
+          },
+          "low": null,
+          "note": "Armor taken from enemies held in Bastille, up to 1,500.",
+          "applies": "all"
+        }
+      ],
+      "special": []
+    },
+    "Vauban Prime": {
+      "name": "Vauban Prime",
+      "rank0": {
+        "health": 270,
+        "shields": 270,
+        "armor": 210,
+        "energy": 175
+      },
+      "rank30": {
+        "health": 370,
+        "shields": 370,
+        "armor": 210,
+        "energy": 225
+      },
+      "statsNote": "",
+      "abilities": [
+        {
+          "kind": "armor",
+          "name": "Bastille",
+          "value": 1500,
+          "mode": "flat",
+          "cap": 1500,
+          "scalesWithStrength": false,
+          "stacks": null,
+          "perStack": null,
+          "level": {
+            "label": "Armor stolen",
+            "default": 1.0
+          },
+          "low": null,
+          "note": "Armor taken from enemies held in Bastille, up to 1,500.",
+          "applies": "all"
+        }
+      ],
+      "special": []
+    },
+    "Voidrig": {
+      "name": "Voidrig",
+      "rank0": {
+        "health": 1400,
+        "shields": 850,
+        "armor": 385,
+        "energy": 175
+      },
+      "rank30": {
+        "health": 1400,
+        "shields": 850,
+        "armor": 385,
+        "energy": 175
+      },
+      "statsNote": "Rank 30 stats are not on the wiki for this unit; the game export's base values are used.",
+      "abilities": [],
+      "special": []
+    },
+    "Volt": {
+      "name": "Volt",
+      "rank0": {
+        "health": 270,
+        "shields": 455,
+        "armor": 105,
+        "energy": 100
+      },
+      "rank30": {
+        "health": 370,
+        "shields": 555,
+        "armor": 105,
+        "energy": 150
+      },
+      "statsNote": "",
+      "abilities": [],
+      "special": []
+    },
+    "Volt Prime": {
+      "name": "Volt Prime",
+      "rank0": {
+        "health": 270,
+        "shields": 455,
+        "armor": 135,
+        "energy": 200
+      },
+      "rank30": {
+        "health": 370,
+        "shields": 555,
+        "armor": 135,
+        "energy": 300
+      },
+      "statsNote": "",
+      "abilities": [],
+      "special": []
+    },
+    "Voruna": {
+      "name": "Voruna",
+      "rank0": {
+        "health": 455,
+        "shields": 270,
+        "armor": 200,
+        "energy": 100
+      },
+      "rank30": {
+        "health": 555,
+        "shields": 370,
+        "armor": 200,
+        "energy": 150
+      },
+      "statsNote": "",
+      "abilities": [],
+      "special": []
+    },
+    "Voruna Prime": {
+      "name": "Voruna Prime",
+      "rank0": {
+        "health": 455,
+        "shields": 270,
+        "armor": 265,
+        "energy": 130
+      },
+      "rank30": {
+        "health": 555,
+        "shields": 370,
+        "armor": 265,
+        "energy": 180
+      },
+      "statsNote": "",
+      "abilities": [],
+      "special": []
+    },
+    "Wisp": {
+      "name": "Wisp",
+      "rank0": {
+        "health": 270,
+        "shields": 180,
+        "armor": 185,
+        "energy": 200
+      },
+      "rank30": {
+        "health": 370,
+        "shields": 280,
+        "armor": 185,
+        "energy": 300
+      },
+      "statsNote": "",
+      "abilities": [],
+      "special": []
+    },
+    "Wisp Prime": {
+      "name": "Wisp Prime",
+      "rank0": {
+        "health": 270,
+        "shields": 270,
+        "armor": 210,
+        "energy": 200
+      },
+      "rank30": {
+        "health": 370,
+        "shields": 370,
+        "armor": 210,
+        "energy": 300
+      },
+      "statsNote": "",
+      "abilities": [],
+      "special": []
+    },
+    "Wukong": {
+      "name": "Wukong",
+      "rank0": {
+        "health": 455,
+        "shields": 270,
+        "armor": 265,
+        "energy": 130
+      },
+      "rank30": {
+        "health": 555,
+        "shields": 370,
+        "armor": 265,
+        "energy": 180
+      },
+      "statsNote": "",
+      "abilities": [
+        {
+          "kind": "armor",
+          "name": "Defy",
+          "value": 1500,
+          "mode": "flat",
+          "cap": 1500,
+          "scalesWithStrength": false,
+          "stacks": null,
+          "perStack": null,
+          "level": {
+            "label": "Damage absorbed",
+            "default": 1.0
+          },
+          "low": null,
+          "note": "100 to 1,500 armor depending on damage taken during the 2s stance.",
+          "applies": "all"
+        }
+      ],
+      "special": [
+        "Passive: survives fatal damage three times per mission."
+      ]
+    },
+    "Wukong Prime": {
+      "name": "Wukong Prime",
+      "rank0": {
+        "health": 455,
+        "shields": 345,
+        "armor": 290,
+        "energy": 145
+      },
+      "rank30": {
+        "health": 555,
+        "shields": 445,
+        "armor": 290,
+        "energy": 195
+      },
+      "statsNote": "",
+      "abilities": [
+        {
+          "kind": "armor",
+          "name": "Defy",
+          "value": 1500,
+          "mode": "flat",
+          "cap": 1500,
+          "scalesWithStrength": false,
+          "stacks": null,
+          "perStack": null,
+          "level": {
+            "label": "Damage absorbed",
+            "default": 1.0
+          },
+          "low": null,
+          "note": "100 to 1,500 armor depending on damage taken during the 2s stance.",
+          "applies": "all"
+        }
+      ],
+      "special": [
+        "Passive: survives fatal damage three times per mission."
+      ]
+    },
+    "Xaku": {
+      "name": "Xaku",
+      "rank0": {
+        "health": 269,
+        "shields": 239,
+        "armor": 146,
+        "energy": 160
+      },
+      "rank30": {
+        "health": 359,
+        "shields": 329,
+        "armor": 146,
+        "energy": 230
+      },
+      "statsNote": "",
+      "abilities": [],
+      "special": [
+        "The Vast Untime: 75% dodge chance and area damage reduction while active."
+      ]
+    },
+    "Xaku Prime": {
+      "name": "Xaku Prime",
+      "rank0": {
+        "health": 269,
+        "shields": 263,
+        "armor": 167,
+        "energy": 181
+      },
+      "rank30": {
+        "health": 359,
+        "shields": 353,
+        "armor": 167,
+        "energy": 251
+      },
+      "statsNote": "",
+      "abilities": [],
+      "special": [
+        "The Vast Untime: 75% dodge chance and area damage reduction while active."
+      ]
+    },
+    "Yareli": {
+      "name": "Yareli",
+      "rank0": {
+        "health": 270,
+        "shields": 455,
+        "armor": 105,
+        "energy": 200
+      },
+      "rank30": {
+        "health": 370,
+        "shields": 555,
+        "armor": 105,
+        "energy": 300
+      },
+      "statsNote": "",
+      "abilities": [
+        {
+          "kind": "dr",
+          "name": "Merulina",
+          "value": 0.9,
+          "cap": 0.9,
+          "scalesWithStrength": false,
+          "stacks": null,
+          "perStack": null,
+          "level": null,
+          "low": null,
+          "note": "90% of damage is redirected to Merulina while riding.",
+          "applies": "all"
+        }
+      ],
+      "special": []
+    },
+    "Yareli Prime": {
+      "name": "Yareli Prime",
+      "rank0": {
+        "health": 270,
+        "shields": 550,
+        "armor": 105,
+        "energy": 215
+      },
+      "rank30": {
+        "health": 370,
+        "shields": 650,
+        "armor": 105,
+        "energy": 315
+      },
+      "statsNote": "",
+      "abilities": [
+        {
+          "kind": "dr",
+          "name": "Merulina",
+          "value": 0.9,
+          "cap": 0.9,
+          "scalesWithStrength": false,
+          "stacks": null,
+          "perStack": null,
+          "level": null,
+          "low": null,
+          "note": "90% of damage is redirected to Merulina while riding.",
+          "applies": "all"
+        }
+      ],
+      "special": []
+    },
+    "Zephyr": {
+      "name": "Zephyr",
+      "rank0": {
+        "health": 455,
+        "shields": 455,
+        "armor": 105,
+        "energy": 100
+      },
+      "rank30": {
+        "health": 555,
+        "shields": 555,
+        "armor": 105,
+        "energy": 150
+      },
+      "statsNote": "",
+      "abilities": [],
+      "special": []
+    },
+    "Zephyr Prime": {
+      "name": "Zephyr Prime",
+      "rank0": {
+        "health": 455,
+        "shields": 455,
+        "armor": 135,
+        "energy": 175
+      },
+      "rank30": {
+        "health": 555,
+        "shields": 555,
+        "armor": 135,
+        "energy": 225
+      },
+      "statsNote": "",
+      "abilities": [],
+      "special": []
+    }
+  },
+  "arcanes": [
+    {
+      "name": "Arcane Blessing",
+      "stat": "HEALTH_FLAT",
+      "perRank": [
+        200.0,
+        400.0,
+        600.0,
+        800.0,
+        1000.0,
+        1200.0
+      ],
+      "maxRank": 5,
+      "note": "+24 max health per Health pickup, up to 50 stacks. Shown at full stacks."
+    },
+    {
+      "name": "Arcane Guardian",
+      "stat": "ARMOR_FLAT",
+      "perRank": [
+        150.0,
+        300.0,
+        450.0,
+        600.0,
+        750.0,
+        900.0
+      ],
+      "maxRank": 5,
+      "note": "15% chance when damaged, for 20s."
+    },
+    {
+      "name": "Arcane Intention",
+      "stat": "HEALTH_FLAT",
+      "perRank": [
+        40.0,
+        80.0,
+        120.0,
+        160.0,
+        200.0,
+        250.0
+      ],
+      "maxRank": 5,
+      "note": "+250 max health per active channelled ability. Shown for one."
+    },
+    {
+      "name": "Arcane Reaper",
+      "stat": "ARMOR_FLAT",
+      "perRank": [
+        110.0,
+        220.0,
+        330.0,
+        440.0,
+        550.0,
+        660.0
+      ],
+      "maxRank": 5,
+      "note": "On melee kill, for 10s."
+    },
+    {
+      "name": "Arcane Tanker",
+      "stat": "ARMOR_FLAT",
+      "perRank": [
+        200.0,
+        400.0,
+        600.0,
+        800.0,
+        1000.0,
+        1200.0
+      ],
+      "maxRank": 5,
+      "note": "On Archgun equip, for 60s."
+    },
+    {
+      "name": "Arcane Ultimatum",
+      "stat": "ARMOR_FLAT",
+      "perRank": [
+        200.0,
+        400.0,
+        600.0,
+        800.0,
+        1000.0,
+        1200.0
+      ],
+      "maxRank": 5,
+      "note": "On finisher kill, for 45s."
+    }
+  ]
+}

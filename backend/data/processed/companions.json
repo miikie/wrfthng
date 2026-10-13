@@ -1,0 +1,1446 @@
+{
+  "Adarza Kavat": {
+    "name": "Adarza Kavat",
+    "type": "Kavat",
+    "variant": "base",
+    "description": "Piercing eyes reflect deadly instincts.",
+    "statsNote": "",
+    "health": 310,
+    "shield": 230,
+    "armor": 300,
+    "precepts": [
+      {
+        "name": "Cat's Eye",
+        "effect": "Adarza Kavat grants 60% increased critical chance for 10s to allies within 25m every 20s.",
+        "damageEffect": "Squad critical chance +60% for 10 s every 20 s."
+      },
+      {
+        "name": "Reflect",
+        "effect": "Adarza Kavat has a 40% chance to reflect damage back to an enemy, amplifying it by 60%.",
+        "damageEffect": ""
+      }
+    ],
+    "weapons": [
+      "Adarza Claws"
+    ],
+    "defaultWeapon": "Adarza Claws",
+    "needsAttackPrecept": false
+  },
+  "Bhaira Hound": {
+    "name": "Bhaira Hound",
+    "type": "Hound",
+    "variant": "base",
+    "description": "Hounds are powerful robotic comanions optimized for combat. They are programmed to excel at battlefield control and can be configured for countless scenarios.",
+    "statsNote": "Stats are for the Adlet Core before bracket bonuses. Any core fits any model; the bracket then shifts each stat by 10-30%.",
+    "health": 350.0,
+    "shield": 450.0,
+    "armor": 350.0,
+    "precepts": [],
+    "weapons": [
+      "Akaten",
+      "Batoten",
+      "Lacerten"
+    ],
+    "defaultWeapon": "Lacerten",
+    "needsAttackPrecept": false
+  },
+  "Carrier": {
+    "name": "Carrier",
+    "type": "Sentinel",
+    "variant": "base",
+    "description": "With 'Assault Mode' and 'Ammo Case' as default Precepts, Carrier is a seeker Sentinel. Carrier also comes with a shotgun weapon.; Note: This item requires two open slots.",
+    "statsNote": "",
+    "health": 560,
+    "shield": 250,
+    "armor": 80,
+    "precepts": [
+      {
+        "name": "Ammo Case",
+        "effect": "Increases Ammo Capacity by 25% and converts Ammo Pickups into ammo for equipped weapons after 2s.",
+        "damageEffect": ""
+      },
+      {
+        "name": "Looter",
+        "effect": "Emits a pulse wave to break open Loot Crates within 22m.",
+        "damageEffect": ""
+      },
+      {
+        "name": "Striker",
+        "effect": "Carrier will attack the first visible enemy within 10m",
+        "damageEffect": ""
+      }
+    ],
+    "weapons": [
+      "Artax",
+      "Burst Laser",
+      "Burst Laser Prime",
+      "Cryotra",
+      "Deth Machine Rifle",
+      "Deth Machine Rifle Prime",
+      "Helstrum",
+      "Laser Rifle",
+      "Multron",
+      "Prime Laser Rifle",
+      "Prisma Burst Laser",
+      "Stinger",
+      "Sweeper",
+      "Sweeper Prime",
+      "Tazicor",
+      "Verglas",
+      "Verglas Prime",
+      "Vulcax",
+      "Vulklok"
+    ],
+    "defaultWeapon": "Sweeper",
+    "needsAttackPrecept": true
+  },
+  "Carrier Prime": {
+    "name": "Carrier Prime",
+    "type": "Sentinel",
+    "variant": "prime",
+    "description": "This ornate sentinel is an excellent example of late Orokin craftsmanship and styling.",
+    "statsNote": "",
+    "health": 650,
+    "shield": 300,
+    "armor": 150,
+    "precepts": [
+      {
+        "name": "Ammo Case",
+        "effect": "Increases Ammo Capacity by 25% and converts Ammo Pickups into ammo for equipped weapons after 2s.",
+        "damageEffect": ""
+      },
+      {
+        "name": "Looter",
+        "effect": "Emits a pulse wave to break open Loot Crates within 22m.",
+        "damageEffect": ""
+      },
+      {
+        "name": "Striker",
+        "effect": "Carrier will attack the first visible enemy within 10m",
+        "damageEffect": ""
+      }
+    ],
+    "weapons": [
+      "Artax",
+      "Burst Laser",
+      "Burst Laser Prime",
+      "Cryotra",
+      "Deth Machine Rifle",
+      "Deth Machine Rifle Prime",
+      "Helstrum",
+      "Laser Rifle",
+      "Multron",
+      "Prime Laser Rifle",
+      "Prisma Burst Laser",
+      "Stinger",
+      "Sweeper",
+      "Sweeper Prime",
+      "Tazicor",
+      "Verglas",
+      "Verglas Prime",
+      "Vulcax",
+      "Vulklok"
+    ],
+    "defaultWeapon": "Sweeper Prime",
+    "needsAttackPrecept": true
+  },
+  "Chesa Kubrow": {
+    "name": "Chesa Kubrow",
+    "type": "Kubrow",
+    "variant": "base",
+    "description": "This Kubrow will disarm adversaries and retrieve the spoils of battle.",
+    "statsNote": "",
+    "health": 940,
+    "shield": 290,
+    "armor": 300,
+    "precepts": [
+      {
+        "name": "Neutralize",
+        "effect": "The kubrow roars, causing enemies within 10m to stumble and drop their weapons.",
+        "damageEffect": ""
+      },
+      {
+        "name": "Retrieve",
+        "effect": "Kubrow has 45% chance to scavenge additional loot from a fallen enemy or containers within 30m, every 10s.",
+        "damageEffect": ""
+      }
+    ],
+    "weapons": [
+      "Chesa Claws"
+    ],
+    "defaultWeapon": "Chesa Claws",
+    "needsAttackPrecept": false
+  },
+  "Crescent Vulpaphyla": {
+    "name": "Crescent Vulpaphyla",
+    "type": "Vulpaphyla",
+    "variant": "base",
+    "description": "Fast and foxy, Vulpaphyla are agile allies to bring along on your next adventure.",
+    "statsNote": "",
+    "health": 680,
+    "shield": 370,
+    "armor": 300,
+    "precepts": [
+      {
+        "name": "Crescent Charge",
+        "effect": "Charges an enemy within 25m dealing Puncture Damage and lifting them. While lifted, enemy is flung at nearby foes dealing an additional 20% of the thrown enemy's health and adding 5 Puncture Status to enemies within 5m.",
+        "damageEffect": ""
+      },
+      {
+        "name": "Crescent Devolution",
+        "effect": "Devolves into its larval form when downed and charges at enemies, dealing 100 Puncture Damage. Regains true form after 30s.",
+        "damageEffect": ""
+      }
+    ],
+    "weapons": [
+      "Crescent Claws"
+    ],
+    "defaultWeapon": "Crescent Claws",
+    "needsAttackPrecept": false
+  },
+  "Dethcube": {
+    "name": "Dethcube",
+    "type": "Sentinel",
+    "variant": "base",
+    "description": "With 'Assault Mode' and 'Vaporize' as default precepts, Dethcube acts exactly as advertised, as a badass cube of 'deth'. Comes loaded with Deth Machine Rifle weapon.; Note: This item requires two open slots.",
+    "statsNote": "",
+    "health": 560,
+    "shield": 250,
+    "armor": 80,
+    "precepts": [
+      {
+        "name": "Energy Generator",
+        "effect": "Dethcube drops an Energy Orb after assisting in 10 kills.",
+        "damageEffect": "Energy Orb after 10 assists: indirect."
+      },
+      {
+        "name": "Swift Deth",
+        "effect": "Sentinel will attack the first visible enemy within 30m.",
+        "damageEffect": ""
+      },
+      {
+        "name": "Vaporize",
+        "effect": "Every 10s the sentinel will stun and inflict 600 damage to an enemy within 30m. Damage dealt affected by Sentinel Weapon Mods.",
+        "damageEffect": "600 damage every 10 s, scaled by the sentinel weapon's mods."
+      }
+    ],
+    "weapons": [
+      "Artax",
+      "Burst Laser",
+      "Burst Laser Prime",
+      "Cryotra",
+      "Deth Machine Rifle",
+      "Deth Machine Rifle Prime",
+      "Helstrum",
+      "Laser Rifle",
+      "Multron",
+      "Prime Laser Rifle",
+      "Prisma Burst Laser",
+      "Stinger",
+      "Sweeper",
+      "Sweeper Prime",
+      "Tazicor",
+      "Verglas",
+      "Verglas Prime",
+      "Vulcax",
+      "Vulklok"
+    ],
+    "defaultWeapon": "Deth Machine Rifle",
+    "needsAttackPrecept": true
+  },
+  "Dethcube Prime": {
+    "name": "Dethcube Prime",
+    "type": "Sentinel",
+    "variant": "prime",
+    "description": "With 'Assault Mode' and 'Vaporize' as default precepts, Dethcube Prime is the apex of lethal support. Comes loaded with Deth Machine Rifle Prime weapon.; Note: This item requires two open slots.",
+    "statsNote": "",
+    "health": 600,
+    "shield": 300,
+    "armor": 150,
+    "precepts": [
+      {
+        "name": "Energy Generator",
+        "effect": "Dethcube drops an Energy Orb after assisting in 10 kills.",
+        "damageEffect": "Energy Orb after 10 assists: indirect."
+      },
+      {
+        "name": "Swift Deth",
+        "effect": "Sentinel will attack the first visible enemy within 30m.",
+        "damageEffect": ""
+      },
+      {
+        "name": "Vaporize",
+        "effect": "Every 10s the sentinel will stun and inflict 600 damage to an enemy within 30m. Damage dealt affected by Sentinel Weapon Mods.",
+        "damageEffect": "600 damage every 10 s, scaled by the sentinel weapon's mods."
+      }
+    ],
+    "weapons": [
+      "Artax",
+      "Burst Laser",
+      "Burst Laser Prime",
+      "Cryotra",
+      "Deth Machine Rifle",
+      "Deth Machine Rifle Prime",
+      "Helstrum",
+      "Laser Rifle",
+      "Multron",
+      "Prime Laser Rifle",
+      "Prisma Burst Laser",
+      "Stinger",
+      "Sweeper",
+      "Sweeper Prime",
+      "Tazicor",
+      "Verglas",
+      "Verglas Prime",
+      "Vulcax",
+      "Vulklok"
+    ],
+    "defaultWeapon": "Deth Machine Rifle Prime",
+    "needsAttackPrecept": true
+  },
+  "Diriga": {
+    "name": "Diriga",
+    "type": "Sentinel",
+    "variant": "base",
+    "description": "Diriga shocks nearby enemies, and picks off distant threats, utilizing the Vulklok sniper rifle and the 'Calculated Shot', 'Arc Coil' and 'Electro Pulse' precepts.; Note: This item requires two open slots.",
+    "statsNote": "",
+    "health": 700,
+    "shield": 150,
+    "armor": 80,
+    "precepts": [
+      {
+        "name": "Arc Coil",
+        "effect": "Sentinel will zap up to 7 enemies within 10m, dealing 100 Electricity Damage with a 10% Status Chance.",
+        "damageEffect": "100 Electricity damage to 7 enemies, 10% status chance."
+      },
+      {
+        "name": "Calculated Shot",
+        "effect": "Sentinel charges a powerful shot and fires at the first enemy within 70m.",
+        "damageEffect": ""
+      },
+      {
+        "name": "Electro Pulse",
+        "effect": "Every 5s, Sentinel will continually zap an enemy within 15m, trapping them in a stunned state.",
+        "damageEffect": ""
+      }
+    ],
+    "weapons": [
+      "Artax",
+      "Burst Laser",
+      "Burst Laser Prime",
+      "Cryotra",
+      "Deth Machine Rifle",
+      "Deth Machine Rifle Prime",
+      "Helstrum",
+      "Laser Rifle",
+      "Multron",
+      "Prime Laser Rifle",
+      "Prisma Burst Laser",
+      "Stinger",
+      "Sweeper",
+      "Sweeper Prime",
+      "Tazicor",
+      "Verglas",
+      "Verglas Prime",
+      "Vulcax",
+      "Vulklok"
+    ],
+    "defaultWeapon": "Vulklok",
+    "needsAttackPrecept": true
+  },
+  "Djinn": {
+    "name": "Djinn",
+    "type": "Sentinel",
+    "variant": "base",
+    "description": "With 'Thumper' and 'Fatal Attraction' as default Precepts, Djinn is a combat Sentinel. Djinn also comes with a poison dart weapon.; Note: This item requires two open slots.",
+    "statsNote": "",
+    "health": 560,
+    "shield": 250,
+    "armor": 80,
+    "precepts": [
+      {
+        "name": "Fatal Attraction",
+        "effect": "Enemies within 20m are drawn to you. Once they are within 6m, they detonate for 250 Damage. Kill them before detonation to increase lure time and reduce cooldown.",
+        "damageEffect": ""
+      },
+      {
+        "name": "Reawaken",
+        "effect": "Energy Orbs reduce Sentinel Recovery timer by 6s. Djinn recovers with 300 Overshields per Energy Orb collected. Djinn's max Overshields increase by 900.",
+        "damageEffect": ""
+      },
+      {
+        "name": "Thumper",
+        "effect": "Djinn will attack the first visible enemy within 60m.",
+        "damageEffect": ""
+      }
+    ],
+    "weapons": [
+      "Artax",
+      "Burst Laser",
+      "Burst Laser Prime",
+      "Cryotra",
+      "Deth Machine Rifle",
+      "Deth Machine Rifle Prime",
+      "Helstrum",
+      "Laser Rifle",
+      "Multron",
+      "Prime Laser Rifle",
+      "Prisma Burst Laser",
+      "Stinger",
+      "Sweeper",
+      "Sweeper Prime",
+      "Tazicor",
+      "Verglas",
+      "Verglas Prime",
+      "Vulcax",
+      "Vulklok"
+    ],
+    "defaultWeapon": "Stinger",
+    "needsAttackPrecept": true
+  },
+  "Dorma Hound": {
+    "name": "Dorma Hound",
+    "type": "Hound",
+    "variant": "base",
+    "description": "Hounds are powerful robotic comanions optimized for combat. They are programmed to excel at battlefield control and can be configured for countless scenarios.",
+    "statsNote": "Stats are for the Garmr Core before bracket bonuses. Any core fits any model; the bracket then shifts each stat by 10-30%.",
+    "health": 350.0,
+    "shield": 350.0,
+    "armor": 450.0,
+    "precepts": [],
+    "weapons": [
+      "Akaten",
+      "Batoten",
+      "Lacerten"
+    ],
+    "defaultWeapon": "Batoten",
+    "needsAttackPrecept": false
+  },
+  "Hec Hound": {
+    "name": "Hec Hound",
+    "type": "Hound",
+    "variant": "base",
+    "description": "Hounds are powerful robotic comanions optimized for combat. They are programmed to excel at battlefield control and can be configured for countless scenarios.",
+    "statsNote": "Stats are for the Raiju Core before bracket bonuses. Any core fits any model; the bracket then shifts each stat by 10-30%.",
+    "health": 450.0,
+    "shield": 350.0,
+    "armor": 350.0,
+    "precepts": [],
+    "weapons": [
+      "Akaten",
+      "Batoten",
+      "Lacerten"
+    ],
+    "defaultWeapon": "Akaten",
+    "needsAttackPrecept": false
+  },
+  "Helios": {
+    "name": "Helios",
+    "type": "Sentinel",
+    "variant": "base",
+    "description": "With 'Investigator' as its unique Precept and 'Deconstructor' as its weapon, the versatile Helios Sentinel acts as both a lethal guardian and an automatic codex scanner. Scans require an equipped Codex Scanner and an available charge.; Note: This item requires two open slots.",
+    "statsNote": "",
+    "health": 560,
+    "shield": 250,
+    "armor": 80,
+    "precepts": [
+      {
+        "name": "Detect Vulnerability",
+        "effect": "Upon completing research on an enemy, subsequent scans will reveal their weak points.",
+        "damageEffect": "Reveals weak points on researched enemies (enables step 13 weak point hits)."
+      },
+      {
+        "name": "Investigator",
+        "effect": "Helios Sentinel will scan objects and enemies within 50m over 2.0s. This consumes Codex Scanner charges.",
+        "damageEffect": ""
+      },
+      {
+        "name": "Targeting Receptor",
+        "effect": "Causes the Helios Sentinel to attack targets within 10m with 3 glaives.",
+        "damageEffect": ""
+      }
+    ],
+    "weapons": [
+      "Artax",
+      "Burst Laser",
+      "Burst Laser Prime",
+      "Cryotra",
+      "Deconstructor",
+      "Deconstructor Prime",
+      "Deth Machine Rifle",
+      "Deth Machine Rifle Prime",
+      "Helstrum",
+      "Laser Rifle",
+      "Multron",
+      "Prime Laser Rifle",
+      "Prisma Burst Laser",
+      "Stinger",
+      "Sweeper",
+      "Sweeper Prime",
+      "Tazicor",
+      "Verglas",
+      "Verglas Prime",
+      "Vulcax",
+      "Vulklok"
+    ],
+    "defaultWeapon": "Deconstructor",
+    "needsAttackPrecept": true
+  },
+  "Helios Prime": {
+    "name": "Helios Prime",
+    "type": "Sentinel",
+    "variant": "prime",
+    "description": "This knowledge hungry protector defends its master with Deconstructor Prime.",
+    "statsNote": "",
+    "health": 700,
+    "shield": 300,
+    "armor": 100,
+    "precepts": [
+      {
+        "name": "Detect Vulnerability",
+        "effect": "Upon completing research on an enemy, subsequent scans will reveal their weak points.",
+        "damageEffect": "Reveals weak points on researched enemies (enables step 13 weak point hits)."
+      },
+      {
+        "name": "Investigator",
+        "effect": "Helios Sentinel will scan objects and enemies within 50m over 2.0s. This consumes Codex Scanner charges.",
+        "damageEffect": ""
+      },
+      {
+        "name": "Targeting Receptor",
+        "effect": "Causes the Helios Sentinel to attack targets within 10m with 3 glaives.",
+        "damageEffect": ""
+      }
+    ],
+    "weapons": [
+      "Artax",
+      "Burst Laser",
+      "Burst Laser Prime",
+      "Cryotra",
+      "Deconstructor",
+      "Deconstructor Prime",
+      "Deth Machine Rifle",
+      "Deth Machine Rifle Prime",
+      "Helstrum",
+      "Laser Rifle",
+      "Multron",
+      "Prime Laser Rifle",
+      "Prisma Burst Laser",
+      "Stinger",
+      "Sweeper",
+      "Sweeper Prime",
+      "Tazicor",
+      "Verglas",
+      "Verglas Prime",
+      "Vulcax",
+      "Vulklok"
+    ],
+    "defaultWeapon": "Deconstructor Prime",
+    "needsAttackPrecept": true
+  },
+  "Helminth Charger": {
+    "name": "Helminth Charger",
+    "type": "Kubrow",
+    "variant": "base",
+    "description": "An Infested pet bred from the Helminth Cyst",
+    "statsNote": "",
+    "health": 710,
+    "shield": 330,
+    "armor": 300,
+    "precepts": [
+      {
+        "name": "Proboscis",
+        "effect": "Helminth Charger whips a proboscis out at an enemy within 30m, pulling them back and dealing 100 damage.",
+        "damageEffect": ""
+      },
+      {
+        "name": "Strain Eruption",
+        "effect": "Maggots explode on death, dealing 4% of an enemy's current Health as Corrosive Damage to any enemy within 8m.",
+        "damageEffect": ""
+      },
+      {
+        "name": "Strain Fever",
+        "effect": "Helminth Charger gains +40% Damage per Cyst.",
+        "damageEffect": "Helminth Charger +40% damage per Cyst."
+      },
+      {
+        "name": "Trample",
+        "effect": "The Helminth Charger rushes an enemy, dealing 160 Damage to all in its path. It gains +10% Melee Damage, Max Health and Armor for every enemy hit for 5s.",
+        "damageEffect": "Helminth Charger gains +10% melee damage, health and armor per enemy hit."
+      }
+    ],
+    "weapons": [
+      "Helminth Claws"
+    ],
+    "defaultWeapon": "Helminth Claws",
+    "needsAttackPrecept": false
+  },
+  "Huras Kubrow": {
+    "name": "Huras Kubrow",
+    "type": "Kubrow",
+    "variant": "base",
+    "description": "Prized for its ability to sneak up on unsuspecting prey, the Huras Kubrow were first used as hunting companions by the Orokin elite. Orokin Era Tenno soon adapted the strain for use in covert missions and assassinations.",
+    "statsNote": "",
+    "health": 560,
+    "shield": 490,
+    "armor": 300,
+    "precepts": [
+      {
+        "name": "Hunt",
+        "effect": "The kubrow charges at a target, dragging them and dealing 120% damage to all in its path.",
+        "damageEffect": "Kubrow charge dealing 120% damage; scales with claw mods."
+      },
+      {
+        "name": "Stalk",
+        "effect": "The kubrow cloaks itself and its master to stalk down its prey when they are within 24m.",
+        "damageEffect": ""
+      }
+    ],
+    "weapons": [
+      "Huras Claws"
+    ],
+    "defaultWeapon": "Huras Claws",
+    "needsAttackPrecept": false
+  },
+  "Lambeo Moa": {
+    "name": "Lambeo Moa",
+    "type": "MOA",
+    "variant": "base",
+    "description": "MOAs are versatile robotic allies that specialize in indirect support both in and outside of combat.",
+    "statsNote": "Stats are for a gilded MOA with a Drex Core and Trux Gyro. Other cores and gyros shift each stat by 5-20%; the three always add up to 1,190.",
+    "health": 402.5,
+    "shield": 385.0,
+    "armor": 402.5,
+    "precepts": [],
+    "weapons": [
+      "Artax",
+      "Burst Laser",
+      "Burst Laser Prime",
+      "Cryotra",
+      "Deth Machine Rifle",
+      "Deth Machine Rifle Prime",
+      "Helstrum",
+      "Laser Rifle",
+      "Multron",
+      "Prime Laser Rifle",
+      "Prisma Burst Laser",
+      "Stinger",
+      "Sweeper",
+      "Sweeper Prime",
+      "Tazicor",
+      "Verglas",
+      "Verglas Prime",
+      "Vulcax",
+      "Vulklok"
+    ],
+    "defaultWeapon": "",
+    "needsAttackPrecept": false
+  },
+  "Medjay Predasite": {
+    "name": "Medjay Predasite",
+    "type": "Predasite",
+    "variant": "base",
+    "description": "These hard-charging, four-legged predators make formidable companions when in the field.",
+    "statsNote": "",
+    "health": 710,
+    "shield": 350,
+    "armor": 300,
+    "precepts": [
+      {
+        "name": "Infectious Bite",
+        "effect": "An attack that deals +200% Finisher Damage and infects the target with a Virus that grows 4 volatile pustules that react to damage and explode.",
+        "damageEffect": "+200% finisher damage attack that seeds exploding pustules."
+      },
+      {
+        "name": "Paralytic Spores",
+        "effect": "Charges at an enemy within 30m dealing 160 damage. This releases spores that affect enemies within 15m, opening them up to Melee Finishers, and slowing them by 50% for 10s.",
+        "damageEffect": ""
+      }
+    ],
+    "weapons": [
+      "Medjay Claws"
+    ],
+    "defaultWeapon": "Medjay Claws",
+    "needsAttackPrecept": false
+  },
+  "Nautilus": {
+    "name": "Nautilus",
+    "type": "Sentinel",
+    "variant": "base",
+    "description": "With 'Auto Omni' and 'Cordon' as default Precepts, this Sentinel is the ideal companion for long voyages aboard a Railjack.; Note: This item requires two open slots.",
+    "statsNote": "",
+    "health": 560,
+    "shield": 250,
+    "armor": 80,
+    "precepts": [
+      {
+        "name": "Auto Omni",
+        "effect": "Nautilus has 100% chance to repair nearby Railjack hull damages and extinguishes fires on Railjack. Cooldown: 20s.",
+        "damageEffect": ""
+      },
+      {
+        "name": "Cordon",
+        "effect": "Nautilus forces enemies within 30m of the target into clusters for easier targeting. Cooldown: 15s.",
+        "damageEffect": "Groups enemies: no stat change, raises practical AoE DPS."
+      }
+    ],
+    "weapons": [
+      "Artax",
+      "Burst Laser",
+      "Burst Laser Prime",
+      "Cryotra",
+      "Deth Machine Rifle",
+      "Deth Machine Rifle Prime",
+      "Helstrum",
+      "Laser Rifle",
+      "Multron",
+      "Prime Laser Rifle",
+      "Prisma Burst Laser",
+      "Stinger",
+      "Sweeper",
+      "Sweeper Prime",
+      "Tazicor",
+      "Verglas",
+      "Verglas Prime",
+      "Vulcax",
+      "Vulklok"
+    ],
+    "defaultWeapon": "Verglas",
+    "needsAttackPrecept": true
+  },
+  "Nautilus Prime": {
+    "name": "Nautilus Prime",
+    "type": "Sentinel",
+    "variant": "prime",
+    "description": "This brave deckhand defends his crew with Verglas Prime.",
+    "statsNote": "",
+    "health": 560,
+    "shield": 350,
+    "armor": 175,
+    "precepts": [
+      {
+        "name": "Auto Omni",
+        "effect": "Nautilus has 100% chance to repair nearby Railjack hull damages and extinguishes fires on Railjack. Cooldown: 20s.",
+        "damageEffect": ""
+      },
+      {
+        "name": "Cordon",
+        "effect": "Nautilus forces enemies within 30m of the target into clusters for easier targeting. Cooldown: 15s.",
+        "damageEffect": "Groups enemies: no stat change, raises practical AoE DPS."
+      }
+    ],
+    "weapons": [
+      "Artax",
+      "Burst Laser",
+      "Burst Laser Prime",
+      "Cryotra",
+      "Deth Machine Rifle",
+      "Deth Machine Rifle Prime",
+      "Helstrum",
+      "Laser Rifle",
+      "Multron",
+      "Prime Laser Rifle",
+      "Prisma Burst Laser",
+      "Stinger",
+      "Sweeper",
+      "Sweeper Prime",
+      "Tazicor",
+      "Verglas",
+      "Verglas Prime",
+      "Vulcax",
+      "Vulklok"
+    ],
+    "defaultWeapon": "Verglas Prime",
+    "needsAttackPrecept": true
+  },
+  "Nychus Moa": {
+    "name": "Nychus Moa",
+    "type": "MOA",
+    "variant": "base",
+    "description": "MOAs are versatile robotic allies that specialize in indirect support both in and outside of combat.",
+    "statsNote": "Stats are for a gilded MOA with a Drex Core and Trux Gyro. Other cores and gyros shift each stat by 5-20%; the three always add up to 1,190.",
+    "health": 402.5,
+    "shield": 385.0,
+    "armor": 402.5,
+    "precepts": [],
+    "weapons": [
+      "Artax",
+      "Burst Laser",
+      "Burst Laser Prime",
+      "Cryotra",
+      "Deth Machine Rifle",
+      "Deth Machine Rifle Prime",
+      "Helstrum",
+      "Laser Rifle",
+      "Multron",
+      "Prime Laser Rifle",
+      "Prisma Burst Laser",
+      "Stinger",
+      "Sweeper",
+      "Sweeper Prime",
+      "Tazicor",
+      "Verglas",
+      "Verglas Prime",
+      "Vulcax",
+      "Vulklok"
+    ],
+    "defaultWeapon": "",
+    "needsAttackPrecept": false
+  },
+  "Oloro Moa": {
+    "name": "Oloro Moa",
+    "type": "MOA",
+    "variant": "base",
+    "description": "MOAs are versatile robotic allies that specialize in indirect support both in and outside of combat.",
+    "statsNote": "Stats are for a gilded MOA with a Drex Core and Trux Gyro. Other cores and gyros shift each stat by 5-20%; the three always add up to 1,190.",
+    "health": 402.5,
+    "shield": 385.0,
+    "armor": 402.5,
+    "precepts": [],
+    "weapons": [
+      "Artax",
+      "Burst Laser",
+      "Burst Laser Prime",
+      "Cryotra",
+      "Deth Machine Rifle",
+      "Deth Machine Rifle Prime",
+      "Helstrum",
+      "Laser Rifle",
+      "Multron",
+      "Prime Laser Rifle",
+      "Prisma Burst Laser",
+      "Stinger",
+      "Sweeper",
+      "Sweeper Prime",
+      "Tazicor",
+      "Verglas",
+      "Verglas Prime",
+      "Vulcax",
+      "Vulklok"
+    ],
+    "defaultWeapon": "",
+    "needsAttackPrecept": false
+  },
+  "Oxylus": {
+    "name": "Oxylus",
+    "type": "Sentinel",
+    "variant": "base",
+    "description": "With 'Scan Aquatic Lifeforms' and 'Scan Matter' as default Precepts, Oxylus was designed to assist in Search-and-Rescue operations through the harsh landscape around The Orb Vallis. Oxylus also comes with a Multron rifle.; Note: This item requires two open slots.",
+    "statsNote": "",
+    "health": 560,
+    "shield": 250,
+    "armor": 80,
+    "precepts": [
+      {
+        "name": "Botanist",
+        "effect": "Oxylus Sentinel will automatically pick any plants within 50m over 2.0s.",
+        "damageEffect": ""
+      },
+      {
+        "name": "Scan Aquatic Lifeforms",
+        "effect": "Reveals hotspots within 100m and applies Luminous Dye to fish within 40m.",
+        "damageEffect": ""
+      },
+      {
+        "name": "Scan Matter",
+        "effect": "Reveals resource containers and mineral deposits within 60m. Automatically breaks containers and collects resources every 3s.",
+        "damageEffect": ""
+      }
+    ],
+    "weapons": [
+      "Artax",
+      "Burst Laser",
+      "Burst Laser Prime",
+      "Cryotra",
+      "Deth Machine Rifle",
+      "Deth Machine Rifle Prime",
+      "Helstrum",
+      "Laser Rifle",
+      "Multron",
+      "Prime Laser Rifle",
+      "Prisma Burst Laser",
+      "Stinger",
+      "Sweeper",
+      "Sweeper Prime",
+      "Tazicor",
+      "Verglas",
+      "Verglas Prime",
+      "Vulcax",
+      "Vulklok"
+    ],
+    "defaultWeapon": "Multron",
+    "needsAttackPrecept": true
+  },
+  "Panzer Vulpaphyla": {
+    "name": "Panzer Vulpaphyla",
+    "type": "Vulpaphyla",
+    "variant": "base",
+    "description": "Fast and foxy, Vulpaphyla are agile allies to bring along on your next adventure.",
+    "statsNote": "",
+    "health": 680,
+    "shield": 370,
+    "armor": 300,
+    "precepts": [
+      {
+        "name": "Panzer Devolution",
+        "effect": "Devolves into its larval form when downed and attacks enemies with quills, dealing 60 Viral Damage each. Regains true form after 30s.",
+        "damageEffect": ""
+      },
+      {
+        "name": "Viral Quills",
+        "effect": "Launches 6 quills at enemies within 20m, each dealing 60 Viral Damage with 40% Status Chance. If the target is affected by a Viral Status, a Spore is added. 4s cooldown.",
+        "damageEffect": "Applies Viral status (40% status chance per quill, 6 quills): feeds the Viral health-damage bonus and Condition Overload."
+      }
+    ],
+    "weapons": [
+      "Panzer Claws"
+    ],
+    "defaultWeapon": "Panzer Claws",
+    "needsAttackPrecept": false
+  },
+  "Para Moa": {
+    "name": "Para Moa",
+    "type": "MOA",
+    "variant": "base",
+    "description": "MOAs are versatile robotic allies that specialize in indirect support both in and outside of combat.",
+    "statsNote": "Stats are for a gilded MOA with a Drex Core and Trux Gyro. Other cores and gyros shift each stat by 5-20%; the three always add up to 1,190.",
+    "health": 402.5,
+    "shield": 385.0,
+    "armor": 402.5,
+    "precepts": [],
+    "weapons": [
+      "Artax",
+      "Burst Laser",
+      "Burst Laser Prime",
+      "Cryotra",
+      "Deth Machine Rifle",
+      "Deth Machine Rifle Prime",
+      "Helstrum",
+      "Laser Rifle",
+      "Multron",
+      "Prime Laser Rifle",
+      "Prisma Burst Laser",
+      "Stinger",
+      "Sweeper",
+      "Sweeper Prime",
+      "Tazicor",
+      "Verglas",
+      "Verglas Prime",
+      "Vulcax",
+      "Vulklok"
+    ],
+    "defaultWeapon": "",
+    "needsAttackPrecept": false
+  },
+  "Pharaoh Predasite": {
+    "name": "Pharaoh Predasite",
+    "type": "Predasite",
+    "variant": "base",
+    "description": "These hard-charging, four-legged predators make formidable companions when in the field.",
+    "statsNote": "",
+    "health": 710,
+    "shield": 350,
+    "armor": 300,
+    "precepts": [
+      {
+        "name": "Anabolic Pollination",
+        "effect": "Release a cloud of spores that persists for 10s increasing Toxin Damage by +100% for 15s.",
+        "damageEffect": "+100% Toxin damage for 15 s to allies in the cloud."
+      },
+      {
+        "name": "Endoparasitic Vector",
+        "effect": "Transmit an endoparasite to an enemy within 30m. Tentacles spawn from it, clinging to enemies within 10m slowing them as they move further from the parasite, and dealing 20 Viral Damage/sec over 5s.",
+        "damageEffect": ""
+      }
+    ],
+    "weapons": [
+      "Pharaoh Claws"
+    ],
+    "defaultWeapon": "Pharaoh Claws",
+    "needsAttackPrecept": false
+  },
+  "Prisma Shade": {
+    "name": "Prisma Shade",
+    "type": "Sentinel",
+    "variant": "prisma",
+    "description": "A rare jewel of the void. How could anything so beautiful be crafted for stealth?",
+    "statsNote": "",
+    "health": 700,
+    "shield": 300,
+    "armor": 80,
+    "precepts": [
+      {
+        "name": "Ambush",
+        "effect": "When Ghost invisibility is broken, Shade's owner is granted +240% Weapon Damage for 3s.",
+        "damageEffect": "+240% weapon damage for 3 s when Ghost's cloak breaks."
+      },
+      {
+        "name": "Ghost",
+        "effect": "Cloaks owner when enemies are within 24m. The cloak is disrupted if owner attacks.",
+        "damageEffect": ""
+      },
+      {
+        "name": "Revenge",
+        "effect": "Sentinel will not attack an enemy unless that enemy has attacked the Sentinel's master within 10m.",
+        "damageEffect": ""
+      }
+    ],
+    "weapons": [
+      "Artax",
+      "Burst Laser",
+      "Burst Laser Prime",
+      "Cryotra",
+      "Deth Machine Rifle",
+      "Deth Machine Rifle Prime",
+      "Helstrum",
+      "Laser Rifle",
+      "Multron",
+      "Prime Laser Rifle",
+      "Prisma Burst Laser",
+      "Stinger",
+      "Sweeper",
+      "Sweeper Prime",
+      "Tazicor",
+      "Verglas",
+      "Verglas Prime",
+      "Vulcax",
+      "Vulklok"
+    ],
+    "defaultWeapon": "Prisma Burst Laser",
+    "needsAttackPrecept": true
+  },
+  "Raksa Kubrow": {
+    "name": "Raksa Kubrow",
+    "type": "Kubrow",
+    "variant": "base",
+    "description": "Designed by the Orokin to be the perfect companion, a Kubrow was never far from its master's side. Loyal and obedient, these creatures made ideal bodyguards. Equipped with shield generators for added protection, their fierce growl could paralyze any attacker with fear.",
+    "statsNote": "",
+    "health": 750,
+    "shield": 390,
+    "armor": 300,
+    "precepts": [
+      {
+        "name": "Howl",
+        "effect": "The kubrow cries out with a blood-curdling howl that strikes fear into 15 enemies within 24m for 16s.",
+        "damageEffect": ""
+      },
+      {
+        "name": "Protect",
+        "effect": "The kubrow comes to the defense of its master, replenishing both of their shields by 30% of its maximum shields and adding its shield regeneration rate to its master's for 3s.",
+        "damageEffect": ""
+      }
+    ],
+    "weapons": [
+      "Raksa Claws"
+    ],
+    "defaultWeapon": "Raksa Claws",
+    "needsAttackPrecept": false
+  },
+  "Sahasa Kubrow": {
+    "name": "Sahasa Kubrow",
+    "type": "Kubrow",
+    "variant": "base",
+    "description": "Enterprising Orokin genetic designers recognized that the Kubrow's affinity for games of fetch could be used for more serious endeavors. They soon developed a strain adept at reconnaissance and contraband recovery. Tenno often used the creatures to help resupply while in the field.",
+    "statsNote": "",
+    "health": 940,
+    "shield": 290,
+    "armor": 300,
+    "precepts": [
+      {
+        "name": "Dig",
+        "effect": "The kubrow sniffs out buried objects and digs them up.; +270% Success Chance",
+        "damageEffect": ""
+      },
+      {
+        "name": "Ferocity",
+        "effect": "Kubrow attacks an enemy open to finishers with +300% crit chance. If the enemy dies during the attack, enemies within 6m have a 30% chance to be knocked down and opened to finishers.",
+        "damageEffect": "Sahasa finisher with +300% crit chance."
+      }
+    ],
+    "weapons": [
+      "Sahasa Claws"
+    ],
+    "defaultWeapon": "Sahasa Claws",
+    "needsAttackPrecept": false
+  },
+  "Shade": {
+    "name": "Shade",
+    "type": "Sentinel",
+    "variant": "base",
+    "description": "With 'Revenge' and 'Ghost' as default Precepts, Shade is well suited for stealth gameplay. Shade also comes with a burst laser pistol.; Note: This item requires two open slots.",
+    "statsNote": "",
+    "health": 600,
+    "shield": 130,
+    "armor": 80,
+    "precepts": [
+      {
+        "name": "Ambush",
+        "effect": "When Ghost invisibility is broken, Shade's owner is granted +240% Weapon Damage for 3s.",
+        "damageEffect": "+240% weapon damage for 3 s when Ghost's cloak breaks."
+      },
+      {
+        "name": "Ghost",
+        "effect": "Cloaks owner when enemies are within 24m. The cloak is disrupted if owner attacks.",
+        "damageEffect": ""
+      },
+      {
+        "name": "Revenge",
+        "effect": "Sentinel will not attack an enemy unless that enemy has attacked the Sentinel's master within 10m.",
+        "damageEffect": ""
+      }
+    ],
+    "weapons": [
+      "Artax",
+      "Burst Laser",
+      "Burst Laser Prime",
+      "Cryotra",
+      "Deth Machine Rifle",
+      "Deth Machine Rifle Prime",
+      "Helstrum",
+      "Laser Rifle",
+      "Multron",
+      "Prime Laser Rifle",
+      "Prisma Burst Laser",
+      "Stinger",
+      "Sweeper",
+      "Sweeper Prime",
+      "Tazicor",
+      "Verglas",
+      "Verglas Prime",
+      "Vulcax",
+      "Vulklok"
+    ],
+    "defaultWeapon": "Burst Laser",
+    "needsAttackPrecept": true
+  },
+  "Shade Prime": {
+    "name": "Shade Prime",
+    "type": "Sentinel",
+    "variant": "prime",
+    "description": "Shade Prime specializes in stealth and comes locked and loaded with the Burst Laser Prime.; Together, you can dominate the shadows.",
+    "statsNote": "",
+    "health": 700,
+    "shield": 300,
+    "armor": 100,
+    "precepts": [
+      {
+        "name": "Ambush",
+        "effect": "When Ghost invisibility is broken, Shade's owner is granted +240% Weapon Damage for 3s.",
+        "damageEffect": "+240% weapon damage for 3 s when Ghost's cloak breaks."
+      },
+      {
+        "name": "Ghost",
+        "effect": "Cloaks owner when enemies are within 24m. The cloak is disrupted if owner attacks.",
+        "damageEffect": ""
+      },
+      {
+        "name": "Revenge",
+        "effect": "Sentinel will not attack an enemy unless that enemy has attacked the Sentinel's master within 10m.",
+        "damageEffect": ""
+      }
+    ],
+    "weapons": [
+      "Artax",
+      "Burst Laser",
+      "Burst Laser Prime",
+      "Cryotra",
+      "Deth Machine Rifle",
+      "Deth Machine Rifle Prime",
+      "Helstrum",
+      "Laser Rifle",
+      "Multron",
+      "Prime Laser Rifle",
+      "Prisma Burst Laser",
+      "Stinger",
+      "Sweeper",
+      "Sweeper Prime",
+      "Tazicor",
+      "Verglas",
+      "Verglas Prime",
+      "Vulcax",
+      "Vulklok"
+    ],
+    "defaultWeapon": "Burst Laser Prime",
+    "needsAttackPrecept": true
+  },
+  "Sly Vulpaphyla": {
+    "name": "Sly Vulpaphyla",
+    "type": "Vulpaphyla",
+    "variant": "base",
+    "description": "Fast and foxy, Vulpaphyla are agile allies to bring along on your next adventure.",
+    "statsNote": "",
+    "health": 680,
+    "shield": 370,
+    "armor": 300,
+    "precepts": [
+      {
+        "name": "Sly Devolution",
+        "effect": "Devolves into its larval form when downed and regains its true form after 30s. Your kills reduce enemy accuracy against Warframes by 20% for 8s.",
+        "damageEffect": ""
+      },
+      {
+        "name": "Survival Instinct",
+        "effect": "On Bullet Jump:; Enemies lose sight of you for 1.5s. 5s cooldown.",
+        "damageEffect": ""
+      }
+    ],
+    "weapons": [
+      "Sly Claws"
+    ],
+    "defaultWeapon": "Sly Claws",
+    "needsAttackPrecept": false
+  },
+  "Smeeta Kavat": {
+    "name": "Smeeta Kavat",
+    "type": "Kavat",
+    "variant": "base",
+    "description": "This sly feline is playful yet devious.",
+    "statsNote": "",
+    "health": 390,
+    "shield": 230,
+    "armor": 300,
+    "precepts": [
+      {
+        "name": "Charm",
+        "effect": "Smeeta Kavat has a 40% chance every 27s to bestow its owner with good fortune.",
+        "damageEffect": "40% chance every 27 s for a random buff; the damage-relevant one is guaranteed orange/red critical hits for a short time."
+      },
+      {
+        "name": "Mischief",
+        "effect": "Smeeta Kavat becomes invisible for 9s every 7s while a decoy kavat draws fire. Decoy has a 15% chance to evade damage and blinds nearby enemies on death.",
+        "damageEffect": ""
+      }
+    ],
+    "weapons": [
+      "Smeeta Claws"
+    ],
+    "defaultWeapon": "Smeeta Claws",
+    "needsAttackPrecept": false
+  },
+  "Sunika Kubrow": {
+    "name": "Sunika Kubrow",
+    "type": "Kubrow",
+    "variant": "base",
+    "description": "Once the value of Orokin guard-pets had been realized, Orokin scientists began experimenting with strains designed for combat. These were no longer household pets but superior war animals bred for ferocity and aggression.",
+    "statsNote": "",
+    "health": 830,
+    "shield": 350,
+    "armor": 300,
+    "precepts": [
+      {
+        "name": "Savagery",
+        "effect": "The Kubrow rushes at 8 enemies within 10m, dealing damage and knocking them over.",
+        "damageEffect": "Sunika knockdown rush: opens enemies to finishers."
+      },
+      {
+        "name": "Unleashed",
+        "effect": "The kubrow hunts for Eximus units protected by Overguard within 60m and deals +300% Damage against Overguard.",
+        "damageEffect": "+300% damage against Overguard for the Sunika."
+      }
+    ],
+    "weapons": [
+      "Sunika Claws"
+    ],
+    "defaultWeapon": "Sunika Claws",
+    "needsAttackPrecept": false
+  },
+  "Taxon": {
+    "name": "Taxon",
+    "type": "Sentinel",
+    "variant": "base",
+    "description": "With 'Assault Mode' and 'Molecular Conversion' as default Precepts, Taxon protects its owner with shield restoration. Equipped with the Artax ice-beam.; Note: This item requires two open slots.",
+    "statsNote": "",
+    "health": 560,
+    "shield": 250,
+    "armor": 80,
+    "precepts": [
+      {
+        "name": "Molecular Conversion",
+        "effect": "Blast enemies within 10m, converting 200 Damage into Shields for the Warframe.",
+        "damageEffect": ""
+      },
+      {
+        "name": "Retarget",
+        "effect": "Sentinel will attack first visible enemy within 30m",
+        "damageEffect": ""
+      }
+    ],
+    "weapons": [
+      "Artax",
+      "Burst Laser",
+      "Burst Laser Prime",
+      "Cryotra",
+      "Deth Machine Rifle",
+      "Deth Machine Rifle Prime",
+      "Helstrum",
+      "Laser Rifle",
+      "Multron",
+      "Prime Laser Rifle",
+      "Prisma Burst Laser",
+      "Stinger",
+      "Sweeper",
+      "Sweeper Prime",
+      "Tazicor",
+      "Verglas",
+      "Verglas Prime",
+      "Vulcax",
+      "Vulklok"
+    ],
+    "defaultWeapon": "Artax",
+    "needsAttackPrecept": true
+  },
+  "Vasca Kavat": {
+    "name": "Vasca Kavat",
+    "type": "Kavat",
+    "variant": "base",
+    "description": "A true child of the night, and a drinker of life.",
+    "statsNote": "",
+    "health": 310,
+    "shield": 270,
+    "armor": 300,
+    "precepts": [
+      {
+        "name": "Draining Bite",
+        "effect": "Vasca Kavat inflicts 5 stacks of Slash at 150% of its melee damage and restores 10% Health to itself.",
+        "damageEffect": "Vasca applies 5 Slash stacks at 150% of its melee damage: counts for Condition Overload."
+      },
+      {
+        "name": "Transfusion",
+        "effect": "When its Master is bleeding out, the Vasca Kavat sacrifices 20% of its Health to raise them.",
+        "damageEffect": ""
+      }
+    ],
+    "weapons": [
+      "Vasca Claws"
+    ],
+    "defaultWeapon": "Vasca Claws",
+    "needsAttackPrecept": false
+  },
+  "Vizier Predasite": {
+    "name": "Vizier Predasite",
+    "type": "Predasite",
+    "variant": "base",
+    "description": "These hard-charging, four-legged predators make formidable companions when in the field.",
+    "statsNote": "",
+    "health": 710,
+    "shield": 350,
+    "armor": 300,
+    "precepts": [
+      {
+        "name": "Acidic Spittle",
+        "effect": "Every 5s spit acidic tar at an enemy within 30m, blinding them for 12s and dealing 120 Corrosive Damage.",
+        "damageEffect": "Corrosive damage and status on a target: armor strip via Corrosive stacks."
+      },
+      {
+        "name": "Iatric Mycelium",
+        "effect": "Release a trail of spores every 8s that heal the companion and its allies for 300 health over 5s.",
+        "damageEffect": ""
+      }
+    ],
+    "weapons": [
+      "Vizier Claws"
+    ],
+    "defaultWeapon": "Vizier Claws",
+    "needsAttackPrecept": false
+  },
+  "Wyrm": {
+    "name": "Wyrm",
+    "type": "Sentinel",
+    "variant": "base",
+    "description": "With 'Assault Mode' and 'Crowd Dispersion' as default Precepts, Wyrm is a highly offensive Sentinel. Wyrm also comes with a laser rifle.; Note: This item requires two open slots.",
+    "statsNote": "",
+    "health": 560,
+    "shield": 250,
+    "armor": 80,
+    "precepts": [
+      {
+        "name": "Crowd Dispersion",
+        "effect": "Unleashes a 10.0m radial knockdown when multiple enemies are nearby, dealing 10.0 Damage.",
+        "damageEffect": ""
+      },
+      {
+        "name": "Negate",
+        "effect": "Sentinel prevents Status Effects from applying to its owner once every 5s.",
+        "damageEffect": ""
+      },
+      {
+        "name": "Warrior",
+        "effect": "Sentinel will attack the first visible enemy within 30m.",
+        "damageEffect": ""
+      }
+    ],
+    "weapons": [
+      "Artax",
+      "Burst Laser",
+      "Burst Laser Prime",
+      "Cryotra",
+      "Deth Machine Rifle",
+      "Deth Machine Rifle Prime",
+      "Helstrum",
+      "Laser Rifle",
+      "Multron",
+      "Prime Laser Rifle",
+      "Prisma Burst Laser",
+      "Stinger",
+      "Sweeper",
+      "Sweeper Prime",
+      "Tazicor",
+      "Verglas",
+      "Verglas Prime",
+      "Vulcax",
+      "Vulklok"
+    ],
+    "defaultWeapon": "Laser Rifle",
+    "needsAttackPrecept": true
+  },
+  "Wyrm Prime": {
+    "name": "Wyrm Prime",
+    "type": "Sentinel",
+    "variant": "prime",
+    "description": "Both bodyguard and status symbol, the Wyrm Prime Sentinel was the last line of defense for high ranking Tenno in the Orokin Era.",
+    "statsNote": "",
+    "health": 450,
+    "shield": 600,
+    "armor": 150,
+    "precepts": [
+      {
+        "name": "Crowd Dispersion",
+        "effect": "Unleashes a 10.0m radial knockdown when multiple enemies are nearby, dealing 10.0 Damage.",
+        "damageEffect": ""
+      },
+      {
+        "name": "Negate",
+        "effect": "Sentinel prevents Status Effects from applying to its owner once every 5s.",
+        "damageEffect": ""
+      },
+      {
+        "name": "Warrior",
+        "effect": "Sentinel will attack the first visible enemy within 30m.",
+        "damageEffect": ""
+      }
+    ],
+    "weapons": [
+      "Artax",
+      "Burst Laser",
+      "Burst Laser Prime",
+      "Cryotra",
+      "Deth Machine Rifle",
+      "Deth Machine Rifle Prime",
+      "Helstrum",
+      "Laser Rifle",
+      "Multron",
+      "Prime Laser Rifle",
+      "Prisma Burst Laser",
+      "Stinger",
+      "Sweeper",
+      "Sweeper Prime",
+      "Tazicor",
+      "Verglas",
+      "Verglas Prime",
+      "Vulcax",
+      "Vulklok"
+    ],
+    "defaultWeapon": "Prime Laser Rifle",
+    "needsAttackPrecept": true
+  }
+}

@@ -1,0 +1,264 @@
+{
+  "mods": {
+    "Bite": {
+      "type": "CLAWS",
+      "stats": [
+        {
+          "stat": "CRIT_CHANCE",
+          "increment": 0.3,
+          "maxRank": 10
+        },
+        {
+          "stat": "CRIT_DAMAGE",
+          "increment": 0.2,
+          "maxRank": 10
+        }
+      ],
+      "polarity": "Madurai",
+      "rarity": "Rare",
+      "baseDrain": 6
+    },
+    "Brute Conditioning": {
+      "type": "CLAWS",
+      "stats": [
+        {
+          "stat": "DAMAGE",
+          "increment": 0.35,
+          "maxRank": 10
+        }
+      ],
+      "polarity": "Madurai",
+      "rarity": "Uncommon",
+      "baseDrain": 4,
+      "note": "Also converts all base physical damage to Impact (conversion not modelled)."
+    },
+    "Burning Claws": {
+      "type": "CLAWS",
+      "stats": [
+        {
+          "stat": "HEAT",
+          "increment": 0.3,
+          "maxRank": 10
+        },
+        {
+          "stat": "STATUS_CHANCE",
+          "increment": 0.3,
+          "maxRank": 10
+        }
+      ],
+      "polarity": "Madurai",
+      "rarity": "Rare",
+      "baseDrain": 4,
+      "note": "Also converts the claws' elemental damage to Heat (conversion not modelled)."
+    },
+    "Chilling Claws": {
+      "type": "CLAWS",
+      "stats": [
+        {
+          "stat": "COLD",
+          "increment": 0.3,
+          "maxRank": 10
+        },
+        {
+          "stat": "STATUS_CHANCE",
+          "increment": 0.3,
+          "maxRank": 10
+        }
+      ],
+      "polarity": "Madurai",
+      "rarity": "Rare",
+      "baseDrain": 4,
+      "note": "Also converts the claws' elemental damage to Cold (conversion not modelled)."
+    },
+    "Disabling Conditioning": {
+      "type": "CLAWS",
+      "stats": [
+        {
+          "stat": "DAMAGE",
+          "increment": 0.35,
+          "maxRank": 10
+        }
+      ],
+      "polarity": "Madurai",
+      "rarity": "Uncommon",
+      "baseDrain": 4,
+      "note": "Also converts all base physical damage to Puncture (conversion not modelled)."
+    },
+    "Flame Gland": {
+      "type": "CLAWS",
+      "stats": [
+        {
+          "stat": "HEAT",
+          "increment": 0.15,
+          "maxRank": 3
+        },
+        {
+          "stat": "STATUS_CHANCE",
+          "increment": 0.15,
+          "maxRank": 3
+        }
+      ],
+      "polarity": "Madurai",
+      "rarity": "Rare",
+      "baseDrain": 4
+    },
+    "Frost Jaw": {
+      "type": "CLAWS",
+      "stats": [
+        {
+          "stat": "COLD",
+          "increment": 0.15,
+          "maxRank": 3
+        },
+        {
+          "stat": "STATUS_CHANCE",
+          "increment": 0.15,
+          "maxRank": 3
+        }
+      ],
+      "polarity": "Madurai",
+      "rarity": "Rare",
+      "baseDrain": 4
+    },
+    "Magnetic Claws": {
+      "type": "CLAWS",
+      "stats": [
+        {
+          "stat": "STATUS_DURATION",
+          "increment": 0.1,
+          "maxRank": 3
+        }
+      ],
+      "polarity": "Madurai",
+      "rarity": "Rare",
+      "baseDrain": 4
+    },
+    "Maul": {
+      "type": "CLAWS",
+      "stats": [
+        {
+          "stat": "DAMAGE",
+          "increment": 0.3,
+          "maxRank": 10
+        }
+      ],
+      "polarity": "Madurai",
+      "rarity": "Uncommon",
+      "baseDrain": 4
+    },
+    "Mecha Overdrive": {
+      "type": "CLAWS",
+      "stats": [
+        {
+          "stat": "STATUS_DURATION",
+          "increment": 0.15,
+          "maxRank": 5
+        }
+      ],
+      "polarity": "Madurai",
+      "rarity": "Rare",
+      "baseDrain": 6
+    },
+    "Precision Conditioning": {
+      "type": "CLAWS",
+      "stats": [
+        {
+          "stat": "DAMAGE",
+          "increment": 0.35,
+          "maxRank": 10
+        }
+      ],
+      "polarity": "Madurai",
+      "rarity": "Uncommon",
+      "baseDrain": 4,
+      "note": "Also converts all base physical damage to Slash (conversion not modelled)."
+    },
+    "Radon Claws": {
+      "type": "CLAWS",
+      "stats": [
+        {
+          "stat": "CRIT_DAMAGE",
+          "increment": 0.2,
+          "maxRank": 3
+        }
+      ],
+      "polarity": "Madurai",
+      "rarity": "Rare",
+      "baseDrain": 4
+    },
+    "Sepsis Claws": {
+      "type": "CLAWS",
+      "stats": [
+        {
+          "stat": "TOXIN",
+          "increment": 0.3,
+          "maxRank": 10
+        },
+        {
+          "stat": "STATUS_CHANCE",
+          "increment": 0.3,
+          "maxRank": 10
+        }
+      ],
+      "polarity": "Madurai",
+      "rarity": "Rare",
+      "baseDrain": 4,
+      "note": "Also converts the claws' elemental damage to Toxin (conversion not modelled)."
+    },
+    "Shock Collar": {
+      "type": "CLAWS",
+      "stats": [
+        {
+          "stat": "ELECTRICITY",
+          "increment": 0.15,
+          "maxRank": 3
+        },
+        {
+          "stat": "STATUS_CHANCE",
+          "increment": 0.15,
+          "maxRank": 3
+        }
+      ],
+      "polarity": "Madurai",
+      "rarity": "Rare",
+      "baseDrain": 4
+    },
+    "Shocking Claws": {
+      "type": "CLAWS",
+      "stats": [
+        {
+          "stat": "ELECTRICITY",
+          "increment": 0.3,
+          "maxRank": 10
+        },
+        {
+          "stat": "STATUS_CHANCE",
+          "increment": 0.3,
+          "maxRank": 10
+        }
+      ],
+      "polarity": "Madurai",
+      "rarity": "Rare",
+      "baseDrain": 4,
+      "note": "Also converts the claws' elemental damage to Electricity (conversion not modelled)."
+    },
+    "Venom Teeth": {
+      "type": "CLAWS",
+      "stats": [
+        {
+          "stat": "TOXIN",
+          "increment": 0.15,
+          "maxRank": 3
+        },
+        {
+          "stat": "STATUS_CHANCE",
+          "increment": 0.15,
+          "maxRank": 3
+        }
+      ],
+      "polarity": "Madurai",
+      "rarity": "Rare",
+      "baseDrain": 4
+    }
+  }
+}

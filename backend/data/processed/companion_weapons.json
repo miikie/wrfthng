@@ -1,0 +1,412 @@
+{
+  "weapons": {
+    "Adarza Claws": {
+      "name": "Adarza Claws",
+      "uniqueName": "/Lotus/Types/Friendly/Pets/BeastWeapons/AdarzaPetWeapon",
+      "category": "Claws",
+      "damage": {
+        "Puncture": 45,
+        "Slash": 45
+      },
+      "totalDamage": 90,
+      "critChance": 0.3,
+      "critMult": 2.5,
+      "statusChance": 0.05,
+      "fireRate": 1,
+      "magSize": 0,
+      "reloadTime": 0,
+      "multishot": 1,
+      "trigger": "",
+      "tags": [
+        "BEAST_WEAPON"
+      ],
+      "masteryReq": 0
+    },
+    "Chesa Claws": {
+      "name": "Chesa Claws",
+      "uniqueName": "/Lotus/Types/Friendly/Pets/BeastWeapons/ChesaPetWeapon",
+      "category": "Claws",
+      "damage": {
+        "Impact": 275
+      },
+      "totalDamage": 275,
+      "critChance": 0.15,
+      "critMult": 1.5,
+      "statusChance": 0.15,
+      "fireRate": 1,
+      "magSize": 0,
+      "reloadTime": 0,
+      "multishot": 1,
+      "trigger": "",
+      "tags": [
+        "BEAST_WEAPON"
+      ],
+      "masteryReq": 0
+    },
+    "Crescent Claws": {
+      "name": "Crescent Claws",
+      "uniqueName": "/Lotus/Types/Friendly/Pets/BeastWeapons/CrescentVulpaphylaPetWeapon",
+      "category": "Claws",
+      "damage": {
+        "Puncture": 50,
+        "Electricity": 50
+      },
+      "totalDamage": 100,
+      "critChance": 0.225,
+      "critMult": 2,
+      "statusChance": 0.175,
+      "fireRate": 1,
+      "magSize": 0,
+      "reloadTime": 0,
+      "multishot": 1,
+      "trigger": "",
+      "tags": [
+        "BEAST_WEAPON"
+      ],
+      "masteryReq": 0
+    },
+    "Helminth Claws": {
+      "name": "Helminth Claws",
+      "uniqueName": "/Lotus/Types/Friendly/Pets/BeastWeapons/HelminthPetWeapon",
+      "category": "Claws",
+      "damage": {
+        "Slash": 200,
+        "Toxin": 50
+      },
+      "totalDamage": 250,
+      "critChance": 0.075,
+      "critMult": 2.5,
+      "statusChance": 0.25,
+      "fireRate": 1,
+      "magSize": 0,
+      "reloadTime": 0,
+      "multishot": 1,
+      "trigger": "",
+      "tags": [
+        "BEAST_WEAPON"
+      ],
+      "masteryReq": 0
+    },
+    "Huras Claws": {
+      "name": "Huras Claws",
+      "uniqueName": "/Lotus/Types/Friendly/Pets/BeastWeapons/HurasPetWeapon",
+      "category": "Claws",
+      "damage": {
+        "Slash": 350
+      },
+      "totalDamage": 350,
+      "critChance": 0.2,
+      "critMult": 3.5,
+      "statusChance": 0.05,
+      "fireRate": 1,
+      "magSize": 0,
+      "reloadTime": 0,
+      "multishot": 1,
+      "trigger": "",
+      "tags": [
+        "BEAST_WEAPON"
+      ],
+      "masteryReq": 0
+    },
+    "Medjay Claws": {
+      "name": "Medjay Claws",
+      "uniqueName": "/Lotus/Types/Friendly/Pets/BeastWeapons/MedjayPredasitePetWeapon",
+      "category": "Claws",
+      "damage": {
+        "Slash": 175,
+        "Viral": 175
+      },
+      "totalDamage": 350,
+      "critChance": 0.1,
+      "critMult": 3,
+      "statusChance": 0.05,
+      "fireRate": 1,
+      "magSize": 0,
+      "reloadTime": 0,
+      "multishot": 1,
+      "trigger": "",
+      "tags": [
+        "BEAST_WEAPON"
+      ],
+      "masteryReq": 0
+    },
+    "Panzer Claws": {
+      "name": "Panzer Claws",
+      "uniqueName": "/Lotus/Types/Friendly/Pets/BeastWeapons/PanzerVulpaphylaPetWeapon",
+      "category": "Claws",
+      "damage": {
+        "Slash": 45,
+        "Toxin": 45
+      },
+      "totalDamage": 90,
+      "critChance": 0.25,
+      "critMult": 2,
+      "statusChance": 0.125,
+      "fireRate": 1,
+      "magSize": 0,
+      "reloadTime": 0,
+      "multishot": 1,
+      "trigger": "",
+      "tags": [
+        "BEAST_WEAPON"
+      ],
+      "masteryReq": 0
+    },
+    "Pharaoh Claws": {
+      "name": "Pharaoh Claws",
+      "uniqueName": "/Lotus/Types/Friendly/Pets/BeastWeapons/PharaohPredasitePetWeapon",
+      "category": "Claws",
+      "damage": {
+        "Puncture": 162,
+        "Gas": 162
+      },
+      "totalDamage": 324,
+      "critChance": 0.075,
+      "critMult": 2.5,
+      "statusChance": 0.25,
+      "fireRate": 1,
+      "magSize": 0,
+      "reloadTime": 0,
+      "multishot": 1,
+      "trigger": "",
+      "tags": [
+        "BEAST_WEAPON"
+      ],
+      "masteryReq": 0
+    },
+    "Raksa Claws": {
+      "name": "Raksa Claws",
+      "uniqueName": "/Lotus/Types/Friendly/Pets/BeastWeapons/RaksaPetWeapon",
+      "category": "Claws",
+      "damage": {
+        "Puncture": 250
+      },
+      "totalDamage": 250,
+      "critChance": 0.075,
+      "critMult": 2.5,
+      "statusChance": 0.2,
+      "fireRate": 1,
+      "magSize": 0,
+      "reloadTime": 0,
+      "multishot": 1,
+      "trigger": "",
+      "tags": [
+        "BEAST_WEAPON"
+      ],
+      "masteryReq": 0
+    },
+    "Sahasa Claws": {
+      "name": "Sahasa Claws",
+      "uniqueName": "/Lotus/Types/Friendly/Pets/BeastWeapons/SahasaPetWeapon",
+      "category": "Claws",
+      "damage": {
+        "Impact": 300
+      },
+      "totalDamage": 300,
+      "critChance": 0.1,
+      "critMult": 3,
+      "statusChance": 0.05,
+      "fireRate": 1,
+      "magSize": 0,
+      "reloadTime": 0,
+      "multishot": 1,
+      "trigger": "",
+      "tags": [
+        "BEAST_WEAPON"
+      ],
+      "masteryReq": 0
+    },
+    "Sly Claws": {
+      "name": "Sly Claws",
+      "uniqueName": "/Lotus/Types/Friendly/Pets/BeastWeapons/SlyVulpaphylaPetWeapon",
+      "category": "Claws",
+      "damage": {
+        "Impact": 40,
+        "Magnetic": 40
+      },
+      "totalDamage": 80,
+      "critChance": 0.2,
+      "critMult": 2,
+      "statusChance": 0.2,
+      "fireRate": 1,
+      "magSize": 0,
+      "reloadTime": 0,
+      "multishot": 1,
+      "trigger": "",
+      "tags": [
+        "BEAST_WEAPON"
+      ],
+      "masteryReq": 0
+    },
+    "Smeeta Claws": {
+      "name": "Smeeta Claws",
+      "uniqueName": "/Lotus/Types/Friendly/Pets/BeastWeapons/SmeetaPetWeapon",
+      "category": "Claws",
+      "damage": {
+        "Slash": 80
+      },
+      "totalDamage": 80,
+      "critChance": 0.2,
+      "critMult": 2,
+      "statusChance": 0.075,
+      "fireRate": 1,
+      "magSize": 0,
+      "reloadTime": 0,
+      "multishot": 1,
+      "trigger": "",
+      "tags": [
+        "BEAST_WEAPON"
+      ],
+      "masteryReq": 0
+    },
+    "Sunika Claws": {
+      "name": "Sunika Claws",
+      "uniqueName": "/Lotus/Types/Friendly/Pets/BeastWeapons/SunikaPetWeapon",
+      "category": "Claws",
+      "damage": {
+        "Slash": 550
+      },
+      "totalDamage": 550,
+      "critChance": 0.075,
+      "critMult": 3.5,
+      "statusChance": 0.075,
+      "fireRate": 1,
+      "magSize": 0,
+      "reloadTime": 0,
+      "multishot": 1,
+      "trigger": "",
+      "tags": [
+        "BEAST_WEAPON"
+      ],
+      "masteryReq": 0
+    },
+    "Vasca Claws": {
+      "name": "Vasca Claws",
+      "uniqueName": "/Lotus/Types/Friendly/Pets/BeastWeapons/VascaPetWeapon",
+      "category": "Claws",
+      "damage": {
+        "Slash": 110
+      },
+      "totalDamage": 110,
+      "critChance": 0.15,
+      "critMult": 2,
+      "statusChance": 0.25,
+      "fireRate": 1,
+      "magSize": 0,
+      "reloadTime": 0,
+      "multishot": 1,
+      "trigger": "",
+      "tags": [
+        "BEAST_WEAPON"
+      ],
+      "masteryReq": 0
+    },
+    "Venari Claws": {
+      "name": "Venari Claws",
+      "uniqueName": "/Lotus/Types/Friendly/Pets/BeastWeapons/VenariPetWeapon",
+      "category": "Claws",
+      "damage": {
+        "Slash": 40
+      },
+      "totalDamage": 40,
+      "critChance": 0.2,
+      "critMult": 2,
+      "statusChance": 0.2,
+      "fireRate": 1,
+      "magSize": 0,
+      "reloadTime": 0,
+      "multishot": 1,
+      "trigger": "",
+      "tags": [
+        "BEAST_WEAPON"
+      ],
+      "masteryReq": 0
+    },
+    "Venari Prime Claws": {
+      "name": "Venari Prime Claws",
+      "uniqueName": "/Lotus/Types/Friendly/Pets/BeastWeapons/VenariPrimePetWeapon",
+      "category": "Claws",
+      "damage": {
+        "Slash": 55
+      },
+      "totalDamage": 55,
+      "critChance": 0.2,
+      "critMult": 2,
+      "statusChance": 0.2,
+      "fireRate": 1,
+      "magSize": 0,
+      "reloadTime": 0,
+      "multishot": 1,
+      "trigger": "",
+      "tags": [
+        "BEAST_WEAPON"
+      ],
+      "masteryReq": 0
+    },
+    "Vizier Claws": {
+      "name": "Vizier Claws",
+      "uniqueName": "/Lotus/Types/Friendly/Pets/BeastWeapons/VizierPredasitePetWeapon",
+      "category": "Claws",
+      "damage": {
+        "Impact": 150,
+        "Corrosive": 150
+      },
+      "totalDamage": 300,
+      "critChance": 0.05,
+      "critMult": 3,
+      "statusChance": 0.3,
+      "fireRate": 1,
+      "magSize": 0,
+      "reloadTime": 0,
+      "multishot": 1,
+      "trigger": "",
+      "tags": [
+        "BEAST_WEAPON"
+      ],
+      "masteryReq": 0
+    }
+  },
+  "modTypes": {
+    "Adarza Claws": "CLAWS",
+    "Akaten": "MELEE",
+    "Artax": "PRIMARY",
+    "Batoten": "MELEE",
+    "Burst Laser": "SECONDARY",
+    "Burst Laser Prime": "SECONDARY",
+    "Chesa Claws": "CLAWS",
+    "Crescent Claws": "CLAWS",
+    "Cryotra": "PRIMARY",
+    "Deconstructor": "MELEE",
+    "Deconstructor Prime": "MELEE",
+    "Deth Machine Rifle": "PRIMARY",
+    "Deth Machine Rifle Prime": "PRIMARY",
+    "Helminth Claws": "CLAWS",
+    "Helstrum": "PRIMARY",
+    "Huras Claws": "CLAWS",
+    "Lacerten": "MELEE",
+    "Laser Rifle": "PRIMARY",
+    "Medjay Claws": "CLAWS",
+    "Multron": "PRIMARY",
+    "Panzer Claws": "CLAWS",
+    "Pharaoh Claws": "CLAWS",
+    "Prime Laser Rifle": "PRIMARY",
+    "Prisma Burst Laser": "SECONDARY",
+    "Raksa Claws": "CLAWS",
+    "Sahasa Claws": "CLAWS",
+    "Sly Claws": "CLAWS",
+    "Smeeta Claws": "CLAWS",
+    "Stinger": "PRIMARY",
+    "Sunika Claws": "CLAWS",
+    "Sweeper": "SHOTGUN",
+    "Sweeper Prime": "SHOTGUN",
+    "Tazicor": "PRIMARY",
+    "Vasca Claws": "CLAWS",
+    "Venari Claws": "CLAWS",
+    "Venari Prime Claws": "CLAWS",
+    "Verglas": "PRIMARY",
+    "Verglas Prime": "PRIMARY",
+    "Vizier Claws": "CLAWS",
+    "Vulcax": "PRIMARY",
+    "Vulklok": "PRIMARY"
+  }
+}

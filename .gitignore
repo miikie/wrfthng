@@ -1,0 +1,33 @@
+# Dependencies and build output
+node_modules/
+dist/
+*.tsbuildinfo
+
+# Python caches
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Local tool and editor settings
+.claude/
+.vscode/
+.idea/
+
+# Secrets and local environment (none exist today; keep them out if they appear)
+.env
+.env.*
+*.pem
+*.key
+
+# Logs and OS clutter
+*.log
+.DS_Store
+Thumbs.db
+
+# data/raw is downloads, caches and regenerable research (about 42 MB).
+# Everything in it stays local, except the three files below, which were written
+# by hand and can't be rebuilt by the scripts.
+data/raw/*
+!data/raw/interactivity_map.json
+!data/raw/engine_changes.md
+!data/raw/wiki_manual_abilities.json

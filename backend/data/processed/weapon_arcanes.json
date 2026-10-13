@@ -1,0 +1,326 @@
+{
+ "arcanes": [
+  {
+   "name": "Melee Afflictions",
+   "type": "MELEE",
+   "maxRank": 5,
+   "text": "Enemies affected by Status Effects gain 6 additional stacks when they're knocked down or flung by melee attacks.",
+   "imageName": "ArcaneProjectionDH.png"
+  },
+  {
+   "name": "Melee Animosity",
+   "type": "MELEE",
+   "maxRank": 5,
+   "text": "On Melee Hit: Gain 42% Critical Chance on your next Heavy Attack, up to 420%",
+   "imageName": "ArcaneProjectionCV.png"
+  },
+  {
+   "name": "Melee Assimilation",
+   "type": "MELEE",
+   "maxRank": 5,
+   "text": "On Shield Break: +150% Melee Damage on Heavy Attack and Heavy Attack kills restore +30% of max Shields for 20s.",
+   "imageName": "MeleeArcaneShieldBreakMeleeUp.png"
+  },
+  {
+   "name": "Melee Careen",
+   "type": "MELEE",
+   "maxRank": 5,
+   "text": "x2.50 Melee Damage against Frozen enemies. On Roll: Freeze enemies in a 5.5m radius with a 2s Cooldown.",
+   "imageName": "ArcaneProjectionDX.png"
+  },
+  {
+   "name": "Melee Crescendo",
+   "type": "MELEE",
+   "maxRank": 5,
+   "text": "On Finisher Kill: Gain 6 Initial Combo for the rest of your mission",
+   "imageName": "ArcaneProjectionDB.png"
+  },
+  {
+   "name": "Melee Doughty",
+   "type": "MELEE",
+   "maxRank": 5,
+   "text": "Gain 1.0x Critical Damage for every 10% Puncture Status chance on your Melee Weapon.",
+   "imageName": "ArcaneProjectionDM.png"
+  },
+  {
+   "name": "Melee Duplicate",
+   "type": "MELEE",
+   "maxRank": 5,
+   "text": "On Base Critical Hits: 100% chance for your attack to strike a second time",
+   "imageName": "ArcaneProjectionCW.png"
+  },
+  {
+   "name": "Melee Exposure",
+   "type": "MELEE",
+   "maxRank": 5,
+   "text": "On Ability Cast: Gain 60% Corrosive Damage on Melee strikes for 25s. Stacks up to 240%.",
+   "imageName": "ArcaneProjectionCY.png"
+  },
+  {
+   "name": "Melee Fortification",
+   "type": "MELEE",
+   "maxRank": 5,
+   "text": "On Melee Kill: +210 Armor for 10s",
+   "imageName": "ArcaneProjectionDA.png"
+  },
+  {
+   "name": "Melee Influence",
+   "type": "MELEE",
+   "maxRank": 5,
+   "text": "On Melee Electricity Status: 20% chance for elemental Melee Status Effects to apply to enemies within 20m for 18s. Cannot refresh while active.",
+   "imageName": "ArcaneProjectionCZ.png"
+  },
+  {
+   "name": "Melee Retaliation",
+   "type": "MELEE",
+   "maxRank": 5,
+   "text": "Gain 30% Melee Damage for every 200 current Shields, up to 420%. Bonus halved for Overshields.",
+   "imageName": "ArcaneProjectionCX.png"
+  },
+  {
+   "name": "Melee Vortex",
+   "type": "MELEE",
+   "maxRank": 5,
+   "text": "Kill an enemy affected by Magnetic Status for a 45% chance to pull in enemies within 18m radius",
+   "imageName": "ArcaneProjectionDC.png"
+  },
+  {
+   "name": "Fractalized Reset",
+   "type": "PRIMARY",
+   "maxRank": 5,
+   "text": "On Ability Cast: +240% Reload Speed for 5s",
+   "imageName": "ArcaneProjectionBO.png"
+  },
+  {
+   "name": "Longbow Sharpshot",
+   "type": "PRIMARY",
+   "maxRank": 5,
+   "text": "On Weak Point Hit: Gain +300% damage on your next shot.",
+   "imageName": "ArcaneProjectionCL.png"
+  },
+  {
+   "name": "Primary Blight",
+   "type": "PRIMARY",
+   "maxRank": 5,
+   "text": "On Toxin Status Effect: +3.6% Critical Damage and +1.8% Multishot for 12s. Stacks up to 40x.",
+   "imageName": "ArcaneProjectionCS.png"
+  },
+  {
+   "name": "Primary Bulwark",
+   "type": "PRIMARY",
+   "maxRank": 5,
+   "text": "Gain +1% damage for each unit of armor past 1,000, up to a max of +500%.",
+   "imageName": "ArcaneProjectionDU.png"
+  },
+  {
+   "name": "Primary Compression",
+   "type": "PRIMARY",
+   "maxRank": 5,
+   "text": "On aim: x0.2 explosion radius, +100% damage and +5.5% ammo efficiency for every 1m radius lost.",
+   "imageName": "PrimaryRadialAttack.png"
+  },
+  {
+   "name": "Primary Crux",
+   "type": "PRIMARY",
+   "maxRank": 5,
+   "text": "On Weak Point Hit: Gain +30% Status Chance and +6% Ammo Efficiency for 10s. Stacks up to 10x.",
+   "imageName": "ArcaneProjectionDK.png"
+  },
+  {
+   "name": "Primary Deadhead",
+   "type": "PRIMARY",
+   "maxRank": 5,
+   "text": "On Weak Point Kill: +120% Damage for 24s. Stacks up to 3x. +30% to Headshot Multiplier -50% Weapon Recoil / +30% to Headshot Multiplier / -50% Weapon Recoil",
+   "imageName": "ArcaneProjectionSteelPathPrecisionHeadshotB.png"
+  },
+  {
+   "name": "Primary Debilitate",
+   "type": "PRIMARY",
+   "maxRank": 5,
+   "text": "If an enemy has 10 stacks of a combined Status Effect, inflicting the same Status Effect again has a 100% chance to inflict one of the base Status Effects it is composed of.",
+   "imageName": "ArcaneProjectionDW.png"
+  },
+  {
+   "name": "Primary Dexterity",
+   "type": "PRIMARY",
+   "maxRank": 5,
+   "text": "On Melee Kill: +60% Damage for 20s. Stacks up to 6x. +7.5s Combo Duration / +7.5s Combo Duration",
+   "imageName": "ArcaneProjectionSteelPathMeleeToolsB.png"
+  },
+  {
+   "name": "Primary Exhilarate",
+   "type": "PRIMARY",
+   "maxRank": 5,
+   "text": "On Weapon Impact Status Effect: +1.2 Energy Regen/s for 10s. Stacks up to 3x.",
+   "imageName": "ArcaneProjectionCN.png"
+  },
+  {
+   "name": "Primary Frostbite",
+   "type": "PRIMARY",
+   "maxRank": 5,
+   "text": "On Cold Status Effect: +3% Critical Damage and +2.25% Multishot for 12s. Stacks up to 40x.",
+   "imageName": "ArcaneProjectionCC.png"
+  },
+  {
+   "name": "Primary Merciless",
+   "type": "PRIMARY",
+   "maxRank": 5,
+   "text": "On Kill: +30% Damage for 4s. Stacks up to 12x. +30% Reload Speed / +30% Reload Speed",
+   "imageName": "ArcaneProjectionSteelPathWarcrimesB.png"
+  },
+  {
+   "name": "Primary Obstruct",
+   "type": "PRIMARY",
+   "maxRank": 5,
+   "text": "On Weapon Magnetic Status Effect: Enemy weapons jam within 15m of target. Cooldown 10s.",
+   "imageName": "ArcaneProjectionCM.png"
+  },
+  {
+   "name": "Primary Overcharge",
+   "type": "PRIMARY",
+   "maxRank": 5,
+   "text": "While at or above 90% Energy: Gain 35% of Max Energy as Multishot, capped at 350%.",
+   "imageName": "ArcaneProjectionEA.png"
+  },
+  {
+   "name": "Primary Plated Round",
+   "type": "PRIMARY",
+   "maxRank": 5,
+   "text": "On Reload: Deal increased damage per round loaded based on max magazine size. Lasts for 10s.",
+   "imageName": "ArcaneProjectionCH.png"
+  },
+  {
+   "name": "Akimbo Slip Shot",
+   "type": "SECONDARY",
+   "maxRank": 5,
+   "text": "While sliding or aim gliding: Gain 65% ammo efficiency with Dual Pistols.",
+   "imageName": "ArcaneProjectionCT.png"
+  },
+  {
+   "name": "Cascadia Accuracy",
+   "type": "SECONDARY",
+   "maxRank": 5,
+   "text": "On Roll: +300% Critical Chance on Weak Point Hits for 4s",
+   "imageName": "ArcaneProjectionBU.png"
+  },
+  {
+   "name": "Cascadia Empowered",
+   "type": "SECONDARY",
+   "maxRank": 5,
+   "text": "On Status Effect: Deals +750 Damage matching the Damage Type of the Status Effect",
+   "imageName": "ArcaneProjectionBT.png"
+  },
+  {
+   "name": "Cascadia Flare",
+   "type": "SECONDARY",
+   "maxRank": 5,
+   "text": "On Heat Status Effect: +12% Damage for 10s. Stacks up to 480%.",
+   "imageName": "ArcaneProjectionBY.png"
+  },
+  {
+   "name": "Cascadia Overcharge",
+   "type": "SECONDARY",
+   "maxRank": 5,
+   "text": "While Overshields Active: +300% Critical Chance",
+   "imageName": "ArcaneProjectionBL.png"
+  },
+  {
+   "name": "Conjunction Voltage",
+   "type": "SECONDARY",
+   "maxRank": 5,
+   "text": "On Electricity Status Effect: +1.5% Reload Speed and +3% Multishot for 12s. Stacks up to 40x.",
+   "imageName": "ArcaneProjectionCD.png"
+  },
+  {
+   "name": "Secondary Cryogenic",
+   "type": "SECONDARY",
+   "maxRank": 5,
+   "text": "On Puncture: Apply 3 Cold stacks on targets within 15m.",
+   "imageName": "SecondaryCritStrikeColdPunct.png"
+  },
+  {
+   "name": "Secondary Deadhead",
+   "type": "SECONDARY",
+   "maxRank": 5,
+   "text": "On Weak Point Kill: +120% Damage for 24s. Stacks up to 3x. +30% to Headshot Multiplier -50% Weapon Recoil / +30% to Headshot Multiplier / -50% Weapon Recoil",
+   "imageName": "ArcaneProjectionSteelPathPrecisionHeadshotA.png"
+  },
+  {
+   "name": "Secondary Dexterity",
+   "type": "SECONDARY",
+   "maxRank": 5,
+   "text": "On Melee Kill: +60% Damage for 20s. Stacks up to 6x. +7.5s Combo Duration / +7.5s Combo Duration",
+   "imageName": "ArcaneProjectionSteelPathMeleeToolsA.png"
+  },
+  {
+   "name": "Secondary Encumber",
+   "type": "SECONDARY",
+   "maxRank": 5,
+   "text": "On Status Effect: +24% chance to trigger a second random Status Effect.",
+   "imageName": "ArcaneProjectionCG.png"
+  },
+  {
+   "name": "Secondary Enervate",
+   "type": "SECONDARY",
+   "maxRank": 5,
+   "text": "On Hit: Increase Critical Chance by 10%. Resets after 6 Big Critical Hit.",
+   "imageName": "ArcaneProjectionDL.png"
+  },
+  {
+   "name": "Secondary Fortifier",
+   "type": "SECONDARY",
+   "maxRank": 5,
+   "text": "Gain 1 Overguard for every 100 Damage dealt to an enemy's Overguard. Deals x8 Extra Damage to Overguard. / Deals x8 Extra Damage to Overguard.",
+   "imageName": "ArcaneProjectionDG.png"
+  },
+  {
+   "name": "Secondary Irradiate",
+   "type": "SECONDARY",
+   "maxRank": 5,
+   "text": "On hitting enemies afflicted by 10 stacks of Radiation: Deal 180% of the hit damage to enemies within 7m.",
+   "imageName": "ArcaneProjectionDV.png"
+  },
+  {
+   "name": "Secondary Kinship",
+   "type": "SECONDARY",
+   "maxRank": 5,
+   "text": "While Buffing Ally Warframes: +20% Critical Chance per buff",
+   "imageName": "ArcaneProjectionCI.png"
+  },
+  {
+   "name": "Secondary Merciless",
+   "type": "SECONDARY",
+   "maxRank": 5,
+   "text": "On Kill: +30% Damage for 4s. Stacks up to 12x. +30% Reload Speed / +30% Reload Speed",
+   "imageName": "ArcaneProjectionSteelPathWarcrimesA.png"
+  },
+  {
+   "name": "Secondary Outburst",
+   "type": "SECONDARY",
+   "maxRank": 5,
+   "text": "On swapping to Secondary Weapon, consume all Combo Multipliers to increase Secondary Weapon Critical Chance and Critical Damage by 20% per Combo consumed for 30s.",
+   "imageName": "ArcaneProjectionCU.png"
+  },
+  {
+   "name": "Secondary Shiver",
+   "type": "SECONDARY",
+   "maxRank": 5,
+   "text": "Enemies take +45% damage per Cold Status",
+   "imageName": "ArcaneProjectionCP.png"
+  },
+  {
+   "name": "Secondary Surge",
+   "type": "SECONDARY",
+   "maxRank": 5,
+   "text": "On Ability Cast: Next shot gains a Damage Multiplier for every 200 current Energy, up to x8.",
+   "imageName": "ArcaneProjectionDE.png"
+  },
+  {
+   "name": "Shotgun Vendetta",
+   "type": "SHOTGUN",
+   "maxRank": 5,
+   "text": "On shotgun kill within 5m of target: +180% Multishot and +75% Reload Speed for 15s.",
+   "imageName": "ArcaneProjectionCO.png"
+  }
+ ]
+}

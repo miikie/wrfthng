@@ -1,0 +1,6 @@
+fastapi
+uvicorn[standard]
+pydantic
+# for the tests (npm test)
+pytest
+httpx

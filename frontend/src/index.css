@@ -1,0 +1,137 @@
+@import '@fontsource/chakra-petch/500.css';
+@import '@fontsource/chakra-petch/600.css';
+@import '@fontsource/barlow-semi-condensed/400.css';
+@import '@fontsource/barlow-semi-condensed/500.css';
+@import '@fontsource/barlow-semi-condensed/600.css';
+@import 'tailwindcss';
+
+@theme {
+  /* Surfaces: the blue-black of the Orbiter's interior, not neutral grey. */
+  --color-void: #0c131e;
+  --color-hull: #121b29;
+  --color-plate: #1a2536;
+  --color-seam: #2a3950;
+  --color-seam-bright: #3d5273;
+
+  /* Orokin gold marks what is selected or primary; Tenno blue marks what is interactive. */
+  --color-gold: #cfa95e;
+  --color-gold-pale: #ead9ab;
+  --color-tenno: #74bfe0;
+
+  --color-ink: #e2e8ef;
+  --color-mute: #8a99ad;
+  --color-good: #6fcf8e;
+  --color-bad: #ef6b5f;
+
+  --color-health: #d9534f;
+  --color-shield: #5aa9e6;
+  --color-armor: #d8b25a;
+  --color-overguard: #b9c2cf;
+
+  --font-display: 'Chakra Petch', 'Segoe UI', sans-serif;
+  --font-sans: 'Barlow Semi Condensed', 'Segoe UI', system-ui, sans-serif;
+
+  --animate-form: form 0.45s ease-out;
+  @keyframes form {
+    from { opacity: 0; transform: translateX(-8px); }
+    to { opacity: 1; transform: none; }
+  }
+}
+
+@layer base {
+  html {
+    color-scheme: dark;
+  }
+
+  body {
+    background-color: var(--color-void);
+    /* The Simulacrum's floor grid, kept faint. */
+    background-image:
+      linear-gradient(to right, rgb(116 191 224 / 0.035) 1px, transparent 1px),
+      linear-gradient(to bottom, rgb(116 191 224 / 0.035) 1px, transparent 1px);
+    background-size: 48px 48px;
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    font-size: 15px;
+    line-height: 1.45;
+    font-variant-numeric: tabular-nums;
+    min-width: 720px;
+  }
+
+  h1, h2, h3 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    letter-spacing: 0.01em;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-tenno);
+    outline-offset: 2px;
+  }
+
+  button:not(:disabled), [role='option'], select {
+    cursor: pointer;
+  }
+
+  input[type='number'] {
+    appearance: textfield;
+  }
+  input[type='number']::-webkit-inner-spin-button {
+    appearance: none;
+  }
+
+  input[type='range'] {
+    appearance: none;
+    height: 16px;
+    background: transparent;
+    cursor: pointer;
+  }
+  input[type='range']::-webkit-slider-runnable-track {
+    height: 3px;
+    background: var(--color-seam-bright);
+  }
+  input[type='range']::-moz-range-track {
+    height: 3px;
+    background: var(--color-seam-bright);
+  }
+  input[type='range']::-webkit-slider-thumb {
+    appearance: none;
+    width: 9px;
+    height: 15px;
+    margin-top: -6px;
+    background: var(--color-gold);
+    border: 0;
+  }
+  input[type='range']::-moz-range-thumb {
+    width: 9px;
+    height: 15px;
+    background: var(--color-gold);
+    border: 0;
+    border-radius: 0;
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-seam);
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+}
+
+@layer components {
+  /* Mod cards are cut at one corner, like the physical cards in the Arsenal. */
+  .mod-card {
+    clip-path: polygon(0 0, calc(100% - 14px) 0, 100% 14px, 100% 100%, 0 100%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

@@ -1,0 +1,725 @@
+{
+  "prisms": [
+    {
+      "name": "Cantic Prism",
+      "series": 5,
+      "trigger": "BURST",
+      "energy": 100,
+      "rechargeDelay": 2,
+      "rechargeRate": 30,
+      "attacks": [
+        {
+          "name": "Normal Attack",
+          "damage": {
+            "Void": 1460
+          },
+          "critChance": 0.34,
+          "critMult": 2.2,
+          "statusChance": 0.1,
+          "fireRate": 2.67,
+          "multishot": 1,
+          "ammoCost": 3,
+          "burstCount": 3,
+          "chargeTime": 0,
+          "falloff": null,
+          "area": false
+        }
+      ]
+    },
+    {
+      "name": "Granmu Prism",
+      "series": 3,
+      "trigger": "BURST",
+      "energy": 100,
+      "rechargeDelay": 2,
+      "rechargeRate": 30,
+      "attacks": [
+        {
+          "name": "Direct Hit",
+          "damage": {
+            "Void": 1000
+          },
+          "critChance": 0.26,
+          "critMult": 2,
+          "statusChance": 0.12,
+          "fireRate": 1,
+          "multishot": 1,
+          "ammoCost": 5,
+          "burstCount": 3,
+          "chargeTime": 0,
+          "falloff": null,
+          "area": false
+        },
+        {
+          "name": "Explosion",
+          "damage": {
+            "Void": 1400
+          },
+          "critChance": 0.26,
+          "critMult": 2,
+          "statusChance": 0.12,
+          "fireRate": 1,
+          "multishot": 1,
+          "ammoCost": 0,
+          "burstCount": 1,
+          "chargeTime": 0,
+          "falloff": {
+            "start": 0,
+            "end": 3.5,
+            "reduction": 0.3
+          },
+          "area": true
+        }
+      ]
+    },
+    {
+      "name": "Klamora Prism",
+      "series": 7,
+      "trigger": "HELD",
+      "energy": 100,
+      "rechargeDelay": 2,
+      "rechargeRate": 30,
+      "attacks": [
+        {
+          "name": "Normal Attack",
+          "damage": {
+            "Void": 600
+          },
+          "critChance": 0.38,
+          "critMult": 2.4,
+          "statusChance": 0.1,
+          "fireRate": 12,
+          "multishot": 1,
+          "ammoCost": 2.5,
+          "burstCount": 1,
+          "chargeTime": 0,
+          "falloff": null,
+          "area": false
+        }
+      ]
+    },
+    {
+      "name": "Lega Prism",
+      "series": 6,
+      "trigger": "HELD",
+      "energy": 100,
+      "rechargeDelay": 2,
+      "rechargeRate": 30,
+      "attacks": [
+        {
+          "name": "Normal Attack",
+          "damage": {
+            "Void": 600
+          },
+          "critChance": 0.08,
+          "critMult": 1.6,
+          "statusChance": 0.34,
+          "fireRate": 7.5,
+          "multishot": 1,
+          "ammoCost": 0.8,
+          "burstCount": 1,
+          "chargeTime": 0,
+          "falloff": null,
+          "area": false
+        }
+      ]
+    },
+    {
+      "name": "Mote Amp",
+      "series": null,
+      "trigger": "HELD",
+      "energy": 100,
+      "rechargeDelay": 2,
+      "rechargeRate": 30,
+      "attacks": [
+        {
+          "name": "Normal Attack",
+          "damage": {
+            "Void": 240
+          },
+          "critChance": 0.2,
+          "critMult": 1.5,
+          "statusChance": 0,
+          "fireRate": 12,
+          "multishot": 1,
+          "ammoCost": 3.5,
+          "burstCount": 1,
+          "chargeTime": 0,
+          "falloff": null,
+          "area": false
+        }
+      ]
+    },
+    {
+      "name": "Rahn Prism",
+      "series": 4,
+      "trigger": "AUTO",
+      "energy": 100,
+      "rechargeDelay": 2,
+      "rechargeRate": 30,
+      "attacks": [
+        {
+          "name": "Normal Attack",
+          "damage": {
+            "Void": 1000
+          },
+          "critChance": 0.3,
+          "critMult": 2,
+          "statusChance": 0.04,
+          "fireRate": 5.67,
+          "multishot": 1,
+          "ammoCost": 3,
+          "burstCount": 1,
+          "chargeTime": 0,
+          "falloff": null,
+          "area": false
+        }
+      ]
+    },
+    {
+      "name": "Raplak Prism",
+      "series": 1,
+      "trigger": "SEMI-AUTO",
+      "energy": 100,
+      "rechargeDelay": 2,
+      "rechargeRate": 30,
+      "attacks": [
+        {
+          "name": "Normal Attack",
+          "damage": {
+            "Void": 3000
+          },
+          "critChance": 0.38,
+          "critMult": 2.6,
+          "statusChance": 0.1,
+          "fireRate": 2,
+          "multishot": 1,
+          "ammoCost": 10,
+          "burstCount": 1,
+          "chargeTime": 0,
+          "falloff": null,
+          "area": false
+        }
+      ]
+    },
+    {
+      "name": "Shwaak Prism",
+      "series": 2,
+      "trigger": "SEMI-AUTO",
+      "energy": 100,
+      "rechargeDelay": 2,
+      "rechargeRate": 30,
+      "attacks": [
+        {
+          "name": "Normal Attack",
+          "damage": {
+            "Void": 3500
+          },
+          "critChance": 0.1,
+          "critMult": 1.6,
+          "statusChance": 0.2,
+          "fireRate": 1.33,
+          "multishot": 1,
+          "ammoCost": 10,
+          "burstCount": 1,
+          "chargeTime": 0,
+          "falloff": {
+            "start": 15,
+            "end": 30,
+            "reduction": 0.5357
+          },
+          "area": false
+        }
+      ]
+    },
+    {
+      "name": "Sirocco",
+      "series": null,
+      "trigger": "SEMI-AUTO",
+      "energy": 10,
+      "rechargeDelay": 2,
+      "rechargeRate": 30,
+      "attacks": [
+        {
+          "name": "Normal Attack",
+          "damage": {
+            "Void": 2000
+          },
+          "critChance": 0.4,
+          "critMult": 2,
+          "statusChance": 0.2,
+          "fireRate": 3,
+          "multishot": 1,
+          "ammoCost": 0,
+          "burstCount": 1,
+          "chargeTime": 0,
+          "falloff": null,
+          "area": false
+        },
+        {
+          "name": "Overcharged Shot",
+          "damage": {
+            "Void": 3600
+          },
+          "critChance": 0.8,
+          "critMult": 2,
+          "statusChance": 0.5,
+          "fireRate": 0.833,
+          "multishot": 1,
+          "ammoCost": 0,
+          "burstCount": 1,
+          "chargeTime": 0,
+          "falloff": null,
+          "area": false
+        }
+      ]
+    }
+  ],
+  "scaffolds": [
+    {
+      "name": "Dissic Scaffold",
+      "series": 6,
+      "trigger": "SEMI-AUTO",
+      "energy": 100,
+      "rechargeDelay": 2,
+      "rechargeRate": 30,
+      "attacks": [
+        {
+          "name": "Direct Hit",
+          "damage": {
+            "Impact": 15
+          },
+          "critChance": 0.03,
+          "critMult": 1.5,
+          "statusChance": 0.37,
+          "fireRate": 1,
+          "multishot": 1,
+          "ammoCost": 50,
+          "burstCount": 1,
+          "chargeTime": 0,
+          "falloff": null,
+          "area": false
+        },
+        {
+          "name": "Explosion",
+          "damage": {
+            "Void": 6600
+          },
+          "critChance": 0.03,
+          "critMult": 1.5,
+          "statusChance": 0.37,
+          "fireRate": 1,
+          "multishot": 1,
+          "ammoCost": 0,
+          "burstCount": 1,
+          "chargeTime": 0,
+          "falloff": {
+            "start": 0,
+            "end": 7,
+            "reduction": 0.6
+          },
+          "area": true
+        },
+        {
+          "name": "Explosive Fragments",
+          "damage": {
+            "Void": 300
+          },
+          "critChance": 0.1,
+          "critMult": 2,
+          "statusChance": 0.37,
+          "fireRate": 1,
+          "multishot": 9,
+          "ammoCost": 0,
+          "burstCount": 1,
+          "chargeTime": 0,
+          "falloff": {
+            "start": 0,
+            "end": 3,
+            "reduction": 1
+          },
+          "area": false
+        }
+      ]
+    },
+    {
+      "name": "Exard Scaffold",
+      "series": 5,
+      "trigger": "BURST",
+      "energy": 100,
+      "rechargeDelay": 2,
+      "rechargeRate": 30,
+      "attacks": [
+        {
+          "name": "Direct Hit",
+          "damage": {
+            "Impact": 200
+          },
+          "critChance": 0.17,
+          "critMult": 1.9,
+          "statusChance": 0.33,
+          "fireRate": 1,
+          "multishot": 1,
+          "ammoCost": 20,
+          "burstCount": 3,
+          "chargeTime": 0,
+          "falloff": {
+            "start": 40,
+            "end": 60,
+            "reduction": 0.825
+          },
+          "area": false
+        },
+        {
+          "name": "Explosion",
+          "damage": {
+            "Void": 2600
+          },
+          "critChance": 0.17,
+          "critMult": 1.9,
+          "statusChance": 0.33,
+          "fireRate": 1,
+          "multishot": 1,
+          "ammoCost": 0,
+          "burstCount": 1,
+          "chargeTime": 0,
+          "falloff": {
+            "start": 0,
+            "end": 2.5,
+            "reduction": 0.3
+          },
+          "area": true
+        }
+      ]
+    },
+    {
+      "name": "Klebrik Scaffold",
+      "series": 3,
+      "trigger": "HELD",
+      "energy": 100,
+      "rechargeDelay": 2,
+      "rechargeRate": 30,
+      "attacks": [
+        {
+          "name": "Normal Attack",
+          "damage": {
+            "Void": 320
+          },
+          "critChance": 0.16,
+          "critMult": 1.6,
+          "statusChance": 0.14,
+          "fireRate": 12,
+          "multishot": 1,
+          "ammoCost": 3,
+          "burstCount": 1,
+          "chargeTime": 0,
+          "falloff": null,
+          "area": false
+        }
+      ]
+    },
+    {
+      "name": "Pencha Scaffold",
+      "series": 1,
+      "trigger": "CHARGE",
+      "energy": 100,
+      "rechargeDelay": 2,
+      "rechargeRate": 30,
+      "attacks": [
+        {
+          "name": "Normal Attack",
+          "damage": {
+            "Void": 9000
+          },
+          "critChance": 0.14,
+          "critMult": 1.6,
+          "statusChance": 0.18,
+          "fireRate": 2,
+          "multishot": 1,
+          "ammoCost": 10,
+          "burstCount": 1,
+          "chargeTime": 0.8,
+          "falloff": null,
+          "area": false
+        }
+      ]
+    },
+    {
+      "name": "Phahd Scaffold",
+      "series": 4,
+      "trigger": "SEMI-AUTO",
+      "energy": 100,
+      "rechargeDelay": 2,
+      "rechargeRate": 30,
+      "attacks": [
+        {
+          "name": "Direct Hit",
+          "damage": {
+            "Void": 3000
+          },
+          "critChance": 0.34,
+          "critMult": 2.6,
+          "statusChance": 0.12,
+          "fireRate": 1.67,
+          "multishot": 1,
+          "ammoCost": 20,
+          "burstCount": 1,
+          "chargeTime": 0,
+          "falloff": null,
+          "area": false
+        },
+        {
+          "name": "Explosion",
+          "damage": {
+            "Void": 1100
+          },
+          "critChance": 0.34,
+          "critMult": 2.6,
+          "statusChance": 0.12,
+          "fireRate": 1.67,
+          "multishot": 1,
+          "ammoCost": 0,
+          "burstCount": 1,
+          "chargeTime": 0,
+          "falloff": {
+            "start": 0,
+            "end": 5,
+            "reduction": 0.3
+          },
+          "area": true
+        }
+      ]
+    },
+    {
+      "name": "Propa Scaffold",
+      "series": 7,
+      "trigger": "SEMI-AUTO",
+      "energy": 100,
+      "rechargeDelay": 2,
+      "rechargeRate": 30,
+      "attacks": [
+        {
+          "name": "Explosion",
+          "damage": {
+            "Void": 9000
+          },
+          "critChance": 0.3,
+          "critMult": 2,
+          "statusChance": 0,
+          "fireRate": 2,
+          "multishot": 1,
+          "ammoCost": 40,
+          "burstCount": 1,
+          "chargeTime": 0,
+          "falloff": {
+            "start": 0,
+            "end": 8,
+            "reduction": 0.7
+          },
+          "area": true
+        }
+      ]
+    },
+    {
+      "name": "Shraksun Scaffold",
+      "series": 2,
+      "trigger": "SEMI-AUTO",
+      "energy": 100,
+      "rechargeDelay": 2,
+      "rechargeRate": 30,
+      "attacks": [
+        {
+          "name": "Direct Hit",
+          "damage": {
+            "Void": 3000
+          },
+          "critChance": 0.2,
+          "critMult": 2,
+          "statusChance": 0.2,
+          "fireRate": 1.33,
+          "multishot": 1,
+          "ammoCost": 10,
+          "burstCount": 1,
+          "chargeTime": 0,
+          "falloff": null,
+          "area": false
+        },
+        {
+          "name": "Explosion",
+          "damage": {
+            "Void": 4500
+          },
+          "critChance": 0.2,
+          "critMult": 2,
+          "statusChance": 0.3,
+          "fireRate": 1.33,
+          "multishot": 1,
+          "ammoCost": 0,
+          "burstCount": 1,
+          "chargeTime": 0,
+          "falloff": {
+            "start": 0,
+            "end": 5,
+            "reduction": 0.4
+          },
+          "area": true
+        }
+      ]
+    }
+  ],
+  "braces": [
+    {
+      "name": "Clapkra Brace",
+      "series": 1,
+      "critChance": 0,
+      "statusChance": 0,
+      "energy": 40,
+      "rechargeDelay": 0,
+      "rechargeRate": 0
+    },
+    {
+      "name": "Juttni Brace",
+      "series": 2,
+      "critChance": 0,
+      "statusChance": 0,
+      "energy": 0,
+      "rechargeDelay": -1,
+      "rechargeRate": 0
+    },
+    {
+      "name": "Lohrin Brace",
+      "series": 3,
+      "critChance": 0.12,
+      "statusChance": 0.12,
+      "energy": 0,
+      "rechargeDelay": 0,
+      "rechargeRate": 0
+    },
+    {
+      "name": "Anspatha Brace",
+      "series": 4,
+      "critChance": 0,
+      "statusChance": 0,
+      "energy": 20,
+      "rechargeDelay": 0,
+      "rechargeRate": 15
+    },
+    {
+      "name": "Suo Brace",
+      "series": 5,
+      "critChance": 0,
+      "statusChance": 0,
+      "energy": 100,
+      "rechargeDelay": 2,
+      "rechargeRate": 0
+    },
+    {
+      "name": "Plaga Brace",
+      "series": 6,
+      "critChance": 0,
+      "statusChance": 0,
+      "energy": -20,
+      "rechargeDelay": -1.5,
+      "rechargeRate": 0
+    },
+    {
+      "name": "Certus Brace",
+      "series": 7,
+      "critChance": 0.2,
+      "statusChance": 0,
+      "energy": 0,
+      "rechargeDelay": 0,
+      "rechargeRate": 0
+    }
+  ],
+  "arcanes": [
+    {
+      "name": "Eternal Eradicate",
+      "stat": "DAMAGE",
+      "text": "+60% amp damage for 8s after an Operator ability",
+      "perRank": [
+        0.1,
+        0.2,
+        0.3,
+        0.4,
+        0.5,
+        0.6
+      ],
+      "maxRank": 5
+    },
+    {
+      "name": "Eternal Onslaught",
+      "stat": "CRIT_CHANCE",
+      "text": "+180% critical chance for 8s when energy is depleted",
+      "perRank": [
+        0.3,
+        0.6,
+        0.9,
+        1.2,
+        1.5,
+        1.8
+      ],
+      "maxRank": 5
+    },
+    {
+      "name": "Virtuos Fury",
+      "stat": "DAMAGE",
+      "text": "+30% damage for 4s on status effect (20% chance)",
+      "perRank": [
+        0.075,
+        0.15,
+        0.225,
+        0.3
+      ],
+      "maxRank": 3
+    },
+    {
+      "name": "Virtuos Ghost",
+      "stat": "STATUS_CHANCE",
+      "text": "+60% status chance for 12s on headshot (40% chance)",
+      "perRank": [
+        0.15,
+        0.3,
+        0.45,
+        0.6
+      ],
+      "maxRank": 3
+    },
+    {
+      "name": "Virtuos Shadow",
+      "stat": "CRIT_CHANCE",
+      "text": "+60% critical chance for 12s on headshot (40% chance)",
+      "perRank": [
+        0.15,
+        0.3,
+        0.45,
+        0.6
+      ],
+      "maxRank": 3
+    },
+    {
+      "name": "Virtuos Strike",
+      "stat": "CRIT_DAMAGE",
+      "text": "+80% critical damage for 4s on critical hit (20% chance)",
+      "perRank": [
+        0.2,
+        0.4,
+        0.6,
+        0.8
+      ],
+      "maxRank": 3
+    },
+    {
+      "name": "Virtuos Tempo",
+      "stat": "FIRE_RATE",
+      "text": "+60% fire rate for 8s on kill (60% chance)",
+      "perRank": [
+        0.15,
+        0.3,
+        0.45,
+        0.6
+      ],
+      "maxRank": 3
+    }
+  ]
+}

@@ -1,0 +1,5775 @@
+{
+  "_comment": "Core damage-relevant mods. Values are per-rank increment; total = increment * (rank+1). Max value = increment * (maxRank+1).",
+  "_statTypes": {
+    "DAMAGE": "Base damage multiplier (Serration, Hornet Strike, etc)",
+    "MULTISHOT": "Multishot (Split Chamber, Barrel Diffusion, etc)",
+    "CRIT_CHANCE": "Critical chance multiplier",
+    "CRIT_DAMAGE": "Critical damage multiplier",
+    "STATUS_CHANCE": "Status chance multiplier",
+    "STATUS_DURATION": "Status duration multiplier",
+    "FIRE_RATE": "Fire rate multiplier (attack speed for melee)",
+    "RELOAD_SPEED": "Reload speed multiplier",
+    "MAG_SIZE": "Magazine size multiplier",
+    "IMPACT": "Impact damage multiplier (physical)",
+    "PUNCTURE": "Puncture damage multiplier (physical)",
+    "SLASH": "Slash damage multiplier (physical)",
+    "HEAT": "Heat elemental damage (additive with other elementals)",
+    "COLD": "Cold elemental damage",
+    "ELECTRICITY": "Electricity elemental damage",
+    "TOXIN": "Toxin elemental damage",
+    "FACTION_GRINEER": "Faction damage vs Grineer",
+    "FACTION_CORPUS": "Faction damage vs Corpus",
+    "FACTION_INFESTED": "Faction damage vs Infested",
+    "COMBO_DURATION": "Melee combo duration (seconds, flat add)",
+    "COMBO_EFFICIENCY": "Heavy attack combo efficiency",
+    "CHANNELING_DAMAGE": "Heavy attack damage multiplier",
+    "CONDITION_OVERLOAD": "Damage per status type on target (melee)",
+    "GALV_STATUS_STACKS": "Damage per status type on target (galvanized)",
+    "STATUS_DAMAGE": "Damage of status effects / DoT ticks (Elementalist mods). Not applied by the engine yet",
+    "WEAK_POINT_DAMAGE": "Weak point (headshot) damage bonus. Not applied automatically; engine takes weak_point_bonus",
+    "DAMAGE_FIRST_SHOT": "Damage on the first shot of a magazine (Charged Chamber family). Not applied by the engine",
+    "RADIATION": "Radiation elemental damage from a mod. Not applied by the engine yet",
+    "MAGNETIC": "Magnetic elemental damage from a mod. Not applied by the engine yet",
+    "VIRAL": "Viral elemental damage from a mod. Not applied by the engine yet",
+    "FACTION_OROKIN": "Faction damage vs Orokin (formerly Corrupted)",
+    "FACTION_MURMUR": "Faction damage vs The Murmur",
+    "FACTION_SENTIENT": "Faction damage vs Sentients",
+    "CRIT_CHANCE_PER_COMBO": "Critical chance per melee combo multiplier (Blood Rush family)",
+    "STATUS_CHANCE_PER_COMBO": "Status chance per melee combo multiplier (Weeping Wounds family)",
+    "CRIT_CHANCE_SLIDE": "Critical chance on slide attacks (Maiming Strike)",
+    "SLASH_ON_CRIT": "Chance for a critical hit to apply a Slash proc (Hunter Munitions)",
+    "*_WHILE_AIMING": "Conditional: applies while aiming after the mod's trigger. Ignored by the engine",
+    "*_ON_KILL": "Conditional: granted on kill, usually stacking. Ignored by the engine",
+    "*_ON_ABILITY": "Conditional: granted on ability cast. Ignored by the engine",
+    "*_ON_RELOAD": "Conditional: granted on reload. Ignored by the engine",
+    "*_ON_HEADSHOT": "Conditional: granted on weak point hit. Ignored by the engine",
+    "*_ON_HIT": "Conditional: granted on hit. Ignored by the engine",
+    "*_ON_EQUIP": "Conditional: granted briefly on equip. Ignored by the engine"
+  },
+  "mods": {
+    "Serration": {
+      "stat": "DAMAGE",
+      "increment": 0.15,
+      "maxRank": 10,
+      "type": "PRIMARY",
+      "polarity": "Madurai",
+      "rarity": "Uncommon",
+      "baseDrain": 4
+    },
+    "Amalgam Serration": {
+      "stat": "DAMAGE",
+      "increment": 0.140909,
+      "maxRank": 10,
+      "type": "PRIMARY",
+      "polarity": "Madurai",
+      "rarity": "Uncommon",
+      "baseDrain": 4,
+      "secondaryStat": "SPRINT_SPEED",
+      "secondaryValue": 0.25
+    },
+    "Hornet Strike": {
+      "stat": "DAMAGE",
+      "increment": 0.2,
+      "maxRank": 10,
+      "type": "SECONDARY",
+      "polarity": "Madurai",
+      "rarity": "Uncommon",
+      "baseDrain": 4
+    },
+    "Pressure Point": {
+      "stat": "DAMAGE",
+      "increment": 0.2,
+      "maxRank": 5,
+      "type": "MELEE",
+      "polarity": "Madurai",
+      "rarity": "Common",
+      "baseDrain": 4
+    },
+    "Primed Pressure Point": {
+      "stat": "DAMAGE",
+      "increment": 0.15,
+      "maxRank": 10,
+      "type": "MELEE",
+      "polarity": "Madurai",
+      "rarity": "Legendary",
+      "baseDrain": 4
+    },
+    "Point Blank": {
+      "stat": "DAMAGE",
+      "increment": 0.15,
+      "maxRank": 5,
+      "type": "SHOTGUN",
+      "polarity": "Madurai",
+      "rarity": "Common",
+      "baseDrain": 4
+    },
+    "Primed Point Blank": {
+      "stat": "DAMAGE",
+      "increment": 0.15,
+      "maxRank": 10,
+      "type": "SHOTGUN",
+      "polarity": "Madurai",
+      "rarity": "Legendary",
+      "baseDrain": 4
+    },
+    "Split Chamber": {
+      "stat": "MULTISHOT",
+      "increment": 0.15,
+      "maxRank": 5,
+      "type": "PRIMARY",
+      "polarity": "Madurai",
+      "rarity": "Rare",
+      "baseDrain": 10
+    },
+    "Barrel Diffusion": {
+      "stat": "MULTISHOT",
+      "increment": 0.2,
+      "maxRank": 5,
+      "type": "SECONDARY",
+      "polarity": "Madurai",
+      "rarity": "Rare",
+      "baseDrain": 6
+    },
+    "Lethal Torrent": {
+      "stats": [
+        {
+          "stat": "MULTISHOT",
+          "increment": 0.1,
+          "maxRank": 5
+        },
+        {
+          "stat": "FIRE_RATE",
+          "increment": 0.1,
+          "maxRank": 5
+        }
+      ],
+      "type": "SECONDARY",
+      "polarity": "Madurai",
+      "rarity": "Rare",
+      "baseDrain": 6
+    },
+    "Hell's Chamber": {
+      "stat": "MULTISHOT",
+      "increment": 0.2,
+      "maxRank": 5,
+      "type": "SHOTGUN",
+      "polarity": "Naramon",
+      "rarity": "Rare",
+      "baseDrain": 10
+    },
+    "Point Strike": {
+      "stat": "CRIT_CHANCE",
+      "increment": 0.25,
+      "maxRank": 5,
+      "type": "PRIMARY",
+      "polarity": "Madurai",
+      "rarity": "Common",
+      "baseDrain": 4
+    },
+    "Pistol Gambit": {
+      "stat": "CRIT_CHANCE",
+      "increment": 0.2,
+      "maxRank": 5,
+      "type": "SECONDARY",
+      "polarity": "Madurai",
+      "rarity": "Common",
+      "baseDrain": 4
+    },
+    "Primed Pistol Gambit": {
+      "stat": "CRIT_CHANCE",
+      "increment": 0.17,
+      "maxRank": 10,
+      "type": "SECONDARY",
+      "polarity": "Madurai",
+      "rarity": "Legendary",
+      "baseDrain": 4
+    },
+    "True Steel": {
+      "stat": "CRIT_CHANCE",
+      "increment": 0.2,
+      "maxRank": 5,
+      "type": "MELEE",
+      "polarity": "Madurai",
+      "rarity": "Common",
+      "baseDrain": 4
+    },
+    "Sacrificial Steel": {
+      "stat": "CRIT_CHANCE",
+      "increment": 0.2,
+      "maxRank": 10,
+      "type": "MELEE",
+      "polarity": "Madurai",
+      "rarity": "Legendary",
+      "baseDrain": 4,
+      "note": "Also x1.33 damage to Sentient at max rank (not applied)."
+    },
+    "Blunderbuss": {
+      "stat": "CRIT_CHANCE",
+      "increment": 0.15,
+      "maxRank": 5,
+      "type": "SHOTGUN",
+      "polarity": "Madurai",
+      "rarity": "Common",
+      "baseDrain": 4
+    },
+    "Primed Blunderbuss": {
+      "stat": "CRIT_CHANCE",
+      "increment": 0.15,
+      "maxRank": 10,
+      "type": "SHOTGUN",
+      "polarity": "Madurai",
+      "rarity": "Legendary",
+      "baseDrain": 4
+    },
+    "Vital Sense": {
+      "stat": "CRIT_DAMAGE",
+      "increment": 0.2,
+      "maxRank": 5,
+      "type": "PRIMARY",
+      "polarity": "Madurai",
+      "rarity": "Rare",
+      "baseDrain": 6
+    },
+    "Target Cracker": {
+      "stat": "CRIT_DAMAGE",
+      "increment": 0.1,
+      "maxRank": 5,
+      "type": "SECONDARY",
+      "polarity": "Madurai",
+      "rarity": "Common",
+      "baseDrain": 4
+    },
+    "Primed Target Cracker": {
+      "stat": "CRIT_DAMAGE",
+      "increment": 0.1,
+      "maxRank": 10,
+      "type": "SECONDARY",
+      "polarity": "Madurai",
+      "rarity": "Legendary",
+      "baseDrain": 4
+    },
+    "Organ Shatter": {
+      "stat": "CRIT_DAMAGE",
+      "increment": 0.15,
+      "maxRank": 5,
+      "type": "MELEE",
+      "polarity": "Madurai",
+      "rarity": "Uncommon",
+      "baseDrain": 6
+    },
+    "Ravage": {
+      "stat": "CRIT_DAMAGE",
+      "increment": 0.1,
+      "maxRank": 5,
+      "type": "SHOTGUN",
+      "polarity": "Madurai",
+      "rarity": "Common",
+      "baseDrain": 4
+    },
+    "Primed Ravage": {
+      "stat": "CRIT_DAMAGE",
+      "increment": 0.1,
+      "maxRank": 10,
+      "type": "SHOTGUN",
+      "polarity": "Madurai",
+      "rarity": "Legendary",
+      "baseDrain": 4
+    },
+    "Rifle Aptitude": {
+      "stat": "STATUS_CHANCE",
+      "increment": 0.15,
+      "maxRank": 5,
+      "type": "PRIMARY",
+      "polarity": "Naramon",
+      "rarity": "Uncommon",
+      "baseDrain": 4
+    },
+    "Sure Shot": {
+      "stat": "STATUS_CHANCE",
+      "increment": 0.15,
+      "maxRank": 5,
+      "type": "SECONDARY",
+      "polarity": "Naramon",
+      "rarity": "Uncommon",
+      "baseDrain": 4
+    },
+    "Melee Prowess": {
+      "stat": "STATUS_CHANCE",
+      "increment": 0.15,
+      "maxRank": 5,
+      "type": "MELEE",
+      "polarity": "Naramon",
+      "rarity": "Uncommon",
+      "baseDrain": 4
+    },
+    "Shotgun Savvy": {
+      "stat": "STATUS_CHANCE",
+      "increment": 0.15,
+      "maxRank": 5,
+      "type": "SHOTGUN",
+      "polarity": "Naramon",
+      "rarity": "Uncommon",
+      "baseDrain": 4
+    },
+    "Speed Trigger": {
+      "stat": "FIRE_RATE",
+      "increment": 0.1,
+      "maxRank": 5,
+      "type": "PRIMARY",
+      "polarity": "Madurai",
+      "rarity": "Uncommon",
+      "baseDrain": 4
+    },
+    "Primed Shred": {
+      "stats": [
+        {
+          "stat": "FIRE_RATE",
+          "increment": 0.05,
+          "maxRank": 10
+        },
+        {
+          "stat": "PUNCH_THROUGH",
+          "increment": 0.2,
+          "maxRank": 10
+        }
+      ],
+      "type": "PRIMARY",
+      "polarity": "Madurai",
+      "rarity": "Legendary",
+      "baseDrain": 6
+    },
+    "Fury": {
+      "stat": "FIRE_RATE",
+      "increment": 0.05,
+      "maxRank": 5,
+      "type": "MELEE",
+      "polarity": "Madurai",
+      "rarity": "Common",
+      "baseDrain": 4
+    },
+    "Primed Fury": {
+      "stat": "FIRE_RATE",
+      "increment": 0.05,
+      "maxRank": 10,
+      "type": "MELEE",
+      "polarity": "Madurai",
+      "rarity": "Legendary",
+      "baseDrain": 4
+    },
+    "Berserker Fury": {
+      "stats": [
+        {
+          "stat": "FIRE_RATE",
+          "increment": 0.058333,
+          "maxRank": 5,
+          "condition": "on_kill",
+          "max_stacks": 2
+        }
+      ],
+      "type": "MELEE",
+      "polarity": "Madurai",
+      "rarity": "Rare",
+      "baseDrain": 6,
+      "conditional": "On melee kill: attack speed for 10s, stacks up to 2x."
+    },
+    "Stormbringer": {
+      "stat": "ELECTRICITY",
+      "increment": 0.15,
+      "maxRank": 5,
+      "type": "PRIMARY",
+      "polarity": "Naramon",
+      "rarity": "Uncommon",
+      "baseDrain": 6
+    },
+    "Hellfire": {
+      "stat": "HEAT",
+      "increment": 0.15,
+      "maxRank": 5,
+      "type": "PRIMARY",
+      "polarity": "Naramon",
+      "rarity": "Uncommon",
+      "baseDrain": 6
+    },
+    "Cryo Rounds": {
+      "stat": "COLD",
+      "increment": 0.15,
+      "maxRank": 5,
+      "type": "PRIMARY",
+      "polarity": "Naramon",
+      "rarity": "Uncommon",
+      "baseDrain": 6
+    },
+    "Primed Cryo Rounds": {
+      "stat": "COLD",
+      "increment": 0.15,
+      "maxRank": 10,
+      "type": "PRIMARY",
+      "polarity": "Naramon",
+      "rarity": "Legendary",
+      "baseDrain": 6
+    },
+    "Infected Clip": {
+      "stat": "TOXIN",
+      "increment": 0.15,
+      "maxRank": 5,
+      "type": "PRIMARY",
+      "polarity": "Naramon",
+      "rarity": "Uncommon",
+      "baseDrain": 6
+    },
+    "Convulsion": {
+      "stat": "ELECTRICITY",
+      "increment": 0.15,
+      "maxRank": 5,
+      "type": "SECONDARY",
+      "polarity": "Naramon",
+      "rarity": "Uncommon",
+      "baseDrain": 6
+    },
+    "Primed Convulsion": {
+      "stat": "ELECTRICITY",
+      "increment": 0.15,
+      "maxRank": 10,
+      "type": "SECONDARY",
+      "polarity": "Naramon",
+      "rarity": "Legendary",
+      "baseDrain": 6
+    },
+    "Heated Charge": {
+      "stat": "HEAT",
+      "increment": 0.15,
+      "maxRank": 5,
+      "type": "SECONDARY",
+      "polarity": "Naramon",
+      "rarity": "Uncommon",
+      "baseDrain": 6
+    },
+    "Primed Heated Charge": {
+      "stat": "HEAT",
+      "increment": 0.15,
+      "maxRank": 10,
+      "type": "SECONDARY",
+      "polarity": "Naramon",
+      "rarity": "Legendary",
+      "baseDrain": 6
+    },
+    "Deep Freeze": {
+      "stat": "COLD",
+      "increment": 0.15,
+      "maxRank": 5,
+      "type": "SECONDARY",
+      "polarity": "Naramon",
+      "rarity": "Uncommon",
+      "baseDrain": 6
+    },
+    "Pathogen Rounds": {
+      "stat": "TOXIN",
+      "increment": 0.15,
+      "maxRank": 5,
+      "type": "SECONDARY",
+      "polarity": "Naramon",
+      "rarity": "Uncommon",
+      "baseDrain": 6
+    },
+    "Molten Impact": {
+      "stat": "HEAT",
+      "increment": 0.15,
+      "maxRank": 5,
+      "type": "MELEE",
+      "polarity": "Naramon",
+      "rarity": "Uncommon",
+      "baseDrain": 6
+    },
+    "North Wind": {
+      "stat": "COLD",
+      "increment": 0.15,
+      "maxRank": 5,
+      "type": "MELEE",
+      "polarity": "Naramon",
+      "rarity": "Uncommon",
+      "baseDrain": 6
+    },
+    "Shocking Touch": {
+      "stat": "ELECTRICITY",
+      "increment": 0.15,
+      "maxRank": 5,
+      "type": "MELEE",
+      "polarity": "Naramon",
+      "rarity": "Uncommon",
+      "baseDrain": 6
+    },
+    "Fever Strike": {
+      "stat": "TOXIN",
+      "increment": 0.15,
+      "maxRank": 5,
+      "type": "MELEE",
+      "polarity": "Naramon",
+      "rarity": "Uncommon",
+      "baseDrain": 6
+    },
+    "Primed Fever Strike": {
+      "stat": "TOXIN",
+      "increment": 0.15,
+      "maxRank": 10,
+      "type": "MELEE",
+      "polarity": "Naramon",
+      "rarity": "Legendary",
+      "baseDrain": 6
+    },
+    "Incendiary Coat": {
+      "stat": "HEAT",
+      "increment": 0.15,
+      "maxRank": 5,
+      "type": "SHOTGUN",
+      "polarity": "Naramon",
+      "rarity": "Uncommon",
+      "baseDrain": 6
+    },
+    "Chilling Grasp": {
+      "stat": "COLD",
+      "increment": 0.15,
+      "maxRank": 5,
+      "type": "SHOTGUN",
+      "polarity": "Naramon",
+      "rarity": "Uncommon",
+      "baseDrain": 6
+    },
+    "Primed Chilling Grasp": {
+      "stat": "COLD",
+      "increment": 0.15,
+      "maxRank": 10,
+      "type": "SHOTGUN",
+      "polarity": "Naramon",
+      "rarity": "Legendary",
+      "baseDrain": 6
+    },
+    "Charged Shell": {
+      "stat": "ELECTRICITY",
+      "increment": 0.15,
+      "maxRank": 5,
+      "type": "SHOTGUN",
+      "polarity": "Naramon",
+      "rarity": "Uncommon",
+      "baseDrain": 6
+    },
+    "Primed Charged Shell": {
+      "stat": "ELECTRICITY",
+      "increment": 0.15,
+      "maxRank": 10,
+      "type": "SHOTGUN",
+      "polarity": "Naramon",
+      "rarity": "Legendary",
+      "baseDrain": 6
+    },
+    "Contagious Spread": {
+      "stat": "TOXIN",
+      "increment": 0.15,
+      "maxRank": 5,
+      "type": "SHOTGUN",
+      "polarity": "Naramon",
+      "rarity": "Uncommon",
+      "baseDrain": 6
+    },
+    "Heavy Caliber": {
+      "stats": [
+        {
+          "stat": "DAMAGE",
+          "increment": 0.15,
+          "maxRank": 10
+        },
+        {
+          "stat": "ACCURACY",
+          "increment": -0.05,
+          "maxRank": 10
+        }
+      ],
+      "type": "PRIMARY",
+      "polarity": "Madurai",
+      "rarity": "Rare",
+      "baseDrain": 6
+    },
+    "Magnum Force": {
+      "stats": [
+        {
+          "stat": "DAMAGE",
+          "increment": 0.15,
+          "maxRank": 10
+        },
+        {
+          "stat": "ACCURACY",
+          "increment": -0.05,
+          "maxRank": 10
+        }
+      ],
+      "type": "SECONDARY",
+      "polarity": "Naramon",
+      "rarity": "Rare",
+      "baseDrain": 6
+    },
+    "Spoiled Strike": {
+      "stats": [
+        {
+          "stat": "DAMAGE",
+          "increment": 0.25,
+          "maxRank": 3
+        },
+        {
+          "stat": "FIRE_RATE",
+          "increment": -0.05,
+          "maxRank": 3
+        }
+      ],
+      "type": "MELEE",
+      "polarity": "Madurai",
+      "rarity": "Rare",
+      "baseDrain": 6
+    },
+    "Condition Overload": {
+      "stat": "CONDITION_OVERLOAD",
+      "increment": 0.8,
+      "maxRank": 0,
+      "type": "MELEE",
+      "polarity": "Madurai",
+      "rarity": "Rare",
+      "baseDrain": 10,
+      "note": "+80% melee damage per unique status type affecting the target. Multiplicative."
+    },
+    "Galvanized Aptitude": {
+      "stats": [
+        {
+          "stat": "STATUS_CHANCE",
+          "increment": 0.072727,
+          "maxRank": 10
+        },
+        {
+          "stat": "GALV_STATUS_STACKS",
+          "increment": 0.4,
+          "maxRank": 0,
+          "condition": "on_kill",
+          "max_stacks": 2
+        }
+      ],
+      "type": "PRIMARY",
+      "polarity": "Madurai",
+      "rarity": "Rare",
+      "baseDrain": 10,
+      "conditional": "On kill: +40% damage per status type on the target for 20s, stacks up to 2x."
+    },
+    "Galvanized Shot": {
+      "stats": [
+        {
+          "stat": "STATUS_CHANCE",
+          "increment": 0.072727,
+          "maxRank": 10
+        },
+        {
+          "stat": "GALV_STATUS_STACKS",
+          "increment": 0.4,
+          "maxRank": 0,
+          "condition": "on_kill",
+          "max_stacks": 3
+        }
+      ],
+      "type": "SECONDARY",
+      "polarity": "Madurai",
+      "rarity": "Rare",
+      "baseDrain": 10,
+      "conditional": "On kill: +40% damage per status type on the target for 14s, stacks up to 3x."
+    },
+    "Galvanized Savvy": {
+      "stats": [
+        {
+          "stat": "STATUS_CHANCE",
+          "increment": 0.072727,
+          "maxRank": 10
+        },
+        {
+          "stat": "GALV_STATUS_STACKS",
+          "increment": 0.4,
+          "maxRank": 0,
+          "condition": "on_kill",
+          "max_stacks": 2
+        }
+      ],
+      "type": "SHOTGUN",
+      "polarity": "Madurai",
+      "rarity": "Rare",
+      "baseDrain": 10,
+      "conditional": "On kill: +40% damage per status type on the target for 20s, stacks up to 2x."
+    },
+    "Galvanized Chamber": {
+      "stats": [
+        {
+          "stat": "MULTISHOT",
+          "increment": 0.072727,
+          "maxRank": 10
+        },
+        {
+          "stat": "MULTISHOT",
+          "increment": 0.027273,
+          "maxRank": 10,
+          "condition": "on_kill",
+          "max_stacks": 5
+        }
+      ],
+      "type": "PRIMARY",
+      "polarity": "Madurai",
+      "rarity": "Rare",
+      "baseDrain": 10,
+      "conditional": "On Kill: +30% Multishot for 20s. Stacks up to 5x."
+    },
+    "Galvanized Diffusion": {
+      "stats": [
+        {
+          "stat": "MULTISHOT",
+          "increment": 0.1,
+          "maxRank": 10
+        },
+        {
+          "stat": "MULTISHOT",
+          "increment": 0.027273,
+          "maxRank": 10,
+          "condition": "on_kill",
+          "max_stacks": 4
+        }
+      ],
+      "type": "SECONDARY",
+      "polarity": "Madurai",
+      "rarity": "Rare",
+      "baseDrain": 10,
+      "conditional": "On Kill: +30% Multishot for 20s. Stacks up to 4x."
+    },
+    "Galvanized Hell": {
+      "stats": [
+        {
+          "stat": "MULTISHOT",
+          "increment": 0.1,
+          "maxRank": 10
+        },
+        {
+          "stat": "MULTISHOT",
+          "increment": 0.027273,
+          "maxRank": 10,
+          "condition": "on_kill",
+          "max_stacks": 4
+        }
+      ],
+      "type": "SHOTGUN",
+      "polarity": "Madurai",
+      "rarity": "Rare",
+      "baseDrain": 10,
+      "conditional": "On Kill: +30% Multishot for 20s. Stacks up to 4x."
+    },
+    "Thermite Rounds": {
+      "stats": [
+        {
+          "stat": "HEAT",
+          "increment": 0.1,
+          "maxRank": 5
+        },
+        {
+          "stat": "STATUS_CHANCE",
+          "increment": 0.1,
+          "maxRank": 5
+        }
+      ],
+      "type": "PRIMARY",
+      "polarity": "Naramon",
+      "rarity": "Uncommon",
+      "baseDrain": 6
+    },
+    "Rime Rounds": {
+      "stats": [
+        {
+          "stat": "COLD",
+          "increment": 0.1,
+          "maxRank": 5
+        },
+        {
+          "stat": "STATUS_CHANCE",
+          "increment": 0.1,
+          "maxRank": 5
+        }
+      ],
+      "type": "PRIMARY",
+      "polarity": "Naramon",
+      "rarity": "Uncommon",
+      "baseDrain": 6
+    },
+    "High Voltage": {
+      "stats": [
+        {
+          "stat": "ELECTRICITY",
+          "increment": 0.1,
+          "maxRank": 5
+        },
+        {
+          "stat": "STATUS_CHANCE",
+          "increment": 0.1,
+          "maxRank": 5
+        }
+      ],
+      "type": "PRIMARY",
+      "polarity": "Naramon",
+      "rarity": "Uncommon",
+      "baseDrain": 6
+    },
+    "Malignant Force": {
+      "stats": [
+        {
+          "stat": "TOXIN",
+          "increment": 0.1,
+          "maxRank": 5
+        },
+        {
+          "stat": "STATUS_CHANCE",
+          "increment": 0.1,
+          "maxRank": 5
+        }
+      ],
+      "type": "PRIMARY",
+      "polarity": "Naramon",
+      "rarity": "Uncommon",
+      "baseDrain": 6
+    },
+    "Scattering Inferno": {
+      "stats": [
+        {
+          "stat": "HEAT",
+          "increment": 0.1,
+          "maxRank": 5
+        },
+        {
+          "stat": "STATUS_CHANCE",
+          "increment": 0.1,
+          "maxRank": 5
+        }
+      ],
+      "type": "SHOTGUN",
+      "polarity": "Naramon",
+      "rarity": "Uncommon",
+      "baseDrain": 6
+    },
+    "Frigid Blast": {
+      "stats": [
+        {
+          "stat": "COLD",
+          "increment": 0.1,
+          "maxRank": 5
+        },
+        {
+          "stat": "STATUS_CHANCE",
+          "increment": 0.1,
+          "maxRank": 5
+        }
+      ],
+      "type": "SHOTGUN",
+      "polarity": "Naramon",
+      "rarity": "Uncommon",
+      "baseDrain": 6
+    },
+    "Shell Shock": {
+      "stats": [
+        {
+          "stat": "ELECTRICITY",
+          "increment": 0.1,
+          "maxRank": 5
+        },
+        {
+          "stat": "STATUS_CHANCE",
+          "increment": 0.1,
+          "maxRank": 5
+        }
+      ],
+      "type": "SHOTGUN",
+      "polarity": "Naramon",
+      "rarity": "Uncommon",
+      "baseDrain": 6
+    },
+    "Toxic Barrage": {
+      "stats": [
+        {
+          "stat": "TOXIN",
+          "increment": 0.1,
+          "maxRank": 5
+        },
+        {
+          "stat": "STATUS_CHANCE",
+          "increment": 0.1,
+          "maxRank": 5
+        }
+      ],
+      "type": "SHOTGUN",
+      "polarity": "Naramon",
+      "rarity": "Uncommon",
+      "baseDrain": 6
+    },
+    "Pistol Pestilence": {
+      "stats": [
+        {
+          "stat": "TOXIN",
+          "increment": 0.1,
+          "maxRank": 5
+        },
+        {
+          "stat": "STATUS_CHANCE",
+          "increment": 0.1,
+          "maxRank": 5
+        }
+      ],
+      "type": "SECONDARY",
+      "polarity": "Naramon",
+      "rarity": "Uncommon",
+      "baseDrain": 6
+    },
+    "Frostbite": {
+      "stats": [
+        {
+          "stat": "COLD",
+          "increment": 0.1,
+          "maxRank": 5
+        },
+        {
+          "stat": "STATUS_CHANCE",
+          "increment": 0.1,
+          "maxRank": 5
+        }
+      ],
+      "type": "SECONDARY",
+      "polarity": "Naramon",
+      "rarity": "Uncommon",
+      "baseDrain": 6
+    },
+    "Jolt": {
+      "stats": [
+        {
+          "stat": "ELECTRICITY",
+          "increment": 0.1,
+          "maxRank": 5
+        },
+        {
+          "stat": "STATUS_CHANCE",
+          "increment": 0.1,
+          "maxRank": 5
+        }
+      ],
+      "type": "SECONDARY",
+      "polarity": "Naramon",
+      "rarity": "Uncommon",
+      "baseDrain": 6
+    },
+    "Scorch": {
+      "stats": [
+        {
+          "stat": "HEAT",
+          "increment": 0.1,
+          "maxRank": 5
+        },
+        {
+          "stat": "STATUS_CHANCE",
+          "increment": 0.1,
+          "maxRank": 5
+        }
+      ],
+      "type": "SECONDARY",
+      "polarity": "Naramon",
+      "rarity": "Uncommon",
+      "baseDrain": 6
+    },
+    "Vicious Frost": {
+      "stats": [
+        {
+          "stat": "COLD",
+          "increment": 0.1,
+          "maxRank": 5
+        },
+        {
+          "stat": "STATUS_CHANCE",
+          "increment": 0.1,
+          "maxRank": 5
+        }
+      ],
+      "type": "MELEE",
+      "polarity": "Naramon",
+      "rarity": "Uncommon",
+      "baseDrain": 6
+    },
+    "Volcanic Edge": {
+      "stats": [
+        {
+          "stat": "HEAT",
+          "increment": 0.1,
+          "maxRank": 5
+        },
+        {
+          "stat": "STATUS_CHANCE",
+          "increment": 0.1,
+          "maxRank": 5
+        }
+      ],
+      "type": "MELEE",
+      "polarity": "Naramon",
+      "rarity": "Uncommon",
+      "baseDrain": 6
+    },
+    "Voltaic Strike": {
+      "stats": [
+        {
+          "stat": "ELECTRICITY",
+          "increment": 0.1,
+          "maxRank": 5
+        },
+        {
+          "stat": "STATUS_CHANCE",
+          "increment": 0.1,
+          "maxRank": 5
+        }
+      ],
+      "type": "MELEE",
+      "polarity": "Naramon",
+      "rarity": "Uncommon",
+      "baseDrain": 6
+    },
+    "Virulent Scourge": {
+      "stats": [
+        {
+          "stat": "TOXIN",
+          "increment": 0.1,
+          "maxRank": 5
+        },
+        {
+          "stat": "STATUS_CHANCE",
+          "increment": 0.1,
+          "maxRank": 5
+        }
+      ],
+      "type": "MELEE",
+      "polarity": "Naramon",
+      "rarity": "Uncommon",
+      "baseDrain": 6
+    },
+    "Crash Course": {
+      "stat": "IMPACT",
+      "increment": 0.2,
+      "maxRank": 5,
+      "type": "PRIMARY",
+      "polarity": "Naramon",
+      "rarity": "Uncommon",
+      "baseDrain": 4
+    },
+    "Piercing Hit": {
+      "stat": "PUNCTURE",
+      "increment": 0.15,
+      "maxRank": 5,
+      "type": "PRIMARY",
+      "polarity": "Naramon",
+      "rarity": "Uncommon",
+      "baseDrain": 4
+    },
+    "Sawtooth Clip": {
+      "stat": "SLASH",
+      "increment": 0.15,
+      "maxRank": 5,
+      "type": "PRIMARY",
+      "polarity": "Naramon",
+      "rarity": "Uncommon",
+      "baseDrain": 4
+    },
+    "Maim": {
+      "stat": "SLASH",
+      "increment": 0.2,
+      "maxRank": 5,
+      "type": "MELEE",
+      "polarity": "Naramon",
+      "rarity": "Rare",
+      "baseDrain": 4
+    },
+    "Primed Bane of Grineer": {
+      "stat": "FACTION_GRINEER",
+      "increment": 0.055,
+      "maxRank": 10,
+      "type": "PRIMARY",
+      "polarity": "Madurai",
+      "rarity": "Legendary",
+      "baseDrain": 4
+    },
+    "Bane of Grineer": {
+      "stat": "FACTION_GRINEER",
+      "increment": 0.05,
+      "maxRank": 5,
+      "type": "PRIMARY",
+      "polarity": "Madurai",
+      "rarity": "Uncommon",
+      "baseDrain": 4
+    },
+    "Bane of Corpus": {
+      "stat": "FACTION_CORPUS",
+      "increment": 0.05,
+      "maxRank": 5,
+      "type": "PRIMARY",
+      "polarity": "Madurai",
+      "rarity": "Uncommon",
+      "baseDrain": 4
+    },
+    "Bane of Infested": {
+      "stat": "FACTION_INFESTED",
+      "increment": 0.05,
+      "maxRank": 5,
+      "type": "PRIMARY",
+      "polarity": "Madurai",
+      "rarity": "Uncommon",
+      "baseDrain": 4
+    },
+    "Bane of Orokin": {
+      "stat": "FACTION_OROKIN",
+      "increment": 0.05,
+      "maxRank": 5,
+      "type": "PRIMARY",
+      "polarity": "Madurai",
+      "rarity": "Uncommon",
+      "baseDrain": 4
+    },
+    "Sacrificial Pressure": {
+      "stat": "DAMAGE",
+      "increment": 0.1,
+      "maxRank": 10,
+      "type": "MELEE",
+      "polarity": "Umbra",
+      "rarity": "Legendary",
+      "baseDrain": 4,
+      "setBonus": "Sacrificial Steel",
+      "note": "Also x1.33 damage to Sentient at max rank (not applied)."
+    },
+    "Blood Rush": {
+      "stats": [
+        {
+          "stat": "CRIT_CHANCE",
+          "increment": 0.066667,
+          "maxRank": 5,
+          "condition": "per_combo",
+          "max_stacks": 1
+        }
+      ],
+      "type": "MELEE",
+      "polarity": "Madurai",
+      "rarity": "Uncommon",
+      "baseDrain": 4,
+      "conditional": "Critical chance per combo multiplier above 1x."
+    },
+    "Weeping Wounds": {
+      "stats": [
+        {
+          "stat": "STATUS_CHANCE",
+          "increment": 0.066667,
+          "maxRank": 5,
+          "condition": "per_combo",
+          "max_stacks": 1
+        }
+      ],
+      "type": "MELEE",
+      "polarity": "Naramon",
+      "rarity": "Uncommon",
+      "baseDrain": 4,
+      "conditional": "Status chance per combo multiplier above 1x."
+    },
+    "Drifting Contact": {
+      "stats": [
+        {
+          "stat": "COMBO_DURATION",
+          "increment": 2.5,
+          "maxRank": 3
+        },
+        {
+          "stat": "STATUS_CHANCE",
+          "increment": 0.1,
+          "maxRank": 3
+        }
+      ],
+      "type": "MELEE",
+      "polarity": "Naramon",
+      "rarity": "Rare",
+      "baseDrain": 4
+    },
+    "Body Count": {
+      "stat": "COMBO_DURATION",
+      "increment": 12,
+      "maxRank": 0,
+      "type": "MELEE",
+      "polarity": "Madurai",
+      "rarity": "Uncommon",
+      "baseDrain": 2,
+      "note": "+12s combo duration (flat)"
+    },
+    "Gladiator Might": {
+      "stat": "CRIT_DAMAGE",
+      "increment": 0.1,
+      "maxRank": 5,
+      "type": "MELEE",
+      "polarity": "Madurai",
+      "rarity": "Uncommon",
+      "baseDrain": 4,
+      "setBonus": "Gladiator Set"
+    },
+    "Gladiator Vice": {
+      "stat": "FIRE_RATE",
+      "increment": 0.05,
+      "maxRank": 5,
+      "type": "MELEE",
+      "polarity": "Madurai",
+      "rarity": "Common",
+      "baseDrain": 4,
+      "setBonus": "Gladiator Set"
+    },
+    "Vigilante Armaments": {
+      "stat": "MULTISHOT",
+      "increment": 0.1,
+      "maxRank": 5,
+      "type": "PRIMARY",
+      "polarity": "Naramon",
+      "rarity": "Uncommon",
+      "baseDrain": 4,
+      "setBonus": "Vigilante Set"
+    },
+    "Shredder": {
+      "stat": "SLASH",
+      "increment": 0.15,
+      "maxRank": 5,
+      "type": "SHOTGUN",
+      "polarity": "Naramon",
+      "rarity": "Common",
+      "baseDrain": 4
+    },
+    "Cleanse The Murmur": {
+      "stat": "FACTION_MURMUR",
+      "increment": 0.05,
+      "maxRank": 5,
+      "type": "SHOTGUN",
+      "polarity": "Madurai",
+      "rarity": "Uncommon",
+      "baseDrain": 4
+    },
+    "Cleanse Infested": {
+      "stat": "FACTION_INFESTED",
+      "increment": 0.05,
+      "maxRank": 5,
+      "type": "SHOTGUN",
+      "polarity": "Madurai",
+      "rarity": "Uncommon",
+      "baseDrain": 4
+    },
+    "Cleanse Grineer": {
+      "stat": "FACTION_GRINEER",
+      "increment": 0.05,
+      "maxRank": 5,
+      "type": "SHOTGUN",
+      "polarity": "Madurai",
+      "rarity": "Uncommon",
+      "baseDrain": 4
+    },
+    "Cleanse Orokin": {
+      "stat": "FACTION_OROKIN",
+      "increment": 0.05,
+      "maxRank": 5,
+      "type": "SHOTGUN",
+      "polarity": "Madurai",
+      "rarity": "Uncommon",
+      "baseDrain": 4
+    },
+    "Cleanse Corpus": {
+      "stat": "FACTION_CORPUS",
+      "increment": 0.05,
+      "maxRank": 5,
+      "type": "SHOTGUN",
+      "polarity": "Madurai",
+      "rarity": "Uncommon",
+      "baseDrain": 4
+    },
+    "Tactical Pump": {
+      "stat": "RELOAD_SPEED",
+      "increment": 0.1,
+      "maxRank": 5,
+      "type": "SHOTGUN",
+      "polarity": "Naramon",
+      "rarity": "Uncommon",
+      "baseDrain": 2
+    },
+    "Galvanized Acceleration": {
+      "maxRank": 10,
+      "type": "SHOTGUN",
+      "polarity": "Madurai",
+      "rarity": "Rare",
+      "baseDrain": 2,
+      "note": "+30% Projectile Speed and +30% Beam Range On Kill: +30% Projectile Speed and +30% Beam Range for 10s. Stacks up to 2x.",
+      "exilus": true
+    },
+    "Lingering Torment": {
+      "stat": "STATUS_DURATION",
+      "increment": 0.15,
+      "maxRank": 5,
+      "type": "SHOTGUN",
+      "polarity": "Madurai",
+      "rarity": "Common",
+      "baseDrain": 6
+    },
+    "Disruptor": {
+      "stat": "IMPACT",
+      "increment": 0.15,
+      "maxRank": 5,
+      "type": "SHOTGUN",
+      "polarity": "Naramon",
+      "rarity": "Common",
+      "baseDrain": 4
+    },
+    "Shotgun Barrage": {
+      "stat": "FIRE_RATE",
+      "increment": 0.15,
+      "maxRank": 5,
+      "type": "SHOTGUN",
+      "polarity": "Madurai",
+      "rarity": "Uncommon",
+      "baseDrain": 4
+    },
+    "Sweeping Serration": {
+      "stat": "SLASH",
+      "increment": 0.2,
+      "maxRank": 5,
+      "type": "SHOTGUN",
+      "polarity": "Naramon",
+      "rarity": "Rare",
+      "baseDrain": 6
+    },
+    "Full Contact": {
+      "stat": "IMPACT",
+      "increment": 0.2,
+      "maxRank": 5,
+      "type": "SHOTGUN",
+      "polarity": "Naramon",
+      "rarity": "Rare",
+      "baseDrain": 6
+    },
+    "Breach Loader": {
+      "stat": "PUNCTURE",
+      "increment": 0.2,
+      "maxRank": 5,
+      "type": "SHOTGUN",
+      "polarity": "Naramon",
+      "rarity": "Rare",
+      "baseDrain": 6
+    },
+    "Ammo Stock": {
+      "stat": "MAG_SIZE",
+      "increment": 0.1,
+      "maxRank": 5,
+      "type": "SHOTGUN",
+      "polarity": "Naramon",
+      "rarity": "Uncommon",
+      "baseDrain": 2
+    },
+    "Flechette": {
+      "stat": "PUNCTURE",
+      "increment": 0.15,
+      "maxRank": 5,
+      "type": "SHOTGUN",
+      "polarity": "Naramon",
+      "rarity": "Common",
+      "baseDrain": 4
+    },
+    "Shotgun Elementalist": {
+      "stats": [
+        {
+          "stat": "STATUS_DAMAGE",
+          "increment": 0.15,
+          "maxRank": 5
+        },
+        {
+          "stat": "MAG_SIZE",
+          "increment": 0.1,
+          "maxRank": 5
+        }
+      ],
+      "type": "SHOTGUN",
+      "polarity": "Vazarin",
+      "rarity": "Uncommon",
+      "baseDrain": 4
+    },
+    "Semi-Shotgun Cannonade": {
+      "stats": [
+        {
+          "stat": "DAMAGE",
+          "increment": 0.4,
+          "maxRank": 5
+        },
+        {
+          "stat": "PUNCH_THROUGH",
+          "increment": 0.25,
+          "maxRank": 5
+        }
+      ],
+      "type": "SHOTGUN",
+      "polarity": "Vazarin",
+      "rarity": "Uncommon",
+      "baseDrain": 4
+    },
+    "Primed Cleanse The Murmur": {
+      "stat": "FACTION_MURMUR",
+      "increment": 0.05,
+      "maxRank": 10,
+      "type": "SHOTGUN",
+      "polarity": "Madurai",
+      "rarity": "Legendary",
+      "baseDrain": 4
+    },
+    "Primed Cleanse Infested": {
+      "stat": "FACTION_INFESTED",
+      "increment": 0.05,
+      "maxRank": 10,
+      "type": "SHOTGUN",
+      "polarity": "Madurai",
+      "rarity": "Legendary",
+      "baseDrain": 4
+    },
+    "Primed Cleanse Grineer": {
+      "stat": "FACTION_GRINEER",
+      "increment": 0.05,
+      "maxRank": 10,
+      "type": "SHOTGUN",
+      "polarity": "Madurai",
+      "rarity": "Legendary",
+      "baseDrain": 4
+    },
+    "Primed Cleanse Orokin": {
+      "stat": "FACTION_OROKIN",
+      "increment": 0.05,
+      "maxRank": 10,
+      "type": "SHOTGUN",
+      "polarity": "Madurai",
+      "rarity": "Legendary",
+      "baseDrain": 4
+    },
+    "Primed Cleanse Corpus": {
+      "stat": "FACTION_CORPUS",
+      "increment": 0.05,
+      "maxRank": 10,
+      "type": "SHOTGUN",
+      "polarity": "Madurai",
+      "rarity": "Legendary",
+      "baseDrain": 4
+    },
+    "Primed Tactical Pump": {
+      "stat": "RELOAD_SPEED",
+      "increment": 0.090909,
+      "maxRank": 10,
+      "type": "SHOTGUN",
+      "polarity": "Naramon",
+      "rarity": "Legendary",
+      "baseDrain": 2
+    },
+    "Primed Ammo Stock": {
+      "stat": "MAG_SIZE",
+      "increment": 0.1,
+      "maxRank": 10,
+      "type": "SHOTGUN",
+      "polarity": "Naramon",
+      "rarity": "Legendary",
+      "baseDrain": 2
+    },
+    "Nano-Applicator": {
+      "stats": [
+        {
+          "stat": "STATUS_CHANCE",
+          "increment": 0.15,
+          "maxRank": 5,
+          "condition": "while_aiming",
+          "max_stacks": 1
+        }
+      ],
+      "type": "SHOTGUN",
+      "polarity": "Madurai",
+      "rarity": "Rare",
+      "baseDrain": 4,
+      "conditional": "On Ability Cast: +90% Status Chance when Aiming for 9s"
+    },
+    "Repeater Clip": {
+      "stats": [
+        {
+          "stat": "FIRE_RATE",
+          "increment": 0.175,
+          "maxRank": 5,
+          "condition": "while_aiming",
+          "max_stacks": 1
+        }
+      ],
+      "type": "SHOTGUN",
+      "polarity": "Madurai",
+      "rarity": "Uncommon",
+      "baseDrain": 4,
+      "conditional": "On Reload: +105% Fire Rate when Aiming for 9s"
+    },
+    "Shrapnel Shot": {
+      "stats": [
+        {
+          "stat": "CRIT_DAMAGE",
+          "increment": 0.165,
+          "maxRank": 5,
+          "condition": "while_aiming",
+          "max_stacks": 1
+        }
+      ],
+      "type": "SHOTGUN",
+      "polarity": "Madurai",
+      "rarity": "Common",
+      "baseDrain": 4,
+      "conditional": "On Kill: +99% Critical Damage when Aiming for 9s"
+    },
+    "Laser Sight": {
+      "stats": [
+        {
+          "stat": "CRIT_CHANCE",
+          "increment": 0.2,
+          "maxRank": 5,
+          "condition": "while_aiming",
+          "max_stacks": 1
+        }
+      ],
+      "type": "SHOTGUN",
+      "polarity": "Madurai",
+      "rarity": "Uncommon",
+      "baseDrain": 4,
+      "conditional": "On Weak Point Hit: +120% Critical Chance when Aiming for 9s"
+    },
+    "Seeking Fury": {
+      "stats": [
+        {
+          "stat": "RELOAD_SPEED",
+          "increment": 0.025,
+          "maxRank": 5
+        },
+        {
+          "stat": "PUNCH_THROUGH",
+          "increment": 0.2,
+          "maxRank": 5
+        }
+      ],
+      "type": "SHOTGUN",
+      "polarity": "Madurai",
+      "rarity": "Rare",
+      "baseDrain": 6
+    },
+    "Atomic Fallout": {
+      "stats": [
+        {
+          "stat": "RADIATION",
+          "increment": 0.15,
+          "maxRank": 3
+        },
+        {
+          "stat": "MAG_SIZE",
+          "increment": 0.1,
+          "maxRank": 3
+        }
+      ],
+      "type": "SHOTGUN",
+      "polarity": "Madurai",
+      "rarity": "Rare",
+      "baseDrain": 4
+    },
+    "Magnetic Strafe": {
+      "stats": [
+        {
+          "stat": "MAGNETIC",
+          "increment": 0.15,
+          "maxRank": 3
+        },
+        {
+          "stat": "FIRE_RATE",
+          "increment": 0.1,
+          "maxRank": 3
+        }
+      ],
+      "type": "SHOTGUN",
+      "polarity": "Madurai",
+      "rarity": "Rare",
+      "baseDrain": 4
+    },
+    "Burdened Magazine": {
+      "stats": [
+        {
+          "stat": "MAG_SIZE",
+          "increment": 0.1,
+          "maxRank": 5
+        },
+        {
+          "stat": "RELOAD_SPEED",
+          "increment": -0.03,
+          "maxRank": 5
+        }
+      ],
+      "type": "SHOTGUN",
+      "polarity": "Naramon",
+      "rarity": "Rare",
+      "baseDrain": 6
+    },
+    "Frail Momentum": {
+      "stats": [
+        {
+          "stat": "FIRE_RATE",
+          "increment": 0.15,
+          "maxRank": 5
+        },
+        {
+          "stat": "DAMAGE",
+          "increment": -0.025,
+          "maxRank": 5
+        }
+      ],
+      "type": "SHOTGUN",
+      "polarity": "Madurai",
+      "rarity": "Rare",
+      "baseDrain": 4
+    },
+    "Vicious Spread": {
+      "stats": [
+        {
+          "stat": "DAMAGE",
+          "increment": 0.15,
+          "maxRank": 5
+        },
+        {
+          "stat": "ACCURACY",
+          "increment": -0.1,
+          "maxRank": 5
+        }
+      ],
+      "type": "SHOTGUN",
+      "polarity": "Madurai",
+      "rarity": "Rare",
+      "baseDrain": 4
+    },
+    "Critical Deceleration": {
+      "stats": [
+        {
+          "stat": "CRIT_CHANCE",
+          "increment": 0.333333,
+          "maxRank": 5
+        },
+        {
+          "stat": "FIRE_RATE",
+          "increment": -0.033333,
+          "maxRank": 5
+        }
+      ],
+      "type": "SHOTGUN",
+      "polarity": "Madurai",
+      "rarity": "Rare",
+      "baseDrain": 4
+    },
+    "Tainted Shell": {
+      "stats": [
+        {
+          "stat": "ACCURACY",
+          "increment": 0.07,
+          "maxRank": 10
+        },
+        {
+          "stat": "FIRE_RATE",
+          "increment": -0.05,
+          "maxRank": 10
+        }
+      ],
+      "type": "SHOTGUN",
+      "polarity": "Vazarin",
+      "rarity": "Rare",
+      "baseDrain": 4
+    },
+    "Chilling Reload": {
+      "stats": [
+        {
+          "stat": "COLD",
+          "increment": 0.15,
+          "maxRank": 3
+        },
+        {
+          "stat": "RELOAD_SPEED",
+          "increment": 0.1,
+          "maxRank": 3
+        }
+      ],
+      "type": "SHOTGUN",
+      "polarity": "Madurai",
+      "rarity": "Rare",
+      "baseDrain": 2
+    },
+    "Blaze": {
+      "stats": [
+        {
+          "stat": "DAMAGE",
+          "increment": 0.15,
+          "maxRank": 3
+        },
+        {
+          "stat": "HEAT",
+          "increment": 0.15,
+          "maxRank": 3
+        }
+      ],
+      "type": "SHOTGUN",
+      "polarity": "Madurai",
+      "rarity": "Rare",
+      "baseDrain": 6
+    },
+    "Accelerated Blast": {
+      "stats": [
+        {
+          "stat": "FIRE_RATE",
+          "increment": 0.15,
+          "maxRank": 3
+        },
+        {
+          "stat": "PUNCTURE",
+          "increment": 0.15,
+          "maxRank": 3
+        }
+      ],
+      "type": "SHOTGUN",
+      "polarity": "Madurai",
+      "rarity": "Rare",
+      "baseDrain": 6
+    },
+    "Vigilante Fervor": {
+      "stat": "FIRE_RATE",
+      "increment": 0.075,
+      "maxRank": 5,
+      "type": "PRIMARY",
+      "polarity": "Madurai",
+      "rarity": "Uncommon",
+      "baseDrain": 4
+    },
+    "Hunter Track": {
+      "stat": "STATUS_DURATION",
+      "increment": 0.15,
+      "maxRank": 5,
+      "type": "PRIMARY",
+      "polarity": "Madurai",
+      "rarity": "Rare",
+      "baseDrain": 4
+    },
+    "Hunter Munitions": {
+      "stat": "SLASH_ON_CRIT",
+      "increment": 0.05,
+      "maxRank": 5,
+      "type": "PRIMARY",
+      "polarity": "Madurai",
+      "rarity": "Uncommon",
+      "baseDrain": 4
+    },
+    "Saxum Thorax": {
+      "stats": [
+        {
+          "stat": "IMPACT",
+          "increment": 0.15,
+          "maxRank": 5
+        },
+        {
+          "stat": "STATUS_CHANCE",
+          "increment": 0.1,
+          "maxRank": 5
+        }
+      ],
+      "type": "MELEE",
+      "polarity": "Naramon",
+      "rarity": "Common",
+      "baseDrain": 4
+    },
+    "Saxum Spittle": {
+      "stats": [
+        {
+          "stat": "IMPACT",
+          "increment": 0.15,
+          "maxRank": 5
+        },
+        {
+          "stat": "STATUS_CHANCE",
+          "increment": 0.1,
+          "maxRank": 5
+        }
+      ],
+      "type": "SECONDARY",
+      "polarity": "Naramon",
+      "rarity": "Rare",
+      "baseDrain": 4
+    },
+    "Jugulus Spines": {
+      "stats": [
+        {
+          "stat": "PUNCTURE",
+          "increment": 0.15,
+          "maxRank": 5
+        },
+        {
+          "stat": "STATUS_CHANCE",
+          "increment": 0.1,
+          "maxRank": 5
+        }
+      ],
+      "type": "SECONDARY",
+      "polarity": "Naramon",
+      "rarity": "Rare",
+      "baseDrain": 4
+    },
+    "Jugulus Barbs": {
+      "stats": [
+        {
+          "stat": "PUNCTURE",
+          "increment": 0.15,
+          "maxRank": 5
+        },
+        {
+          "stat": "STATUS_CHANCE",
+          "increment": 0.1,
+          "maxRank": 5
+        }
+      ],
+      "type": "MELEE",
+      "polarity": "Naramon",
+      "rarity": "Common",
+      "baseDrain": 4
+    },
+    "Augur Seeker": {
+      "stat": "STATUS_DURATION",
+      "increment": 0.15,
+      "maxRank": 5,
+      "type": "SECONDARY",
+      "polarity": "Madurai",
+      "rarity": "Rare",
+      "baseDrain": 2
+    },
+    "Augur Pact": {
+      "stat": "DAMAGE",
+      "increment": 0.15,
+      "maxRank": 5,
+      "type": "SECONDARY",
+      "polarity": "Naramon",
+      "rarity": "Common",
+      "baseDrain": 2
+    },
+    "Carnis Stinger": {
+      "stats": [
+        {
+          "stat": "SLASH",
+          "increment": 0.15,
+          "maxRank": 5
+        },
+        {
+          "stat": "STATUS_CHANCE",
+          "increment": 0.1,
+          "maxRank": 5
+        }
+      ],
+      "type": "SECONDARY",
+      "polarity": "Naramon",
+      "rarity": "Rare",
+      "baseDrain": 4
+    },
+    "Carnis Mandible": {
+      "stats": [
+        {
+          "stat": "SLASH",
+          "increment": 0.15,
+          "maxRank": 5
+        },
+        {
+          "stat": "STATUS_CHANCE",
+          "increment": 0.1,
+          "maxRank": 5
+        }
+      ],
+      "type": "MELEE",
+      "polarity": "Naramon",
+      "rarity": "Common",
+      "baseDrain": 4
+    },
+    "Primary Acuity": {
+      "stat": "WEAK_POINT_DAMAGE",
+      "increment": 0.318182,
+      "maxRank": 10,
+      "type": "PRIMARY",
+      "polarity": "Naramon",
+      "rarity": "Rare",
+      "baseDrain": 6,
+      "note": "+350% Weak Point Critical Chance. Multishot cannot be modified."
+    },
+    "Fast Hands": {
+      "stat": "RELOAD_SPEED",
+      "increment": 0.05,
+      "maxRank": 5,
+      "type": "PRIMARY",
+      "polarity": "Naramon",
+      "rarity": "Common",
+      "baseDrain": 2
+    },
+    "Continuous Misery": {
+      "stat": "STATUS_DURATION",
+      "increment": 0.25,
+      "maxRank": 3,
+      "type": "PRIMARY",
+      "polarity": "Madurai",
+      "rarity": "Common",
+      "baseDrain": 4
+    },
+    "Rupture": {
+      "stat": "IMPACT",
+      "increment": 0.15,
+      "maxRank": 5,
+      "type": "PRIMARY",
+      "polarity": "Naramon",
+      "rarity": "Common",
+      "baseDrain": 4
+    },
+    "Bane of The Murmur": {
+      "stat": "FACTION_MURMUR",
+      "increment": 0.05,
+      "maxRank": 5,
+      "type": "PRIMARY",
+      "polarity": "Madurai",
+      "rarity": "Uncommon",
+      "baseDrain": 4
+    },
+    "Fanged Fusillade": {
+      "stat": "SLASH",
+      "increment": 0.2,
+      "maxRank": 5,
+      "type": "PRIMARY",
+      "polarity": "Naramon",
+      "rarity": "Rare",
+      "baseDrain": 6
+    },
+    "Piercing Caliber": {
+      "stat": "PUNCTURE",
+      "increment": 0.2,
+      "maxRank": 5,
+      "type": "PRIMARY",
+      "polarity": "Naramon",
+      "rarity": "Rare",
+      "baseDrain": 6
+    },
+    "Magazine Warp": {
+      "stat": "MAG_SIZE",
+      "increment": 0.05,
+      "maxRank": 5,
+      "type": "PRIMARY",
+      "polarity": "Naramon",
+      "rarity": "Common",
+      "baseDrain": 4
+    },
+    "Internal Bleeding": {
+      "maxRank": 5,
+      "type": "PRIMARY",
+      "polarity": "Madurai",
+      "rarity": "Rare",
+      "baseDrain": 10,
+      "note": "Impact Status Effects have 35% chance to apply a Slash Status Effect (x2 when Fire Rate is below 2.5)"
+    },
+    "Charged Chamber": {
+      "stat": "DAMAGE_FIRST_SHOT",
+      "increment": 0.1,
+      "maxRank": 3,
+      "type": "PRIMARY",
+      "polarity": "Madurai",
+      "rarity": "Uncommon",
+      "baseDrain": 6,
+      "note": "Sniper rifles only"
+    },
+    "Target Acquired": {
+      "stat": "WEAK_POINT_DAMAGE",
+      "increment": 0.1,
+      "maxRank": 5,
+      "type": "PRIMARY",
+      "polarity": "Madurai",
+      "rarity": "Rare",
+      "baseDrain": 6,
+      "note": "Sniper rifles only"
+    },
+    "Rifle Elementalist": {
+      "stats": [
+        {
+          "stat": "STATUS_DAMAGE",
+          "increment": 0.15,
+          "maxRank": 5
+        },
+        {
+          "stat": "PUNCH_THROUGH",
+          "increment": 0.1,
+          "maxRank": 5
+        }
+      ],
+      "type": "PRIMARY",
+      "polarity": "Vazarin",
+      "rarity": "Uncommon",
+      "baseDrain": 4
+    },
+    "Semi-Rifle Cannonade": {
+      "stats": [
+        {
+          "stat": "DAMAGE",
+          "increment": 0.4,
+          "maxRank": 5
+        },
+        {
+          "stat": "PUNCH_THROUGH",
+          "increment": 0.25,
+          "maxRank": 5
+        }
+      ],
+      "type": "PRIMARY",
+      "polarity": "Vazarin",
+      "rarity": "Uncommon",
+      "baseDrain": 4
+    },
+    "Primed Chamber": {
+      "stat": "DAMAGE_FIRST_SHOT",
+      "increment": 0.25,
+      "maxRank": 3,
+      "type": "PRIMARY",
+      "polarity": "Madurai",
+      "rarity": "Rare",
+      "baseDrain": 4,
+      "note": "Sniper rifles only"
+    },
+    "Split Flights": {
+      "stats": [
+        {
+          "stat": "MULTISHOT",
+          "increment": 0.166667,
+          "maxRank": 5,
+          "condition": "on_hit",
+          "max_stacks": 4
+        },
+        {
+          "stat": "ACCURACY",
+          "increment": -0.3,
+          "maxRank": 5,
+          "condition": "on_hit",
+          "max_stacks": 4
+        }
+      ],
+      "type": "PRIMARY",
+      "polarity": "Madurai",
+      "rarity": "Rare",
+      "baseDrain": 10,
+      "conditional": "On Hit: +100% Multishot -180% Accuracy for 2s. Stacks up to 4x. (Non-AOE Bows)",
+      "note": "Bows only"
+    },
+    "Primed Fast Hands": {
+      "stat": "RELOAD_SPEED",
+      "increment": 0.05,
+      "maxRank": 10,
+      "type": "PRIMARY",
+      "polarity": "Naramon",
+      "rarity": "Legendary",
+      "baseDrain": 2
+    },
+    "Primed Magazine Warp": {
+      "stat": "MAG_SIZE",
+      "increment": 0.05,
+      "maxRank": 10,
+      "type": "PRIMARY",
+      "polarity": "Naramon",
+      "rarity": "Legendary",
+      "baseDrain": 4
+    },
+    "Primed Bane of The Murmur": {
+      "stat": "FACTION_MURMUR",
+      "increment": 0.05,
+      "maxRank": 10,
+      "type": "PRIMARY",
+      "polarity": "Madurai",
+      "rarity": "Legendary",
+      "baseDrain": 4
+    },
+    "Primed Bane of Infested": {
+      "stat": "FACTION_INFESTED",
+      "increment": 0.05,
+      "maxRank": 10,
+      "type": "PRIMARY",
+      "polarity": "Madurai",
+      "rarity": "Legendary",
+      "baseDrain": 4
+    },
+    "Primed Bane of Orokin": {
+      "stat": "FACTION_OROKIN",
+      "increment": 0.05,
+      "maxRank": 10,
+      "type": "PRIMARY",
+      "polarity": "Madurai",
+      "rarity": "Legendary",
+      "baseDrain": 4
+    },
+    "Primed Bane of Corpus": {
+      "stat": "FACTION_CORPUS",
+      "increment": 0.05,
+      "maxRank": 10,
+      "type": "PRIMARY",
+      "polarity": "Madurai",
+      "rarity": "Legendary",
+      "baseDrain": 4
+    },
+    "Catalyzer Link": {
+      "stats": [
+        {
+          "stat": "STATUS_CHANCE",
+          "increment": 0.1,
+          "maxRank": 5,
+          "condition": "while_aiming",
+          "max_stacks": 1
+        }
+      ],
+      "type": "PRIMARY",
+      "polarity": "Madurai",
+      "rarity": "Common",
+      "baseDrain": 4,
+      "conditional": "On Ability Cast: +60% Status Chance when Aiming for 9s"
+    },
+    "Spring-Loaded Chamber": {
+      "stats": [
+        {
+          "stat": "FIRE_RATE",
+          "increment": 0.125,
+          "maxRank": 5,
+          "condition": "while_aiming",
+          "max_stacks": 1
+        }
+      ],
+      "type": "PRIMARY",
+      "polarity": "Madurai",
+      "rarity": "Uncommon",
+      "baseDrain": 2,
+      "conditional": "On Reload: +75% Fire Rate when Aiming for 9s",
+      "note": "Assault rifles only"
+    },
+    "Bladed Rounds": {
+      "stats": [
+        {
+          "stat": "CRIT_DAMAGE",
+          "increment": 0.2,
+          "maxRank": 5,
+          "condition": "while_aiming",
+          "max_stacks": 1
+        }
+      ],
+      "type": "PRIMARY",
+      "polarity": "Madurai",
+      "rarity": "Uncommon",
+      "baseDrain": 4,
+      "conditional": "On Kill: +120% Critical Damage when Aiming for 9s"
+    },
+    "Galvanized Scope": {
+      "stats": [
+        {
+          "stat": "CRIT_CHANCE",
+          "increment": 0.109091,
+          "maxRank": 10,
+          "condition": "while_aiming",
+          "max_stacks": 1
+        },
+        {
+          "stat": "CRIT_CHANCE",
+          "increment": 0.036364,
+          "maxRank": 10,
+          "condition": "on_kill",
+          "max_stacks": 5
+        }
+      ],
+      "type": "PRIMARY",
+      "polarity": "Madurai",
+      "rarity": "Rare",
+      "baseDrain": 2,
+      "conditional": "On Weak Point Hit: +120% Critical Chance when Aiming for 12s On Weak Point Kill: +40% Critical Chance when Aiming for 12s. Stacks up to 5x."
+    },
+    "Argon Scope": {
+      "stats": [
+        {
+          "stat": "CRIT_CHANCE",
+          "increment": 0.225,
+          "maxRank": 5,
+          "condition": "while_aiming",
+          "max_stacks": 1
+        }
+      ],
+      "type": "PRIMARY",
+      "polarity": "Madurai",
+      "rarity": "Rare",
+      "baseDrain": 2,
+      "conditional": "On Weak Point Hit: +135% Critical Chance when Aiming for 9s"
+    },
+    "Wildfire": {
+      "stats": [
+        {
+          "stat": "MAG_SIZE",
+          "increment": 0.05,
+          "maxRank": 3
+        },
+        {
+          "stat": "HEAT",
+          "increment": 0.15,
+          "maxRank": 3
+        }
+      ],
+      "type": "PRIMARY",
+      "polarity": "Madurai",
+      "rarity": "Rare",
+      "baseDrain": 6
+    },
+    "Shred": {
+      "stats": [
+        {
+          "stat": "FIRE_RATE",
+          "increment": 0.05,
+          "maxRank": 5
+        },
+        {
+          "stat": "PUNCH_THROUGH",
+          "increment": 0.2,
+          "maxRank": 5
+        }
+      ],
+      "type": "PRIMARY",
+      "polarity": "Madurai",
+      "rarity": "Rare",
+      "baseDrain": 6
+    },
+    "Radiated Reload": {
+      "stats": [
+        {
+          "stat": "RADIATION",
+          "increment": 0.15,
+          "maxRank": 3
+        },
+        {
+          "stat": "RELOAD_SPEED",
+          "increment": 0.1,
+          "maxRank": 3
+        }
+      ],
+      "type": "PRIMARY",
+      "polarity": "Madurai",
+      "rarity": "Rare",
+      "baseDrain": 4
+    },
+    "Magnetic Capacity": {
+      "stats": [
+        {
+          "stat": "MAGNETIC",
+          "increment": 0.15,
+          "maxRank": 3
+        },
+        {
+          "stat": "MAG_SIZE",
+          "increment": 0.1,
+          "maxRank": 3
+        }
+      ],
+      "type": "PRIMARY",
+      "polarity": "Madurai",
+      "rarity": "Rare",
+      "baseDrain": 4
+    },
+    "Hammer Shot": {
+      "stats": [
+        {
+          "stat": "CRIT_DAMAGE",
+          "increment": 0.15,
+          "maxRank": 3
+        },
+        {
+          "stat": "STATUS_CHANCE",
+          "increment": 0.2,
+          "maxRank": 3
+        }
+      ],
+      "type": "PRIMARY",
+      "polarity": "Vazarin",
+      "rarity": "Rare",
+      "baseDrain": 6
+    },
+    "Depleted Reload": {
+      "stats": [
+        {
+          "stat": "MAG_SIZE",
+          "increment": -0.1,
+          "maxRank": 5
+        },
+        {
+          "stat": "RELOAD_SPEED",
+          "increment": 0.08,
+          "maxRank": 5
+        }
+      ],
+      "type": "PRIMARY",
+      "polarity": "Naramon",
+      "rarity": "Rare",
+      "baseDrain": 2,
+      "note": "Sniper rifles only"
+    },
+    "Vile Precision": {
+      "stat": "FIRE_RATE",
+      "increment": -0.06,
+      "maxRank": 5,
+      "type": "PRIMARY",
+      "polarity": "Naramon",
+      "rarity": "Rare",
+      "baseDrain": 4,
+      "note": "-90% Weapon Recoil",
+      "exilus": true
+    },
+    "Tainted Mag": {
+      "stats": [
+        {
+          "stat": "MAG_SIZE",
+          "increment": 0.06,
+          "maxRank": 10
+        },
+        {
+          "stat": "RELOAD_SPEED",
+          "increment": -0.03,
+          "maxRank": 10
+        }
+      ],
+      "type": "PRIMARY",
+      "polarity": "Naramon",
+      "rarity": "Rare",
+      "baseDrain": 4,
+      "note": "Assault rifles only"
+    },
+    "Vile Acceleration": {
+      "stats": [
+        {
+          "stat": "FIRE_RATE",
+          "increment": 0.15,
+          "maxRank": 5
+        },
+        {
+          "stat": "DAMAGE",
+          "increment": -0.025,
+          "maxRank": 5
+        }
+      ],
+      "type": "PRIMARY",
+      "polarity": "Naramon",
+      "rarity": "Rare",
+      "baseDrain": 4
+    },
+    "Critical Delay": {
+      "stats": [
+        {
+          "stat": "CRIT_CHANCE",
+          "increment": 0.333333,
+          "maxRank": 5
+        },
+        {
+          "stat": "FIRE_RATE",
+          "increment": -0.033333,
+          "maxRank": 5
+        }
+      ],
+      "type": "PRIMARY",
+      "polarity": "Naramon",
+      "rarity": "Rare",
+      "baseDrain": 4
+    },
+    "Pistol Acuity": {
+      "stat": "WEAK_POINT_DAMAGE",
+      "increment": 0.318182,
+      "maxRank": 10,
+      "type": "SECONDARY",
+      "polarity": "Naramon",
+      "rarity": "Rare",
+      "baseDrain": 6,
+      "note": "+350% Weak Point Critical Chance. Multishot cannot be modified."
+    },
+    "Razor Shot": {
+      "stat": "SLASH",
+      "increment": 0.15,
+      "maxRank": 5,
+      "type": "SECONDARY",
+      "polarity": "Naramon",
+      "rarity": "Uncommon",
+      "baseDrain": 2
+    },
+    "Quickdraw": {
+      "stat": "RELOAD_SPEED",
+      "increment": 0.08,
+      "maxRank": 5,
+      "type": "SECONDARY",
+      "polarity": "Naramon",
+      "rarity": "Common",
+      "baseDrain": 2
+    },
+    "Perpetual Agony": {
+      "stat": "STATUS_DURATION",
+      "increment": 0.15,
+      "maxRank": 5,
+      "type": "SECONDARY",
+      "polarity": "Madurai",
+      "rarity": "Common",
+      "baseDrain": 6
+    },
+    "Expel The Murmur": {
+      "stat": "FACTION_MURMUR",
+      "increment": 0.05,
+      "maxRank": 5,
+      "type": "SECONDARY",
+      "polarity": "Madurai",
+      "rarity": "Uncommon",
+      "baseDrain": 4
+    },
+    "Expel Infested": {
+      "stat": "FACTION_INFESTED",
+      "increment": 0.05,
+      "maxRank": 5,
+      "type": "SECONDARY",
+      "polarity": "Madurai",
+      "rarity": "Uncommon",
+      "baseDrain": 4
+    },
+    "Expel Grineer": {
+      "stat": "FACTION_GRINEER",
+      "increment": 0.05,
+      "maxRank": 5,
+      "type": "SECONDARY",
+      "polarity": "Madurai",
+      "rarity": "Uncommon",
+      "baseDrain": 4
+    },
+    "Expel Orokin": {
+      "stat": "FACTION_OROKIN",
+      "increment": 0.05,
+      "maxRank": 5,
+      "type": "SECONDARY",
+      "polarity": "Madurai",
+      "rarity": "Uncommon",
+      "baseDrain": 4
+    },
+    "Expel Corpus": {
+      "stat": "FACTION_CORPUS",
+      "increment": 0.05,
+      "maxRank": 5,
+      "type": "SECONDARY",
+      "polarity": "Madurai",
+      "rarity": "Uncommon",
+      "baseDrain": 4
+    },
+    "Concussion Rounds": {
+      "stat": "IMPACT",
+      "increment": 0.15,
+      "maxRank": 5,
+      "type": "SECONDARY",
+      "polarity": "Naramon",
+      "rarity": "Uncommon",
+      "baseDrain": 2
+    },
+    "Gunslinger": {
+      "stat": "FIRE_RATE",
+      "increment": 0.12,
+      "maxRank": 5,
+      "type": "SECONDARY",
+      "polarity": "Madurai",
+      "rarity": "Uncommon",
+      "baseDrain": 4
+    },
+    "Bore": {
+      "stat": "PUNCTURE",
+      "increment": 0.2,
+      "maxRank": 5,
+      "type": "SECONDARY",
+      "polarity": "Naramon",
+      "rarity": "Rare",
+      "baseDrain": 6
+    },
+    "Pummel": {
+      "stat": "IMPACT",
+      "increment": 0.2,
+      "maxRank": 5,
+      "type": "SECONDARY",
+      "polarity": "Naramon",
+      "rarity": "Rare",
+      "baseDrain": 6
+    },
+    "Slip Magazine": {
+      "stat": "MAG_SIZE",
+      "increment": 0.05,
+      "maxRank": 5,
+      "type": "SECONDARY",
+      "polarity": "Naramon",
+      "rarity": "Common",
+      "baseDrain": 4
+    },
+    "Hemorrhage": {
+      "maxRank": 5,
+      "type": "SECONDARY",
+      "polarity": "Madurai",
+      "rarity": "Rare",
+      "baseDrain": 10,
+      "note": "Impact Status Effects have 35% chance to apply a Slash Status Effect (x2 when Fire Rate is below 2.5)"
+    },
+    "No Return": {
+      "stat": "PUNCTURE",
+      "increment": 0.15,
+      "maxRank": 5,
+      "type": "SECONDARY",
+      "polarity": "Naramon",
+      "rarity": "Uncommon",
+      "baseDrain": 2
+    },
+    "Pistol Elementalist": {
+      "stats": [
+        {
+          "stat": "STATUS_DAMAGE",
+          "increment": 0.15,
+          "maxRank": 5
+        },
+        {
+          "stat": "RELOAD_SPEED",
+          "increment": 0.1,
+          "maxRank": 5
+        }
+      ],
+      "type": "SECONDARY",
+      "polarity": "Vazarin",
+      "rarity": "Uncommon",
+      "baseDrain": 4
+    },
+    "Semi-Pistol Cannonade": {
+      "stats": [
+        {
+          "stat": "DAMAGE",
+          "increment": 0.5,
+          "maxRank": 5
+        },
+        {
+          "stat": "PUNCH_THROUGH",
+          "increment": 0.25,
+          "maxRank": 5
+        }
+      ],
+      "type": "SECONDARY",
+      "polarity": "Vazarin",
+      "rarity": "Uncommon",
+      "baseDrain": 4
+    },
+    "Primed Quickdraw": {
+      "stat": "RELOAD_SPEED",
+      "increment": 0.08,
+      "maxRank": 10,
+      "type": "SECONDARY",
+      "polarity": "Naramon",
+      "rarity": "Legendary",
+      "baseDrain": 2
+    },
+    "Primed Expel The Murmur": {
+      "stat": "FACTION_MURMUR",
+      "increment": 0.05,
+      "maxRank": 10,
+      "type": "SECONDARY",
+      "polarity": "Madurai",
+      "rarity": "Legendary",
+      "baseDrain": 4
+    },
+    "Primed Expel Infested": {
+      "stat": "FACTION_INFESTED",
+      "increment": 0.05,
+      "maxRank": 10,
+      "type": "SECONDARY",
+      "polarity": "Madurai",
+      "rarity": "Legendary",
+      "baseDrain": 4
+    },
+    "Primed Expel Grineer": {
+      "stat": "FACTION_GRINEER",
+      "increment": 0.05,
+      "maxRank": 10,
+      "type": "SECONDARY",
+      "polarity": "Madurai",
+      "rarity": "Legendary",
+      "baseDrain": 4
+    },
+    "Primed Expel Orokin": {
+      "stat": "FACTION_OROKIN",
+      "increment": 0.05,
+      "maxRank": 10,
+      "type": "SECONDARY",
+      "polarity": "Madurai",
+      "rarity": "Legendary",
+      "baseDrain": 4
+    },
+    "Primed Expel Corpus": {
+      "stat": "FACTION_CORPUS",
+      "increment": 0.05,
+      "maxRank": 10,
+      "type": "SECONDARY",
+      "polarity": "Madurai",
+      "rarity": "Legendary",
+      "baseDrain": 4
+    },
+    "Primed Slip Magazine": {
+      "stat": "MAG_SIZE",
+      "increment": 0.05,
+      "maxRank": 10,
+      "type": "SECONDARY",
+      "polarity": "Naramon",
+      "rarity": "Legendary",
+      "baseDrain": 4
+    },
+    "Embedded Catalyzer": {
+      "stats": [
+        {
+          "stat": "STATUS_CHANCE",
+          "increment": 0.15,
+          "maxRank": 5,
+          "condition": "while_aiming",
+          "max_stacks": 1
+        }
+      ],
+      "type": "SECONDARY",
+      "polarity": "Madurai",
+      "rarity": "Uncommon",
+      "baseDrain": 4,
+      "conditional": "On Ability Cast: +90% Status Chance when Aiming for 9s"
+    },
+    "Pressurized Magazine": {
+      "stats": [
+        {
+          "stat": "FIRE_RATE",
+          "increment": 0.15,
+          "maxRank": 5,
+          "condition": "while_aiming",
+          "max_stacks": 1
+        }
+      ],
+      "type": "SECONDARY",
+      "polarity": "Madurai",
+      "rarity": "Rare",
+      "baseDrain": 4,
+      "conditional": "On Reload: +90% Fire Rate when Aiming for 9s"
+    },
+    "Sharpened Bullets": {
+      "stats": [
+        {
+          "stat": "CRIT_DAMAGE",
+          "increment": 0.125,
+          "maxRank": 5,
+          "condition": "while_aiming",
+          "max_stacks": 1
+        }
+      ],
+      "type": "SECONDARY",
+      "polarity": "Madurai",
+      "rarity": "Uncommon",
+      "baseDrain": 2,
+      "conditional": "On Kill: +75% Critical Damage when Aiming for 9s"
+    },
+    "Galvanized Crosshairs": {
+      "stats": [
+        {
+          "stat": "CRIT_CHANCE",
+          "increment": 0.109091,
+          "maxRank": 10,
+          "condition": "while_aiming",
+          "max_stacks": 1
+        },
+        {
+          "stat": "CRIT_CHANCE",
+          "increment": 0.036364,
+          "maxRank": 10,
+          "condition": "on_kill",
+          "max_stacks": 5
+        }
+      ],
+      "type": "SECONDARY",
+      "polarity": "Madurai",
+      "rarity": "Rare",
+      "baseDrain": 2,
+      "conditional": "On Weak Point Hit: +120% Critical Chance when Aiming for 12s On Weak Point Kill: +40% Critical Chance when Aiming for 12s. Stacks up to 5x."
+    },
+    "Hydraulic Crosshairs": {
+      "stats": [
+        {
+          "stat": "CRIT_CHANCE",
+          "increment": 0.225,
+          "maxRank": 5,
+          "condition": "while_aiming",
+          "max_stacks": 1
+        }
+      ],
+      "type": "SECONDARY",
+      "polarity": "Madurai",
+      "rarity": "Common",
+      "baseDrain": 2,
+      "conditional": "On Weak Point Hit: +135% Critical Chance when Aiming for 9s"
+    },
+    "Stunning Speed": {
+      "stats": [
+        {
+          "stat": "RELOAD_SPEED",
+          "increment": 0.1,
+          "maxRank": 3
+        },
+        {
+          "stat": "STATUS_CHANCE",
+          "increment": 0.075,
+          "maxRank": 3
+        }
+      ],
+      "type": "SECONDARY",
+      "polarity": "Naramon",
+      "rarity": "Rare",
+      "baseDrain": 6
+    },
+    "Accelerated Isotope": {
+      "stats": [
+        {
+          "stat": "RADIATION",
+          "increment": 0.15,
+          "maxRank": 3
+        },
+        {
+          "stat": "FIRE_RATE",
+          "increment": 0.1,
+          "maxRank": 3
+        }
+      ],
+      "type": "SECONDARY",
+      "polarity": "Madurai",
+      "rarity": "Rare",
+      "baseDrain": 4
+    },
+    "Magnetic Might": {
+      "stats": [
+        {
+          "stat": "MAGNETIC",
+          "increment": 0.15,
+          "maxRank": 3
+        },
+        {
+          "stat": "CRIT_DAMAGE",
+          "increment": 0.1,
+          "maxRank": 3
+        }
+      ],
+      "type": "SECONDARY",
+      "polarity": "Madurai",
+      "rarity": "Rare",
+      "baseDrain": 4
+    },
+    "Ice Storm": {
+      "stats": [
+        {
+          "stat": "MAG_SIZE",
+          "increment": 0.1,
+          "maxRank": 3
+        },
+        {
+          "stat": "COLD",
+          "increment": 0.1,
+          "maxRank": 3
+        }
+      ],
+      "type": "SECONDARY",
+      "polarity": "Madurai",
+      "rarity": "Rare",
+      "baseDrain": 6
+    },
+    "Merciless Gunfight": {
+      "stats": [
+        {
+          "stat": "CRIT_DAMAGE",
+          "increment": 0.075,
+          "maxRank": 5
+        },
+        {
+          "stat": "PUNCH_THROUGH",
+          "increment": 0.2,
+          "maxRank": 5
+        }
+      ],
+      "type": "SECONDARY",
+      "polarity": "Naramon",
+      "rarity": "Rare",
+      "baseDrain": 10
+    },
+    "Tainted Clip": {
+      "stats": [
+        {
+          "stat": "MAG_SIZE",
+          "increment": 0.1,
+          "maxRank": 5
+        },
+        {
+          "stat": "RELOAD_SPEED",
+          "increment": -0.05,
+          "maxRank": 5
+        }
+      ],
+      "type": "SECONDARY",
+      "polarity": "Naramon",
+      "rarity": "Rare",
+      "baseDrain": 6
+    },
+    "Anemic Agility": {
+      "stats": [
+        {
+          "stat": "FIRE_RATE",
+          "increment": 0.15,
+          "maxRank": 5
+        },
+        {
+          "stat": "DAMAGE",
+          "increment": -0.025,
+          "maxRank": 5
+        }
+      ],
+      "type": "SECONDARY",
+      "polarity": "Naramon",
+      "rarity": "Rare",
+      "baseDrain": 4
+    },
+    "Hollow Point": {
+      "stats": [
+        {
+          "stat": "CRIT_DAMAGE",
+          "increment": 0.1,
+          "maxRank": 5
+        },
+        {
+          "stat": "DAMAGE",
+          "increment": -0.025,
+          "maxRank": 5
+        }
+      ],
+      "type": "SECONDARY",
+      "polarity": "Naramon",
+      "rarity": "Rare",
+      "baseDrain": 4
+    },
+    "Creeping Bullseye": {
+      "stats": [
+        {
+          "stat": "CRIT_CHANCE",
+          "increment": 0.333333,
+          "maxRank": 5
+        },
+        {
+          "stat": "FIRE_RATE",
+          "increment": -0.033333,
+          "maxRank": 5
+        }
+      ],
+      "type": "SECONDARY",
+      "polarity": "Naramon",
+      "rarity": "Rare",
+      "baseDrain": 4
+    },
+    "Jagged Edge": {
+      "stat": "SLASH",
+      "increment": 0.15,
+      "maxRank": 5,
+      "type": "MELEE",
+      "polarity": "Naramon",
+      "rarity": "Rare",
+      "baseDrain": 2
+    },
+    "Lasting Sting": {
+      "stat": "STATUS_DURATION",
+      "increment": 0.1,
+      "maxRank": 10,
+      "type": "MELEE",
+      "polarity": "Madurai",
+      "rarity": "Common",
+      "baseDrain": 6
+    },
+    "Smite The Murmur": {
+      "stat": "FACTION_MURMUR",
+      "increment": 0.05,
+      "maxRank": 5,
+      "type": "MELEE",
+      "polarity": "Madurai",
+      "rarity": "Uncommon",
+      "baseDrain": 4
+    },
+    "Smite Infested": {
+      "stat": "FACTION_INFESTED",
+      "increment": 0.05,
+      "maxRank": 5,
+      "type": "MELEE",
+      "polarity": "Madurai",
+      "rarity": "Uncommon",
+      "baseDrain": 4
+    },
+    "Smite Grineer": {
+      "stat": "FACTION_GRINEER",
+      "increment": 0.05,
+      "maxRank": 5,
+      "type": "MELEE",
+      "polarity": "Madurai",
+      "rarity": "Uncommon",
+      "baseDrain": 4
+    },
+    "Smite Orokin": {
+      "stat": "FACTION_OROKIN",
+      "increment": 0.05,
+      "maxRank": 5,
+      "type": "MELEE",
+      "polarity": "Madurai",
+      "rarity": "Uncommon",
+      "baseDrain": 4
+    },
+    "Smite Corpus": {
+      "stat": "FACTION_CORPUS",
+      "increment": 0.05,
+      "maxRank": 5,
+      "type": "MELEE",
+      "polarity": "Madurai",
+      "rarity": "Uncommon",
+      "baseDrain": 4
+    },
+    "Heavy Trauma": {
+      "stat": "IMPACT",
+      "increment": 0.15,
+      "maxRank": 5,
+      "type": "MELEE",
+      "polarity": "Naramon",
+      "rarity": "Rare",
+      "baseDrain": 2
+    },
+    "Buzz Kill": {
+      "stat": "SLASH",
+      "increment": 0.2,
+      "maxRank": 5,
+      "type": "MELEE",
+      "polarity": "Naramon",
+      "rarity": "Rare",
+      "baseDrain": 6
+    },
+    "Auger Strike": {
+      "stat": "PUNCTURE",
+      "increment": 0.2,
+      "maxRank": 5,
+      "type": "MELEE",
+      "polarity": "Naramon",
+      "rarity": "Rare",
+      "baseDrain": 6
+    },
+    "Collision Force": {
+      "stat": "IMPACT",
+      "increment": 0.2,
+      "maxRank": 5,
+      "type": "MELEE",
+      "polarity": "Naramon",
+      "rarity": "Rare",
+      "baseDrain": 6
+    },
+    "Sundering Strike": {
+      "stat": "PUNCTURE",
+      "increment": 0.15,
+      "maxRank": 5,
+      "type": "MELEE",
+      "polarity": "Naramon",
+      "rarity": "Rare",
+      "baseDrain": 2
+    },
+    "Melee Elementalist": {
+      "stat": "STATUS_DAMAGE",
+      "increment": 0.15,
+      "maxRank": 5,
+      "type": "MELEE",
+      "polarity": "Vazarin",
+      "rarity": "Uncommon",
+      "baseDrain": 4,
+      "note": "+60% Heavy Attack Wind Up Speed"
+    },
+    "Galvanized Elementalist": {
+      "stats": [
+        {
+          "stat": "STATUS_DAMAGE",
+          "increment": 0.072727,
+          "maxRank": 10
+        },
+        {
+          "stat": "STATUS_CHANCE",
+          "increment": 0.027273,
+          "maxRank": 10,
+          "condition": "on_kill",
+          "max_stacks": 4
+        }
+      ],
+      "type": "MELEE",
+      "polarity": "Vazarin",
+      "rarity": "Rare",
+      "baseDrain": 2,
+      "conditional": "On Melee Kill: +30% Status Chance for 20s. Stacks up to 4x."
+    },
+    "Primed Smite The Murmur": {
+      "stat": "FACTION_MURMUR",
+      "increment": 0.05,
+      "maxRank": 10,
+      "type": "MELEE",
+      "polarity": "Madurai",
+      "rarity": "Legendary",
+      "baseDrain": 4
+    },
+    "Primed Smite Infested": {
+      "stat": "FACTION_INFESTED",
+      "increment": 0.05,
+      "maxRank": 10,
+      "type": "MELEE",
+      "polarity": "Madurai",
+      "rarity": "Legendary",
+      "baseDrain": 4
+    },
+    "Primed Smite Grineer": {
+      "stat": "FACTION_GRINEER",
+      "increment": 0.05,
+      "maxRank": 10,
+      "type": "MELEE",
+      "polarity": "Madurai",
+      "rarity": "Legendary",
+      "baseDrain": 4
+    },
+    "Primed Smite Orokin": {
+      "stat": "FACTION_OROKIN",
+      "increment": 0.05,
+      "maxRank": 10,
+      "type": "MELEE",
+      "polarity": "Madurai",
+      "rarity": "Legendary",
+      "baseDrain": 4
+    },
+    "Primed Smite Corpus": {
+      "stat": "FACTION_CORPUS",
+      "increment": 0.05,
+      "maxRank": 10,
+      "type": "MELEE",
+      "polarity": "Madurai",
+      "rarity": "Legendary",
+      "baseDrain": 4
+    },
+    "Primed Heavy Trauma": {
+      "stat": "IMPACT",
+      "increment": 0.15,
+      "maxRank": 10,
+      "type": "MELEE",
+      "polarity": "Naramon",
+      "rarity": "Legendary",
+      "baseDrain": 2
+    },
+    "Galvanized Reflex": {
+      "stat": "COMBO_EFFICIENCY",
+      "increment": 0.045455,
+      "maxRank": 10,
+      "type": "MELEE",
+      "polarity": "Madurai",
+      "rarity": "Rare",
+      "baseDrain": 2,
+      "note": "On Melee Kill: +20 Initial Combo for 20s. Stacks up to 4x."
+    },
+    "Galvanized Steel": {
+      "stats": [
+        {
+          "stat": "CRIT_CHANCE",
+          "increment": 0.1,
+          "maxRank": 10
+        },
+        {
+          "stat": "CRIT_DAMAGE",
+          "increment": 0.027273,
+          "maxRank": 10,
+          "condition": "on_kill",
+          "max_stacks": 4
+        }
+      ],
+      "type": "MELEE",
+      "polarity": "Madurai",
+      "rarity": "Rare",
+      "baseDrain": 2,
+      "conditional": "On Melee Kill: +30% Critical Damage for 20s. Stacks up to 4x."
+    },
+    "Maiming Strike": {
+      "stat": "CRIT_CHANCE_SLIDE",
+      "increment": 0.25,
+      "maxRank": 5,
+      "type": "MELEE",
+      "polarity": "Madurai",
+      "rarity": "Rare",
+      "baseDrain": 2
+    },
+    "Rending Strike": {
+      "stats": [
+        {
+          "stat": "SLASH",
+          "increment": 0.15,
+          "maxRank": 3
+        },
+        {
+          "stat": "PUNCTURE",
+          "increment": 0.2,
+          "maxRank": 3
+        }
+      ],
+      "type": "MELEE",
+      "polarity": "Naramon",
+      "rarity": "Rare",
+      "baseDrain": 6
+    },
+    "Focus Radon": {
+      "stats": [
+        {
+          "stat": "RADIATION",
+          "increment": 0.15,
+          "maxRank": 3
+        },
+        {
+          "stat": "COMBO_EFFICIENCY",
+          "increment": 0.1,
+          "maxRank": 3
+        }
+      ],
+      "type": "MELEE",
+      "polarity": "Madurai",
+      "rarity": "Rare",
+      "baseDrain": 4
+    },
+    "Magnetic Rush": {
+      "stats": [
+        {
+          "stat": "MAGNETIC",
+          "increment": 0.15,
+          "maxRank": 3
+        },
+        {
+          "stat": "FIRE_RATE",
+          "increment": 0.05,
+          "maxRank": 3
+        }
+      ],
+      "type": "MELEE",
+      "polarity": "Madurai",
+      "rarity": "Rare",
+      "baseDrain": 4
+    },
+    "Focus Energy": {
+      "stats": [
+        {
+          "stat": "COMBO_EFFICIENCY",
+          "increment": 0.1,
+          "maxRank": 3
+        },
+        {
+          "stat": "ELECTRICITY",
+          "increment": 0.15,
+          "maxRank": 3
+        }
+      ],
+      "type": "MELEE",
+      "polarity": "Madurai",
+      "rarity": "Rare",
+      "baseDrain": 6
+    },
+    "Quickening": {
+      "stat": "FIRE_RATE",
+      "increment": 0.1,
+      "maxRank": 3,
+      "type": "MELEE",
+      "polarity": "Madurai",
+      "rarity": "Rare",
+      "baseDrain": 6,
+      "note": "+20% Combo Count Chance"
+    },
+    "Amalgam Shotgun Barrage": {
+      "stat": "FIRE_RATE",
+      "increment": 0.141667,
+      "maxRank": 5,
+      "type": "SHOTGUN",
+      "polarity": "Madurai",
+      "rarity": "Rare",
+      "baseDrain": 6,
+      "note": "+45% Revive Speed"
+    },
+    "Amalgam Barrel Diffusion": {
+      "stat": "MULTISHOT",
+      "increment": 0.183333,
+      "maxRank": 5,
+      "type": "SECONDARY",
+      "polarity": "Madurai",
+      "rarity": "Rare",
+      "baseDrain": 10,
+      "note": "+60% Dodge Speed"
+    },
+    "Amalgam Organ Shatter": {
+      "stat": "CRIT_DAMAGE",
+      "increment": 0.141667,
+      "maxRank": 5,
+      "type": "MELEE",
+      "polarity": "Madurai",
+      "rarity": "Rare",
+      "baseDrain": 6,
+      "note": "+60% Heavy Attack Wind Up Speed"
+    },
+    "Primed Charged Chamber": {
+      "stat": "DAMAGE_FIRST_SHOT",
+      "increment": 0.1,
+      "maxRank": 10,
+      "type": "PRIMARY",
+      "polarity": "Madurai",
+      "rarity": "Legendary",
+      "baseDrain": 6,
+      "note": "Sniper rifles only"
+    },
+    "Amar's Contempt": {
+      "stats": [
+        {
+          "stat": "DAMAGE",
+          "increment": 0.15,
+          "maxRank": 5
+        },
+        {
+          "stat": "SLASH",
+          "increment": 0.05,
+          "maxRank": 5
+        }
+      ],
+      "type": "MELEE",
+      "polarity": "Madurai",
+      "rarity": "Rare",
+      "baseDrain": 4,
+      "note": "Dual daggers only. Amar set."
+    },
+    "Boreal's Contempt": {
+      "stats": [
+        {
+          "stat": "DAMAGE",
+          "increment": 0.15,
+          "maxRank": 5
+        },
+        {
+          "stat": "STATUS_DAMAGE",
+          "increment": 0.1,
+          "maxRank": 5
+        }
+      ],
+      "type": "MELEE",
+      "polarity": "Madurai",
+      "rarity": "Rare",
+      "baseDrain": 4,
+      "note": "Polearms only. Boreal set."
+    },
+    "Nira's Contempt": {
+      "stats": [
+        {
+          "stat": "DAMAGE",
+          "increment": 0.15,
+          "maxRank": 5
+        },
+        {
+          "stat": "STATUS_CHANCE",
+          "increment": 0.1,
+          "maxRank": 5
+        }
+      ],
+      "type": "MELEE",
+      "polarity": "Madurai",
+      "rarity": "Rare",
+      "baseDrain": 4,
+      "note": "Whips only. Nira set."
+    },
+    "Bright Purity": {
+      "stats": [
+        {
+          "stat": "DAMAGE",
+          "increment": 0.25,
+          "maxRank": 3
+        }
+      ],
+      "type": "MELEE",
+      "polarity": "Madurai",
+      "rarity": "Rare",
+      "baseDrain": 4,
+      "note": "Skana only."
+    },
+    "Justice Blades": {
+      "stats": [
+        {
+          "stat": "DAMAGE",
+          "increment": 0.25,
+          "maxRank": 3
+        }
+      ],
+      "type": "MELEE",
+      "polarity": "Naramon",
+      "rarity": "Rare",
+      "baseDrain": 4,
+      "note": "Dual Cleavers only."
+    },
+    "Deadly Sequence": {
+      "stats": [
+        {
+          "stat": "CRIT_CHANCE",
+          "increment": 0.5,
+          "maxRank": 3
+        }
+      ],
+      "type": "PRIMARY",
+      "polarity": "Madurai",
+      "rarity": "Rare",
+      "baseDrain": 4,
+      "note": "Grinlok only."
+    },
+    "Soaring Truth": {
+      "stats": [
+        {
+          "stat": "CRIT_CHANCE",
+          "increment": 0.5,
+          "maxRank": 3
+        }
+      ],
+      "type": "SECONDARY",
+      "polarity": "Vazarin",
+      "rarity": "Rare",
+      "baseDrain": 4,
+      "note": "Ballistica only."
+    },
+    "Gilded Truth": {
+      "stats": [
+        {
+          "stat": "FIRE_RATE",
+          "increment": 0.2,
+          "maxRank": 3
+        }
+      ],
+      "type": "PRIMARY",
+      "polarity": "Madurai",
+      "rarity": "Rare",
+      "baseDrain": 4,
+      "note": "Burston Prime only."
+    },
+    "Scattered Justice": {
+      "stats": [
+        {
+          "stat": "MULTISHOT",
+          "increment": 0.5,
+          "maxRank": 3
+        }
+      ],
+      "type": "SHOTGUN",
+      "polarity": "Madurai",
+      "rarity": "Rare",
+      "baseDrain": 4,
+      "note": "Hek only."
+    },
+    "Shattering Justice": {
+      "stats": [
+        {
+          "stat": "STATUS_CHANCE",
+          "increment": 0.225,
+          "maxRank": 3
+        }
+      ],
+      "type": "SHOTGUN",
+      "polarity": "Naramon",
+      "rarity": "Rare",
+      "baseDrain": 4,
+      "note": "Sobek only."
+    },
+    "Gleaming Blight": {
+      "stats": [
+        {
+          "stat": "STATUS_CHANCE",
+          "increment": 0.25,
+          "maxRank": 3
+        }
+      ],
+      "type": "MELEE",
+      "polarity": "Naramon",
+      "rarity": "Rare",
+      "baseDrain": 4,
+      "note": "Dark Dagger only."
+    },
+    "Toxic Blight": {
+      "stats": [
+        {
+          "stat": "TOXIN",
+          "increment": 0.25,
+          "maxRank": 3
+        }
+      ],
+      "type": "MELEE",
+      "polarity": "Madurai",
+      "rarity": "Rare",
+      "baseDrain": 4,
+      "note": "Mire only."
+    },
+    "Toxic Sequence": {
+      "stats": [
+        {
+          "stat": "STATUS_DURATION",
+          "increment": 0.5,
+          "maxRank": 3
+        }
+      ],
+      "type": "SECONDARY",
+      "polarity": "Vazarin",
+      "rarity": "Rare",
+      "baseDrain": 4,
+      "note": "Acrid only."
+    },
+    "Eroding Blight": {
+      "stats": [
+        {
+          "stat": "MAG_SIZE",
+          "increment": 0.5,
+          "maxRank": 3
+        }
+      ],
+      "type": "SECONDARY",
+      "polarity": "Vazarin",
+      "rarity": "Rare",
+      "baseDrain": 4,
+      "note": "Embolist only."
+    },
+    "Stockpiled Blight": {
+      "stats": [
+        {
+          "stat": "MAG_SIZE",
+          "increment": 0.5,
+          "maxRank": 3
+        }
+      ],
+      "type": "SECONDARY",
+      "polarity": "Vazarin",
+      "rarity": "Rare",
+      "baseDrain": 4,
+      "note": "Kunai only."
+    },
+    "Efficient Beams": {
+      "stats": [
+        {
+          "stat": "STATUS_CHANCE",
+          "increment": 0.25,
+          "maxRank": 5
+        }
+      ],
+      "type": "PRIMARY",
+      "polarity": "Naramon",
+      "rarity": "Rare",
+      "baseDrain": 4,
+      "note": "Convectrix only."
+    },
+    "Bhisaj-Bal": {
+      "stats": [
+        {
+          "stat": "STATUS_CHANCE",
+          "increment": 0.15,
+          "maxRank": 5
+        }
+      ],
+      "type": "PRIMARY",
+      "polarity": "Naramon",
+      "rarity": "Rare",
+      "baseDrain": 2,
+      "note": "Paris Prime only. Also restores 300 health every 3 status effects.",
+      "exilus": true
+    },
+    "Dizzying Rounds": {
+      "stats": [
+        {
+          "stat": "STATUS_CHANCE",
+          "increment": 0.5,
+          "maxRank": 3
+        }
+      ],
+      "type": "SHOTGUN",
+      "polarity": "Naramon",
+      "rarity": "Rare",
+      "baseDrain": 4,
+      "note": "Bronco only. Shots within 8m also stun."
+    },
+    "Photon Overcharge": {
+      "stats": [
+        {
+          "stat": "CRIT_DAMAGE",
+          "increment": 0.15,
+          "maxRank": 5
+        }
+      ],
+      "type": "PRIMARY",
+      "polarity": "Vazarin",
+      "rarity": "Rare",
+      "baseDrain": 2,
+      "note": "Glaxion only."
+    },
+    "Amalgam Ripkas True Steel": {
+      "stats": [
+        {
+          "stat": "CRIT_CHANCE",
+          "increment": 0.311667,
+          "maxRank": 5
+        }
+      ],
+      "type": "MELEE",
+      "polarity": "Madurai",
+      "rarity": "Rare",
+      "baseDrain": 6,
+      "note": "Ripkas only. Doubled for heavy attacks (not modelled)."
+    },
+    "Amalgam Javlok Magazine Warp": {
+      "stats": [
+        {
+          "stat": "MAG_SIZE",
+          "increment": 0.075,
+          "maxRank": 5
+        }
+      ],
+      "type": "PRIMARY",
+      "polarity": "Naramon",
+      "rarity": "Rare",
+      "baseDrain": 6,
+      "note": "Javlok only."
+    },
+    "Spectral Serration": {
+      "stats": [
+        {
+          "stat": "DAMAGE",
+          "increment": 0.3,
+          "maxRank": 10,
+          "condition": "while_invisible",
+          "max_stacks": 1
+        }
+      ],
+      "type": "PRIMARY",
+      "polarity": "Madurai",
+      "rarity": "Rare",
+      "baseDrain": 6,
+      "note": "Damage only while invisible."
+    },
+    "Lasting Purity": {
+      "stats": [
+        {
+          "stat": "DAMAGE",
+          "increment": 0.15,
+          "maxRank": 3,
+          "condition": "while_aiming",
+          "max_stacks": 1
+        }
+      ],
+      "type": "PRIMARY",
+      "polarity": "Naramon",
+      "rarity": "Rare",
+      "baseDrain": 4,
+      "note": "Vulkar only."
+    },
+    "Exposing Harpoon": {
+      "stats": [
+        {
+          "stat": "CRIT_CHANCE",
+          "increment": 0.5,
+          "maxRank": 5,
+          "condition": "on_hit",
+          "max_stacks": 1
+        }
+      ],
+      "type": "PRIMARY",
+      "polarity": "Naramon",
+      "rarity": "Rare",
+      "baseDrain": 4,
+      "note": "Harpak only. For 15s after pulling an enemy."
+    },
+    "Proton Jet": {
+      "stats": [
+        {
+          "stat": "STATUS_CHANCE",
+          "increment": 0.3,
+          "maxRank": 3,
+          "condition": "on_wall_latch",
+          "max_stacks": 1
+        },
+        {
+          "stat": "CRIT_CHANCE",
+          "increment": 0.3,
+          "maxRank": 3,
+          "condition": "on_wall_latch",
+          "max_stacks": 1
+        }
+      ],
+      "type": "PRIMARY",
+      "polarity": "Naramon",
+      "rarity": "Uncommon",
+      "baseDrain": 4,
+      "note": "During a wall latch."
+    },
+    "Proton Snap": {
+      "stats": [
+        {
+          "stat": "TOXIN",
+          "increment": 0.25,
+          "maxRank": 3,
+          "condition": "on_wall_latch",
+          "max_stacks": 1
+        },
+        {
+          "stat": "STATUS_CHANCE",
+          "increment": 0.125,
+          "maxRank": 3,
+          "condition": "on_wall_latch",
+          "max_stacks": 1
+        }
+      ],
+      "type": "MELEE",
+      "polarity": "Madurai",
+      "rarity": "Rare",
+      "baseDrain": 6,
+      "note": "For 20s after holding a wall latch for 2s."
+    },
+    "Flux Overdrive": {
+      "maxRank": 5,
+      "type": "PRIMARY",
+      "polarity": "Madurai",
+      "rarity": "Rare",
+      "baseDrain": 2,
+      "special": true,
+      "mechanic": "Flux Rifle only. Status chance swings between +150% and +250% over 5s while the beam fires.",
+      "note": "Flux Rifle only. Status chance swings between +150% and +250% over 5s while the beam fires. Not applied by the calculator."
+    },
+    "Killing Blow": {
+      "maxRank": 5,
+      "type": "MELEE",
+      "polarity": "Madurai",
+      "rarity": "Uncommon",
+      "baseDrain": 6,
+      "special": true,
+      "mechanic": "+120% melee damage on heavy attacks and +60% wind-up speed. Heavy attacks are not modelled.",
+      "note": "+120% melee damage on heavy attacks and +60% wind-up speed. Heavy attacks are not modelled. Not applied by the calculator."
+    },
+    "Corrupt Charge": {
+      "maxRank": 3,
+      "type": "MELEE",
+      "polarity": "Madurai",
+      "rarity": "Rare",
+      "baseDrain": 4,
+      "special": true,
+      "mechanic": "+30 initial combo, -50% combo duration.",
+      "note": "+30 initial combo, -50% combo duration. Not applied by the calculator."
+    },
+    "True Punishment": {
+      "maxRank": 3,
+      "type": "MELEE",
+      "polarity": "Zenurik",
+      "rarity": "Common",
+      "baseDrain": 4,
+      "special": true,
+      "mechanic": "+100% additional combo count chance, -50% combo duration.",
+      "note": "+100% additional combo count chance, -50% combo duration. Not applied by the calculator."
+    },
+    "Covert Lethality": {
+      "maxRank": 3,
+      "type": "MELEE",
+      "polarity": "Madurai",
+      "rarity": "Rare",
+      "baseDrain": 10,
+      "special": true,
+      "mechanic": "Daggers only. +16 initial combo, +100% finisher damage.",
+      "note": "Daggers only. +16 initial combo, +100% finisher damage. Not applied by the calculator."
+    },
+    "Gladiator Rush": {
+      "maxRank": 5,
+      "type": "MELEE",
+      "polarity": "Naramon",
+      "rarity": "Common",
+      "baseDrain": 4,
+      "special": true,
+      "mechanic": "+6s combo duration. Gladiator set.",
+      "note": "+6s combo duration. Gladiator set. Not applied by the calculator."
+    },
+    "Relentless Combination": {
+      "maxRank": 3,
+      "type": "MELEE",
+      "polarity": "Naramon",
+      "rarity": "Uncommon",
+      "baseDrain": 6,
+      "special": true,
+      "mechanic": "Slash status damage ticks have a 100% chance to add to the melee combo counter.",
+      "note": "Slash status damage ticks have a 100% chance to add to the melee combo counter. Not applied by the calculator."
+    },
+    "Meticulous Aim": {
+      "maxRank": 5,
+      "type": "PRIMARY",
+      "polarity": "Naramon",
+      "rarity": "Rare",
+      "baseDrain": 4,
+      "special": true,
+      "mechanic": "Vulkar only. +105% headshot damage, -45% bodyshot damage.",
+      "note": "Vulkar only. +105% headshot damage, -45% bodyshot damage. Not applied by the calculator."
+    },
+    "Hata-Satya": {
+      "maxRank": 5,
+      "type": "PRIMARY",
+      "polarity": "Madurai",
+      "rarity": "Rare",
+      "baseDrain": 2,
+      "special": true,
+      "mechanic": "Soma Prime only. Each hit adds 1.2% critical chance until reload or holster.",
+      "note": "Soma Prime only. Each hit adds 1.2% critical chance until reload or holster. Not applied by the calculator."
+    },
+    "Entropy Burst": {
+      "maxRank": 3,
+      "type": "PRIMARY",
+      "polarity": "Madurai",
+      "rarity": "Rare",
+      "baseDrain": 4,
+      "special": true,
+      "mechanic": "Supra only. +20 final status chance (flat points, not a multiplier).",
+      "note": "Supra only. +20 final status chance (flat points, not a multiplier). Not applied by the calculator."
+    },
+    "Napalm Grenades": {
+      "maxRank": 5,
+      "type": "PRIMARY",
+      "polarity": "Naramon",
+      "rarity": "Rare",
+      "baseDrain": 4,
+      "special": true,
+      "mechanic": "Penta only. +30 final status chance (flat points, not a multiplier).",
+      "note": "Penta only. +30 final status chance (flat points, not a multiplier). Not applied by the calculator."
+    },
+    "Synth Charge": {
+      "maxRank": 3,
+      "type": "SECONDARY",
+      "polarity": "Madurai",
+      "rarity": "Rare",
+      "baseDrain": 6,
+      "special": true,
+      "mechanic": "+200% damage on the final shot of a magazine of 6 or more. Synth set.",
+      "note": "+200% damage on the final shot of a magazine of 6 or more. Synth set. Not applied by the calculator."
+    },
+    "Clip Delegation": {
+      "maxRank": 5,
+      "type": "SHOTGUN",
+      "polarity": "Vazarin",
+      "rarity": "Rare",
+      "baseDrain": 2,
+      "special": true,
+      "mechanic": "Sobek only. Next magazine gains 15% status chance and multishot per shot landed, up to 15 stacks.",
+      "note": "Sobek only. Next magazine gains 15% status chance and multishot per shot landed, up to 15 stacks. Not applied by the calculator."
+    },
+    "Motus Setup": {
+      "maxRank": 3,
+      "type": "SHOTGUN",
+      "polarity": "Madurai",
+      "rarity": "Rare",
+      "baseDrain": 6,
+      "special": true,
+      "mechanic": "100% critical and status chance for 4s after landing from a double or bullet jump. Motus set.",
+      "note": "100% critical and status chance for 4s after landing from a double or bullet jump. Motus set. Not applied by the calculator."
+    },
+    "Deadly Maneuvers": {
+      "maxRank": 3,
+      "type": "SECONDARY",
+      "polarity": "Naramon",
+      "rarity": "Rare",
+      "baseDrain": 4,
+      "special": true,
+      "mechanic": "Magnus only. After a dodge, +400% headshot critical chance for the next 2 shots.",
+      "note": "Magnus only. After a dodge, +400% headshot critical chance for the next 2 shots. Not applied by the calculator."
+    },
+    "Wild Frenzy": {
+      "maxRank": 5,
+      "type": "PRIMARY",
+      "polarity": "Naramon",
+      "rarity": "Rare",
+      "baseDrain": 4,
+      "special": true,
+      "mechanic": "Grakata only. Secondary fire shoots at +400% fire rate until the magazine is empty.",
+      "note": "Grakata only. Secondary fire shoots at +400% fire rate until the magazine is empty. Not applied by the calculator."
+    },
+    "Power Throw": {
+      "maxRank": 10,
+      "type": "MELEE",
+      "polarity": "Madurai",
+      "rarity": "Rare",
+      "baseDrain": 4,
+      "special": true,
+      "mechanic": "Thrown melee only. +1.3 punch through; consecutive throws gain +66.7% throw damage, up to 3 stacks.",
+      "note": "Thrown melee only. +1.3 punch through; consecutive throws gain +66.7% throw damage, up to 3 stacks. Not applied by the calculator."
+    },
+    "Energy Channel": {
+      "maxRank": 5,
+      "type": "MELEE",
+      "polarity": "Madurai",
+      "rarity": "Rare",
+      "baseDrain": 4,
+      "special": true,
+      "mechanic": "Converts 550% of energy spent into up to 550 bonus damage on the next melee attack.",
+      "note": "Converts 550% of energy spent into up to 550 bonus damage on the next melee attack. Not applied by the calculator."
+    },
+    "Seismic Wave": {
+      "maxRank": 3,
+      "type": "MELEE",
+      "polarity": "Madurai",
+      "rarity": "Uncommon",
+      "baseDrain": 6,
+      "special": true,
+      "mechanic": "+200% slam attack damage. Slam attacks are not modelled.",
+      "note": "+200% slam attack damage. Slam attacks are not modelled. Not applied by the calculator."
+    },
+    "Finishing Touch": {
+      "maxRank": 5,
+      "type": "MELEE",
+      "polarity": "Madurai",
+      "rarity": "Uncommon",
+      "baseDrain": 2,
+      "special": true,
+      "mechanic": "+165% finisher damage. Finishers are not modelled.",
+      "note": "+165% finisher damage. Finishers are not modelled. Not applied by the calculator."
+    },
+    "Shattering Impact": {
+      "maxRank": 5,
+      "type": "MELEE",
+      "polarity": "Vazarin",
+      "rarity": "Common",
+      "baseDrain": 4,
+      "special": true,
+      "mechanic": "Each hit with Impact damage removes 6 armor from the enemy.",
+      "note": "Each hit with Impact damage removes 6 armor from the enemy. Not applied by the calculator."
+    },
+    "Strain Infection": {
+      "maxRank": 3,
+      "type": "MELEE",
+      "polarity": "Madurai",
+      "rarity": "Rare",
+      "baseDrain": 6,
+      "special": true,
+      "mechanic": "+20% melee critical damage per Helminth cyst. Strain set.",
+      "note": "+20% melee critical damage per Helminth cyst. Strain set. Not applied by the calculator."
+    },
+    "Enduring Affliction": {
+      "maxRank": 5,
+      "type": "MELEE",
+      "polarity": "Vazarin",
+      "rarity": "Uncommon",
+      "baseDrain": 4,
+      "special": true,
+      "mechanic": "+100% status chance against Lifted enemies.",
+      "note": "+100% status chance against Lifted enemies. Not applied by the calculator."
+    },
+    "Master's Edge": {
+      "maxRank": 5,
+      "type": "MELEE",
+      "polarity": "Madurai",
+      "rarity": "Uncommon",
+      "baseDrain": 4,
+      "special": true,
+      "mechanic": "Enables Tennokai; +60% Tennokai damage. Tennokai is not modelled.",
+      "note": "Enables Tennokai; +60% Tennokai damage. Tennokai is not modelled. Not applied by the calculator.",
+      "exilus": true
+    },
+    "Dreamer's Wrath": {
+      "maxRank": 3,
+      "type": "MELEE",
+      "polarity": "Madurai",
+      "rarity": "Rare",
+      "baseDrain": 6,
+      "special": true,
+      "mechanic": "Enables Tennokai; +50% opportunity chance and +32% critical damage on Tennokai attacks.",
+      "note": "Enables Tennokai; +50% opportunity chance and +32% critical damage on Tennokai attacks. Not applied by the calculator.",
+      "exilus": true
+    },
+    "Condition's Perfection": {
+      "maxRank": 3,
+      "type": "MELEE",
+      "polarity": "Vazarin",
+      "rarity": "Uncommon",
+      "baseDrain": 4,
+      "special": true,
+      "mechanic": "Enables Tennokai; +100% status chance on Tennokai attacks.",
+      "note": "Enables Tennokai; +100% status chance on Tennokai attacks. Not applied by the calculator.",
+      "exilus": true
+    },
+    "Truth's Flame": {
+      "maxRank": 3,
+      "type": "MELEE",
+      "polarity": "Madurai",
+      "rarity": "Rare",
+      "baseDrain": 6,
+      "special": true,
+      "mechanic": "Enables Tennokai; Tennokai kills extend the opportunity by 4s and add 120% Tennokai damage.",
+      "note": "Enables Tennokai; Tennokai kills extend the opportunity by 4s and add 120% Tennokai damage. Not applied by the calculator.",
+      "exilus": true
+    },
+    "Combustion Beam": {
+      "maxRank": 5,
+      "type": "PRIMARY",
+      "polarity": "Madurai",
+      "rarity": "Rare",
+      "baseDrain": 4,
+      "special": true,
+      "mechanic": "Beam weapons. Enemies killed explode for 600 damage.",
+      "note": "Beam weapons. Enemies killed explode for 600 damage. Not applied by the calculator."
+    },
+    "Shivering Contagion": {
+      "maxRank": 5,
+      "type": "PRIMARY",
+      "polarity": "Naramon",
+      "rarity": "Rare",
+      "baseDrain": 4,
+      "special": true,
+      "mechanic": "Cold status effects spread to enemies within 6m.",
+      "note": "Cold status effects spread to enemies within 6m. Not applied by the calculator."
+    },
+    "Magnetic Welt": {
+      "maxRank": 5,
+      "type": "SHOTGUN",
+      "polarity": "Madurai",
+      "rarity": "Rare",
+      "baseDrain": 10,
+      "special": true,
+      "mechanic": "Impact status effects have a 35% chance to also apply Magnetic (doubled below 2.5 fire rate).",
+      "note": "Impact status effects have a 35% chance to also apply Magnetic (doubled below 2.5 fire rate). Not applied by the calculator."
+    },
+    "Acid Shells": {
+      "maxRank": 5,
+      "type": "SHOTGUN",
+      "polarity": "Madurai",
+      "rarity": "Uncommon",
+      "baseDrain": 4,
+      "special": true,
+      "mechanic": "Sobek only. Enemies explode on death for 450 Corrosive plus 45% of their max health.",
+      "note": "Sobek only. Enemies explode on death for 450 Corrosive plus 45% of their max health. Not applied by the calculator."
+    },
+    "Thermagnetic Shells": {
+      "maxRank": 3,
+      "type": "SECONDARY",
+      "polarity": "Naramon",
+      "rarity": "Rare",
+      "baseDrain": 2,
+      "special": true,
+      "mechanic": "Detron only. Enemies explode on death for 80 Magnetic plus 40% of their max health.",
+      "note": "Detron only. Enemies explode on death for 80 Magnetic plus 40% of their max health. Not applied by the calculator."
+    },
+    "Vulcan Blitz": {
+      "maxRank": 5,
+      "type": "MELEE",
+      "polarity": "Madurai",
+      "rarity": "Uncommon",
+      "baseDrain": 4,
+      "special": true,
+      "mechanic": "Jat Kittag only. Enemies explode on death for 300 Blast plus 60% of their max health.",
+      "note": "Jat Kittag only. Enemies explode on death for 300 Blast plus 60% of their max health. Not applied by the calculator."
+    },
+    "Static Discharge": {
+      "maxRank": 5,
+      "type": "MELEE",
+      "polarity": "Naramon",
+      "rarity": "Rare",
+      "baseDrain": 2,
+      "special": true,
+      "mechanic": "Prova only. Heavy attacks shock nearby enemies for 80% of weapon damage.",
+      "note": "Prova only. Heavy attacks shock nearby enemies for 80% of weapon damage. Not applied by the calculator."
+    },
+    "Nightwatch Napalm": {
+      "maxRank": 5,
+      "type": "PRIMARY",
+      "polarity": "Madurai",
+      "rarity": "Uncommon",
+      "baseDrain": 4,
+      "special": true,
+      "mechanic": "Ogris only. Rockets leave napalm dealing 30% damage over 6s.",
+      "note": "Ogris only. Rockets leave napalm dealing 30% damage over 6s. Not applied by the calculator."
+    },
+    "Adaptation": {
+      "stats": [
+        {
+          "stat": "DAMAGE_REDUCTION",
+          "increment": 0.009091,
+          "maxRank": 10,
+          "condition": "on_damaged",
+          "max_stacks": 9
+        }
+      ],
+      "type": "WARFRAME",
+      "polarity": "Vazarin",
+      "rarity": "Rare",
+      "baseDrain": 2,
+      "note": "Each hit of a damage type adds resistance to that type (5% per hit at rank 0, 10% at rank 10), up to 90%."
+    },
+    "Agility Drift": {
+      "stats": [
+        {
+          "stat": "DAMAGE_REDUCTION",
+          "increment": 0.02,
+          "maxRank": 5,
+          "condition": "while_airborne",
+          "max_stacks": 1
+        }
+      ],
+      "type": "WARFRAME",
+      "polarity": "Vazarin",
+      "rarity": "Rare",
+      "baseDrain": 4,
+      "note": "Only while airborne.",
+      "exilus": true
+    },
+    "Amar's Hatred": {
+      "stats": [
+        {
+          "stat": "ARMOR",
+          "increment": 0.041667,
+          "maxRank": 5
+        },
+        {
+          "stat": "ABILITY_STRENGTH",
+          "increment": 0.025,
+          "maxRank": 5
+        }
+      ],
+      "type": "WARFRAME",
+      "polarity": "Vazarin",
+      "rarity": "Uncommon",
+      "baseDrain": 4
+    },
+    "Antitoxin": {
+      "stats": [
+        {
+          "stat": "RESIST_TOXIN",
+          "increment": 0.075,
+          "maxRank": 5
+        }
+      ],
+      "type": "WARFRAME",
+      "polarity": "Vazarin",
+      "rarity": "Uncommon",
+      "baseDrain": 4
+    },
+    "Archon Continuity": {
+      "stats": [
+        {
+          "stat": "ABILITY_DURATION",
+          "increment": 0.05,
+          "maxRank": 10
+        }
+      ],
+      "type": "WARFRAME",
+      "polarity": "Madurai",
+      "rarity": "Legendary",
+      "baseDrain": 6
+    },
+    "Archon Intensify": {
+      "stats": [
+        {
+          "stat": "ABILITY_STRENGTH",
+          "increment": 0.027273,
+          "maxRank": 10
+        }
+      ],
+      "type": "WARFRAME",
+      "polarity": "Madurai",
+      "rarity": "Legendary",
+      "baseDrain": 6
+    },
+    "Archon Stretch": {
+      "stats": [
+        {
+          "stat": "ABILITY_RANGE",
+          "increment": 0.040909,
+          "maxRank": 10
+        }
+      ],
+      "type": "WARFRAME",
+      "polarity": "Naramon",
+      "rarity": "Legendary",
+      "baseDrain": 6
+    },
+    "Archon Vitality": {
+      "stats": [
+        {
+          "stat": "HEALTH",
+          "increment": 0.090909,
+          "maxRank": 10
+        }
+      ],
+      "type": "WARFRAME",
+      "polarity": "Vazarin",
+      "rarity": "Legendary",
+      "baseDrain": 6
+    },
+    "Armored Agility": {
+      "stats": [
+        {
+          "stat": "ARMOR",
+          "increment": 0.066667,
+          "maxRank": 5
+        }
+      ],
+      "type": "WARFRAME",
+      "polarity": "Vazarin",
+      "rarity": "Rare",
+      "baseDrain": 6
+    },
+    "Augur Accord": {
+      "stats": [
+        {
+          "stat": "SHIELDS",
+          "increment": 0.116667,
+          "maxRank": 5
+        }
+      ],
+      "type": "WARFRAME",
+      "polarity": "Vazarin",
+      "rarity": "Uncommon",
+      "baseDrain": 2
+    },
+    "Augur Message": {
+      "stats": [
+        {
+          "stat": "ABILITY_DURATION",
+          "increment": 0.04,
+          "maxRank": 5
+        }
+      ],
+      "type": "WARFRAME",
+      "polarity": "Naramon",
+      "rarity": "Common",
+      "baseDrain": 2
+    },
+    "Augur Reach": {
+      "stats": [
+        {
+          "stat": "ABILITY_RANGE",
+          "increment": 0.05,
+          "maxRank": 5
+        }
+      ],
+      "type": "WARFRAME",
+      "polarity": "Naramon",
+      "rarity": "Uncommon",
+      "baseDrain": 2
+    },
+    "Augur Secrets": {
+      "stats": [
+        {
+          "stat": "ABILITY_STRENGTH",
+          "increment": 0.04,
+          "maxRank": 5
+        }
+      ],
+      "type": "WARFRAME",
+      "polarity": "Naramon",
+      "rarity": "Rare",
+      "baseDrain": 2
+    },
+    "Aviator": {
+      "stats": [
+        {
+          "stat": "DAMAGE_REDUCTION",
+          "increment": 0.1,
+          "maxRank": 3,
+          "condition": "while_airborne",
+          "max_stacks": 1
+        }
+      ],
+      "type": "WARFRAME",
+      "polarity": "Vazarin",
+      "rarity": "Common",
+      "baseDrain": 4,
+      "note": "Only while airborne.",
+      "exilus": true
+    },
+    "Blind Rage": {
+      "stats": [
+        {
+          "stat": "ABILITY_STRENGTH",
+          "increment": 0.09,
+          "maxRank": 10
+        },
+        {
+          "stat": "ABILITY_EFFICIENCY",
+          "increment": -0.05,
+          "maxRank": 10
+        }
+      ],
+      "type": "WARFRAME",
+      "polarity": "Madurai",
+      "rarity": "Rare",
+      "baseDrain": 6
+    },
+    "Boreal's Hatred": {
+      "stats": [
+        {
+          "stat": "SHIELDS",
+          "increment": 0.108333,
+          "maxRank": 5
+        },
+        {
+          "stat": "ABILITY_EFFICIENCY",
+          "increment": 0.025,
+          "maxRank": 5
+        }
+      ],
+      "type": "WARFRAME",
+      "polarity": "Vazarin",
+      "rarity": "Uncommon",
+      "baseDrain": 4
+    },
+    "Brief Respite": {
+      "maxRank": 5,
+      "type": "AURA",
+      "polarity": "Zenurik",
+      "rarity": "Uncommon",
+      "baseDrain": -2,
+      "special": true,
+      "note": "Aura: 150% of energy spent becomes shields while overshields are inactive. Not part of the numbers."
+    },
+    "Carnis Carapace": {
+      "stats": [
+        {
+          "stat": "ARMOR",
+          "increment": 0.091667,
+          "maxRank": 5
+        },
+        {
+          "stat": "HEALTH",
+          "increment": 0.033333,
+          "maxRank": 5
+        }
+      ],
+      "type": "WARFRAME",
+      "polarity": "Vazarin",
+      "rarity": "Uncommon",
+      "baseDrain": 4
+    },
+    "Catalyzing Shields": {
+      "maxRank": 3,
+      "type": "WARFRAME",
+      "polarity": "Vazarin",
+      "rarity": "Rare",
+      "baseDrain": 10,
+      "special": true,
+      "note": "Cuts max shields to 20% and fixes the full shield gate at 1.33s (at rank 3)."
+    },
+    "Constitution": {
+      "stats": [
+        {
+          "stat": "ABILITY_DURATION",
+          "increment": 0.07,
+          "maxRank": 3
+        }
+      ],
+      "type": "WARFRAME",
+      "polarity": "Naramon",
+      "rarity": "Rare",
+      "baseDrain": 10
+    },
+    "Continuity": {
+      "stats": [
+        {
+          "stat": "ABILITY_DURATION",
+          "increment": 0.05,
+          "maxRank": 5
+        }
+      ],
+      "type": "WARFRAME",
+      "polarity": "Madurai",
+      "rarity": "Rare",
+      "baseDrain": 2
+    },
+    "Cunning Drift": {
+      "stats": [
+        {
+          "stat": "ABILITY_RANGE",
+          "increment": 0.025,
+          "maxRank": 5
+        }
+      ],
+      "type": "WARFRAME",
+      "polarity": "Madurai",
+      "rarity": "Rare",
+      "baseDrain": 4,
+      "exilus": true
+    },
+    "Diamond Skin": {
+      "stats": [
+        {
+          "stat": "RESIST_RADIATION",
+          "increment": 0.075,
+          "maxRank": 5
+        }
+      ],
+      "type": "WARFRAME",
+      "polarity": "Vazarin",
+      "rarity": "Uncommon",
+      "baseDrain": 4
+    },
+    "Energy Conversion": {
+      "maxRank": 5,
+      "type": "WARFRAME",
+      "polarity": "Madurai",
+      "rarity": "Rare",
+      "baseDrain": 10,
+      "special": true,
+      "note": "Energy Orbs give +50% Ability Strength to the next cast. Not part of the numbers."
+    },
+    "Flame Repellent": {
+      "stats": [
+        {
+          "stat": "RESIST_HEAT",
+          "increment": 0.1,
+          "maxRank": 5
+        }
+      ],
+      "type": "WARFRAME",
+      "polarity": "Vazarin",
+      "rarity": "Common",
+      "baseDrain": 4
+    },
+    "Fleeting Expertise": {
+      "stats": [
+        {
+          "stat": "ABILITY_EFFICIENCY",
+          "increment": 0.1,
+          "maxRank": 5
+        },
+        {
+          "stat": "ABILITY_DURATION",
+          "increment": -0.1,
+          "maxRank": 5
+        }
+      ],
+      "type": "WARFRAME",
+      "polarity": "Naramon",
+      "rarity": "Rare",
+      "baseDrain": 6
+    },
+    "Gladiator Aegis": {
+      "stats": [
+        {
+          "stat": "ARMOR",
+          "increment": 0.066667,
+          "maxRank": 5
+        }
+      ],
+      "type": "WARFRAME",
+      "polarity": "Vazarin",
+      "rarity": "Common",
+      "baseDrain": 4
+    },
+    "Gladiator Resolve": {
+      "stats": [
+        {
+          "stat": "HEALTH",
+          "increment": 0.066667,
+          "maxRank": 5
+        }
+      ],
+      "type": "WARFRAME",
+      "polarity": "Vazarin",
+      "rarity": "Uncommon",
+      "baseDrain": 4
+    },
+    "Growing Power": {
+      "stats": [
+        {
+          "stat": "ABILITY_STRENGTH",
+          "increment": 0.041667,
+          "maxRank": 5,
+          "condition": "on_status",
+          "max_stacks": 1
+        }
+      ],
+      "type": "AURA",
+      "polarity": "Madurai",
+      "rarity": "Rare",
+      "baseDrain": -2,
+      "note": "Aura: +25% Ability Strength for 6s after a weapon status effect. Use the conditional toggle."
+    },
+    "Health Conversion": {
+      "stats": [
+        {
+          "stat": "ARMOR_FLAT",
+          "increment": 75.0,
+          "maxRank": 5,
+          "condition": "on_health_orb",
+          "max_stacks": 3
+        }
+      ],
+      "type": "WARFRAME",
+      "polarity": "Unairu",
+      "rarity": "Rare",
+      "baseDrain": 10,
+      "note": "Each Health Orb adds a stack of flat armor; taking damage uses one up after 3s."
+    },
+    "Insulation": {
+      "stats": [
+        {
+          "stat": "RESIST_COLD",
+          "increment": 0.1,
+          "maxRank": 5
+        }
+      ],
+      "type": "WARFRAME",
+      "polarity": "Vazarin",
+      "rarity": "Common",
+      "baseDrain": 4
+    },
+    "Intensify": {
+      "stats": [
+        {
+          "stat": "ABILITY_STRENGTH",
+          "increment": 0.05,
+          "maxRank": 5
+        }
+      ],
+      "type": "WARFRAME",
+      "polarity": "Madurai",
+      "rarity": "Rare",
+      "baseDrain": 6
+    },
+    "Jugulus Carapace": {
+      "stats": [
+        {
+          "stat": "ARMOR",
+          "increment": 0.091667,
+          "maxRank": 5
+        },
+        {
+          "stat": "HEALTH",
+          "increment": 0.033333,
+          "maxRank": 5
+        }
+      ],
+      "type": "WARFRAME",
+      "polarity": "Vazarin",
+      "rarity": "Uncommon",
+      "baseDrain": 4
+    },
+    "Lightning Rod": {
+      "stats": [
+        {
+          "stat": "RESIST_ELECTRICITY",
+          "increment": 0.1,
+          "maxRank": 5
+        }
+      ],
+      "type": "WARFRAME",
+      "polarity": "Vazarin",
+      "rarity": "Common",
+      "baseDrain": 4
+    },
+    "Mecha Pulse": {
+      "maxRank": 3,
+      "type": "WARFRAME",
+      "polarity": "Madurai",
+      "rarity": "Rare",
+      "baseDrain": 6,
+      "special": true,
+      "note": "Killing a marked enemy gives +60% armor per enemy within 30m for 20s. Not part of the numbers."
+    },
+    "Narrow Minded": {
+      "stats": [
+        {
+          "stat": "ABILITY_DURATION",
+          "increment": 0.09,
+          "maxRank": 10
+        },
+        {
+          "stat": "ABILITY_RANGE",
+          "increment": -0.06,
+          "maxRank": 10
+        }
+      ],
+      "type": "WARFRAME",
+      "polarity": "Vazarin",
+      "rarity": "Rare",
+      "baseDrain": 6
+    },
+    "Nira's Hatred": {
+      "stats": [
+        {
+          "stat": "HEALTH",
+          "increment": 0.058333,
+          "maxRank": 5
+        },
+        {
+          "stat": "ABILITY_DURATION",
+          "increment": 0.025,
+          "maxRank": 5
+        }
+      ],
+      "type": "WARFRAME",
+      "polarity": "Vazarin",
+      "rarity": "Uncommon",
+      "baseDrain": 4
+    },
+    "Overextended": {
+      "stats": [
+        {
+          "stat": "ABILITY_RANGE",
+          "increment": 0.15,
+          "maxRank": 5
+        },
+        {
+          "stat": "ABILITY_STRENGTH",
+          "increment": -0.1,
+          "maxRank": 5
+        }
+      ],
+      "type": "WARFRAME",
+      "polarity": "Vazarin",
+      "rarity": "Rare",
+      "baseDrain": 6
+    },
+    "Physique": {
+      "stats": [
+        {
+          "stat": "HEALTH",
+          "increment": 0.033333,
+          "maxRank": 5
+        }
+      ],
+      "type": "AURA",
+      "polarity": "Vazarin",
+      "rarity": "Uncommon",
+      "baseDrain": -2
+    },
+    "Power Drift": {
+      "stats": [
+        {
+          "stat": "ABILITY_STRENGTH",
+          "increment": 0.025,
+          "maxRank": 5
+        }
+      ],
+      "type": "WARFRAME",
+      "polarity": "Zenurik",
+      "rarity": "Rare",
+      "baseDrain": 4,
+      "exilus": true
+    },
+    "Primed Continuity": {
+      "stats": [
+        {
+          "stat": "ABILITY_DURATION",
+          "increment": 0.05,
+          "maxRank": 10
+        }
+      ],
+      "type": "WARFRAME",
+      "polarity": "Madurai",
+      "rarity": "Legendary",
+      "baseDrain": 4
+    },
+    "Primed Redirection": {
+      "stats": [
+        {
+          "stat": "SHIELDS",
+          "increment": 0.163636,
+          "maxRank": 10
+        }
+      ],
+      "type": "WARFRAME",
+      "polarity": "Vazarin",
+      "rarity": "Legendary",
+      "baseDrain": 6
+    },
+    "Primed Streamline": {
+      "stats": [
+        {
+          "stat": "ABILITY_EFFICIENCY",
+          "increment": 0.05,
+          "maxRank": 10
+        }
+      ],
+      "type": "WARFRAME",
+      "polarity": "Naramon",
+      "rarity": "Legendary",
+      "baseDrain": 4
+    },
+    "Primed Vigor": {
+      "stats": [
+        {
+          "stat": "SHIELDS",
+          "increment": 0.068182,
+          "maxRank": 10
+        },
+        {
+          "stat": "HEALTH",
+          "increment": 0.068182,
+          "maxRank": 10
+        }
+      ],
+      "type": "WARFRAME",
+      "polarity": "Vazarin",
+      "rarity": "Legendary",
+      "baseDrain": 6
+    },
+    "Quick Thinking": {
+      "maxRank": 3,
+      "type": "WARFRAME",
+      "polarity": "Vazarin",
+      "rarity": "Rare",
+      "baseDrain": 10,
+      "special": true,
+      "note": "Lethal damage drains energy instead of health at 80% efficiency (max rank). Not part of the numbers."
+    },
+    "Redirection": {
+      "stats": [
+        {
+          "stat": "SHIELDS",
+          "increment": 0.090909,
+          "maxRank": 10
+        }
+      ],
+      "type": "WARFRAME",
+      "polarity": "Vazarin",
+      "rarity": "Common",
+      "baseDrain": 2
+    },
+    "Rolling Guard": {
+      "maxRank": 10,
+      "type": "WARFRAME",
+      "polarity": "Vazarin",
+      "rarity": "Rare",
+      "baseDrain": 2,
+      "special": true,
+      "note": "On dodge: invulnerable for 3s at max rank, 7s cooldown. Not part of the numbers."
+    },
+    "Saxum Carapace": {
+      "stats": [
+        {
+          "stat": "ARMOR",
+          "increment": 0.091667,
+          "maxRank": 5
+        },
+        {
+          "stat": "HEALTH",
+          "increment": 0.033333,
+          "maxRank": 5
+        }
+      ],
+      "type": "WARFRAME",
+      "polarity": "Vazarin",
+      "rarity": "Uncommon",
+      "baseDrain": 4
+    },
+    "Shock Absorbers": {
+      "stats": [
+        {
+          "stat": "RESIST_PHYSICAL",
+          "increment": 0.05,
+          "maxRank": 3
+        }
+      ],
+      "type": "WARFRAME",
+      "polarity": "Vazarin",
+      "rarity": "Rare",
+      "baseDrain": 4,
+      "exilus": true
+    },
+    "Stand United": {
+      "stats": [
+        {
+          "stat": "ARMOR",
+          "increment": 0.041667,
+          "maxRank": 5
+        }
+      ],
+      "type": "AURA",
+      "polarity": "Vazarin",
+      "rarity": "Uncommon",
+      "baseDrain": -2
+    },
+    "Steel Fiber": {
+      "stats": [
+        {
+          "stat": "ARMOR",
+          "increment": 0.090909,
+          "maxRank": 10
+        }
+      ],
+      "type": "WARFRAME",
+      "polarity": "Vazarin",
+      "rarity": "Common",
+      "baseDrain": 4
+    },
+    "Streamline": {
+      "stats": [
+        {
+          "stat": "ABILITY_EFFICIENCY",
+          "increment": 0.05,
+          "maxRank": 5
+        }
+      ],
+      "type": "WARFRAME",
+      "polarity": "Naramon",
+      "rarity": "Rare",
+      "baseDrain": 2
+    },
+    "Stretch": {
+      "stats": [
+        {
+          "stat": "ABILITY_RANGE",
+          "increment": 0.075,
+          "maxRank": 5
+        }
+      ],
+      "type": "WARFRAME",
+      "polarity": "Naramon",
+      "rarity": "Uncommon",
+      "baseDrain": 4
+    },
+    "Toxin Resistance": {
+      "stats": [
+        {
+          "stat": "RESIST_TOXIN",
+          "increment": 0.025,
+          "maxRank": 5
+        }
+      ],
+      "type": "AURA",
+      "polarity": "Vazarin",
+      "rarity": "Uncommon",
+      "baseDrain": -2
+    },
+    "Transient Fortitude": {
+      "stats": [
+        {
+          "stat": "ABILITY_STRENGTH",
+          "increment": 0.05,
+          "maxRank": 10
+        },
+        {
+          "stat": "ABILITY_DURATION",
+          "increment": -0.025,
+          "maxRank": 10
+        }
+      ],
+      "type": "WARFRAME",
+      "polarity": "Madurai",
+      "rarity": "Rare",
+      "baseDrain": 6
+    },
+    "Umbral Fiber": {
+      "stats": [
+        {
+          "stat": "ARMOR",
+          "increment": 0.090909,
+          "maxRank": 10
+        }
+      ],
+      "type": "WARFRAME",
+      "polarity": "Umbra",
+      "rarity": "Legendary",
+      "baseDrain": 6,
+      "note": "Umbral set: each other Umbral mod equipped raises this mod's value (x1.25 with two, x1.75 with three)."
+    },
+    "Umbral Intensify": {
+      "stats": [
+        {
+          "stat": "ABILITY_STRENGTH",
+          "increment": 0.04,
+          "maxRank": 10
+        }
+      ],
+      "type": "WARFRAME",
+      "polarity": "Umbra",
+      "rarity": "Legendary",
+      "baseDrain": 6,
+      "note": "Umbral set: each other Umbral mod equipped raises this mod's value (x1.25 with two, x1.75 with three)."
+    },
+    "Umbral Vitality": {
+      "stats": [
+        {
+          "stat": "HEALTH",
+          "increment": 0.090909,
+          "maxRank": 10
+        }
+      ],
+      "type": "WARFRAME",
+      "polarity": "Umbra",
+      "rarity": "Legendary",
+      "baseDrain": 6,
+      "note": "Umbral set: each other Umbral mod equipped raises this mod's value (x1.25 with two, x1.75 with three)."
+    },
+    "Vigor": {
+      "stats": [
+        {
+          "stat": "SHIELDS",
+          "increment": 0.083333,
+          "maxRank": 5
+        },
+        {
+          "stat": "HEALTH",
+          "increment": 0.083333,
+          "maxRank": 5
+        }
+      ],
+      "type": "WARFRAME",
+      "polarity": "Vazarin",
+      "rarity": "Rare",
+      "baseDrain": 6
+    },
+    "Vitality": {
+      "stats": [
+        {
+          "stat": "HEALTH",
+          "increment": 0.090909,
+          "maxRank": 10
+        }
+      ],
+      "type": "WARFRAME",
+      "polarity": "Vazarin",
+      "rarity": "Common",
+      "baseDrain": 2
+    },
+    "Adhesive Blast": {
+      "maxRank": 5,
+      "type": "PRIMARY",
+      "polarity": "Madurai",
+      "rarity": "Rare",
+      "baseDrain": 4,
+      "special": true,
+      "exilus": true,
+      "note": "Grenades have 100% chance to stick to surfaces. (at max rank). Utility mod: no effect on the calculator."
+    },
+    "Aerial Ace": {
+      "maxRank": 5,
+      "type": "PRIMARY",
+      "polarity": "Naramon",
+      "rarity": "Rare",
+      "baseDrain": 4,
+      "special": true,
+      "exilus": true,
+      "note": "On Kill: Refresh Double Jump up to 6x while Airborne. (at max rank). Utility mod: no effect on the calculator."
+    },
+    "Aero Periphery": {
+      "maxRank": 3,
+      "type": "PRIMARY",
+      "polarity": "Naramon",
+      "rarity": "Common",
+      "baseDrain": 2,
+      "special": true,
+      "exilus": true,
+      "note": "-50% Zoom while Aim Gliding (at max rank). Utility mod: no effect on the calculator."
+    },
+    "Aero Vantage": {
+      "maxRank": 3,
+      "type": "WARFRAME",
+      "polarity": "Naramon",
+      "rarity": "Uncommon",
+      "baseDrain": 4,
+      "special": true,
+      "exilus": true,
+      "note": "-100% Gravity while Aim Gliding (at max rank). Utility mod: no effect on the calculator."
+    },
+    "Amar's Anguish": {
+      "maxRank": 5,
+      "type": "WARFRAME",
+      "polarity": "Vazarin",
+      "rarity": "Common",
+      "baseDrain": 4,
+      "special": true,
+      "exilus": true,
+      "note": "+15% to Parkour Velocity / +15% Sprint Speed (at max rank). Utility mod: no effect on the calculator."
+    },
+    "Ammo Drum": {
+      "maxRank": 3,
+      "type": "PRIMARY",
+      "polarity": "Naramon",
+      "rarity": "Common",
+      "baseDrain": 2,
+      "special": true,
+      "exilus": true,
+      "note": "+10% Ammo Maximum (at max rank). Utility mod: no effect on the calculator."
+    },
+    "Anchored Glide": {
+      "maxRank": 5,
+      "type": "WARFRAME",
+      "polarity": "Zenurik",
+      "rarity": "Rare",
+      "baseDrain": 2,
+      "special": true,
+      "exilus": true,
+      "note": "Disable Zephyr's reduced airborne gravity. Increase Ability Strength by 15%. (at max rank). Utility mod: no effect on the calculator."
+    },
+    "Arrow Mutation": {
+      "maxRank": 10,
+      "type": "PRIMARY",
+      "polarity": "Naramon",
+      "rarity": "Rare",
+      "baseDrain": 0,
+      "special": true,
+      "exilus": true,
+      "note": "Converts Secondary ammo pickups to 92% of Ammo Pick Up. (at max rank). Utility mod: no effect on the calculator."
+    },
+    "Battering Maneuver": {
+      "maxRank": 5,
+      "type": "WARFRAME",
+      "polarity": "Vazarin",
+      "rarity": "Uncommon",
+      "baseDrain": 4,
+      "special": true,
+      "exilus": true,
+      "note": "+18% to Parkour Velocity / +18% Aim Glide/Wall Latch Duration / +60% Impact on Bullet Jump (at max rank). Utility mod: no effect on the calculator."
+    },
+    "Boreal's Anguish": {
+      "maxRank": 5,
+      "type": "WARFRAME",
+      "polarity": "Vazarin",
+      "rarity": "Common",
+      "baseDrain": 4,
+      "special": true,
+      "exilus": true,
+      "note": "-75% Gravity while Aim Gliding / +60% Aim Glide/Wall Latch Duration (at max rank). Utility mod: no effect on the calculator."
+    },
+    "Cautious Shot": {
+      "maxRank": 10,
+      "type": "PRIMARY",
+      "polarity": "Naramon",
+      "rarity": "Rare",
+      "baseDrain": 0,
+      "special": true,
+      "exilus": true,
+      "note": "+100% chance to reduce the Stagger effect from self-imposed Radial Attacks (at max rank). Utility mod: no effect on the calculator."
+    },
+    "Coaction Drift": {
+      "maxRank": 5,
+      "type": "WARFRAME",
+      "polarity": "Naramon",
+      "rarity": "Rare",
+      "baseDrain": 4,
+      "special": true,
+      "exilus": true,
+      "note": "Squad benefits +15% more from Auras / You benefit an additional +15% from Auras (at max rank). Utility mod: no effect on the calculator."
+    },
+    "Controlled Slide": {
+      "maxRank": 5,
+      "type": "WARFRAME",
+      "polarity": "Zenurik",
+      "rarity": "Rare",
+      "baseDrain": 2,
+      "special": true,
+      "exilus": true,
+      "note": "Disable Nezha's passive ability. Increase Ability Strength by 15%. (at max rank). Utility mod: no effect on the calculator."
+    },
+    "Counterbalance": {
+      "maxRank": 3,
+      "type": "SHOTGUN",
+      "polarity": "Naramon",
+      "rarity": "Rare",
+      "baseDrain": 6,
+      "special": true,
+      "exilus": true,
+      "note": "-60% Weapon Recoil (at max rank). Utility mod: no effect on the calculator."
+    },
+    "Discipline's Merit": {
+      "maxRank": 3,
+      "type": "MELEE",
+      "polarity": "Naramon",
+      "rarity": "Rare",
+      "baseDrain": 4,
+      "special": true,
+      "exilus": true,
+      "note": "Enables Tennokai. Opportunities occur every 4 melee hits instead of at random. (at max rank). Utility mod: no effect on the calculator."
+    },
+    "Dispatch Overdrive": {
+      "maxRank": 5,
+      "type": "MELEE",
+      "polarity": "Naramon",
+      "rarity": "Uncommon",
+      "baseDrain": 4,
+      "special": true,
+      "exilus": true,
+      "note": "On Heavy Attack Hit: +60% Movement Speed for 15s (at max rank). Utility mod: no effect on the calculator."
+    },
+    "Eagle Eye": {
+      "maxRank": 10,
+      "type": "PRIMARY",
+      "polarity": "Naramon",
+      "rarity": "Uncommon",
+      "baseDrain": 4,
+      "special": true,
+      "exilus": true,
+      "note": "+110% Zoom (at max rank). Utility mod: no effect on the calculator."
+    },
+    "Electromagnetic Shielding": {
+      "maxRank": 5,
+      "type": "MELEE",
+      "polarity": "Vazarin",
+      "rarity": "Uncommon",
+      "baseDrain": 4,
+      "special": true,
+      "exilus": true,
+      "note": "While blocking, redirect 50% of damage taken by allies within 12m to yourself. (at max rank). Utility mod: no effect on the calculator."
+    },
+    "Endurance Drift": {
+      "maxRank": 5,
+      "type": "WARFRAME",
+      "polarity": "Zenurik",
+      "rarity": "Rare",
+      "baseDrain": 4,
+      "special": true,
+      "exilus": true,
+      "note": "+10% Energy Max / +12% Parkour Velocity (at max rank). Utility mod: no effect on the calculator."
+    },
+    "Enemy Sense": {
+      "maxRank": 5,
+      "type": "WARFRAME",
+      "polarity": "Naramon",
+      "rarity": "Rare",
+      "baseDrain": 2,
+      "special": true,
+      "exilus": true,
+      "note": "+30m Enemy Radar (at max rank). Utility mod: no effect on the calculator."
+    },
+    "Energizing Shot": {
+      "maxRank": 10,
+      "type": "SECONDARY",
+      "polarity": "Madurai",
+      "rarity": "Rare",
+      "baseDrain": 0,
+      "special": true,
+      "exilus": true,
+      "note": "Shoot Energy Orbs to obtain them with +110% extra effect. (at max rank). Utility mod: no effect on the calculator."
+    },
+    "Fass Canticle": {
+      "maxRank": 3,
+      "type": "SECONDARY",
+      "polarity": "Naramon",
+      "rarity": "Rare",
+      "baseDrain": 4,
+      "special": true,
+      "exilus": true,
+      "note": "Killing enemies grants Allies in Affinity Range 40% Shield Recharge Rate and -28% Shield Recharge Delay for 15s. (at max rank). Utility mod: no effect on the calculator."
+    },
+    "Fatal Acceleration": {
+      "maxRank": 3,
+      "type": "SHOTGUN",
+      "polarity": "Madurai",
+      "rarity": "Uncommon",
+      "baseDrain": 4,
+      "special": true,
+      "exilus": true,
+      "note": "+40% Projectile Speed (at max rank). Utility mod: no effect on the calculator."
+    },
+    "Firewalker": {
+      "maxRank": 10,
+      "type": "WARFRAME",
+      "polarity": "Madurai",
+      "rarity": "Rare",
+      "baseDrain": 2,
+      "special": true,
+      "exilus": true,
+      "note": "+24.2% to Parkour Velocity / +24.2% Aim Glide/Wall Latch Duration / +275% Heat on Bullet Jump (at max rank). Utility mod: no effect on the calculator."
+    },
+    "Focused Defense": {
+      "maxRank": 3,
+      "type": "MELEE",
+      "polarity": "Vazarin",
+      "rarity": "Common",
+      "baseDrain": 4,
+      "special": true,
+      "exilus": true,
+      "note": "+20 Parry Angle (at max rank). Utility mod: no effect on the calculator."
+    },
+    "Fomorian Accelerant": {
+      "maxRank": 3,
+      "type": "SHOTGUN",
+      "polarity": "Madurai",
+      "rarity": "Uncommon",
+      "baseDrain": 4,
+      "special": true,
+      "exilus": true,
+      "note": "Flak now bounces up to 4x and travels 60% faster. (at max rank). Utility mod: no effect on the calculator."
+    },
+    "Gale Kick": {
+      "maxRank": 3,
+      "type": "WARFRAME",
+      "polarity": "Madurai",
+      "rarity": "Rare",
+      "baseDrain": 4,
+      "special": true,
+      "exilus": true,
+      "note": "+100% of Melee Damage converted to Impact Damage on Jump Kick, knocking down nearby enemies on kill. (at max rank). Utility mod: no effect on the calculator."
+    },
+    "Guardian Derision": {
+      "maxRank": 5,
+      "type": "MELEE",
+      "polarity": "Vazarin",
+      "rarity": "Rare",
+      "baseDrain": 6,
+      "special": true,
+      "exilus": true,
+      "note": "Blocking taunts enemies within 15 meters to target you instead of allies. / +30% Combo Count Chance while Blocking (at max rank). Utility mod: no effect on the calculator."
+    },
+    "Guided Ordnance": {
+      "maxRank": 5,
+      "type": "PRIMARY",
+      "polarity": "Madurai",
+      "rarity": "Uncommon",
+      "baseDrain": 2,
+      "special": true,
+      "exilus": true,
+      "note": "On Hit: +30% Accuracy when Aiming for 9s (at max rank). Utility mod: no effect on the calculator."
+    },
+    "Handspring": {
+      "maxRank": 3,
+      "type": "WARFRAME",
+      "polarity": "Naramon",
+      "rarity": "Rare",
+      "baseDrain": 6,
+      "special": true,
+      "exilus": true,
+      "note": "+160% Faster Knockdown Recovery (at max rank). Utility mod: no effect on the calculator."
+    },
+    "Hawk Eye": {
+      "maxRank": 10,
+      "type": "SECONDARY",
+      "polarity": "Naramon",
+      "rarity": "Uncommon",
+      "baseDrain": 4,
+      "special": true,
+      "exilus": true,
+      "note": "+220% Zoom (at max rank). Utility mod: no effect on the calculator."
+    },
+    "Heavy Impact": {
+      "maxRank": 5,
+      "type": "WARFRAME",
+      "polarity": "Naramon",
+      "rarity": "Uncommon",
+      "baseDrain": 4,
+      "special": true,
+      "exilus": true,
+      "note": "Create 6m seismic shockwaves from heavy landings, dealing 300 Damage and knocking foes off their feet. (at max rank). Utility mod: no effect on the calculator."
+    },
+    "Hush": {
+      "maxRank": 3,
+      "type": "PRIMARY",
+      "polarity": "Naramon",
+      "rarity": "Common",
+      "baseDrain": 2,
+      "special": true,
+      "exilus": true,
+      "note": "Reduces the chance an enemy will hear gunfire by 100%. (at max rank). Utility mod: no effect on the calculator."
+    },
+    "Ice Spring": {
+      "maxRank": 10,
+      "type": "WARFRAME",
+      "polarity": "Vazarin",
+      "rarity": "Rare",
+      "baseDrain": 2,
+      "special": true,
+      "exilus": true,
+      "note": "+24.2% to Parkour Velocity / +24.2% Aim Glide/Wall Latch Duration / +275% Cold on Bullet Jump (at max rank). Utility mod: no effect on the calculator."
+    },
+    "Intruder": {
+      "maxRank": 0,
+      "type": "WARFRAME",
+      "polarity": "Universal",
+      "rarity": "Common",
+      "baseDrain": 0,
+      "special": true,
+      "exilus": true,
+      "note": "+8s to Hacking (at max rank). Utility mod: no effect on the calculator."
+    },
+    "Ironclad Flight": {
+      "maxRank": 3,
+      "type": "WARFRAME",
+      "polarity": "Zenurik",
+      "rarity": "Rare",
+      "baseDrain": 4,
+      "special": true,
+      "exilus": true,
+      "note": "Disable vacuum in Razorwing. Reduced Damage by 40% while Airborne. (at max rank). Utility mod: no effect on the calculator."
+    },
+    "Jahu Canticle": {
+      "maxRank": 3,
+      "type": "SECONDARY",
+      "polarity": "Madurai",
+      "rarity": "Rare",
+      "baseDrain": 4,
+      "special": true,
+      "exilus": true,
+      "note": "Killing enemies reduces the Armor and Shields of other enemies within Affinity Range by 5%. (at max rank). Utility mod: no effect on the calculator."
+    },
+    "Kavat's Grace": {
+      "maxRank": 3,
+      "type": "WARFRAME",
+      "polarity": "Naramon",
+      "rarity": "Rare",
+      "baseDrain": 4,
+      "special": true,
+      "exilus": true,
+      "note": "Falling is 100% less likely to result in a hard landing. (at max rank). Utility mod: no effect on the calculator."
+    },
+    "Khra Canticle": {
+      "maxRank": 3,
+      "type": "SECONDARY",
+      "polarity": "Naramon",
+      "rarity": "Rare",
+      "baseDrain": 4,
+      "special": true,
+      "exilus": true,
+      "note": "Enemies have a 12% chance to drop a Universal Orb on death. (at max rank). Utility mod: no effect on the calculator."
+    },
+    "Kinetic Ricochet": {
+      "maxRank": 5,
+      "type": "PRIMARY",
+      "polarity": "Naramon",
+      "rarity": "Rare",
+      "baseDrain": 2,
+      "special": true,
+      "exilus": true,
+      "note": "Shots now bounce up to 6x and travel 30% further. (at max rank). Utility mod: no effect on the calculator."
+    },
+    "Lethal Momentum": {
+      "maxRank": 3,
+      "type": "SECONDARY",
+      "polarity": "Madurai",
+      "rarity": "Uncommon",
+      "baseDrain": 4,
+      "special": true,
+      "exilus": true,
+      "note": "+40% Projectile Speed (at max rank). Utility mod: no effect on the calculator."
+    },
+    "Lightning Dash": {
+      "maxRank": 10,
+      "type": "WARFRAME",
+      "polarity": "Madurai",
+      "rarity": "Rare",
+      "baseDrain": 2,
+      "special": true,
+      "exilus": true,
+      "note": "+24.2% to Parkour Velocity / +24.2% Aim Glide/Wall Latch Duration / +275% Electricity on Bullet Jump (at max rank). Utility mod: no effect on the calculator."
+    },
+    "Lohk Canticle": {
+      "maxRank": 3,
+      "type": "SECONDARY",
+      "polarity": "Madurai",
+      "rarity": "Rare",
+      "baseDrain": 4,
+      "special": true,
+      "exilus": true,
+      "note": "Killing enemies grants Allies within Affinity Range +30% Fire Rate for 15s. (at max rank). Utility mod: no effect on the calculator."
+    },
+    "Maglev": {
+      "maxRank": 3,
+      "type": "WARFRAME",
+      "polarity": "Naramon",
+      "rarity": "Uncommon",
+      "baseDrain": 6,
+      "special": true,
+      "exilus": true,
+      "note": "+20% Slide / -20% Friction (at max rank). Utility mod: no effect on the calculator."
+    },
+    "Master Thief": {
+      "maxRank": 3,
+      "type": "WARFRAME",
+      "polarity": "Naramon",
+      "rarity": "Rare",
+      "baseDrain": 10,
+      "special": true,
+      "exilus": true,
+      "note": "+40% chance to unlock locked lockers. (at max rank). Utility mod: no effect on the calculator."
+    },
+    "Mending Shot": {
+      "maxRank": 10,
+      "type": "PRIMARY",
+      "polarity": "Madurai",
+      "rarity": "Rare",
+      "baseDrain": 0,
+      "special": true,
+      "exilus": true,
+      "note": "Shoot Health Orbs to obtain them with +110% extra effect. (at max rank). Utility mod: no effect on the calculator."
+    },
+    "Mobilize": {
+      "maxRank": 3,
+      "type": "WARFRAME",
+      "polarity": "Naramon",
+      "rarity": "Uncommon",
+      "baseDrain": 2,
+      "special": true,
+      "exilus": true,
+      "note": "+20% to Parkour Velocity / +20% Aim Glide/Wall Latch Duration (at max rank). Utility mod: no effect on the calculator."
+    },
+    "Motus Signal": {
+      "maxRank": 3,
+      "type": "WARFRAME",
+      "polarity": "Naramon",
+      "rarity": "Common",
+      "baseDrain": 4,
+      "special": true,
+      "exilus": true,
+      "note": "Increase Double Jump strength by +200%. (at max rank). Utility mod: no effect on the calculator."
+    },
+    "Narrow Barrel": {
+      "maxRank": 5,
+      "type": "SHOTGUN",
+      "polarity": "Madurai",
+      "rarity": "Rare",
+      "baseDrain": 2,
+      "special": true,
+      "exilus": true,
+      "note": "On Hit: +30% Accuracy when Aiming for 9s (at max rank). Utility mod: no effect on the calculator."
+    },
+    "Nira's Anguish": {
+      "maxRank": 5,
+      "type": "WARFRAME",
+      "polarity": "Vazarin",
+      "rarity": "Common",
+      "baseDrain": 4,
+      "special": true,
+      "exilus": true,
+      "note": "+15% to Parkour Velocity / +15% Aim Glide/Wall Latch Duration (at max rank). Utility mod: no effect on the calculator."
+    },
+    "Opportunity's Reach": {
+      "maxRank": 3,
+      "type": "MELEE",
+      "polarity": "Madurai",
+      "rarity": "Uncommon",
+      "baseDrain": 4,
+      "special": true,
+      "exilus": true,
+      "note": "Enables Tennokai. Increases opportunity window to 4.0s and melee range by 3m for Tennokai attacks. (at max rank). Utility mod: no effect on the calculator."
+    },
+    "Pain Threshold": {
+      "maxRank": 3,
+      "type": "WARFRAME",
+      "polarity": "Naramon",
+      "rarity": "Rare",
+      "baseDrain": 6,
+      "special": true,
+      "exilus": true,
+      "note": "+160% Faster Stagger Recovery (at max rank). Utility mod: no effect on the calculator."
+    },
+    "Parry": {
+      "maxRank": 5,
+      "type": "WARFRAME",
+      "polarity": "Vazarin",
+      "rarity": "Common",
+      "baseDrain": 2,
+      "special": true,
+      "exilus": true,
+      "note": "+96% chance to open enemies to Finisher Attacks after Warframe blocks Melee (at max rank). Utility mod: no effect on the calculator."
+    },
+    "Patagium": {
+      "maxRank": 5,
+      "type": "WARFRAME",
+      "polarity": "Naramon",
+      "rarity": "Uncommon",
+      "baseDrain": 2,
+      "special": true,
+      "exilus": true,
+      "note": "+90% Aim Glide/Wall Latch Duration (at max rank). Utility mod: no effect on the calculator."
+    },
+    "Piercing Step": {
+      "maxRank": 5,
+      "type": "WARFRAME",
+      "polarity": "Naramon",
+      "rarity": "Uncommon",
+      "baseDrain": 4,
+      "special": true,
+      "exilus": true,
+      "note": "+18% to Parkour Velocity / +18% Aim Glide/Wall Latch Duration / +60% Puncture on Bullet Jump (at max rank). Utility mod: no effect on the calculator."
+    },
+    "Pistol Ammo Mutation": {
+      "maxRank": 5,
+      "type": "SECONDARY",
+      "polarity": "Naramon",
+      "rarity": "Rare",
+      "baseDrain": 2,
+      "special": true,
+      "exilus": true,
+      "note": "Converts Primary ammo pickups to 50% of Ammo Pick Up. (at max rank). Utility mod: no effect on the calculator."
+    },
+    "Preparation": {
+      "maxRank": 10,
+      "type": "WARFRAME",
+      "polarity": "Zenurik",
+      "rarity": "Rare",
+      "baseDrain": 2,
+      "special": true,
+      "exilus": true,
+      "note": "+100% Maximum Energy is filled on Spawn (at max rank). Utility mod: no effect on the calculator."
+    },
+    "Primed Counterbalance": {
+      "maxRank": 10,
+      "type": "SHOTGUN",
+      "polarity": "Naramon",
+      "rarity": "Legendary",
+      "baseDrain": 2,
+      "special": true,
+      "exilus": true,
+      "note": "-85% Weapon Recoil (at max rank). Utility mod: no effect on the calculator."
+    },
+    "Primed Pistol Ammo Mutation": {
+      "maxRank": 10,
+      "type": "SECONDARY",
+      "polarity": "Naramon",
+      "rarity": "Legendary",
+      "baseDrain": 0,
+      "special": true,
+      "exilus": true,
+      "note": "Converts Primary ammo pickups to 92% of Ammo Pick Up. (at max rank). Utility mod: no effect on the calculator."
+    },
+    "Primed Rifle Ammo Mutation": {
+      "maxRank": 10,
+      "type": "PRIMARY",
+      "polarity": "Naramon",
+      "rarity": "Legendary",
+      "baseDrain": 0,
+      "special": true,
+      "exilus": true,
+      "note": "Converts Secondary ammo pickups to 92% of Ammo Pick Up. (at max rank). Utility mod: no effect on the calculator."
+    },
+    "Primed Shotgun Ammo Mutation": {
+      "maxRank": 10,
+      "type": "SHOTGUN",
+      "polarity": "Naramon",
+      "rarity": "Legendary",
+      "baseDrain": 0,
+      "special": true,
+      "exilus": true,
+      "note": "Converts Secondary ammo pickups to 92% of Ammo Pick Up. (at max rank). Utility mod: no effect on the calculator."
+    },
+    "Primed Sniper Ammo Mutation": {
+      "maxRank": 10,
+      "type": "PRIMARY",
+      "polarity": "Naramon",
+      "rarity": "Legendary",
+      "baseDrain": 0,
+      "special": true,
+      "exilus": true,
+      "note": "Converts Secondary ammo pickups to 92% of Ammo Pick Up. (at max rank). Utility mod: no effect on the calculator."
+    },
+    "Primed Stabilizer": {
+      "maxRank": 10,
+      "type": "PRIMARY",
+      "polarity": "Naramon",
+      "rarity": "Legendary",
+      "baseDrain": 2,
+      "special": true,
+      "exilus": true,
+      "note": "-85% Weapon Recoil (at max rank). Utility mod: no effect on the calculator."
+    },
+    "Primed Steady Hands": {
+      "maxRank": 10,
+      "type": "SECONDARY",
+      "polarity": "Naramon",
+      "rarity": "Legendary",
+      "baseDrain": 2,
+      "special": true,
+      "exilus": true,
+      "note": "-85% Weapon Recoil (at max rank). Utility mod: no effect on the calculator."
+    },
+    "Primed Sure Footed": {
+      "maxRank": 10,
+      "type": "WARFRAME",
+      "polarity": "Vazarin",
+      "rarity": "Legendary",
+      "baseDrain": 6,
+      "special": true,
+      "exilus": true,
+      "note": "+100% Chance to Resist Knockdown (at max rank). Utility mod: no effect on the calculator."
+    },
+    "Proton Pulse": {
+      "maxRank": 3,
+      "type": "WARFRAME",
+      "polarity": "Naramon",
+      "rarity": "Common",
+      "baseDrain": 4,
+      "special": true,
+      "exilus": true,
+      "note": "Wall Dashing grants +100% Bullet Jump Speed. (at max rank). Utility mod: no effect on the calculator."
+    },
+    "Rending Turn": {
+      "maxRank": 5,
+      "type": "WARFRAME",
+      "polarity": "Madurai",
+      "rarity": "Uncommon",
+      "baseDrain": 4,
+      "special": true,
+      "exilus": true,
+      "note": "+18% to Parkour Velocity / +18% Aim Glide/Wall Latch Duration / +60% Slash on Bullet Jump (at max rank). Utility mod: no effect on the calculator."
+    },
+    "Retribution": {
+      "maxRank": 3,
+      "type": "WARFRAME",
+      "polarity": "Vazarin",
+      "rarity": "Rare",
+      "baseDrain": 6,
+      "special": true,
+      "exilus": true,
+      "note": "+60% Chance to deal Electrical Damage when shield struck by melee enemies. / +80 Electricity (at max rank). Utility mod: no effect on the calculator."
+    },
+    "Rifle Ammo Mutation": {
+      "maxRank": 5,
+      "type": "PRIMARY",
+      "polarity": "Naramon",
+      "rarity": "Rare",
+      "baseDrain": 2,
+      "special": true,
+      "exilus": true,
+      "note": "Converts Secondary ammo pickups to 50% of Ammo Pick Up. (at max rank). Utility mod: no effect on the calculator."
+    },
+    "Ruinous Extension": {
+      "maxRank": 3,
+      "type": "SECONDARY",
+      "polarity": "Naramon",
+      "rarity": "Uncommon",
+      "baseDrain": 2,
+      "special": true,
+      "exilus": true,
+      "note": "+8m Beam Range (at max rank). Utility mod: no effect on the calculator."
+    },
+    "Rush": {
+      "maxRank": 5,
+      "type": "WARFRAME",
+      "polarity": "Naramon",
+      "rarity": "Uncommon",
+      "baseDrain": 6,
+      "special": true,
+      "exilus": true,
+      "note": "+30% Sprint Speed (at max rank). Utility mod: no effect on the calculator."
+    },
+    "Shell Compression": {
+      "maxRank": 3,
+      "type": "SHOTGUN",
+      "polarity": "Naramon",
+      "rarity": "Uncommon",
+      "baseDrain": 2,
+      "special": true,
+      "exilus": true,
+      "note": "+12% Ammo Maximum (at max rank). Utility mod: no effect on the calculator."
+    },
+    "Shotgun Ammo Mutation": {
+      "maxRank": 5,
+      "type": "SHOTGUN",
+      "polarity": "Naramon",
+      "rarity": "Rare",
+      "baseDrain": 2,
+      "special": true,
+      "exilus": true,
+      "note": "Converts Secondary ammo pickups to 50% of Ammo Pick Up. (at max rank). Utility mod: no effect on the calculator."
+    },
+    "Silent Battery": {
+      "maxRank": 3,
+      "type": "SHOTGUN",
+      "polarity": "Naramon",
+      "rarity": "Uncommon",
+      "baseDrain": 2,
+      "special": true,
+      "exilus": true,
+      "note": "Reduces the chance an enemy will hear gunfire by 100%. (at max rank). Utility mod: no effect on the calculator."
+    },
+    "Sinister Reach": {
+      "maxRank": 3,
+      "type": "PRIMARY",
+      "polarity": "Naramon",
+      "rarity": "Uncommon",
+      "baseDrain": 2,
+      "special": true,
+      "exilus": true,
+      "note": "+12m Beam Range (at max rank). Utility mod: no effect on the calculator."
+    },
+    "Sniper Ammo Mutation": {
+      "maxRank": 5,
+      "type": "PRIMARY",
+      "polarity": "Naramon",
+      "rarity": "Rare",
+      "baseDrain": 2,
+      "special": true,
+      "exilus": true,
+      "note": "Converts Secondary ammo pickups to 50% of Ammo Pick Up. (at max rank). Utility mod: no effect on the calculator."
+    },
+    "Speed Drift": {
+      "maxRank": 5,
+      "type": "WARFRAME",
+      "polarity": "Madurai",
+      "rarity": "Rare",
+      "baseDrain": 4,
+      "special": true,
+      "exilus": true,
+      "note": "+12% Sprint Speed / +15% Casting Speed (at max rank). Utility mod: no effect on the calculator."
+    },
+    "Stabilizer": {
+      "maxRank": 5,
+      "type": "PRIMARY",
+      "polarity": "Naramon",
+      "rarity": "Rare",
+      "baseDrain": 6,
+      "special": true,
+      "exilus": true,
+      "note": "-90% Weapon Recoil (at max rank). Utility mod: no effect on the calculator."
+    },
+    "Steady Hands": {
+      "maxRank": 5,
+      "type": "SECONDARY",
+      "polarity": "Naramon",
+      "rarity": "Rare",
+      "baseDrain": 6,
+      "special": true,
+      "exilus": true,
+      "note": "-90% Weapon Recoil (at max rank). Utility mod: no effect on the calculator."
+    },
+    "Stealth Drift": {
+      "maxRank": 5,
+      "type": "WARFRAME",
+      "polarity": "Naramon",
+      "rarity": "Rare",
+      "baseDrain": 4,
+      "special": true,
+      "exilus": true,
+      "note": "+18m Enemy Radar / +12% Aim Glide/Wall Latch Duration (at max rank). Utility mod: no effect on the calculator."
+    },
+    "Streamlined Form": {
+      "maxRank": 5,
+      "type": "WARFRAME",
+      "polarity": "Naramon",
+      "rarity": "Rare",
+      "baseDrain": 2,
+      "special": true,
+      "exilus": true,
+      "note": "+30% Slide / -30% Friction (at max rank). Utility mod: no effect on the calculator."
+    },
+    "Suppress": {
+      "maxRank": 3,
+      "type": "SECONDARY",
+      "polarity": "Naramon",
+      "rarity": "Common",
+      "baseDrain": 2,
+      "special": true,
+      "exilus": true,
+      "note": "Reduces the chance an enemy will hear gunfire by 100%. (at max rank). Utility mod: no effect on the calculator."
+    },
+    "Sure Footed": {
+      "maxRank": 3,
+      "type": "WARFRAME",
+      "polarity": "Vazarin",
+      "rarity": "Rare",
+      "baseDrain": 6,
+      "special": true,
+      "exilus": true,
+      "note": "+60% Chance to Resist Knockdown (at max rank). Utility mod: no effect on the calculator."
+    },
+    "Synth Reflex": {
+      "maxRank": 3,
+      "type": "WARFRAME",
+      "polarity": "Madurai",
+      "rarity": "Rare",
+      "baseDrain": 4,
+      "special": true,
+      "exilus": true,
+      "note": "On Equip: +40% Bullet Jump for 2s (at max rank). Utility mod: no effect on the calculator."
+    },
+    "Targeting Subsystem": {
+      "maxRank": 5,
+      "type": "SECONDARY",
+      "polarity": "Madurai",
+      "rarity": "Uncommon",
+      "baseDrain": 2,
+      "special": true,
+      "exilus": true,
+      "note": "On Hit: +30% Accuracy when Aiming for 9s (at max rank). Utility mod: no effect on the calculator."
+    },
+    "Terminal Velocity": {
+      "maxRank": 3,
+      "type": "PRIMARY",
+      "polarity": "Madurai",
+      "rarity": "Uncommon",
+      "baseDrain": 4,
+      "special": true,
+      "exilus": true,
+      "note": "+60% Projectile Speed (at max rank). Utility mod: no effect on the calculator."
+    },
+    "Tether Grenades": {
+      "maxRank": 5,
+      "type": "PRIMARY",
+      "polarity": "Naramon",
+      "rarity": "Rare",
+      "baseDrain": 2,
+      "special": true,
+      "exilus": true,
+      "note": "Grenades tether up to 5 enemies from 9m away. (at max rank). Utility mod: no effect on the calculator."
+    },
+    "Thief's Wit": {
+      "maxRank": 5,
+      "type": "WARFRAME",
+      "polarity": "Naramon",
+      "rarity": "Common",
+      "baseDrain": 2,
+      "special": true,
+      "exilus": true,
+      "note": "+42m Loot Radar (at max rank). Utility mod: no effect on the calculator."
+    },
+    "Toxic Flight": {
+      "maxRank": 10,
+      "type": "WARFRAME",
+      "polarity": "Naramon",
+      "rarity": "Rare",
+      "baseDrain": 2,
+      "special": true,
+      "exilus": true,
+      "note": "+24.2% to Parkour Velocity / +24.2% Aim Glide/Wall Latch Duration / +275% Toxin on Bullet Jump (at max rank). Utility mod: no effect on the calculator."
+    },
+    "Trick Mag": {
+      "maxRank": 3,
+      "type": "SECONDARY",
+      "polarity": "Naramon",
+      "rarity": "Common",
+      "baseDrain": 2,
+      "special": true,
+      "exilus": true,
+      "note": "+40% Ammo Maximum (at max rank). Utility mod: no effect on the calculator."
+    },
+    "Vigilante Pursuit": {
+      "maxRank": 5,
+      "type": "WARFRAME",
+      "polarity": "Naramon",
+      "rarity": "Uncommon",
+      "baseDrain": 4,
+      "special": true,
+      "exilus": true,
+      "note": "+30m Enemy Radar (at max rank). Utility mod: no effect on the calculator."
+    },
+    "Vigilante Supplies": {
+      "maxRank": 5,
+      "type": "PRIMARY",
+      "polarity": "Naramon",
+      "rarity": "Rare",
+      "baseDrain": 4,
+      "special": true,
+      "exilus": true,
+      "note": "Converts Secondary ammo pickups to 30% of Ammo Pick Up. (at max rank). Utility mod: no effect on the calculator."
+    },
+    "Warm Coat": {
+      "maxRank": 3,
+      "type": "WARFRAME",
+      "polarity": "Vazarin",
+      "rarity": "Common",
+      "baseDrain": 6,
+      "special": true,
+      "exilus": true,
+      "note": "+12% Shield Resistance to Environmental Ice Hazards (at max rank). Utility mod: no effect on the calculator."
+    },
+    "Whirlwind": {
+      "maxRank": 3,
+      "type": "MELEE",
+      "polarity": "Madurai",
+      "rarity": "Rare",
+      "baseDrain": 4,
+      "special": true,
+      "exilus": true,
+      "note": "+120% Projectile Speed (at max rank). Utility mod: no effect on the calculator."
+    }
+  },
+  "_conditions": {
+    "while_aiming": "Active while aiming after the mod's trigger (weak point hit, kill, reload or ability cast). On or off.",
+    "on_kill": "Granted on kill, up to max_stacks.",
+    "on_hit": "Granted on hit, up to max_stacks.",
+    "per_combo": "Scales with the melee combo multiplier above 1x. Applied automatically."
+  }
+}

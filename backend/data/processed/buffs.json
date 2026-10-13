@@ -1,0 +1,404 @@
+{
+  "buffs": [
+    {
+      "id": "focus.phoenix_talons",
+      "name": "Phoenix Talons",
+      "group": "Focus: Madurai",
+      "kind": "physical_add",
+      "perRank": [
+        0.05,
+        0.1,
+        0.2,
+        0.3
+      ],
+      "maxRank": 3,
+      "text": "Physical damage (Impact, Puncture, Slash) of Warframe weapons. For amps it is Operator damage.",
+      "requires": {
+        "text": "",
+        "companions": [],
+        "companionTypes": [],
+        "meleeWeapon": false,
+        "anyCompanion": false
+      },
+      "uptime": 1.0,
+      "uptimeNote": "",
+      "verified": true,
+      "amount": null,
+      "appliesTo": [
+        "weapon",
+        "amp"
+      ]
+    },
+    {
+      "id": "focus.void_strike",
+      "name": "Void Strike",
+      "group": "Focus: Madurai",
+      "kind": "base_damage_add",
+      "perRank": [
+        0.04,
+        0.06,
+        0.08,
+        0.1
+      ],
+      "maxRank": 3,
+      "text": "Damage per 1% of Operator energy consumed, added to base damage bonuses like Serration.",
+      "requires": {
+        "text": "",
+        "companions": [],
+        "companionTypes": [],
+        "meleeWeapon": false,
+        "anyCompanion": false
+      },
+      "uptime": 0.16666666666666666,
+      "uptimeNote": "8s of buff, then a 40s cooldown, at rank 3.",
+      "verified": true,
+      "amount": {
+        "label": "Energy consumed (%)",
+        "min": 1,
+        "max": 100,
+        "default": 100
+      },
+      "appliesTo": [
+        "weapon",
+        "amp"
+      ]
+    },
+    {
+      "id": "focus.caustic_strike",
+      "name": "Caustic Strike",
+      "group": "Focus: Unairu",
+      "kind": "armor_strip",
+      "perRank": [
+        0.4,
+        0.6,
+        0.8,
+        1.0
+      ],
+      "maxRank": 3,
+      "text": "Strips this share of the enemy's armor.",
+      "requires": {
+        "text": "",
+        "companions": [],
+        "companionTypes": [],
+        "meleeWeapon": false,
+        "anyCompanion": false
+      },
+      "uptime": 1.0,
+      "uptimeNote": "",
+      "verified": true,
+      "amount": null,
+      "appliesTo": [
+        "enemy"
+      ]
+    },
+    {
+      "id": "focus.power_transfer",
+      "name": "Power Transfer",
+      "group": "Focus: Madurai",
+      "kind": "crit_damage_add",
+      "perRank": [
+        0.45,
+        0.6,
+        0.75,
+        1.0
+      ],
+      "maxRank": 3,
+      "text": "Amp critical damage after switching to Operator.",
+      "requires": {
+        "text": "",
+        "companions": [],
+        "companionTypes": [],
+        "meleeWeapon": false,
+        "anyCompanion": false
+      },
+      "uptime": 1.0,
+      "uptimeNote": "",
+      "verified": true,
+      "amount": null,
+      "appliesTo": [
+        "amp"
+      ]
+    },
+    {
+      "id": "companion.cats_eye",
+      "name": "Cat's Eye",
+      "group": "Companion",
+      "kind": "crit_chance_flat",
+      "perRank": [
+        0.15,
+        0.3,
+        0.45,
+        0.6
+      ],
+      "maxRank": 3,
+      "text": "Flat critical chance points added after mods, for the whole squad.",
+      "requires": {
+        "text": "Adarza Kavat",
+        "companions": [
+          "Adarza Kavat"
+        ],
+        "companionTypes": [],
+        "meleeWeapon": false,
+        "anyCompanion": false
+      },
+      "uptime": 0.3333333333333333,
+      "uptimeNote": "10s of buff, then a 20s cooldown.",
+      "verified": true,
+      "amount": null,
+      "appliesTo": [
+        "weapon",
+        "companion",
+        "amp"
+      ]
+    },
+    {
+      "id": "companion.charm",
+      "name": "Charm (critical buff)",
+      "group": "Companion",
+      "kind": "crit_chance_floor",
+      "perRank": [
+        2.0
+      ],
+      "maxRank": 0,
+      "text": "Sets a minimum critical chance of 200% while the buff lasts. Rolled at random among six Charm buffs.",
+      "requires": {
+        "text": "Smeeta Kavat",
+        "companions": [
+          "Smeeta Kavat"
+        ],
+        "companionTypes": [],
+        "meleeWeapon": false,
+        "anyCompanion": false
+      },
+      "uptime": 0.1,
+      "uptimeNote": "Charm triggers 40% of the time every 27s and picks one of six buffs. 10% is a rough figure.",
+      "verified": true,
+      "amount": null,
+      "appliesTo": [
+        "weapon"
+      ]
+    },
+    {
+      "id": "companion.sharpened_claws",
+      "name": "Sharpened Claws",
+      "group": "Companion",
+      "kind": "armor_strip",
+      "perRank": [
+        0.3,
+        0.6,
+        0.9,
+        1.0
+      ],
+      "maxRank": 3,
+      "text": "Kavat or Vulpaphyla attack that removes armor from one enemy.",
+      "requires": {
+        "text": "a Kavat or Vulpaphyla",
+        "companions": [],
+        "companionTypes": [
+          "Kavat",
+          "Vulpaphyla"
+        ],
+        "meleeWeapon": false,
+        "anyCompanion": false
+      },
+      "uptime": 1.0,
+      "uptimeNote": "",
+      "verified": true,
+      "amount": null,
+      "appliesTo": [
+        "enemy"
+      ]
+    },
+    {
+      "id": "companion.ambush",
+      "name": "Ambush",
+      "group": "Companion",
+      "kind": "base_damage_add",
+      "perRank": [
+        0.6,
+        1.2,
+        1.8,
+        2.4
+      ],
+      "maxRank": 3,
+      "text": "Weapon damage for 3s when Shade's cloak breaks.",
+      "requires": {
+        "text": "Shade",
+        "companions": [
+          "Shade",
+          "Shade Prime",
+          "Prisma Shade"
+        ],
+        "companionTypes": [],
+        "meleeWeapon": false,
+        "anyCompanion": false
+      },
+      "uptime": 1.0,
+      "uptimeNote": "Lasts 3s each time the cloak breaks. Set the uptime to match how you play.",
+      "verified": false,
+      "amount": null,
+      "appliesTo": [
+        "weapon"
+      ]
+    },
+    {
+      "id": "bond.tenacious",
+      "name": "Tenacious Bond",
+      "group": "Companion mod",
+      "kind": "crit_mult_flat",
+      "perRank": [
+        0.2,
+        0.4,
+        0.6,
+        0.8,
+        1,
+        1.2
+      ],
+      "maxRank": 5,
+      "text": "Flat final critical multiplier while the companion's critical chance is 50% or more.",
+      "requires": {
+        "text": "a companion whose critical chance is 50% or more",
+        "companions": [],
+        "companionTypes": [],
+        "meleeWeapon": false,
+        "anyCompanion": true
+      },
+      "uptime": 1.0,
+      "uptimeNote": "",
+      "verified": true,
+      "amount": null,
+      "appliesTo": [
+        "weapon"
+      ]
+    },
+    {
+      "id": "bond.reinforced",
+      "name": "Reinforced Bond",
+      "group": "Companion mod",
+      "kind": "fire_rate_add",
+      "perRank": [
+        0.1,
+        0.2,
+        0.3,
+        0.4,
+        0.5,
+        0.6
+      ],
+      "maxRank": 5,
+      "text": "Fire rate while the companion has more than 1200 shields.",
+      "requires": {
+        "text": "a companion with more than 1,200 shields",
+        "companions": [],
+        "companionTypes": [],
+        "meleeWeapon": false,
+        "anyCompanion": true
+      },
+      "uptime": 1.0,
+      "uptimeNote": "",
+      "verified": true,
+      "amount": null,
+      "appliesTo": [
+        "weapon"
+      ]
+    },
+    {
+      "id": "bond.vicious",
+      "name": "Vicious Bond",
+      "group": "Companion mod",
+      "kind": "armor_strip",
+      "perRank": [
+        0.15
+      ],
+      "maxRank": 0,
+      "text": "Each companion melee hit removes 15% of the enemy's armor.",
+      "requires": {
+        "text": "a companion that attacks in melee (a beast or Hound)",
+        "companions": [],
+        "companionTypes": [
+          "Kubrow",
+          "Kavat",
+          "Vulpaphyla",
+          "Predasite",
+          "Hound"
+        ],
+        "meleeWeapon": false,
+        "anyCompanion": false
+      },
+      "uptime": 1.0,
+      "uptimeNote": "",
+      "verified": true,
+      "amount": {
+        "label": "Companion hits",
+        "min": 1,
+        "max": 7,
+        "default": 3
+      },
+      "appliesTo": [
+        "enemy"
+      ]
+    },
+    {
+      "id": "aura.mecha_empowered",
+      "name": "Mecha Empowered",
+      "group": "Set: Mecha",
+      "kind": "final_multiplier",
+      "perRank": [
+        0.25,
+        0.5,
+        0.75,
+        1.0,
+        1.25,
+        1.5
+      ],
+      "maxRank": 5,
+      "text": "Extra damage against the enemy your Kubrow or Predasite has marked. Counts twice on damage-over-time.",
+      "requires": {
+        "text": "a Kubrow or Predasite carrying a Mecha set mod",
+        "companions": [],
+        "companionTypes": [
+          "Kubrow",
+          "Predasite"
+        ],
+        "meleeWeapon": false,
+        "anyCompanion": false
+      },
+      "uptime": 1.0,
+      "uptimeNote": "",
+      "verified": true,
+      "amount": null,
+      "appliesTo": [
+        "weapon"
+      ]
+    },
+    {
+      "id": "set.gladiator",
+      "name": "Gladiator set",
+      "group": "Set: Gladiator",
+      "kind": "crit_per_combo",
+      "perRank": [
+        0.1
+      ],
+      "maxRank": 0,
+      "text": "Melee critical chance per combo multiplier, per set piece. Pieces on the companion count.",
+      "requires": {
+        "text": "a melee weapon",
+        "companions": [],
+        "companionTypes": [],
+        "meleeWeapon": true,
+        "anyCompanion": false
+      },
+      "uptime": 1.0,
+      "uptimeNote": "",
+      "verified": true,
+      "amount": {
+        "label": "Set pieces",
+        "min": 1,
+        "max": 6,
+        "default": 6
+      },
+      "appliesTo": [
+        "weapon"
+      ]
+    }
+  ]
+}

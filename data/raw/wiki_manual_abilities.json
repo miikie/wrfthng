@@ -1,0 +1,847 @@
+{
+ "_comment": "Abilities of frames released after warframe.fandom.com stopped updating. Read from wiki.warframe.com in October 2026 through a page-summarising fetch, so numbers were transcribed by a model rather than parsed from wikitext. Spot-check before relying on them. Same field layout as the wiki's ability template.",
+ "Stinkbrain": {
+  "energy": 25,
+  "strength": [
+   "175 / 200 / 225 / 250 (Viral damage)"
+  ],
+  "duration": [
+   "10 / 15 / 20 / 25 s"
+  ],
+  "range": [
+   "5 m"
+  ],
+  "misc": [
+   "3 s (pulse interval)",
+   "100% (Viral Status Chance and Sleep on pulse)",
+   "3 s (Sleep duration)",
+   "100% (Finisher damage vulnerability)",
+   "4 (Stinkbrain cap)",
+   "1.5 s (Sporespring pulse interval)"
+  ],
+  "info": [
+   "Nokko throws a bouncy spore that grows into a mushroom when it lands on a horizontal surface.",
+   "Stinkbrain pulses immediately on creation, then every 3 seconds, hitting enemies in range and line of sight.",
+   "Each pulse deals Viral damage, has a 100% chance to apply Viral status, and puts enemies to sleep for 3 seconds.",
+   "Sleeping enemies can be finished with melee Finishers and take extra Finisher damage.",
+   "Sporespring and Arbucep projectiles Invigorate a Stinkbrain, cutting its pulse interval to 1.5 s and resetting its duration."
+  ],
+  "augments": []
+ },
+ "Brightbonnet": {
+  "energy": 50,
+  "strength": [
+   "10 / 12 / 13 / 15 (Energy restore)",
+   "15% / 20% / 25% / 30% (Ability Strength bonus)"
+  ],
+  "duration": [
+   "10 / 15 / 20 / 25 s (Brightbonnet duration)",
+   "5 s (Ability Strength bonus duration)"
+  ],
+  "range": [
+   "15 m (Range)"
+  ],
+  "misc": [
+   "200 (damage on sprout)",
+   "6 m (sprout radius)",
+   "3 s (pulse interval)",
+   "2 (Brightbonnet cap)",
+   "150% / 300% (Ability Strength bonus caps)",
+   "1.5 s (Sporespring pulse interval)"
+  ],
+  "info": [
+   "Sprouting deals 200 damage and Stagger to enemies within 6 m of the landing spot.",
+   "Ability Strength bonus is 15% to 30% by rank, capped at 150%, or 300% while Invigorated.",
+   "Sporespring or Arbucep hits Invigorate a Brightbonnet, cutting its pulse to 1.5 s and doubling its buff.",
+   "Energy restore works on Warframes, Archwings, and Railjacks, but not Necramechs.",
+   "Ability Strength bonus does not boost existing Brightbonnets, but raises energy from ones cast while it is active."
+  ],
+  "augments": []
+ },
+ "Reroot": {
+  "energy": 50,
+  "strength": [
+   "4 / 6 / 8 / 10 (Health/Shield Restore per second)",
+   "50 / 60 / 70 / 80 (Health/Shield Restore per pickup)"
+  ],
+  "duration": [
+   "7 / 8 / 9 / 10 s (Duration)"
+  ],
+  "range": [],
+  "misc": [
+   "4.8 m/s (base move speed)",
+   "3 (Fungal Spores)",
+   "10 m (Fungal Spore spawn radius)",
+   "100% (move speed bonus)",
+   "3 s (move speed bonus duration)"
+  ],
+  "info": [
+   "Heals 4/6/8/10 Health and Shields per second, with excess able to become Overshields.",
+   "Each Fungal Spore restores 50/60/70/80 Health and Shields and grants 100% move speed for 3 s.",
+   "Sprodling form is invulnerable, invisible, intangible, and immune to status effects and hard landings; weapons and other abilities are disabled.",
+   "Ability Strength scales healing; Ability Duration sets the length of Sprodling form.",
+   "Invisibility activates Arcane Crepuscular."
+  ],
+  "augments": [
+   {
+    "name": "Reroot Rampage",
+    "effect": "Spawns a Sprodling each time a Fungal Spore is picked up; it seeks enemies and bounces on their heads for increasing Toxin damage"
+   }
+  ]
+ },
+ "Sporespring": {
+  "energy": 75,
+  "strength": [
+   "1750 / 2000 / 2250 / 2500 (Toxin damage)"
+  ],
+  "duration": [],
+  "range": [
+   "3 m (explosion radius)",
+   "8 m (bounce distance)"
+  ],
+  "misc": [
+   "10 (Bounces)",
+   "1.5x (Bounce Damage Multiplier)",
+   "75% (Initial Critical Chance)",
+   "2x (Critical Damage)",
+   "25% (Flat Critical Chance per Bounce)",
+   "3 (Sporespring cap)"
+  ],
+  "info": [
+   "Bounce damage = Base Damage x 1.5 ^ Bounce Count.",
+   "Each bounce adds a flat 25% Critical Chance; forced Toxin status effect.",
+   "Affected by Arcane Crepuscular and Emerald Archon Shard (Toxin).",
+   "Not affected by Arcane Avenger, Puncture procs, Arcane Hot Shot, Tenacious Bond, Cold procs, or Nourish's Viral buff.",
+   "Hitting Stinkbrain or Brightbonnet makes it Invigorated; Brightbonnet's Strength buff is doubled while Invigorated."
+  ],
+  "augments": []
+ },
+ "Infernalis": {
+  "energy": 25,
+  "strength": [
+   "1,500 (Heat damage on cast)",
+   "100 / 150 / 200 / 250 (Heat damage per second)",
+   "100 (Catenach Chain damage per second)",
+   "50% (Catenach Slow)"
+  ],
+  "duration": [
+   "20 / 25 / 30 / 35 s (Duration)",
+   "10 s (Catenach Chain Duration)"
+  ],
+  "range": [
+   "1.25 / 1.5 / 1.75 / 2 m (Range)"
+  ],
+  "misc": [
+   "100% (Heat Status Chance)",
+   "16 m/s (flight speed)",
+   "6 m (Catenach Target Range)",
+   "2 (Catenach Minimum Chained Enemies)",
+   "5 (Catenach Maximum Chained Enemies)",
+   "15 m (Catenach Chain Range)",
+   "100% (Catenach Chain Damage Redirection)",
+   "95% (Catenach Slow Cap)"
+  ],
+  "info": [
+   "Aura applies Heat damage and 100% Heat status chance per second to enemies within its radius, scaled by Ability Range.",
+   "Catenach chains up to 5 enemies for 10s, dealing 100 damage per second and 50% Slow, capped at 95%.",
+   "Damage taken by a chained enemy is redirected to other chained enemies at 100% of the original damage.",
+   "Flight speed stacks multiplicatively with Parkour Velocity and Dodge Speed, but not with Movement Speed bonuses.",
+   "Ability Strength scales the cast and per-second Heat damage; Ability Duration and Range scale the aura."
+  ],
+  "augments": [
+   {
+    "name": "Infernum",
+    "effect": "Releases fireball volleys during flight, which grow larger briefly after collecting a Demonium Rune. Scales Fireball AoE Heat damage and Volley Duration."
+   }
+  ]
+ },
+ "Remedium": {
+  "energy": 50,
+  "strength": [
+   "35% / 40% / 45% / 50% (Health restore)",
+   "750 (Gulphagor damage per tick)",
+   "300% (Gulphagor Health Orb drop chance)",
+   "100% (Gulphagor Energy Orb drop chance)",
+   "200 (Gulphagor Heat Field damage per half second)"
+  ],
+  "duration": [
+   "10 s (Gulphagor latch duration)",
+   "10 s (Gulphagor Heat Field duration)"
+  ],
+  "range": [
+   "12 m (Gulphagor latch range)",
+   "4 m (Gulphagor Heat Field range)"
+  ],
+  "misc": [
+   "4 (Gulphagor latch damage ticks per second)",
+   "500% (Gulphagor Heat Field Status Chance)",
+   "0.5 s (Gulphagor Heat damage tick interval)",
+   "4 s (Gulphagor target cooldown)"
+  ],
+  "info": [
+   "Health restore is based on max Health; excess healing overflows into Shields, then Overshields.",
+   "Gulphagor's latch damage bypasses Shields but not Armor or Overguard; only latch damage is affected by Summoner's Wrath.",
+   "Circle of pain uses Uriel's universal weapon bonuses (e.g., Arcane Arachne, Nourish), but cannot critically hit.",
+   "Orb drop chances above 100% guarantee an orb and grant a chance for extra orbs.",
+   "Invulnerability duration scales with cast time and is shortened by increased casting speed."
+  ],
+  "augments": []
+ },
+ "Demonium": {
+  "energy": 75,
+  "strength": [
+   "100 / 150 / 200 / 250 (Heat damage)",
+   "35% / 40% / 45% / 50% (Damage Vulnerability)"
+  ],
+  "duration": [
+   "5 s (Projectile Duration)",
+   "10 s (Vythelas Rune Duration)"
+  ],
+  "range": [
+   "3 / 4 / 5 / 6 m (Explosion Range)"
+  ],
+  "misc": [
+   "10% (Demon Health Drain)",
+   "1 (Minimum Projectile)",
+   "3 (Maximum Projectiles)",
+   "5 (Max Direct Hits Per Soul)",
+   "3 (Max Vythelas Runes)",
+   "12 m/s (Projectile Speed)",
+   "30% (Vythelas Rune Fire Rate)",
+   "30% (Vythelas Rune Bonus Heat Damage)"
+  ],
+  "info": [
+   "Explosions deal Heat damage and apply Damage Vulnerability to every enemy hit, lasting until the enemy dies.",
+   "Explosions need line of sight to damage enemies.",
+   "Each soul can directly hit up to 5 targets before it is destroyed.",
+   "Explosion damage is listed as scaling with Ability Strength, but a bug locks it at 250.",
+   "Vythelas Runes grant Fire Rate and an extra Heat hit, and their buff strength is set when picked up."
+  ],
+  "augments": []
+ },
+ "Brimstone": {
+  "energy": 75,
+  "strength": [
+   "1200 / 1300 / 1400 / 1500 (Heat damage)"
+  ],
+  "duration": [
+   "7 / 8 / 9 / 10 s"
+  ],
+  "range": [
+   "10 / 12 / 14 / 15 m"
+  ],
+  "misc": [
+   "100% (Heat Status Chance)",
+   "0.25 s (damage tick interval)",
+   "100% (Heat damage growth per 0.5 s per field)",
+   "10x (damage multiplier cap)"
+  ],
+  "info": [
+   "Initial 600 / 650 / 700 / 750 Heat damage with 100% Status Chance every 0.25 s.",
+   "Damage multiplier grows 100% every 0.5 s per active field, capped at 10x.",
+   "Uriel and each active demon cast a field, up to 4 overlapping fields; Uriel is invulnerable during the cast.",
+   "Cannot be dispelled by nullification or magnetic; duration counts down normally while nullified.",
+   "Passive gauge is filled by Infernum, Catenach, Gulphagor, Vythelas, and Demonium."
+  ],
+  "augments": []
+ },
+ "Mercy's Kiss": {
+  "energy": 25,
+  "strength": [
+   "1,000 / 2,000 / 3,000 / 4,000 (Toxin damage)"
+  ],
+  "duration": [],
+  "range": [
+   "40 m"
+  ],
+  "misc": [
+   "3 s (Melee Finisher prompt)",
+   "50% (hitpoints Instant Kill Threshold)"
+  ],
+  "info": [
+   "Damage is Toxin and scales with Ability Strength.",
+   "Instantly kills targets at or below 50% health or the Mercy kill threshold when cast.",
+   "Stagger on hit; the victim is exposed to a Finisher prompt for 3 seconds. Invulnerable during the dash.",
+   "Orb drops: 200% base Health Orb chance and 50% base Energy Orb chance.",
+   "Webbed Embrace's damage vulnerability increases its damage; Widow's Brood Impact procs raise the Mercy threshold on specialists."
+  ],
+  "augments": []
+ },
+ "Webbed Embrace": {
+  "energy": 50,
+  "strength": [
+   "100 / 150 / 200 / 250 (Toxin damage)"
+  ],
+  "duration": [
+   "10 / 15 / 20 / 25 s"
+  ],
+  "range": [
+   "5 / 7 / 8 / 10 m (Radius)"
+  ],
+  "misc": [
+   "100% (Toxin Status Chance)",
+   "3 (max webs)"
+  ],
+  "info": [
+   "Enemies entering the web take Toxin damage with 100% Status Chance.",
+   "Cocooned enemies cannot move and take increased damage from all sources.",
+   "Enemies entering an expanding web with line of sight to its center are slowed before being cocooned.",
+   "Damage Vulnerability boosts Mercy's Kiss, Widow's Brood darts and Scuttler bites, and Silken Stride's bonus Toxin damage.",
+   "Up to 3 webs can be active at once."
+  ],
+  "augments": []
+ },
+ "Widow's Brood": {
+  "energy": 50,
+  "strength": [
+   "300 / 450 / 600 / 750 (Toxin damage per dart)"
+  ],
+  "duration": [
+   "10 / 12 / 14 / 15 s (Mark Duration)",
+   "30 / 35 / 40 / 45 s (Scuttler Duration)"
+  ],
+  "range": [
+   "16 / 19 / 22 / 25 m"
+  ],
+  "misc": [
+   "10 (dart projectiles)",
+   "35° (cone angle)",
+   "4 (forced Toxin status effects)",
+   "50 (Scuttler Toxin damage)",
+   "10 (max Scuttlers)",
+   "6 s (Scuttler status duration bonus)",
+   "60 m (recall radius)"
+  ],
+  "info": [
+   "Each dart deals Toxin damage scaled by Ability Strength, forces 4 Toxin statuses, and staggers the target.",
+   "Darts mark enemies for the Duration; enemies killed by non-dart damage spawn a Scuttler.",
+   "Scuttlers scale with the killed enemy's level (minimum level 30) and deal Toxin and Impact status with 100% status chance.",
+   "Scuttler lifetime scales with Ability Duration, and their status effects last 6 s longer.",
+   "Webbed Embrace's Damage Vulnerability increases the damage of both Widow's Brood and Scuttlers."
+  ],
+  "augments": [
+   {
+    "name": "Brood's Oversurge",
+    "effect": "Gives Scuttlers Electricity damage. Holding the ability sends all active Scuttlers at the aimed target to deal Electricity damage and guaranteed status effects in an area."
+   }
+  ]
+ },
+ "Silken Stride": {
+  "energy": 25,
+  "strength": [
+   "1.25x / 1.5x / 1.75x / 2x (Health Bonus)",
+   "10% / 20% / 30% / 40% (Toxin Weapon Damage)",
+   "20% / 40% / 60% / 80% (Toxin Weapon Damage while Wall Latching)",
+   "200 / 300 / 400 / 500 (Toxin Explosion Damage)"
+  ],
+  "duration": [],
+  "range": [
+   "5 m (Explosion Radius)",
+   "75 m (Dodge Range)"
+  ],
+  "misc": [
+   "30% (Movement Speed)",
+   "25% (Parkour Velocity)",
+   "100% (Jump Height)",
+   "10 m (Explosion Max Radius)",
+   "70 m/s (Silken Thread Travel Speed)",
+   "5 (energy drain per second)"
+  ],
+  "info": [
+   "Max health is multiplied by Ability Strength, which is snapshotted on cast; Oraxia heals to the new maximum when cast.",
+   "Each weapon hit adds an extra Toxin hit with 100% status chance, stronger while wall-latching.",
+   "Enemies killed by her guns or abilities explode with Toxin damage and 100% status chance within 5 m; the bonus is set on cast and ignores later Strength changes.",
+   "Weapons in Incarnon form do not get the Toxin ranged damage bonus, since they have no magazine.",
+   "Drains 5 energy per second while active; immune to status effects and hard landings."
+  ],
+  "augments": []
+ },
+ "Pyrotechnics": {
+  "energy": 25,
+  "strength": [
+   "550 / 700 / 850 / 1,000 (Impact/Puncture/Slash damage per pillar)",
+   "3 / 3 / 4 / 5 (Pillars)"
+  ],
+  "duration": [
+   "3 / 4 / 5 / 6 s (Ripper's Wail bonus)"
+  ],
+  "range": [
+   "25 m"
+  ],
+  "misc": [
+   "20 m (Radius)",
+   "100% (Heat Status Chance)",
+   "2x (Pyrotechnics Backbeat Bonus)"
+  ],
+  "info": [
+   "Each pillar's 1000 base damage is split evenly across Impact, Puncture, and Slash; quantization makes the in-game base 1031.25.",
+   "The guaranteed 100% Heat status chance scales with the full 1000 base damage.",
+   "Pyrotechnics is weapon damage, so universal buffs like Arcane Arachne and Nourish apply to it.",
+   "Pyrotechnics has 0% critical chance, and flat bonuses like Arcane Avenger cannot raise it.",
+   "Backbeat-timed strikes grow Ripper's Wail Heat damage by 2-5% per hit (max 750%) and extend its duration up to 60s."
+  ],
+  "augments": []
+ },
+ "Overdrive": {
+  "energy": 25,
+  "strength": [
+   "300 / 450 / 600 / 750 (Heat damage)"
+  ],
+  "duration": [
+   "8 / 12 / 16 / 20 s (duration)",
+   "3 / 4 / 5 / 6 s (Ripper's Wail bonus)"
+  ],
+  "range": [
+   "14 / 16 / 18 / 20 m (range)"
+  ],
+  "misc": [
+   "100° (angle)",
+   "2 s (deafened stun)",
+   "2x (Overdrive Backbeat bonus)"
+  ],
+  "info": [
+   "Summons twin speakers that hit enemies in a 100° frontal cone, dealing Heat damage that scales with Ability Strength.",
+   "Applies a final Critical Chance vulnerability of 10%-25% that scales with Ability Strength, lasting 8-20 s with Ability Duration.",
+   "Backbeat timing doubles the Critical Chance vulnerability and grants a 50% Ability Efficiency bonus.",
+   "Backbeat timing plus strikes raises Ripper's Wail Heat damage by 2%-5% per hit, capped at 750%.",
+   "Backbeat timing extends Ripper's Wail duration by 3-6 s per hit, up to a 60 s maximum."
+  ],
+  "augments": []
+ },
+ "Ripper's Wail": {
+  "energy": 50,
+  "strength": [
+   "30% / 45% / 60% / 75% (Heat damage)",
+   "2% / 3% / 4% / 5% (Backbeat bonus)",
+   "50% (Health restored per second)"
+  ],
+  "duration": [
+   "15 / 20 / 25 / 30 s (buff duration)"
+  ],
+  "range": [],
+  "misc": [
+   "3 s (invulnerability time)",
+   "50 m (Affinity Range)",
+   "60 s (max buff duration)",
+   "750% (Heat damage cap)",
+   "4 s (invulnerability bonus)"
+  ],
+  "info": [
+   "Grants weapon Heat damage bonus of 30% to 75% by Strength, shared with allies in Affinity Range.",
+   "Bonus is additive with mods and does not create Gas or Blast secondary elements.",
+   "Backbeat-timed casts or recasts on Pyrotechnics or Overdrive hits add 2% to 5% Heat bonus, capped at 750%.",
+   "Backbeat timing adds 3 to 6 s of buff duration, up to a 60 s maximum."
+  ],
+  "augments": []
+ },
+ "Exalted Solo": {
+  "energy": 75,
+  "strength": [
+   "1x / 1.08x / 1.15x / 1.25x (damage multiplier)"
+  ],
+  "duration": [],
+  "range": [],
+  "misc": [
+   "3 (Backbeat wave status bonus)",
+   "2 (sonic sigil Backbeat ammo cost)"
+  ],
+  "info": [
+   "Lizzie's primary fire deals 85 pure Heat base damage, scaled by the Strength multiplier and additive with base damage mods like Serration.",
+   "Each sonic sigil deals 100 pure base damage of its element, also scaled by the Strength multiplier.",
+   "Every sonic sigil guarantees a status proc of its element plus Impact.",
+   "Timing Backbeat on sigil casts applies 3 guaranteed status procs instead of 1.",
+   "Lizzie's 55-charge ammo pool is refilled by timed Backbeat casts; sigils cost 2 ammo each and have no cooldown."
+  ],
+  "augments": []
+ },
+ "Forced Perspective": {
+  "energy": 15,
+  "strength": [
+   "300 / 450 / 600 / 750 (Corrosive damage on dive and emerge)"
+  ],
+  "duration": [],
+  "range": [
+   "3 / 4 / 4 / 5 m (splash radius)"
+  ],
+  "misc": [
+   "3.5 s (invulnerable time)",
+   "100 m (max teleport range)"
+  ],
+  "info": [
+   "Diving splashes Corrosive damage and Stagger on nearby enemies, scaling with Ability Strength, within the splash radius.",
+   "Emerging deals a second instance of Corrosive damage and Stagger in the same radius.",
+   "Inkblot is applied to nearby enemies on both the dive and the emergence.",
+   "Invulnerability lasts 3.5 s; status effects are cleansed on cast.",
+   "Can be cast on vertical and horizontal surfaces up to 100 m away."
+  ],
+  "augments": []
+ },
+ "Shadowgraph": {
+  "energy": 25,
+  "strength": [
+   "250 (Corrosive damage on creation and expiry)"
+  ],
+  "duration": [
+   "20 s (object lifetime)"
+  ],
+  "range": [
+   "4 m (splash radius)"
+  ],
+  "misc": [
+   "50 m (object creation range)",
+   "14 (object types)",
+   "16 (Brush Stroke layers)",
+   "3 (object limit: Explosive Barrel, Arc Trap, Amphors, Launch Pad)",
+   "1 (object limit: Corralizer Armament, Lohk Surge, Lost Spirit)"
+  ],
+  "info": [
+   "Creation and expiry each splash 250 Corrosive damage and Stagger within 4 m and apply Inkblot; Ability Strength does not scale this.",
+   "Explosive Barrel: Blast and Cold deal 65% max health, Gas 12.5%, both ignoring armor.",
+   "Arc Trap: 250 base plus 2.5% max health as Electricity, ignoring armor, up to 10 hits.",
+   "Amphor: 90% max health, ignoring armor; damage is not affected by Ability Strength or Range.",
+   "Death Orb lasers: 500 plus 15% health and shields as Radiation, 100% status chance, armor applies."
+  ],
+  "augments": []
+ },
+ "Self Portrait": {
+  "energy": 50,
+  "strength": [
+   "250 / 350 / 450 / 550 (Corrosive damage)",
+   "35% / 40% / 45% / 50% (maximum damage reduction)"
+  ],
+  "duration": [
+   "20 / 24 / 26 / 30 s",
+   "40 / 48 / 52 / 60 s (maximum duration)",
+   "3 s (bonus duration per kill)"
+  ],
+  "range": [
+   "8 - 20 m (Radius at max rank; 6 - 15 m at rank 0)"
+  ],
+  "misc": [
+   "10% (starting damage reduction)",
+   "90% (maximum damage reduction cap)",
+   "50 m (maximum spawn range)"
+  ],
+  "info": [
+   "Cast and expiration deal Corrosive damage in the starting radius and apply Inkblot; cast has 100% falloff, expiration has 0%.",
+   "Enemies entering the ink pool are continuously inked with Inkblot for the full duration.",
+   "Follie and allies in the pool gain damage reduction, which rises with each enemy killed inside it, up to the Strength-scaled maximum.",
+   "Each kill inside the pool adds 3 s duration and 0.6 to 0.8 m radius.",
+   "Damage requires line of sight; inking does not. The Helminth-subsumed version caps damage reduction at 75% and does not apply Inkblot."
+  ],
+  "augments": [],
+  "subsumable": true
+ },
+ "Plein Air": {
+  "energy": 75,
+  "strength": [
+   "250 - 25,000 (Corrosive damage at max rank; 100 - 10,000 at rank 0)",
+   "35% / 40% / 45% / 50% (Defense Reduction)"
+  ],
+  "duration": [
+   "10 / 15 / 20 / 25 s"
+  ],
+  "range": [
+   "12 / 14 / 16 / 18 m (Radius)",
+   "3 m / 4 m (Splash radius)"
+  ],
+  "misc": [],
+  "info": [
+   "Armor and Shields are reduced by 35-50% based on Strength, fully removed at 200% Strength (164% with Corrosive Projection).",
+   "Popping a balloon drops the enemy; ground impact splashes Inkblot and Corrosive damage to nearby enemies.",
+   "Impact damage scales with fall distance and enemy health, falling off with distance from the impact center.",
+   "Arc Traps' Electricity damage on armored enemies can rise up to 10x after Plein Air strips their armor.",
+   "Bosses and Overguarded enemies are not lifted but still get defense reduction, plus a balloon that deals minimum Corrosive damage on pop."
+  ],
+  "augments": []
+ },
+ "Gravitic Slash": {
+  "energy": 15,
+  "strength": [
+   "1,250 / 1,500 / 1,750 / 2,000 (Slash damage)",
+   "35% / 40% / 45% / 50% (defense reduction)",
+   "100% (Slash Status Chance)"
+  ],
+  "duration": [],
+  "range": [
+   "6 / 7 / 7 / 8 m"
+  ],
+  "misc": [
+   "67.5° (angle)"
+  ],
+  "info": [
+   "Armor and shield reduction is permanent and scales with Ability Strength; enemy armor and shields are fully removed at 200% Strength (164% with one Corrosive Projection).",
+   "Armor reduction is a percentage of the enemy's total armor, so two base-strength casts fully strip it.",
+   "Shield reduction is a percentage of current max shields, so it has diminishing returns on repeated casts.",
+   "Defense reduction applies only once per cast, and enemy shields can still regenerate naturally.",
+   "Hitting Event Horizon pushes it toward the reticle and extends its duration by up to 5 seconds."
+  ],
+  "augments": []
+ },
+ "Astral Shell": {
+  "energy": 50,
+  "strength": [
+   "50 / 100 / 150 / 200 (Blast damage on explosion)"
+  ],
+  "duration": [
+   "20 / 25 / 30 / 35 s (buff duration)",
+   "5 s (clone duration)"
+  ],
+  "range": [
+   "5 m (explosion radius)"
+  ],
+  "misc": [
+   "30 m (taunt radius)",
+   "5 s (clone cooldown)"
+  ],
+  "info": [
+   "Negates damage on hit and leaves an invulnerable decoy.",
+   "Decoy explosion deals Blast damage that scales with Ability Strength and applies a big Stagger within a 5 m radius.",
+   "Decoy draws enemies within 30 m and stays invulnerable until it expires.",
+   "Decoy detonation triggers Jade Stars to attack enemies.",
+   "Recasting while active refreshes buff duration and bypasses the decoy cooldown."
+  ],
+  "augments": []
+ },
+ "Event Horizon": {
+  "energy": 50,
+  "strength": [
+   "300 / 450 / 600 / 750 (Heat damage on collapse)"
+  ],
+  "duration": [
+   "10 / 12 / 16 / 18 s (duration)",
+   "5 s (bonus duration)"
+  ],
+  "range": [
+   "5 / 5 / 8 / 8 m (black hole radius)",
+   "8 / 10 / 11 / 12 m (explosion radius)"
+  ],
+  "misc": [
+   "1 (black hole limit)"
+  ],
+  "info": [
+   "Collapse deals Heat damage in an area, scaling with Ability Strength.",
+   "Expiry or recasting collapses the black hole, dealing its Heat damage.",
+   "Gravitic Slash redirects it away and adds up to 5s duration.",
+   "Coronal Ejection pulls it toward Sirius and adds up to 5s duration.",
+   "Collapse triggers Jade Stars to attack enemies."
+  ],
+  "augments": []
+ },
+ "Celestial Clash": {
+  "energy": 100,
+  "strength": [
+   "7,000 / 8,000 / 9,000 / 10,000 (Heat or Slash Damage)"
+  ],
+  "duration": [],
+  "range": [
+   "20 / 22 / 24 / 26 m"
+  ],
+  "misc": [
+   "50% (critical chance per matched hit)",
+   "1.5x (damage bonus per matched hit)",
+   "100% (Sirius Heat status chance)",
+   "100% (Orion Slash status chance)"
+  ],
+  "info": [
+   "Each hit deals Heat (Sirius) or Slash (Orion) damage scaled by Ability Strength, with 100% status chance in the radius.",
+   "Matched hits stack +50% Critical Chance and +1.5x damage, from 2.5x on the first hit up to 11.5x on the seventh.",
+   "Base damage multiplier is 1.0x, base Critical Chance 0%, and base Critical Multiplier 2.0x; buffs cannot change Critical Chance.",
+   "Each hit uses the stats of the Son performing it, and each Warframe snapshots its own Ability Strength when casting.",
+   "Only Arcane Crepuscular affects Critical Damage."
+  ],
+  "augments": []
+ },
+ "Coronal Ejection": {
+  "energy": 15,
+  "strength": [
+   "750 / 1000 / 1250 / 1500 (Heat damage)",
+   "100% (Heat Status Chance)"
+  ],
+  "duration": [],
+  "range": [
+   "3 / 4 / 4 / 5 m"
+  ],
+  "misc": [],
+  "info": [
+   "Each enemy directly hit by the scythe takes Heat damage with 100% Heat status chance.",
+   "Enemies can be struck twice, once on the throw and again when the scythe returns along the same path.",
+   "Hitting Event Horizon pulls it toward Sirius and extends its duration by up to 5 s, based on Orion's Ability Duration.",
+   "Range sets the pickup vacuum radius at 3 to 5 m around the scythe."
+  ],
+  "augments": []
+ },
+ "Jade Stars": {
+  "energy": 50,
+  "strength": [
+   "350 / 400 / 450 / 500 (Heat damage)",
+   "100% (Heat Status Chance)"
+  ],
+  "duration": [
+   "20 / 25 / 30 / 35 s (duration)"
+  ],
+  "range": [
+   "4 m (explosion radius)"
+  ],
+  "misc": [
+   "7 (number of motes)",
+   "0.2 (mote recovery per second)",
+   "50 m (max attack range)"
+  ],
+  "info": [
+   "Each launched mote deals Heat damage scaled by Ability Strength, with Heat status chance.",
+   "AoE abilities hitting multiple enemies launch multiple motes, up to 7.",
+   "Motes do not launch on fatal attacks or against targets over 50 m away.",
+   "Motes ignore base damage bonuses like Arcane Arachne and multipliers like Eclipse, but some elemental bonuses such as Nourish apply.",
+   "Recasting refreshes duration and instantly replenishes all motes."
+  ],
+  "augments": []
+ },
+ "Light's Sanctuary": {
+  "energy": 50,
+  "strength": [
+   "25 - 55 (heal rate at max rank; 10 - 40 at rank 0)",
+   "15% - 45% (damage reduction)"
+  ],
+  "duration": [
+   "25 / 26 / 28 / 30 s"
+  ],
+  "range": [
+   "5 - 10 m (radius)"
+  ],
+  "misc": [
+   "10 s (expansion time)",
+   "60 s (revive cooldown per ally)",
+   "1 (sanctuary limit)",
+   "75% (maximum damage reduction cap)"
+  ],
+  "info": [
+   "Heal rate scales with Ability Strength; damage reduction ramps up over 10 seconds.",
+   "Ramp-up damage reduction is capped at 75%, reached at 167% Ability Strength.",
+   "Initial damage reduction ignores the ramp cap and can reach 100% at 667% Ability Strength.",
+   "Sanctum radius and effect expand over 10 seconds; recasting elsewhere resets them.",
+   "Downed allies and Sirius inside the sanctum are gradually revived, with a 60 s cooldown per ally."
+  ],
+  "augments": []
+ },
+ "_passives": {
+  "Narin": "Sangodae: Each stack of Cold Status Effect on enemies increases the chance to spawn a Sangodae pickup by 1%, granting Extra Cold Damage on Primary and Secondary weapons for 10s. Narin also gains Cold Damage for her abilities."
+ },
+ "Neote": {
+  "energy": 25,
+  "strength": [
+   "250 / 300 / 350 / 400 (Cold damage per hit)",
+   "1,250 / 1,500 / 1,750 / 2,000 (total Cold damage)"
+  ],
+  "duration": [],
+  "range": [
+   "9 / 10 / 11 / 12 m"
+  ],
+  "misc": [
+   "5 (hits)",
+   "Stagger on hit",
+   "2 Cold and 1 Puncture status per hit",
+   "10 Cold and 5 Puncture status effects in total",
+   "7% (Ice per cast)",
+   "0.5% (Ice per hit)"
+  ],
+  "info": [
+   "Each blade deals Cold damage with Stagger plus Cold and Puncture status; enemies hit by all blades receive up to 10 Cold and 5 Puncture status effects.",
+   "Max Cold stacks freeze enemies for 3 seconds; after thawing they are slowed by up to 60%.",
+   "Max Puncture stacks reduce the enemy's attack damage by 80%.",
+   "Enemies that survive with max Cold and Puncture stacks boost Narin's and her teammates' weapon Critical Chance and final Critical Damage Multiplier.",
+   "Each cast that hits grants Ice for Nurinarim (7% per cast plus 0.5% per hit)."
+  ],
+  "subsumable": true,
+  "augments": []
+ },
+ "Naraemagi": {
+  "energy": 50,
+  "strength": [
+   "40 / 50 / 60 / 75 (Shields restored per Cold status absorbed, or Overguard if Shields are full)",
+   "9,000 / 11,000 / 13,000 / 15,000 (Overguard cap)"
+  ],
+  "duration": [],
+  "range": [
+   "10 / 12 / 13 / 14 m"
+  ],
+  "misc": [
+   "5% (Ice per cast)",
+   "1% (Ice per hit)"
+  ],
+  "info": [
+   "Absorbs Cold status effects from enemies in range; each one absorbed restores Shields, or grants Overguard up to the cap if Shields are full.",
+   "Cannot be cast unless an enemy with a Cold status is within range.",
+   "Sangodae ammo guarantees Cold status on primary and secondary weapon attacks, giving Naraemagi a source to absorb.",
+   "Neote stacks 10 Cold status; Hakchum stacks Cold on landing and 1 per second, keeping Naraemagi castable.",
+   "Cannot be cast during Nurinarim, but its frost aura applies 2 Cold status per second that can be absorbed once Nurinarim ends."
+  ],
+  "subsumable": false,
+  "augments": []
+ },
+ "Hakchum": {
+  "energy": 75,
+  "strength": [
+   "400 / 600 / 800 / 1,000 (landing Cold damage)",
+   "100 (storm Cold damage per second)",
+   "120% / 130% / 140% / 150% (Cold Damage Vulnerability)"
+  ],
+  "duration": [
+   "15 s (ice storm duration)"
+  ],
+  "range": [
+   "7 / 8 / 9 / 10 m (storm radius)"
+  ],
+  "misc": [
+   "Invulnerable during flight",
+   "3 s (maximum flight duration)",
+   "6 (Cold status on landing)",
+   "1 (Cold status per second in storm)",
+   "1 (ice storm limit)",
+   "1% (Ice per hit)"
+  ],
+  "info": [
+   "The Cold Damage Vulnerability multiplies all Cold damage taken by enemies in the storm, including the storm's own damage, Nurinarim's frost aura, and weapon Cold damage. Only uncombined Cold is affected; combined elements containing Cold, such as Viral, are not boosted.",
+   "The vulnerability boosts Sangodae's Cold extra hit on every weapon hit, regardless of the weapon's own elements. Sangodae's 25% Cold bonus applies to the storm only if Sangodae is active when Hakchum is cast.",
+   "The storm and Nurinarim's frost aura rapidly stack Cold statuses to 10, enabling icy slash explosions against frozen enemies.",
+   "Only one ice storm can be active at once; recasting into flight expires the current storm.",
+   "Grants invulnerability during flight; during Nurinarim, only Hakchum can be cast."
+  ],
+  "subsumable": false,
+  "augments": []
+ },
+ "Nurinarim": {
+  "energy": 25,
+  "strength": [
+   "200 / 300 / 400 / 500 (ice aura Cold damage per second)",
+   "12,500 / 15,000 / 17,500 / 20,000 (Icy Slash Cold damage)",
+   "6,250 / 7,500 / 8,750 / 10,000 (frozen enemy explosion Cold damage)",
+   "2% / 3% / 4% / 5% (Shield and Armor reduction per Cold status stack on the target)"
+  ],
+  "duration": [
+   "20 s (maximum duration)"
+  ],
+  "range": [
+   "6 / 7 / 7 / 8 m (ice aura radius)",
+   "7 / 8 / 9 / 10 m (frozen enemy explosion radius)"
+  ],
+  "misc": [
+   "2x (damage on marked targets)",
+   "200% (radial status chance)",
+   "2% (Ice cost per unmarked slash)",
+   "60 m (Icy Slash travel distance)",
+   "50 m (targeting radius)",
+   "3 s (targeting duration)",
+   "Requires a full Ice bar to cast"
+  ],
+  "info": [
+   "Each slash strips shields and base armor based on the target's Cold status stacks, applied before the slash's damage; the reduction is cumulative across hits. Explosions also strip armor using each enemy's own Cold stacks.",
+   "Slashes deal Cold damage and always apply a Cold status. A frozen enemy (10 Cold stacks) takes slash damage twice and explodes; enemies capped at 4 stacks (bosses, Overguarded enemies) cannot be frozen.",
+   "Marked targets make slashes cost 0% Ice and deal 2x damage to everything the slash passes through; unmarked slashes cost 2% Ice. A new mark appears every 0.667s and lasts 3s.",
+   "The frost aura deals Cold damage and 2 Cold status per second to nearby enemies without line of sight. Ability Efficiency does not affect the drain or the slash cost.",
+   "Duration only slows the Ice drain: sword dance length is 20 s x Duration x (1 - 0.02 x unmarked slashes). Hakchum's Cold Damage Vulnerability multiplies with Sangodae's x1.25 ability bonus."
+  ],
+  "subsumable": false,
+  "augments": []
+ }
+}

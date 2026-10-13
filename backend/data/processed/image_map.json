@@ -1,0 +1,4204 @@
+{
+ "abilities": {
+  "Absorb": "NyxAbsorb.png",
+  "Aegis Storm": "HildrynWingedDeath.png",
+  "Airburst": "TenguAirBurst.png",
+  "Amp": "BardAmplifier.png",
+  "Antimatter Drop": "NovaAntimatterDrop.png",
+  "Aquablades": "YareliAqueousDisks.png",
+  "Arcsphere": "GyrePulse.png",
+  "Artemis Bow": "RangerExaltedBow.png",
+  "Astral Shell": "OrionDarkestNight.png",
+  "Avalanche": "FrostAvalanche.png",
+  "Axios Javelin": "StyanaxImpale.png",
+  "Balefire": "HildrynBalefire.png",
+  "Ballistic Battery": "GunslingerBallisticBattery.png",
+  "Banish": "LimboBanish.png",
+  "Bastille": "VaubanBastille.png",
+  "Blade Storm": "NinjaStorm.png",
+  "Blaze Artillery": "ProteaBFG.png",
+  "Blazing Chakram": "NezhaRing.png",
+  "Blessing": "TrinityBlessing.png",
+  "Blood Altar": "GarudaSanguineSiphon.png",
+  "Bloodletting": "GarudaBloodSunder.png",
+  "Breach Surge": "WispHarnessTheLight.png",
+  "Brightbonnet": "NokkoPower.png",
+  "Brimstone": "UrielBrimstone.png",
+  "Bunraku": "KoumeiBunraku.png",
+  "Cataclysm": "LimboTearInSpace.png",
+  "Catalyze": "AlchemistDistill.png",
+  "Cathode Grace": "GyreEnergised.png",
+  "Celestial Clash": "SiriusOrionUltimate.png",
+  "Celestial Twin": "WukongHairOfTheKing.png",
+  "Chaos": "NyxChaos.png",
+  "Chyrinka Pillar": "QorvexChyrinkaPillar.png",
+  "Cloud Walker": "WukongCloudWalker.png",
+  "Coil Horizon": "GyreSphere.png",
+  "Collective Curse": "KullervoSharedFate.png",
+  "Condemn": "PriestCondemn.png",
+  "Containment Wall": "QorvexContainmentWall.png",
+  "Coronal Ejection": "SiriusCoronalEjection.png",
+  "Covenant": "PriestPact.png",
+  "Crucible Blast": "QorvexCrucibleBlast.png",
+  "Crush": "MagCrush.png",
+  "Crystallize": "CitrineCrystalGrowths.png",
+  "Danse Macabre": "RevenantDanseMacabre.png",
+  "Dark Verse": "DanteDarkVerse.png",
+  "Decoy": "LokiDecoy.png",
+  "Defy": "WukongDefy.png",
+  "Demonium": "UrielDemonium.png",
+  "Desecrate": "NecroSearchTheDead.png",
+  "Desiccation": "SandmanBlast.png",
+  "Desolate Hands": "BaruukOrbitalDisarm.png",
+  "Discharge": "VoltOverLoad.png",
+  "Disometric Guard": "QorvexDisometricGuard.png",
+  "Dispensary": "ProteaDispensary.png",
+  "Divine Spears": "NezhaSpear.png",
+  "Doom": "DagathUnhallowed.png",
+  "Dread Mirror": "GarudaMeatShield.png",
+  "Eclipse": "HarlequinLightDark.png",
+  "Effigy": "DragonSentient.png",
+  "Electric Shield": "VoltShield.png",
+  "Elemental Ward": "DragonLuckyDragon.png",
+  "Elude": "BaruukBulletDodger.png",
+  "Energy Vampire": "TrinityEnergyVampire.png",
+  "Ensnare": "KhoraAllTiedUp.png",
+  "Enthrall": "RevenantEnthrall.png",
+  "Evade": "FrumentariusEvade.png",
+  "Event Horizon": "OrionVortex.png",
+  "Exalted Blade": "ExcaliburSwordOfDoom.png",
+  "Exalted Ironbride": "ThanomechSword.png",
+  "Exalted Shadow": "WraithDontFearTheReaper.png",
+  "Exalted Solo": "TempleGuitar.png",
+  "Fangs Of Raksh": "WerewolfBite.png",
+  "Feast": "GrendelDevour.png",
+  "Final Stand": "StyanaxOneManArmy.png",
+  "Final Verse": "DanteResolution.png",
+  "Fire Blast": "EmberFireBlast.png",
+  "Fire Walker": "NezhaTrail.png",
+  "Fireball": "EmberFireBall.png",
+  "Firing Line": "ThanomechRepulse.png",
+  "Forced Perspective": "InkblotField.png",
+  "Fractured Blast": "CitrineBleedingShards.png",
+  "Freeze": "FrostFreeze.png",
+  "Fusion Strike": "CalibanTriLaser.png",
+  "Gloom": "WraithGloom.png",
+  "Glory On High": "ChoirEruption.png",
+  "Grasp Of Lohk": "BrokenFrameTendrilGrasp.png",
+  "Grave Spirit": "DagathApparition.png",
+  "Gravemines": "NechramechMine.png",
+  "Gravitic Slash": "OrionGraviticSlash.png",
+  "Grenade Fan": "ProteaGrenadeFan.png",
+  "Guard Mode": "NechramechArtillery.png",
+  "Hakchum": "NarinLeap.png",
+  "Hall Of Mirrors": "HarlequinReflection.png",
+  "Hallowed Ground": "PaladinHallowedGround.png",
+  "Haven": "HildrynHaven.png",
+  "Hysteria": "BerserkerLastStand.png",
+  "Ice Wave": "FrostIceWave.png",
+  "Immolation": "EmberImmolation.png",
+  "Infernalis": "UrielInfernalis.png",
+  "Inferno": "EmberInferno.png",
+  "Invisibility": "LokiInvisibility.png",
+  "Iron Skin": "RhinoIronSkin.png",
+  "Jade Stars": "SiriusStarEater.png",
+  "Kinetic Plating": "RunnerKineticPlating.png",
+  "Kumihimo": "KoumeiKumihimo.png",
+  "Landslide": "AtlasRockPunch.png",
+  "Lantern": "FaerieLamp.png",
+  "Larva": "InfestedTendrils.png",
+  "Lethal Progeny": "CalibanSummonSentients.png",
+  "Light Verse": "DanteLightVerse.png",
+  "Light's Judgment": "ChoirAbsolution.png",
+  "Light's Sanctuary": "SiriusAurora.png",
+  "Link": "TrinityLink.png",
+  "Lull": "BaruukCalmingWave.png",
+  "Lycath's Hunt": "WerewolfLeap.png",
+  "Mach Rush": "RunnerMachRush.png",
+  "Magnetize": "MagMagnetize.png",
+  "Mallet": "BardMusicBox.png",
+  "Mass Vitrify": "GlassRing.png",
+  "Meathook": "ThanomechGrab.png",
+  "Mend & Maim": "YinYangBlastHeal.png",
+  "Mercy's Kiss": "OraxiaStrikeLeap.png",
+  "Merulina": "YareliAquaBoard.png",
+  "Mesmer Skin": "RevenantMesmerSkin.png",
+  "Metamorphosis": "YinYangSwitch.png",
+  "Metronome": "BardPumpJam.png",
+  "Miasma": "SarynMiasma.png",
+  "Mind Control": "NyxMindControl.png",
+  "Minelayer": "VaubanMinelayer.png",
+  "Molecular Prime": "NovaMolecularPrime.png",
+  "Molt": "SarynMoult.png",
+  "Naraemagi": "NarinRiposte.png",
+  "Navigator": "RangerAfterTouch.png",
+  "Necraweb": "NechramechOil.png",
+  "Neote": "NarinThrust.png",
+  "Neutralize": "FrumentariusNeutralize.png",
+  "Noctua": "DanteNoctua.png",
+  "Nourish": "GrendelConsume.png",
+  "Null Star": "NovaNullStar.png",
+  "Nurinarim": "NarinBladeDance.png",
+  "Omamori": "KoumeiOmamori.png",
+  "Omikuji": "KoumeiOmikuji.png",
+  "Ophanim Eyes": "ChoirEyesOfLight.png",
+  "Ophidian Bite": "AlchemistSerpent.png",
+  "Overdrive": "TempleSpeakers.png",
+  "Pacify & Provoke": "YinYangAuraEnemyDamage.png",
+  "Paralysis": "BerserkerShieldBash.png",
+  "Parasitic Link": "InfestedSymboticLink.png",
+  "Peacemaker": "GunslingerGunFu.png",
+  "Penance": "PriestPenance.png",
+  "Petrify": "AtlasStoneGaze.png",
+  "Photon Strike": "VaubanOrbitalStrike.png",
+  "Pillage": "HildrynShieldPillage.png",
+  "Plein Air": "InkblotBalloon.png",
+  "Plunder": "PiratePlunderArmor.png",
+  "Polarize": "MagShieldRenew.png",
+  "Preserving Shell": "CitrineProtectiveShell.png",
+  "Primal Fury": "WukongPrimalFury.png",
+  "Prism": "HarlequinPrism.png",
+  "Prismatic Gem": "CitrineChromaticGeode.png",
+  "Prowl": "RangerSteal.png",
+  "Psychic Bolts": "NyxPsychicBolts.png",
+  "Pull": "MagPull.png",
+  "Pulverize": "GrendelBellyBowling.png",
+  "Pyrotechnics": "TempleShred.png",
+  "Quiver": "RangerVersatileQuiver.png",
+  "Radial Blind": "Power01.png",
+  "Radial Disarm": "LokiRadialDisarm.png",
+  "Radial Howl": "ExcaliburUmbraRoar.png",
+  "Radial Javelin": "Power03.png",
+  "Rakhali's Cavalry": "DagathUndyingGallop.png",
+  "Rally Point": "StyanaxRallyTroops.png",
+  "Ravenous": "InfestedInfest.png",
+  "Razor Gyre": "CalibanWhirlwind.png",
+  "Razorwing": "FaerieShrink.png",
+  "Reap": "WraithReap.png",
+  "Reave": "RevenantReave.png",
+  "Reckoning": "PaladinReckoning.png",
+  "Recompense": "KullervoBackstab.png",
+  "Redline": "RunnerRedline.png",
+  "Regurgitate": "GrendelRegurgitate.png",
+  "Remedium": "UrielRemedium.png",
+  "Renewal": "PaladinRenewal.png",
+  "Reroot": "NokkoShrink.png",
+  "Reservoirs": "WispReservoir.png",
+  "Resonator": "BardPiedPiper.png",
+  "Rest & Rage": "YinYangTargetCalm.png",
+  "Resupply": "FrumentariusResupply.png",
+  "Rhino Charge": "RhinoDash.png",
+  "Rhino Stomp": "RhinoStomp.png",
+  "Rift Surge": "LimboVolatile.png",
+  "Rip Line": "BerserkerGrapplingHook.png",
+  "Ripper's Wail": "TempleSolo.png",
+  "Riptide": "YareliCrushingWaters.png",
+  "Roar": "RhinoRadialBlast.png",
+  "Rotorswell": "GyreOvercharged.png",
+  "Rumblers": "AtlasSummon.png",
+  "Sandstorm": "SandmanStorm.png",
+  "Scarab Shell": "SandmanSwarm.png",
+  "Scarab Swarm": "SandmanScarabArmor.png",
+  "Sea Snares": "YareliWaterTomb.png",
+  "Seek": "FrumentariusSeek.png",
+  "Seeking Talons": "GarudaBoneZone.png",
+  "Self Portrait": "InkblotClone.png",
+  "Sentient Wrath": "CalibanShockwave.png",
+  "Serene Storm": "BaruukOverTheEdge.png",
+  "Shadowgraph": "InkblotSketch.png",
+  "Shadows Of The Dead": "NecroCloneTheDead.png",
+  "Shatter Shield": "GunslingerRicochetArmour.png",
+  "Shattered Lash": "GlassShank.png",
+  "Shield Maiden": "ThanomechShield.png",
+  "Shock": "VoltChainLightning.png",
+  "Shooting Gallery": "GunslingerRussianRoulette.png",
+  "Shroud Of Dynar": "WerewolfShroud.png",
+  "Shuriken": "NinjaStar.png",
+  "Silence": "BansheeSilence.png",
+  "Silken Stride": "OraxiaWallCling.png",
+  "Slash Dash": "Power04.png",
+  "Sleight Of Hand": "HarlequinDeadlyTrap.png",
+  "Smite": "PaladinSmite.png",
+  "Smoke Screen": "NinjaSmokeScreen.png",
+  "Snow Globe": "FrostSnowGlobe.png",
+  "Sol Gate": "WispSolGate.png",
+  "Sonar": "BansheeSonar.png",
+  "Sonic Boom": "BansheeSonicBoom.png",
+  "Soul Punch": "NecroSoulPunch.png",
+  "Sound Quake": "BansheeSoundQuake.png",
+  "Sow": "WraithSow.png",
+  "Spectral Scream": "DragonElementalAttack.png",
+  "Spectrorage": "GlassFragmentedReality.png",
+  "Speed": "VoltSuperSpeed.png",
+  "Spellbind": "FaerieDust.png",
+  "Splinter Storm": "GlassShatteredAura.png",
+  "Spores": "SarynVenom.png",
+  "Sporespring": "NokkoLaunch.png",
+  "Stasis": "LimboRiftWalk.png",
+  "Stinkbrain": "NokkoToxic.png",
+  "Storm Of Ukko": "KullervoRisingBlades.png",
+  "Storm Shroud": "NechramechShock.png",
+  "Strangledome": "KhoraStrangleDome.png",
+  "Switch Teleport": "LokiSwitchTeleport.png",
+  "Symphony Of Mercy": "ChoirChorus.png",
+  "Tail Wind": "TenguTailWind.png",
+  "Tectonics": "AtlasBarrier.png",
+  "Teleport": "NinjaTeleport.png",
+  "Tempest Barrage": "PirateCannonBarage.png",
+  "Temporal Anchor": "ProteaTemporalAnchor.png",
+  "Tentacle Swarm": "PirateKraken.png",
+  "Terrify": "NecroTerrorTotem.png",
+  "Tesla Nervos": "VaubanTeslaDrones.png",
+  "Tharros Strike": "StyanaxShieldBash.png",
+  "The Lost": "BrokenFrameEmbraceTheFallen.png",
+  "The Vast Untime": "BrokenFrameSelfDestruct.png",
+  "Thermal Sunder": "RunnerEnergyTransfer.png",
+  "Thurible": "PriestRavage.png",
+  "Tidal Surge": "PirateTidalWave.png",
+  "Tornado": "TenguTornado.png",
+  "Toxic Lash": "SarynContagion.png",
+  "Transmutation Probe": "AlchemistTransmuter.png",
+  "Tribute": "FaerieSoul.png",
+  "Turbulence": "TenguTurbulance.png",
+  "Ulfrun's Descent": "WerewolfHowl.png",
+  "Venari": "KhoraSummon.png",
+  "Vex Armor": "DragonDragonScales.png",
+  "Vial Rush": "AlchemistRush.png",
+  "Virulence": "InfestedRupture.png",
+  "Warcry": "BerserkerScream.png",
+  "Warding Halo": "NezhaSash.png",
+  "Webbed Embrace": "OraxiaWebTangle.png",
+  "Well Of Life": "TrinityWellOfLife.png",
+  "Whipclaw": "KhoraCrack.png",
+  "Widow's Brood": "OraxiaSpiderlingBrood.png",
+  "Wil-O-Wisp": "WispLight.png",
+  "Wormhole": "NovaWormHole.png",
+  "Wrathful Advance": "KullervoExecute.png",
+  "Wyrd Scythes": "DagathImpiety.png",
+  "Xata's Whisper": "BrokenFrameVoidRot.png"
+ },
+ "ampParts": {
+  "Anspatha Brace": "SentAmpSet2GripPartA.png",
+  "Cantic Prism": "CorpAmpSet1BarrelPartA.png",
+  "Certus Brace": "CorpAmpSet1GripPartC.png",
+  "Clapkra Brace": "SentAmpSet1GripPartA.png",
+  "Dissic Scaffold": "CorpAmpSet1ChassisPartB.png",
+  "Exard Scaffold": "CorpAmpSet1ChassisPartA.png",
+  "Granmu Prism": "SentAmpSet1BarrelPartC.png",
+  "Juttni Brace": "SentAmpSet1GripPartB.png",
+  "Klamora Prism": "CorpAmpSet1BarrelPartC.png",
+  "Klebrik Scaffold": "SentAmpSet1ChassisPartC.png",
+  "Lega Prism": "CorpAmpSet1BarrelPartB.png",
+  "Lohrin Brace": "SentAmpSet1GripPartC.png",
+  "Pencha Scaffold": "SentAmpSet1ChassisPartA.png",
+  "Phahd Scaffold": "SentAmpSet2ChassisPartA.png",
+  "Plaga Brace": "CorpAmpSet1GripPartB.png",
+  "Propa Scaffold": "CorpAmpSet1ChassisPartC.png",
+  "Rahn Prism": "SentAmpSet2BarrelPartA.png",
+  "Raplak Prism": "SentAmpSet1BarrelPartA.png",
+  "Shraksun Scaffold": "SentAmpSet1ChassisPartB.png",
+  "Shwaak Prism": "SentAmpSet1BarrelPartB.png",
+  "Sirocco": "DrifterPistol.png",
+  "Suo Brace": "CorpAmpSet1GripPartA.png"
+ },
+ "arcanes": {
+  "Arcane Blessing": "ArcaneProjectionCA.png",
+  "Arcane Guardian": "ArcaneProjectionAA.png",
+  "Arcane Intention": "ArcaneProjectionCJ.png",
+  "Arcane Reaper": "ArcaneProjectionCK.png",
+  "Arcane Tanker": "ArcaneProjectionArmorOnHeavyGunEquipped.png",
+  "Arcane Ultimatum": "ArcaneProjectionBB.png",
+  "Eternal Eradicate": "ArcaneProjectionBP.png",
+  "Eternal Onslaught": "ArcaneProjectionBV.png",
+  "Virtuos Fury": "IncreasedDamageOnStatusProc.png",
+  "Virtuos Ghost": "StatusChanceOnHeadshot.png",
+  "Virtuos Shadow": "CriticalChanceOnHeadshot.png",
+  "Virtuos Strike": "IncreasedCriticalDamageOnCriticalStrike.png",
+  "Virtuos Tempo": "AttackSpeedOnKill.png"
+ },
+ "companions": {
+  "Adarza Kavat": "KavatBreedAdarza.png",
+  "Bhaira Hound": "ZanukaPetHeadB.png",
+  "Carrier": "Carrier.png",
+  "Carrier Prime": "CarrierPrime.png",
+  "Chesa Kubrow": "KubrowBreedChesa.png",
+  "Crescent Vulpaphyla": "KavatBreedCrescentVulpaphyla.png",
+  "Dethcube": "Dethcube.png",
+  "Dethcube Prime": "DethcubePrime.png",
+  "Diriga": "Diriga.png",
+  "Djinn": "Djinn.png",
+  "Dorma Hound": "ZanukaPetHeadA.png",
+  "Hec Hound": "ZanukaPetHeadC.png",
+  "Helios": "Helios.png",
+  "Helios Prime": "HeliosPrime.png",
+  "Helminth Charger": "KubrowBreedHelminthCharger.png",
+  "Huras Kubrow": "KubrowBreedHuras.png",
+  "Lambeo Moa": "MoaHeadB.png",
+  "Medjay Predasite": "KubrowBreedPredasiteMedjay.png",
+  "Nautilus": "EmpyreanSentinel.png",
+  "Nautilus Prime": "NautilusPrime.png",
+  "Nychus Moa": "PetMoaMeleeHead.png",
+  "Oloro Moa": "MoaHeadC.png",
+  "Oxylus": "Oxylus.png",
+  "Panzer Vulpaphyla": "KavatBreedPanzerVulpaphyla.png",
+  "Para Moa": "MoaHeadA.png",
+  "Pharaoh Predasite": "KubrowBreedPredasitePharaoh.png",
+  "Prisma Shade": "PrismaShade.png",
+  "Raksa Kubrow": "KubrowBreedRaksa.png",
+  "Sahasa Kubrow": "KubrowBreedSahasa.png",
+  "Shade": "Shade.png",
+  "Shade Prime": "ShadePrime.png",
+  "Sly Vulpaphyla": "KavatBreedSlyVulpaphyla.png",
+  "Smeeta Kavat": "KavatBreedSmeeta.png",
+  "Sunika Kubrow": "KubrowBreedSunika.png",
+  "Taxon": "Taxon.png",
+  "Vasca Kavat": "KavatBreedVasca.png",
+  "Vizier Predasite": "KubrowBreedPredasiteVizier.png",
+  "Wyrm": "Wyrm.png",
+  "Wyrm Prime": "WyrmPrime.png"
+ },
+ "mods": {
+  "Accelerated Blast": "ShotgunAcceleratedBlast.jpg",
+  "Accelerated Isotope": "RadiationFireratePistolMod.jpg",
+  "Acid Shells": "SobekNightwatchMod.jpg",
+  "Adaptation": "AvatarResistanceOnDamageMod.jpg",
+  "Adhesive Blast": "WeaponGrenadeStickyMod.jpg",
+  "Aerial Ace": "JumpRefreshOnKillRifleMod.jpg",
+  "Aero Periphery": "HawksPeriphery.jpg",
+  "Aero Vantage": "HawksVantage.jpg",
+  "Agility Drift": "OrokinChallengeModAgility.jpg",
+  "Amalgam Barrel Diffusion": "TacticalDiffusion.jpg",
+  "Amalgam Javlok Magazine Warp": "AmalgamJavlok.jpg",
+  "Amalgam Organ Shatter": "SwiftShatter.jpg",
+  "Amalgam Ripkas True Steel": "AmalgamRipkas.jpg",
+  "Amalgam Serration": "SerratedRush.jpg",
+  "Amalgam Shotgun Barrage": "VampireShot.jpg",
+  "Amar's Anguish": "AmarExilusMod.jpg",
+  "Amar's Contempt": "AmarMeleeMod.jpg",
+  "Amar's Hatred": "AmarWarframeMod.jpg",
+  "Ammo Drum": "RifleAmmoMaxMod.jpg",
+  "Ammo Stock": "ShotgunClipMaxMod.jpg",
+  "Anchored Glide": "ZephyrDisablePassiveMod.jpg",
+  "Anemic Agility": "CorruptedFireRateDamagePistolMod.jpg",
+  "Antitoxin": "AvatarDamageResistancePoison.jpg",
+  "Archon Continuity": "KahlAvatarAbilityDurationMod.jpg",
+  "Archon Intensify": "KahlAvatarAbilityStrengthMod.jpg",
+  "Archon Stretch": "KahlAvatarAbilityRangeMod.jpg",
+  "Archon Vitality": "KahlAvatarHealthMaxMod.jpg",
+  "Argon Scope": "CritChanceWhileAimingMods.jpg",
+  "Armored Agility": "ArmoredAgility.jpg",
+  "Arrow Mutation": "BowAmmoMutatorMod.jpg",
+  "Atomic Fallout": "RadiationClipShotgunMod.jpg",
+  "Auger Strike": "EventPunctureDamageModMelee.jpg",
+  "Augur Accord": "AugurAccord.jpg",
+  "Augur Message": "AugurMessage.jpg",
+  "Augur Pact": "AugurPact.jpg",
+  "Augur Reach": "AugurReach.jpg",
+  "Augur Secrets": "AugurSecrets.jpg",
+  "Augur Seeker": "AugurSeeker.jpg",
+  "Aviator": "AvatarDamageReductionInAir.jpg",
+  "Bane of Corpus": "RifleDamageCorpus.jpg",
+  "Bane of Grineer": "RifleDamageGrineer.jpg",
+  "Bane of Infested": "RifleDamageInfested.jpg",
+  "Bane of Orokin": "RifleDamageCorrupted.jpg",
+  "Bane of The Murmur": "WeaponFactionDamageMurmurs.jpg",
+  "Barrel Diffusion": "PistolFireIterationsMod.jpg",
+  "Battering Maneuver": "ImpactParkourTwoMod.jpg",
+  "Berserker Fury": "MeleeBerserkerMod.jpg",
+  "Bhisaj-Bal": "ParisPrimeStatusHealMod.jpg",
+  "Bite": "KubrowHunterAttack.jpg",
+  "Bladed Rounds": "CritDamageWhileAimingMods.jpg",
+  "Blaze": "ShotgunBlazeMod.jpg",
+  "Blind Rage": "CorruptedPowerForEfficiencyMod.jpg",
+  "Blood Rush": "ComboCritChanceMod.jpg",
+  "Blunderbuss": "ShotgunCriticalChanceMod.jpg",
+  "Body Count": "ComboDurationMod.jpg",
+  "Bore": "EventPunctureDamageModPistol.jpg",
+  "Boreal's Anguish": "BorealExilusMod.jpg",
+  "Boreal's Contempt": "BorealMeleeMod.jpg",
+  "Boreal's Hatred": "BorealWarframeMod.jpg",
+  "Breach Loader": "EventPunctureDamageModShotgun.jpg",
+  "Brief Respite": "FairyQuestAbilityToShieldsAura.jpg",
+  "Bright Purity": "Skana.jpg",
+  "Brute Conditioning": "BeastBruteConditioningMod.jpg",
+  "Burdened Magazine": "CorruptedClipsizeForReloadShotgunMod.jpg",
+  "Burning Claws": "KubrowHeatConversionMod.jpg",
+  "Buzz Kill": "EventSlashDamageMeleeMod.jpg",
+  "Carnis Carapace": "AshenCarapace.jpg",
+  "Carnis Mandible": "AshenMandible.jpg",
+  "Carnis Stinger": "AshenStinger.jpg",
+  "Catalyzer Link": "StatusChanceWhileAimingMods.jpg",
+  "Catalyzing Shields": "FixedShieldAndShieldGatingDuration.jpg",
+  "Cautious Shot": "WeaponResistSelfDamageMod.jpg",
+  "Charged Chamber": "RifleChargedChamberMod.jpg",
+  "Charged Shell": "ShotgunElectricityDamageMod.jpg",
+  "Chilling Claws": "KubrowColdConversionMod.jpg",
+  "Chilling Grasp": "ShotgunFreezeDamageMod.jpg",
+  "Chilling Reload": "ColdDmgReloadSpeedMod.jpg",
+  "Cleanse Corpus": "ShotgunDamageCorpus.jpg",
+  "Cleanse Grineer": "ShotgunDamageGrineer.jpg",
+  "Cleanse Infested": "ShotgunDamageInfested.jpg",
+  "Cleanse Orokin": "ShotgunDamageCorrupted.jpg",
+  "Cleanse The Murmur": "WeaponShotgunFactionDamageMurmurs.jpg",
+  "Clip Delegation": "SobekNightwaveMod.jpg",
+  "Coaction Drift": "OrokinChallengeModCollaboration.jpg",
+  "Collision Force": "EventImpactDamageMeleeMod.jpg",
+  "Combustion Beam": "WeaponBeamExplodeOnDeathMod.jpg",
+  "Concussion Rounds": "ImpactDamagePistolMod.jpg",
+  "Condition Overload": "WeaponDamageIfVictimProcActive.jpg",
+  "Condition's Perfection": "PerfectCondition.jpg",
+  "Constitution": "WarframeConstitutionMod.jpg",
+  "Contagious Spread": "PoisonDamageShotgunMod.jpg",
+  "Continuity": "AbilityDurationMod.jpg",
+  "Continuous Misery": "WeaponProcTimeRifleMod.jpg",
+  "Controlled Slide": "NezhaDisablePassiveMod.jpg",
+  "Convulsion": "PistolElectricityDamageMod.jpg",
+  "Corrupt Charge": "ChannelingCorruptChargeMod.jpg",
+  "Counterbalance": "WeaponRecoilShotgunMod.jpg",
+  "Covert Lethality": "WeaponMeleeStealthLethalMod.jpg",
+  "Crash Course": "EventImpactDamageRifleMod.jpg",
+  "Creeping Bullseye": "CorruptedCritChanceFireRatePistolMod.jpg",
+  "Critical Deceleration": "CorruptedCritChanceFireRateShotgunMod.jpg",
+  "Critical Delay": "CorruptedCriticalRateForFireRateMod.jpg",
+  "Cryo Rounds": "RifleFreezeDamageMod.jpg",
+  "Cunning Drift": "OrokinChallengeModCunning.jpg",
+  "Deadly Maneuvers": "MagnusNightwaveMod.jpg",
+  "Deadly Sequence": "Grinlok.jpg",
+  "Deep Freeze": "PistolFreezeDamageMod.jpg",
+  "Depleted Reload": "CorruptedReloadSpeedMaxClipRifleMod.jpg",
+  "Diamond Skin": "AvatarDamageResistanceLaser.jpg",
+  "Disabling Conditioning": "BeastDisablingConditionMod.jpg",
+  "Discipline's Merit": "CertainStrike.jpg",
+  "Dispatch Overdrive": "MoveSpeedOnChannelKillMod.jpg",
+  "Disruptor": "ImpactDamageShotgunMod.jpg",
+  "Dizzying Rounds": "BroncoNightwaveMod.jpg",
+  "Dreamer's Wrath": "FocusedAttack.jpg",
+  "Drifting Contact": "ComboTimeStatusChanceMod.jpg",
+  "Eagle Eye": "RifleZoomMod.jpg",
+  "Efficient Beams": "CrpSplitLaserArbitrationMod.jpg",
+  "Electromagnetic Shielding": "AckBruntNightwatchMod.jpg",
+  "Embedded Catalyzer": "StatusChanceWhileAimingMods.jpg",
+  "Endurance Drift": "OrokinChallengeModEndurance.jpg",
+  "Enduring Affliction": "ChannelProcTimeExtendOnHitMod.jpg",
+  "Enemy Sense": "EnemyRadarMod.jpg",
+  "Energizing Shot": "ShootPickupPistolMod.jpg",
+  "Energy Channel": "MeleeChannel.jpg",
+  "Energy Conversion": "EnergyPickupGivesStrengthMod.jpg",
+  "Entropy Burst": "Supra.jpg",
+  "Eroding Blight": "Embolist.jpg",
+  "Expel Corpus": "PistolDamageCorpus.jpg",
+  "Expel Grineer": "PistolDamageGrineer.jpg",
+  "Expel Infested": "PistolDamageInfested.jpg",
+  "Expel Orokin": "PistolDamageCorrupted.jpg",
+  "Expel The Murmur": "WeaponPistolFactionDamageMurmurs.jpg",
+  "Exposing Harpoon": "GrnHarpoonGunArbitrationMod.jpg",
+  "Fanged Fusillade": "EventSlashDamageRifleMod.jpg",
+  "Fass Canticle": "ImmortalRuneChaos.png",
+  "Fast Hands": "RifleReloadSpeedMod.jpg",
+  "Fatal Acceleration": "WeaponProjectileSpeedShotgunMod.jpg",
+  "Fever Strike": "PoisonDamageMeleeMod.jpg",
+  "Finishing Touch": "MeleeFinishingTouchMod.jpg",
+  "Firewalker": "FireParkourTwoMod.jpg",
+  "Flame Gland": "KubrowDualFire.jpg",
+  "Flame Repellent": "AvatarDamageResistanceFire.jpg",
+  "Flechette": "ShotgunPunctureDepthMod.jpg",
+  "Fleeting Expertise": "CorruptedDurationForRangeMod.jpg",
+  "Flux Overdrive": "FluxRifleCorpusArenaMod.jpg",
+  "Focus Energy": "MeleeFocusEnergyMod.jpg",
+  "Focus Radon": "RadiationEfficiencyMeleeMod.jpg",
+  "Focused Defense": "ChannelingArmour.jpg",
+  "Fomorian Accelerant": "DrakgoonNightwatchMod.jpg",
+  "Frail Momentum": "CorruptedFireRateDamageShotgunMod.jpg",
+  "Frigid Blast": "IceEventShotgunMod.jpg",
+  "Frost Jaw": "KubrowDualIce.jpg",
+  "Frostbite": "IceEventPistolMod.jpg",
+  "Full Contact": "EventImpactDamageShotgunMod.jpg",
+  "Fury": "MeleeFireRateMod.jpg",
+  "Gale Kick": "GaleKick.jpg",
+  "Galvanized Acceleration": "WeaponProjectileSpeedSPMod.jpg",
+  "Galvanized Aptitude": "WeaponStatusChanceSPModMods.jpg",
+  "Galvanized Chamber": "WeaponFireIterationsSPModMods.jpg",
+  "Galvanized Crosshairs": "CritChanceWhileAimingPistolSPMod.jpg",
+  "Galvanized Diffusion": "WeaponFireIterationsSPModMods.jpg",
+  "Galvanized Elementalist": "WeaponMeleeStatusChanceSPMod.jpg",
+  "Galvanized Hell": "WeaponFireIterationsSPMod.jpg",
+  "Galvanized Reflex": "WeaponHeavyAttackEfficiencySPMod.jpg",
+  "Galvanized Savvy": "WeaponStatusChanceSPMod.jpg",
+  "Galvanized Scope": "CritChanceWhileAimingRifleSPMod.jpg",
+  "Galvanized Shot": "WeaponStatusChanceSPModMods.jpg",
+  "Galvanized Steel": "WeaponCritChanceSPMod.jpg",
+  "Gilded Truth": "BurstonPrime.jpg",
+  "Gladiator Aegis": "GladiatorAegis.jpg",
+  "Gladiator Might": "GladiatorMight.jpg",
+  "Gladiator Resolve": "GladiatorResolve.jpg",
+  "Gladiator Rush": "GladiatorRush.jpg",
+  "Gladiator Vice": "GladiatorVice.jpg",
+  "Gleaming Blight": "DarkDagger.jpg",
+  "Growing Power": "FairyQuestCritToAbilityAura.jpg",
+  "Guardian Derision": "WeaponBlockingTauntMod.jpg",
+  "Guided Ordnance": "AccuracyWhileAimingMods.jpg",
+  "Gunslinger": "PistolFireRateMod.jpg",
+  "Hammer Shot": "RifleHammerSHotMod.jpg",
+  "Handspring": "NinjaRecoveryMod.jpg",
+  "Hata-Satya": "SomaPrimeCritChanceMod.jpg",
+  "Hawk Eye": "PistolZoomMod.jpg",
+  "Health Conversion": "HealthPickupGivesArmourMod.jpg",
+  "Heated Charge": "PistolFireDamageMod.jpg",
+  "Heavy Caliber": "CorruptedDmgForRecoilRifleMod.jpg",
+  "Heavy Impact": "AvatarHeavyImpactMod.jpg",
+  "Heavy Trauma": "ImpactDamageMeleeMod.jpg",
+  "Hell's Chamber": "ShotgunFireIterationsMod.jpg",
+  "Hellfire": "RifleFireDamageMod.jpg",
+  "Hemorrhage": "WeaponBleedOnImpactPistolMod.jpg",
+  "High Voltage": "ElectEventRifleMod.jpg",
+  "Hollow Point": "CorruptedCritDmgForDmgMod.jpg",
+  "Hornet Strike": "PistolDamageAmountMod.jpg",
+  "Hunter Munitions": "HunterMunitions.jpg",
+  "Hunter Track": "HunterTrack.jpg",
+  "Hush": "RifleSilencerMod.jpg",
+  "Hydraulic Crosshairs": "CritChanceWhileAimingMods.jpg",
+  "Ice Spring": "IceParkourTwoMod.jpg",
+  "Ice Storm": "PistolIceStormMod.jpg",
+  "Incendiary Coat": "ShotgunFireDamageMod.jpg",
+  "Infected Clip": "PoisonDamageRifleMod.jpg",
+  "Insulation": "AvatarDamageResistanceIce.jpg",
+  "Intensify": "AbilityStrengthMod.jpg",
+  "Internal Bleeding": "WeaponBleedOnImpactProcRifleMod.jpg",
+  "Intruder": "DataSpikeIntruderMod.jpg",
+  "Ironclad Flight": "TitaniaDisablePassiveMod.jpg",
+  "Jagged Edge": "BleedDamageMeleeMod.jpg",
+  "Jahu Canticle": "ImmortalRuneForm.png",
+  "Jolt": "ElectEventPistolMod.jpg",
+  "Jugulus Barbs": "BonebladeBarbs.jpg",
+  "Jugulus Carapace": "BonebladeCarapace.jpg",
+  "Jugulus Spines": "BonebladeSpines.jpg",
+  "Justice Blades": "DualCleavers.jpg",
+  "Kavat's Grace": "KavatsGrace.jpg",
+  "Khra Canticle": "ImmortalRuneTime.png",
+  "Killing Blow": "ChannelingKillingBlow.jpg",
+  "Kinetic Ricochet": "TetraCorpusArenaMod.jpg",
+  "Laser Sight": "CritChanceWhileAiming.jpg",
+  "Lasting Purity": "Vulkar.jpg",
+  "Lasting Sting": "WeaponProcTimeMeleeMod.jpg",
+  "Lethal Momentum": "WeaponProjectileSpeedPistolMod.jpg",
+  "Lethal Torrent": "Grinder.jpg",
+  "Lightning Dash": "FocusIcon39.jpg",
+  "Lightning Rod": "AvatarDamageResistanceElectricity.jpg",
+  "Lingering Torment": "WeaponProcTimeShotgunMod.jpg",
+  "Lohk Canticle": "ImmortalRuneVoid.png",
+  "Magazine Warp": "RifleClipMaxMod.jpg",
+  "Maglev": "SlideResistanceDecreaseMod.jpg",
+  "Magnetic Capacity": "MagneticClipRifleMod.jpg",
+  "Magnetic Claws": "KubrowMagneticEventMeleeMod.jpg",
+  "Magnetic Might": "MagneticCritDamagePistolMod.jpg",
+  "Magnetic Rush": "MagneticAttackSpeedMeleeMod.jpg",
+  "Magnetic Strafe": "MagneticFireRateShotgunMod.jpg",
+  "Magnetic Welt": "WeaponMagneticOnImpactShotgunMod.jpg",
+  "Magnum Force": "CorruptedDmgForRecoilMod.jpg",
+  "Maim": "EventSlashDamagePistolMod.jpg",
+  "Maiming Strike": "SlideAttackCritChanceMod.jpg",
+  "Malignant Force": "PoisonEventRifleMod.jpg",
+  "Master Thief": "AvatarChanceToLootMod.jpg",
+  "Master's Edge": "HeavyAggression.jpg",
+  "Maul": "KubrowAdventurerAttack.jpg",
+  "Mecha Overdrive": "KubrowMechaOverdriveMod.jpg",
+  "Mecha Pulse": "WarframeMechaPulseMod.jpg",
+  "Melee Elementalist": "MeleeStatusDamageDuoMod.jpg",
+  "Melee Prowess": "StatusChanceMeleeMod.jpg",
+  "Mending Shot": "ShootPickupRifleMod.jpg",
+  "Merciless Gunfight": "CriticalDamagePunchThroughMod.jpg",
+  "Meticulous Aim": "GrnSniperRifleArbitrationMod.jpg",
+  "Mobilize": "StaggerParkourTwoMod.jpg",
+  "Molten Impact": "MeleeFireDamageMod.jpg",
+  "Motus Setup": "RaptorsAmbush.jpg",
+  "Motus Signal": "RaptorsFrenzy.jpg",
+  "Nano-Applicator": "StatusChanceWhileAiming.jpg",
+  "Napalm Grenades": "GrenadeLauncherProjectileMod.jpg",
+  "Narrow Barrel": "AccuracyWhileAiming.jpg",
+  "Narrow Minded": "CorruptedEfficiencyForDurationMod.jpg",
+  "Nightwatch Napalm": "OgrisNightwatchMod.jpg",
+  "Nira's Anguish": "NiraExilusMod.jpg",
+  "Nira's Contempt": "NiraMeleeMod.jpg",
+  "Nira's Hatred": "NiraWarframeMod.jpg",
+  "No Return": "PistolArmorPiercingDamageMod.jpg",
+  "North Wind": "MeleeFreezeDamageMod.jpg",
+  "Opportunity's Reach": "PerfectReach.jpg",
+  "Organ Shatter": "MeleeCritDamageMod.jpg",
+  "Overextended": "CorruptedRangeForPowerMod.jpg",
+  "Pain Threshold": "AvatarStaggerRecoveryMod.jpg",
+  "Parry": "ChannelingParryMod.jpg",
+  "Patagium": "SuperGlideParkourTwoMod.jpg",
+  "Pathogen Rounds": "PoisonDamagePistolMod.jpg",
+  "Perpetual Agony": "WeaponProcTimePistolMod.jpg",
+  "Photon Overcharge": "GlaxionNightwaveMod.jpg",
+  "Physique": "PlayerHealthBuff.jpg",
+  "Piercing Caliber": "EventPunctureDamageModRifle.jpg",
+  "Piercing Hit": "RifleArmorPiercingMod.jpg",
+  "Piercing Step": "PunctureParkourTwoMod.jpg",
+  "Pistol Acuity": "WeaponWeakpointCriticalChanceModMods.jpg",
+  "Pistol Ammo Mutation": "PistolAmmoMutatorMod.jpg",
+  "Pistol Elementalist": "PistolStatusDamageDuoMod.jpg",
+  "Pistol Gambit": "PistolCritChanceMod.jpg",
+  "Pistol Pestilence": "PoisonEventPistolMod.jpg",
+  "Point Blank": "ShotgunDamageAmountMod.jpg",
+  "Point Strike": "RifleCritChanceMod.jpg",
+  "Power Drift": "OrokinChallengeModPower.jpg",
+  "Power Throw": "GlaivePunctureMod.jpg",
+  "Precision Conditioning": "BeastPrecisionConditionMod.jpg",
+  "Preparation": "AvatarSpawnEnergyMod.jpg",
+  "Pressure Point": "MeleeDamageMod.jpg",
+  "Pressurized Magazine": "FireRateWhileAimingMods.jpg",
+  "Primary Acuity": "WeaponWeakpointCriticalChanceMod.jpg",
+  "Primed Ammo Stock": "ShotgunClipMaxMod.jpg",
+  "Primed Bane of Corpus": "RifleDamageCorpus.jpg",
+  "Primed Bane of Grineer": "RifleDamageGrineer.jpg",
+  "Primed Bane of Infested": "RifleDamageInfested.jpg",
+  "Primed Bane of Orokin": "RifleDamageCorrupted.jpg",
+  "Primed Bane of The Murmur": "WeaponFactionDamageMurmurs.jpg",
+  "Primed Blunderbuss": "ShotgunCriticalChanceMod.jpg",
+  "Primed Chamber": "RifleChargedChamberMod.jpg",
+  "Primed Charged Chamber": "RifleChargedChamberMod.jpg",
+  "Primed Charged Shell": "ShotgunElectricityDamageMod.jpg",
+  "Primed Chilling Grasp": "ShotgunFreezeDamageMod.jpg",
+  "Primed Cleanse Corpus": "ShotgunDamageCorpus.jpg",
+  "Primed Cleanse Grineer": "ShotgunDamageGrineer.jpg",
+  "Primed Cleanse Infested": "ShotgunDamageInfested.jpg",
+  "Primed Cleanse Orokin": "ShotgunDamageCorrupted.jpg",
+  "Primed Cleanse The Murmur": "WeaponShotgunFactionDamageMurmurs.jpg",
+  "Primed Continuity": "AbilityDurationMod.jpg",
+  "Primed Convulsion": "PistolElectricityDamageMod.jpg",
+  "Primed Counterbalance": "WeaponRecoilShotgunMod.jpg",
+  "Primed Cryo Rounds": "RifleFreezeDamageMod.jpg",
+  "Primed Expel Corpus": "PistolDamageCorpus.jpg",
+  "Primed Expel Grineer": "PistolDamageGrineer.jpg",
+  "Primed Expel Infested": "PistolDamageInfested.jpg",
+  "Primed Expel Orokin": "PistolDamageCorrupted.jpg",
+  "Primed Expel The Murmur": "WeaponPistolFactionDamageMurmurs.jpg",
+  "Primed Fast Hands": "RifleReloadSpeedMod.jpg",
+  "Primed Fever Strike": "PoisonDamageMeleeMod.jpg",
+  "Primed Fury": "MeleeFireRateMod.jpg",
+  "Primed Heated Charge": "PistolFireDamageMod.jpg",
+  "Primed Heavy Trauma": "ImpactDamageMeleeMod.jpg",
+  "Primed Magazine Warp": "RifleClipMaxMod.jpg",
+  "Primed Pistol Ammo Mutation": "PistolAmmoMutatorMod.jpg",
+  "Primed Pistol Gambit": "PistolCritChanceMod.jpg",
+  "Primed Point Blank": "ShotgunDamageAmountMod.jpg",
+  "Primed Pressure Point": "MeleeDamageMod.jpg",
+  "Primed Quickdraw": "PistolReloadSpeedMod.jpg",
+  "Primed Ravage": "ShotgunCritDamageMod.jpg",
+  "Primed Redirection": "ShieldMaxMod.jpg",
+  "Primed Rifle Ammo Mutation": "RifleAmmoMutatorMod.jpg",
+  "Primed Shotgun Ammo Mutation": "ShotgunAmmoMutatorMod.jpg",
+  "Primed Shred": "Shred.jpg",
+  "Primed Slip Magazine": "PistolClipMax.jpg",
+  "Primed Smite Corpus": "MeleeDamageCorpus.jpg",
+  "Primed Smite Grineer": "MeleeDamageGrineer.jpg",
+  "Primed Smite Infested": "MeleeDamageInfested.jpg",
+  "Primed Smite Orokin": "MeleeDamageCorrupted.jpg",
+  "Primed Smite The Murmur": "WeaponMeleeFactionDamageMurmurs.jpg",
+  "Primed Sniper Ammo Mutation": "SniperAmmoMutatorMod.jpg",
+  "Primed Stabilizer": "RifleRecoilReductionMod.jpg",
+  "Primed Steady Hands": "PistolRecoilReductionMod.jpg",
+  "Primed Streamline": "AbilityEfficiencyMod.jpg",
+  "Primed Sure Footed": "AvatarSureFootedMod.jpg",
+  "Primed Tactical Pump": "ShotgunReloadSpeedMod.jpg",
+  "Primed Target Cracker": "PistolCritDamageMod.jpg",
+  "Primed Vigor": "Vigor.jpg",
+  "Proton Jet": "SpiderVenom.jpg",
+  "Proton Pulse": "SpiderLeap.jpg",
+  "Proton Snap": "SpiderBite.jpg",
+  "Pummel": "EventImpactDamagePistolMod.jpg",
+  "Quick Thinking": "AvatarQuickThinkingMod.jpg",
+  "Quickdraw": "PistolReloadSpeedMod.jpg",
+  "Quickening": "ChannelingAttackSpeed.jpg",
+  "Radiated Reload": "RadiationReloadRifleMod.jpg",
+  "Radon Claws": "KubrowRadiationEventMeleeMod.jpg",
+  "Ravage": "ShotgunCritDamageMod.jpg",
+  "Razor Shot": "BleedDamagePistolMod.jpg",
+  "Redirection": "ShieldMaxMod.jpg",
+  "Relentless Combination": "WeaponMeleeComboChanceFromDot.jpg",
+  "Rending Strike": "MeleeRendingStrikeMod.jpg",
+  "Rending Turn": "SlashParkourTwoMod.jpg",
+  "Repeater Clip": "FireRateWhileAiming.jpg",
+  "Retribution": "ShockingBarrierMod.jpg",
+  "Rifle Ammo Mutation": "RifleAmmoMutatorMod.jpg",
+  "Rifle Aptitude": "StatusChanceRifleMod.jpg",
+  "Rifle Elementalist": "RifleStatusDamageDuoMod.jpg",
+  "Rime Rounds": "IceEventRifleMod.jpg",
+  "Rolling Guard": "AvatarInvulnOnRollMod.jpg",
+  "Ruinous Extension": "WeaponBeamDistancePistolMod.jpg",
+  "Rupture": "ImpactDamageRifleMod.jpg",
+  "Rush": "SprintSpeedMod.jpg",
+  "Sacrificial Pressure": "MeleeSacrificeModA.jpg",
+  "Sacrificial Steel": "MeleeSacrificeModB.jpg",
+  "Sawtooth Clip": "BleedDamageRifleMod.jpg",
+  "Saxum Carapace": "FemurCarapace.jpg",
+  "Saxum Spittle": "FemurSpittle.jpg",
+  "Saxum Thorax": "FemurThorax.jpg",
+  "Scattered Justice": "Hek.jpg",
+  "Scattering Inferno": "DualStatFireProcShotgun.jpg",
+  "Scorch": "DualStatFireProcPistol.jpg",
+  "Seeking Fury": "SeekingFury.jpg",
+  "Seismic Wave": "WeaponMeleeSlamDamageMod.jpg",
+  "Semi-Pistol Cannonade": "PistolSemiAutoFantasyMod.jpg",
+  "Semi-Rifle Cannonade": "RifleSemiAutoFantasyMod.jpg",
+  "Semi-Shotgun Cannonade": "ShotgunSemiAutoFantasyMod.jpg",
+  "Sepsis Claws": "KubrowToxicConversionMod.jpg",
+  "Serration": "RifleDamageAmountMod.jpg",
+  "Sharpened Bullets": "CritDamageWhileAimingMods.jpg",
+  "Shattering Impact": "WeaponMeleeArmorShatterMod.jpg",
+  "Shattering Justice": "Sobek.jpg",
+  "Shell Compression": "ShotgunAmmoMaxMod.jpg",
+  "Shell Shock": "ElectEventShotgunMod.jpg",
+  "Shivering Contagion": "WeaponSpreadFreezeProcsMod.jpg",
+  "Shock Absorbers": "ShockAbsorbersMod.jpg",
+  "Shock Collar": "KubrowDualElect.jpg",
+  "Shocking Claws": "KubrowElectricConversionMod.jpg",
+  "Shocking Touch": "MeleeElectricityDamageMod.jpg",
+  "Shotgun Ammo Mutation": "ShotgunAmmoMutatorMod.jpg",
+  "Shotgun Barrage": "ShotgunFireRateMod.jpg",
+  "Shotgun Elementalist": "ShotgunStatusDamageDuoMod.jpg",
+  "Shotgun Savvy": "StatusChanceShotgunMod.jpg",
+  "Shrapnel Shot": "CritDamageWhileAiming.jpg",
+  "Shred": "Shred.jpg",
+  "Shredder": "BleedDamageShotgunMod.jpg",
+  "Silent Battery": "WeaponNoiseReductionMod.jpg",
+  "Sinister Reach": "WeaponBeamDistanceRifleMod.jpg",
+  "Slip Magazine": "PistolClipMax.jpg",
+  "Smite Corpus": "MeleeDamageCorpus.jpg",
+  "Smite Grineer": "MeleeDamageGrineer.jpg",
+  "Smite Infested": "MeleeDamageInfested.jpg",
+  "Smite Orokin": "MeleeDamageCorrupted.jpg",
+  "Smite The Murmur": "WeaponMeleeFactionDamageMurmurs.jpg",
+  "Sniper Ammo Mutation": "SniperAmmoMutatorMod.jpg",
+  "Soaring Truth": "Ballistica.jpg",
+  "Spectral Serration": "WeaponDamageAmountInvisibleMod.jpg",
+  "Speed Drift": "OrokinChallengeModSpeed.jpg",
+  "Speed Trigger": "RifleFireRateMod.jpg",
+  "Split Chamber": "RifleFireIterationsMod.jpg",
+  "Split Flights": "BowMultiShotOnHitMod.jpg",
+  "Spoiled Strike": "CorruptedChargeDmgForChargeSpeedMod.jpg",
+  "Spring-Loaded Chamber": "FireRateWhileAimingMods.jpg",
+  "Stabilizer": "RifleRecoilReductionMod.jpg",
+  "Stand United": "FairyQuestStandUnited.jpg",
+  "Static Discharge": "ProvaCorpusArenaMod.jpg",
+  "Steady Hands": "PistolRecoilReductionMod.jpg",
+  "Stealth Drift": "OrokinChallengeModStealth.jpg",
+  "Steel Fiber": "ArmourMod.jpg",
+  "Stockpiled Blight": "Kunai.jpg",
+  "Stormbringer": "RifleElectricityDamageMod.jpg",
+  "Strain Infection": "MeleeStrainInfectionMod.jpg",
+  "Streamline": "AbilityEfficiencyMod.jpg",
+  "Streamlined Form": "HolsterSpeedSlideBoostMod.jpg",
+  "Stretch": "AbilityRangeMod.jpg",
+  "Stunning Speed": "PistolStunningSpeed.jpg",
+  "Sundering Strike": "MeleeArmorPiercingDamageMod.jpg",
+  "Suppress": "PistolSilencerMod.jpg",
+  "Sure Footed": "AvatarSureFootedMod.jpg",
+  "Sure Shot": "StatusChancePistolMod.jpg",
+  "Sweeping Serration": "EventSlashDamageShotgunMod.jpg",
+  "Synth Charge": "PystolSynthChargeMod.jpg",
+  "Synth Reflex": "WarframeSynthReflexMod.jpg",
+  "Tactical Pump": "ShotgunReloadSpeedMod.jpg",
+  "Tainted Clip": "CorruptedMaxClipForReloadMod.jpg",
+  "Tainted Mag": "CorruptedMaxClipForReloadSpeedMod.jpg",
+  "Tainted Shell": "CorruptedSpreadForFireRateShotgunMod.jpg",
+  "Target Acquired": "SniperHeadshotMultiplierMod.jpg",
+  "Target Cracker": "PistolCritDamageMod.jpg",
+  "Targeting Subsystem": "AccuracyWhileAimingMods.jpg",
+  "Terminal Velocity": "WeaponProjectileSpeedRifleMod.jpg",
+  "Tether Grenades": "PentaCorpusArenaMod.jpg",
+  "Thermagnetic Shells": "CorpusArenaDetronMod.jpg",
+  "Thermite Rounds": "DualStatFireProcRifle.jpg",
+  "Thief's Wit": "LootRadarMod.jpg",
+  "Toxic Barrage": "PoisonEventShotgunMod.jpg",
+  "Toxic Blight": "Mire.jpg",
+  "Toxic Flight": "ToxicParkourTwoMod.jpg",
+  "Toxic Sequence": "Acrid.jpg",
+  "Toxin Resistance": "PlayerPoisonImmunityBuff.jpg",
+  "Transient Fortitude": "CorruptedPowerStrengthPowerDurationWarframeMod.jpg",
+  "Trick Mag": "PistolAmmoMaxMod.jpg",
+  "True Punishment": "ChannelingCritChance.jpg",
+  "True Steel": "MeleeCritChanceMod.jpg",
+  "Truth's Flame": "CursedSyndicateEmpoweredHeavyMeleeMod.jpg",
+  "Umbral Fiber": "WarframeUmbraModB.jpg",
+  "Umbral Intensify": "WarframeUmbraModC.jpg",
+  "Umbral Vitality": "WarframeUmbraModA.jpg",
+  "Venom Teeth": "KubrowDualPoison.jpg",
+  "Vicious Frost": "IceEventMeleeMod.jpg",
+  "Vicious Spread": "CorruptedDamageForSpreadShotgunMod.jpg",
+  "Vigilante Armaments": "VigilanteArmaments.jpg",
+  "Vigilante Fervor": "VigilanteFervor.jpg",
+  "Vigilante Pursuit": "VigilantePursuit.jpg",
+  "Vigilante Supplies": "VigilanteSupplies.jpg",
+  "Vigor": "Vigor.jpg",
+  "Vile Acceleration": "CorruptedFireRateDamageRifleMod.jpg",
+  "Vile Precision": "CorruptedRecoilForFireRateMod.jpg",
+  "Virulent Scourge": "PoisonEventMeleeMod.jpg",
+  "Vital Sense": "RifleCritDamageMod.jpg",
+  "Vitality": "HealthMaxMod.jpg",
+  "Volcanic Edge": "DualStatFireProcMelee.jpg",
+  "Voltaic Strike": "ElectEventMeleeMod.jpg",
+  "Vulcan Blitz": "JatKittagNightwatchMod.jpg",
+  "Warm Coat": "AvatarMissionSpecificResistanceIce.jpg",
+  "Weeping Wounds": "ComboStatusChanceMod.jpg",
+  "Whirlwind": "GlaiveWhirlwindMod.jpg",
+  "Wild Frenzy": "GrnAssaultRifleArbitrationMod.jpg",
+  "Wildfire": "RifleWildfireMod.jpg"
+ },
+ "slotPolarities": {
+  "warframes": {
+   "Ash": {
+    "aura": "Madurai",
+    "slots": [
+     "Madurai",
+     "Madurai"
+    ]
+   },
+   "Ash Prime": {
+    "aura": "Madurai",
+    "slots": [
+     "Naramon",
+     "Madurai",
+     "Madurai"
+    ]
+   },
+   "Atlas": {
+    "aura": "Madurai",
+    "slots": [
+     "Naramon",
+     "Vazarin",
+     "Madurai"
+    ]
+   },
+   "Atlas Prime": {
+    "aura": "Madurai",
+    "slots": [
+     "Naramon",
+     "Vazarin",
+     "Madurai",
+     "Madurai"
+    ]
+   },
+   "Banshee": {
+    "aura": "Madurai",
+    "slots": [
+     "Madurai",
+     "Madurai"
+    ]
+   },
+   "Banshee Prime": {
+    "aura": "Madurai",
+    "slots": [
+     "Madurai",
+     "Madurai",
+     "Naramon"
+    ]
+   },
+   "Baruuk": {
+    "aura": "Naramon",
+    "slots": [
+     "Vazarin",
+     "Vazarin"
+    ]
+   },
+   "Baruuk Prime": {
+    "aura": "Naramon",
+    "slots": [
+     "Naramon",
+     "Vazarin",
+     "Madurai"
+    ]
+   },
+   "Bonewidow": {
+    "aura": "",
+    "slots": [
+     "Vazarin",
+     "Vazarin",
+     "Madurai"
+    ]
+   },
+   "Caliban": {
+    "aura": "Naramon",
+    "slots": [
+     "Vazarin"
+    ]
+   },
+   "Caliban Prime": {
+    "aura": "Naramon",
+    "slots": [
+     "Vazarin",
+     "Madurai",
+     "Madurai"
+    ]
+   },
+   "Chroma": {
+    "aura": "Madurai",
+    "slots": [
+     "Naramon",
+     "Madurai"
+    ]
+   },
+   "Chroma Prime": {
+    "aura": "Madurai",
+    "slots": [
+     "Naramon",
+     "Vazarin",
+     "Madurai",
+     "Naramon"
+    ]
+   },
+   "Citrine": {
+    "aura": "Naramon",
+    "slots": [
+     "Madurai",
+     "Vazarin"
+    ]
+   },
+   "Citrine Prime": {
+    "aura": "Naramon",
+    "slots": [
+     "Vazarin",
+     "Madurai",
+     "Naramon"
+    ]
+   },
+   "Cyte-09": {
+    "aura": "Madurai",
+    "slots": [
+     "Madurai",
+     "Vazarin"
+    ]
+   },
+   "Dagath": {
+    "aura": "Zenurik",
+    "slots": [
+     "Madurai",
+     "Vazarin"
+    ]
+   },
+   "Dante": {
+    "aura": "Aura",
+    "slots": [
+     "Madurai",
+     "Naramon"
+    ]
+   },
+   "Ember": {
+    "aura": "Madurai",
+    "slots": [
+     "Naramon",
+     "Naramon"
+    ]
+   },
+   "Ember Prime": {
+    "aura": "Madurai",
+    "slots": [
+     "Madurai",
+     "Vazarin"
+    ]
+   },
+   "Equinox": {
+    "aura": "Naramon",
+    "slots": [
+     "Vazarin",
+     "Madurai"
+    ]
+   },
+   "Equinox Prime": {
+    "aura": "Naramon",
+    "slots": [
+     "Vazarin",
+     "Vazarin",
+     "Madurai",
+     "Madurai"
+    ]
+   },
+   "Excalibur": {
+    "aura": "",
+    "slots": [
+     "Vazarin",
+     "Madurai"
+    ]
+   },
+   "Excalibur Prime": {
+    "aura": "Madurai",
+    "slots": [
+     "Vazarin",
+     "Madurai",
+     "Madurai"
+    ]
+   },
+   "Excalibur Umbra": {
+    "aura": "Madurai",
+    "slots": [
+     "Madurai",
+     "Umbra",
+     "Umbra",
+     "Umbra"
+    ]
+   },
+   "Follie": {
+    "aura": "Vazarin",
+    "slots": [
+     "Vazarin",
+     "Naramon"
+    ]
+   },
+   "Frost": {
+    "aura": "Vazarin",
+    "slots": [
+     "Naramon",
+     "Vazarin"
+    ]
+   },
+   "Frost Prime": {
+    "aura": "Vazarin",
+    "slots": [
+     "Naramon",
+     "Vazarin",
+     "Vazarin"
+    ]
+   },
+   "Gara": {
+    "aura": "Vazarin",
+    "slots": [
+     "Madurai",
+     "Madurai"
+    ]
+   },
+   "Gara Prime": {
+    "aura": "Vazarin",
+    "slots": [
+     "Madurai",
+     "Madurai",
+     "Naramon"
+    ]
+   },
+   "Garuda": {
+    "aura": "Madurai",
+    "slots": [
+     "Naramon",
+     "Vazarin"
+    ]
+   },
+   "Garuda Prime": {
+    "aura": "Madurai",
+    "slots": [
+     "Naramon",
+     "Vazarin",
+     "Madurai"
+    ]
+   },
+   "Gauss": {
+    "aura": "Naramon",
+    "slots": [
+     "Madurai",
+     "Vazarin"
+    ]
+   },
+   "Gauss Prime": {
+    "aura": "Naramon",
+    "slots": [
+     "Madurai",
+     "Naramon",
+     "Vazarin"
+    ]
+   },
+   "Grendel": {
+    "aura": "Naramon",
+    "slots": [
+     "Naramon",
+     "Vazarin",
+     "Vazarin"
+    ]
+   },
+   "Grendel Prime": {
+    "aura": "Naramon",
+    "slots": [
+     "Naramon",
+     "Vazarin",
+     "Vazarin",
+     "Madurai"
+    ]
+   },
+   "Gyre": {
+    "aura": "Naramon",
+    "slots": [
+     "Madurai",
+     "Vazarin"
+    ]
+   },
+   "Gyre Prime": {
+    "aura": "Naramon",
+    "slots": [
+     "Madurai",
+     "Vazarin"
+    ]
+   },
+   "Harrow": {
+    "aura": "Naramon",
+    "slots": [
+     "Vazarin",
+     "Naramon"
+    ]
+   },
+   "Harrow Prime": {
+    "aura": "Naramon",
+    "slots": [
+     "Madurai",
+     "Vazarin",
+     "Naramon"
+    ]
+   },
+   "Hildryn": {
+    "aura": "Naramon",
+    "slots": [
+     "Vazarin",
+     "Vazarin"
+    ]
+   },
+   "Hildryn Prime": {
+    "aura": "Naramon",
+    "slots": [
+     "Vazarin",
+     "Vazarin",
+     "Naramon"
+    ]
+   },
+   "Hydroid": {
+    "aura": "Naramon",
+    "slots": [
+     "Madurai",
+     "Naramon"
+    ]
+   },
+   "Hydroid Prime": {
+    "aura": "Naramon",
+    "slots": [
+     "Madurai",
+     "Vazarin",
+     "Naramon",
+     "Naramon"
+    ]
+   },
+   "Inaros": {
+    "aura": "Naramon",
+    "slots": [
+     "Vazarin",
+     "Vazarin"
+    ]
+   },
+   "Inaros Prime": {
+    "aura": "Naramon",
+    "slots": [
+     "Madurai",
+     "Vazarin",
+     "Vazarin"
+    ]
+   },
+   "Ivara": {
+    "aura": "Naramon",
+    "slots": [
+     "Vazarin",
+     "Naramon"
+    ]
+   },
+   "Ivara Prime": {
+    "aura": "Naramon",
+    "slots": [
+     "Madurai",
+     "Vazarin",
+     "Naramon"
+    ]
+   },
+   "Jade": {
+    "aura": "Aura",
+    "slots": [
+     "Naramon"
+    ]
+   },
+   "Khora": {
+    "aura": "Vazarin",
+    "slots": [
+     "Madurai",
+     "Naramon"
+    ]
+   },
+   "Khora Prime": {
+    "aura": "Vazarin",
+    "slots": [
+     "Madurai",
+     "Vazarin",
+     "Naramon"
+    ]
+   },
+   "Koumei": {
+    "aura": "Madurai",
+    "slots": [
+     "Madurai",
+     "Naramon"
+    ]
+   },
+   "Kullervo": {
+    "aura": "Naramon",
+    "slots": [
+     "Madurai",
+     "Madurai"
+    ]
+   },
+   "Lavos": {
+    "aura": "Naramon",
+    "slots": [
+     "Vazarin",
+     "Naramon"
+    ]
+   },
+   "Lavos Prime": {
+    "aura": "Naramon",
+    "slots": [
+     "Vazarin",
+     "Naramon",
+     "Naramon"
+    ]
+   },
+   "Limbo": {
+    "aura": "Naramon",
+    "slots": [
+     "Madurai",
+     "Madurai"
+    ]
+   },
+   "Limbo Prime": {
+    "aura": "Naramon",
+    "slots": [
+     "Madurai",
+     "Madurai",
+     "Naramon",
+     "Vazarin"
+    ]
+   },
+   "Loki": {
+    "aura": "Naramon",
+    "slots": [
+     "Vazarin",
+     "Madurai"
+    ]
+   },
+   "Loki Prime": {
+    "aura": "Naramon",
+    "slots": [
+     "Vazarin",
+     "Vazarin",
+     "Madurai",
+     "Naramon"
+    ]
+   },
+   "Mag": {
+    "aura": "Madurai",
+    "slots": [
+     "Naramon",
+     "Naramon"
+    ]
+   },
+   "Mag Prime": {
+    "aura": "Madurai",
+    "slots": [
+     "Naramon",
+     "Naramon",
+     "Madurai"
+    ]
+   },
+   "Mesa": {
+    "aura": "Madurai",
+    "slots": [
+     "Naramon",
+     "Naramon"
+    ]
+   },
+   "Mesa Prime": {
+    "aura": "Madurai",
+    "slots": [
+     "Naramon",
+     "Naramon",
+     "Vazarin",
+     "Madurai"
+    ]
+   },
+   "Mirage": {
+    "aura": "Naramon",
+    "slots": [
+     "Vazarin",
+     "Madurai"
+    ]
+   },
+   "Mirage Prime": {
+    "aura": "Naramon",
+    "slots": [
+     "Vazarin",
+     "Vazarin",
+     "Naramon",
+     "Madurai"
+    ]
+   },
+   "Narin": {
+    "aura": "Naramon",
+    "slots": [
+     "Madurai",
+     "Vazarin"
+    ]
+   },
+   "Nekros": {
+    "aura": "",
+    "slots": [
+     "Vazarin",
+     "Madurai"
+    ]
+   },
+   "Nekros Prime": {
+    "aura": "",
+    "slots": [
+     "Madurai",
+     "Vazarin",
+     "Naramon"
+    ]
+   },
+   "Nezha": {
+    "aura": "Naramon",
+    "slots": [
+     "Vazarin",
+     "Madurai"
+    ]
+   },
+   "Nezha Prime": {
+    "aura": "Naramon",
+    "slots": [
+     "Vazarin",
+     "Madurai",
+     "Naramon"
+    ]
+   },
+   "Nidus": {
+    "aura": "Madurai",
+    "slots": [
+     "Madurai",
+     "Vazarin"
+    ]
+   },
+   "Nidus Prime": {
+    "aura": "Madurai",
+    "slots": [
+     "Madurai",
+     "Naramon",
+     "Vazarin"
+    ]
+   },
+   "Nokko": {
+    "aura": "Madurai",
+    "slots": [
+     "Madurai",
+     "Naramon"
+    ]
+   },
+   "Nova": {
+    "aura": "Naramon",
+    "slots": [
+     "Madurai",
+     "Madurai"
+    ]
+   },
+   "Nova Prime": {
+    "aura": "Naramon",
+    "slots": [
+     "Madurai",
+     "Madurai",
+     "Madurai"
+    ]
+   },
+   "Nyx": {
+    "aura": "Naramon",
+    "slots": [
+     "Madurai",
+     "Naramon"
+    ]
+   },
+   "Nyx Prime": {
+    "aura": "Naramon",
+    "slots": [
+     "Madurai",
+     "Naramon",
+     "Vazarin"
+    ]
+   },
+   "Oberon": {
+    "aura": "Madurai",
+    "slots": [
+     "Madurai",
+     "Madurai"
+    ]
+   },
+   "Oberon Prime": {
+    "aura": "Madurai",
+    "slots": [
+     "Naramon",
+     "Naramon",
+     "Madurai",
+     "Madurai"
+    ]
+   },
+   "Octavia": {
+    "aura": "Naramon",
+    "slots": [
+     "Naramon",
+     "Naramon"
+    ]
+   },
+   "Octavia Prime": {
+    "aura": "Naramon",
+    "slots": [
+     "Vazarin",
+     "Naramon",
+     "Naramon"
+    ]
+   },
+   "Oraxia": {
+    "aura": "Madurai",
+    "slots": [
+     "Madurai",
+     "Naramon"
+    ]
+   },
+   "Orion & Sirius": {
+    "aura": "Naramon",
+    "slots": [
+     "Madurai",
+     "Naramon",
+     "Aura"
+    ]
+   },
+   "Protea": {
+    "aura": "Aura",
+    "slots": [
+     "Madurai",
+     "Naramon"
+    ]
+   },
+   "Protea Prime": {
+    "aura": "Aura",
+    "slots": [
+     "Madurai",
+     "Naramon",
+     "Naramon"
+    ]
+   },
+   "Qorvex": {
+    "aura": "Vazarin",
+    "slots": [
+     "Naramon",
+     "Vazarin"
+    ]
+   },
+   "Revenant": {
+    "aura": "Naramon",
+    "slots": [
+     "Madurai",
+     "Vazarin"
+    ]
+   },
+   "Revenant Prime": {
+    "aura": "Naramon",
+    "slots": [
+     "Naramon",
+     "Madurai",
+     "Vazarin"
+    ]
+   },
+   "Rhino": {
+    "aura": "Madurai",
+    "slots": [
+     "Vazarin",
+     "Vazarin"
+    ]
+   },
+   "Rhino Prime": {
+    "aura": "Madurai",
+    "slots": [
+     "Vazarin",
+     "Vazarin",
+     "Naramon"
+    ]
+   },
+   "Saryn": {
+    "aura": "Vazarin",
+    "slots": [
+     "Naramon",
+     "Vazarin"
+    ]
+   },
+   "Saryn Prime": {
+    "aura": "Vazarin",
+    "slots": [
+     "Naramon",
+     "Vazarin",
+     "Madurai"
+    ]
+   },
+   "Sevagoth": {
+    "aura": "",
+    "slots": [
+     "Vazarin",
+     "Madurai"
+    ]
+   },
+   "Sevagoth Prime": {
+    "aura": "",
+    "slots": [
+     "Vazarin",
+     "Naramon",
+     "Madurai"
+    ]
+   },
+   "Sirius & Orion": {
+    "aura": "Vazarin",
+    "slots": [
+     "Vazarin",
+     "Naramon",
+     "Aura"
+    ]
+   },
+   "Styanax": {
+    "aura": "Naramon",
+    "slots": [
+     "Vazarin",
+     "Naramon"
+    ]
+   },
+   "Styanax Prime": {
+    "aura": "Naramon",
+    "slots": [
+     "Vazarin",
+     "Naramon",
+     "Naramon"
+    ]
+   },
+   "Temple": {
+    "aura": "Naramon",
+    "slots": [
+     "Madurai",
+     "Vazarin"
+    ]
+   },
+   "Titania": {
+    "aura": "Madurai",
+    "slots": [
+     "Madurai",
+     "Vazarin"
+    ]
+   },
+   "Titania Prime": {
+    "aura": "Madurai",
+    "slots": [
+     "Naramon",
+     "Madurai",
+     "Madurai",
+     "Vazarin"
+    ]
+   },
+   "Trinity": {
+    "aura": "Vazarin",
+    "slots": [
+     "Vazarin",
+     "Vazarin"
+    ]
+   },
+   "Trinity Prime": {
+    "aura": "Vazarin",
+    "slots": [
+     "Vazarin",
+     "Vazarin",
+     "Madurai",
+     "Naramon"
+    ]
+   },
+   "Uriel": {
+    "aura": "Madurai",
+    "slots": [
+     "Naramon",
+     "Vazarin"
+    ]
+   },
+   "Valkyr": {
+    "aura": "Madurai",
+    "slots": [
+     "Madurai",
+     "Madurai"
+    ]
+   },
+   "Valkyr Prime": {
+    "aura": "Madurai",
+    "slots": [
+     "Madurai",
+     "Madurai",
+     "Madurai"
+    ]
+   },
+   "Vauban": {
+    "aura": "Naramon",
+    "slots": [
+     "Naramon",
+     "Madurai"
+    ]
+   },
+   "Vauban Prime": {
+    "aura": "Naramon",
+    "slots": [
+     "Naramon",
+     "Madurai",
+     "Vazarin"
+    ]
+   },
+   "Voidrig": {
+    "aura": "",
+    "slots": [
+     "Madurai",
+     "Vazarin",
+     "Naramon"
+    ]
+   },
+   "Volt": {
+    "aura": "Madurai",
+    "slots": [
+     "Naramon",
+     "Madurai"
+    ]
+   },
+   "Volt Prime": {
+    "aura": "Madurai",
+    "slots": [
+     "Naramon",
+     "Madurai",
+     "Madurai"
+    ]
+   },
+   "Voruna": {
+    "aura": "Vazarin",
+    "slots": [
+     "Madurai",
+     "Vazarin"
+    ]
+   },
+   "Voruna Prime": {
+    "aura": "Vazarin",
+    "slots": [
+     "Madurai",
+     "Madurai",
+     "Vazarin"
+    ]
+   },
+   "Wisp": {
+    "aura": "Naramon",
+    "slots": [
+     "Madurai",
+     "Vazarin"
+    ]
+   },
+   "Wisp Prime": {
+    "aura": "Naramon",
+    "slots": [
+     "Madurai",
+     "Vazarin",
+     "Naramon"
+    ]
+   },
+   "Wukong": {
+    "aura": "Madurai",
+    "slots": [
+     "Naramon",
+     "Vazarin"
+    ]
+   },
+   "Wukong Prime": {
+    "aura": "Madurai",
+    "slots": [
+     "Naramon",
+     "Vazarin",
+     "Madurai"
+    ]
+   },
+   "Xaku": {
+    "aura": "Naramon",
+    "slots": [
+     "Vazarin",
+     "Vazarin"
+    ]
+   },
+   "Xaku Prime": {
+    "aura": "Naramon",
+    "slots": [
+     "Vazarin",
+     "Vazarin",
+     "Madurai"
+    ]
+   },
+   "Yareli": {
+    "aura": "Madurai",
+    "slots": [
+     "Madurai",
+     "Naramon"
+    ]
+   },
+   "Yareli Prime": {
+    "aura": "Madurai",
+    "slots": [
+     "Madurai",
+     "Naramon",
+     "Vazarin"
+    ]
+   },
+   "Zephyr": {
+    "aura": "Vazarin",
+    "slots": [
+     "Madurai",
+     "Naramon"
+    ]
+   },
+   "Zephyr Prime": {
+    "aura": "Vazarin",
+    "slots": [
+     "Madurai",
+     "Madurai",
+     "Vazarin",
+     "Naramon"
+    ]
+   }
+  },
+  "weapons": {
+   "Acceltra": [
+    "Naramon"
+   ],
+   "Acceltra Prime": [
+    "Naramon",
+    "Madurai"
+   ],
+   "Aegrit": [
+    "Madurai",
+    "Madurai",
+    "Madurai"
+   ],
+   "Aeolak": [
+    "Madurai",
+    "Madurai"
+   ],
+   "Afentis": [
+    "Naramon",
+    "Madurai",
+    "Madurai"
+   ],
+   "Afentis Prime": [
+    "Naramon",
+    "Madurai",
+    "Madurai"
+   ],
+   "Afuris": [
+    "Naramon"
+   ],
+   "Afuris Prime": [
+    "Naramon",
+    "Madurai",
+    "Madurai"
+   ],
+   "Akarius": [
+    "Naramon",
+    "Naramon"
+   ],
+   "Akarius Prime": [
+    "Naramon",
+    "Naramon",
+    "Madurai"
+   ],
+   "Akbolto": [
+    "Vazarin"
+   ],
+   "Akbolto Prime": [
+    "Naramon",
+    "Madurai",
+    "Madurai",
+    "Madurai"
+   ],
+   "Akbronco": [
+    "Madurai"
+   ],
+   "Akbronco Prime": [
+    "Madurai",
+    "Madurai"
+   ],
+   "Akjagara": [
+    "Naramon"
+   ],
+   "Akjagara Prime": [
+    "Madurai",
+    "Madurai"
+   ],
+   "Akmagnus Prime": [
+    "Madurai",
+    "Vazarin"
+   ],
+   "Aksomati": [
+    "Naramon"
+   ],
+   "Aksomati Prime": [
+    "Naramon",
+    "Madurai",
+    "Madurai"
+   ],
+   "Aksondol": [
+    "Vazarin"
+   ],
+   "Akstiletto": [
+    "Naramon"
+   ],
+   "Akstiletto Prime": [
+    "Naramon",
+    "Madurai"
+   ],
+   "Akvasto Prime": [
+    "Madurai",
+    "Madurai"
+   ],
+   "Akzani": [
+    "Naramon"
+   ],
+   "Alternox": [
+    "Madurai"
+   ],
+   "Alternox Prime": [
+    "Madurai"
+   ],
+   "Amanata": [
+    "Madurai"
+   ],
+   "Amphis": [
+    "Naramon"
+   ],
+   "Angstrum": [
+    "Vazarin"
+   ],
+   "Anku": [
+    "Madurai"
+   ],
+   "Ankyros Prime": [
+    "Madurai",
+    "Madurai"
+   ],
+   "Arbucep": [
+    "Madurai",
+    "Naramon"
+   ],
+   "Arca Plasmor": [
+    "Madurai",
+    "Madurai"
+   ],
+   "Arca Scisco": [
+    "Madurai",
+    "Madurai"
+   ],
+   "Arca Titron": [
+    "Madurai",
+    "Naramon"
+   ],
+   "Argonak": [
+    "Madurai",
+    "Naramon"
+   ],
+   "Arquebex": [
+    "Madurai"
+   ],
+   "Artemis Bow": [
+    "Madurai",
+    "Madurai",
+    "Naramon"
+   ],
+   "Artemis Bow Prime": [
+    "Madurai",
+    "Madurai",
+    "Naramon"
+   ],
+   "Arum Spinosa": [
+    "Naramon",
+    "Madurai"
+   ],
+   "Astilla": [
+    "Madurai",
+    "Naramon"
+   ],
+   "Astilla Prime": [
+    "Madurai",
+    "Naramon",
+    "Madurai"
+   ],
+   "Athodai": [
+    "Madurai"
+   ],
+   "Athodai Prime": [
+    "Madurai",
+    "Madurai",
+    "Madurai"
+   ],
+   "Atomos": [
+    "Vazarin"
+   ],
+   "Attica": [
+    "Madurai"
+   ],
+   "Azima": [
+    "Naramon",
+    "Madurai"
+   ],
+   "Ballistica": [
+    "Vazarin"
+   ],
+   "Ballistica Prime": [
+    "Naramon",
+    "Madurai",
+    "Madurai"
+   ],
+   "Basmu": [
+    "Madurai"
+   ],
+   "Baza": [
+    "Madurai"
+   ],
+   "Baza Prime": [
+    "Madurai",
+    "Madurai"
+   ],
+   "Bo": [
+    "Vazarin"
+   ],
+   "Bo Prime": [
+    "Vazarin",
+    "Madurai"
+   ],
+   "Bolto": [
+    "Vazarin"
+   ],
+   "Boltor": [
+    "Vazarin"
+   ],
+   "Boltor Prime": [
+    "Vazarin",
+    "Madurai"
+   ],
+   "Brakk": [
+    "Naramon",
+    "Madurai"
+   ],
+   "Braton Vandal": [
+    "Madurai"
+   ],
+   "Broken Scepter": [
+    "Naramon"
+   ],
+   "Broken War": [
+    "Madurai",
+    "Naramon"
+   ],
+   "Bubonico": [
+    "Naramon"
+   ],
+   "Burston": [
+    "Madurai"
+   ],
+   "Burston Prime": [
+    "Madurai"
+   ],
+   "Cadus": [
+    "Vazarin"
+   ],
+   "Cantare": [
+    "Madurai",
+    "Madurai"
+   ],
+   "Cassowar": [
+    "Madurai",
+    "Vazarin"
+   ],
+   "Castanas": [
+    "Madurai",
+    "Madurai"
+   ],
+   "Catabolyst": [
+    "Madurai"
+   ],
+   "Caustacyst": [
+    "Madurai"
+   ],
+   "Cedo": [
+    "Madurai",
+    "Madurai"
+   ],
+   "Cedo Prime": [
+    "Madurai",
+    "Madurai",
+    "Vazarin"
+   ],
+   "Ceramic Dagger": [
+    "Madurai"
+   ],
+   "Cerata": [
+    "Madurai",
+    "Vazarin"
+   ],
+   "Cernos": [
+    "Madurai"
+   ],
+   "Cernos Prime": [
+    "Madurai",
+    "Madurai"
+   ],
+   "Ceti Lacera": [
+    "Naramon"
+   ],
+   "Cinta": [
+    "Madurai"
+   ],
+   "Cobra & Crane Prime": [
+    "Madurai",
+    "Madurai"
+   ],
+   "Coda Bassocyst": [
+    "Madurai"
+   ],
+   "Coda Bubonico": [
+    "Naramon",
+    "Madurai",
+    "Naramon"
+   ],
+   "Coda Catabolyst": [
+    "Madurai"
+   ],
+   "Coda Caustacyst": [
+    "Madurai"
+   ],
+   "Coda Hema": [
+    "Madurai",
+    "Madurai"
+   ],
+   "Coda Hirudo": [
+    "Madurai"
+   ],
+   "Coda Mire": [
+    "Vazarin"
+   ],
+   "Coda Motovore": [
+    "Naramon"
+   ],
+   "Coda Pathocyst": [
+    "Madurai",
+    "Vazarin"
+   ],
+   "Coda Pox": [
+    "Madurai",
+    "Madurai"
+   ],
+   "Coda Sporothrix": [
+    "Vazarin"
+   ],
+   "Coda Synapse": [
+    "Madurai"
+   ],
+   "Coda Tysis": [
+    "Vazarin"
+   ],
+   "Convectrix": [
+    "Naramon"
+   ],
+   "Corinth": [
+    "Madurai",
+    "Madurai"
+   ],
+   "Corinth Prime": [
+    "Madurai",
+    "Madurai",
+    "Naramon"
+   ],
+   "Corufell": [
+    "Madurai"
+   ],
+   "Corufell Prime": [
+    "Madurai",
+    "Naramon"
+   ],
+   "Corvas": [
+    "Naramon"
+   ],
+   "Corvas Prime": [
+    "Madurai",
+    "Madurai",
+    "Naramon"
+   ],
+   "Cronus": [
+    "Madurai"
+   ],
+   "Cryotra": [
+    "Madurai"
+   ],
+   "Cycron": [
+    "Naramon",
+    "Naramon"
+   ],
+   "Daikyu": [
+    "Madurai"
+   ],
+   "Daikyu Prime": [
+    "Madurai",
+    "Madurai"
+   ],
+   "Dakra Prime": [
+    "Madurai",
+    "Naramon"
+   ],
+   "Dark Split-Sword": [
+    "Madurai"
+   ],
+   "Desert Wind": [
+    "Madurai",
+    "Madurai",
+    "Vazarin"
+   ],
+   "Desert Wind Prime": [
+    "Madurai",
+    "Madurai",
+    "Vazarin"
+   ],
+   "Despair": [
+    "Madurai",
+    "Madurai"
+   ],
+   "Destreza": [
+    "Madurai"
+   ],
+   "Destreza Prime": [
+    "Madurai",
+    "Madurai"
+   ],
+   "Dex Dakra": [
+    "Naramon"
+   ],
+   "Dex Furis": [
+    "Naramon"
+   ],
+   "Dex Nikana": [
+    "Madurai",
+    "Naramon"
+   ],
+   "Dex Pixia": [
+    "Madurai",
+    "Madurai",
+    "Naramon"
+   ],
+   "Dex Pixia Prime": [
+    "Madurai",
+    "Madurai",
+    "Naramon"
+   ],
+   "Diwata": [
+    "Madurai",
+    "Madurai",
+    "Naramon"
+   ],
+   "Diwata Prime": [
+    "Madurai",
+    "Madurai",
+    "Naramon"
+   ],
+   "Dorrclave": [
+    "Naramon"
+   ],
+   "Dragon Nikana": [
+    "Madurai",
+    "Vazarin"
+   ],
+   "Dread": [
+    "Madurai",
+    "Madurai"
+   ],
+   "Dual Cestra": [
+    "Madurai"
+   ],
+   "Dual Cleavers": [
+    "Madurai"
+   ],
+   "Dual Coda Torxica": [
+    "Naramon"
+   ],
+   "Dual Heat Swords": [
+    "Naramon"
+   ],
+   "Dual Ichor": [
+    "Vazarin"
+   ],
+   "Dual Kamas Prime": [
+    "Madurai"
+   ],
+   "Dual Keres Prime": [
+    "Madurai",
+    "Madurai"
+   ],
+   "Dual Toxocyst": [
+    "Madurai",
+    "Naramon"
+   ],
+   "Dual Zoren": [
+    "Vazarin"
+   ],
+   "Dual Zoren Prime": [
+    "Vazarin",
+    "Naramon",
+    "Naramon"
+   ],
+   "Ekhein": [
+    "Madurai"
+   ],
+   "Embolist": [
+    "Naramon"
+   ],
+   "Endura": [
+    "Madurai"
+   ],
+   "Enkaus": [
+    "Naramon"
+   ],
+   "Epitaph": [
+    "Madurai",
+    "Madurai"
+   ],
+   "Epitaph Prime": [
+    "Madurai",
+    "Madurai"
+   ],
+   "Ether Daggers": [
+    "Vazarin"
+   ],
+   "Ether Reaper": [
+    "Madurai"
+   ],
+   "Euphona Prime": [
+    "Madurai",
+    "Madurai",
+    "Madurai"
+   ],
+   "Evensong": [
+    "Madurai",
+    "Madurai"
+   ],
+   "Exalted Blade": [
+    "Madurai",
+    "Madurai",
+    "Naramon"
+   ],
+   "Exalted Prime Blade": [
+    "Madurai",
+    "Madurai",
+    "Naramon"
+   ],
+   "Exalted Umbra Blade": [
+    "Umbra",
+    "Umbra"
+   ],
+   "Exergis": [
+    "Vazarin"
+   ],
+   "Fang": [
+    "Vazarin"
+   ],
+   "Fang Prime": [
+    "Vazarin"
+   ],
+   "Felarx": [
+    "Madurai"
+   ],
+   "Ferrox": [
+    "Madurai",
+    "Vazarin"
+   ],
+   "Fluctus": [
+    "Naramon"
+   ],
+   "Fragor Prime": [
+    "Madurai"
+   ],
+   "Fulmin Prime": [
+    "Naramon"
+   ],
+   "Furis": [
+    "Naramon"
+   ],
+   "Fusilai": [
+    "Madurai"
+   ],
+   "Galariak Prime": [
+    "Madurai",
+    "Madurai"
+   ],
+   "Galatine": [
+    "Naramon"
+   ],
+   "Galatine Prime": [
+    "Madurai",
+    "Madurai"
+   ],
+   "Gammacor": [
+    "Vazarin"
+   ],
+   "Garuda Prime Talons": [
+    "Madurai",
+    "Naramon"
+   ],
+   "Garuda Talons": [
+    "Madurai",
+    "Naramon"
+   ],
+   "Gazal Machete": [
+    "Madurai"
+   ],
+   "Glaive": [
+    "Madurai",
+    "Naramon"
+   ],
+   "Glaive Prime": [
+    "Madurai",
+    "Naramon"
+   ],
+   "Glory": [
+    "Madurai",
+    "Madurai"
+   ],
+   "Gotva Prime": [
+    "Madurai",
+    "Madurai",
+    "Naramon"
+   ],
+   "Gram Prime": [
+    "Madurai",
+    "Madurai"
+   ],
+   "Grattler": [
+    "Madurai"
+   ],
+   "Grimoire": [
+    "Madurai",
+    "Naramon"
+   ],
+   "Grinlok": [
+    "Madurai"
+   ],
+   "Guandao": [
+    "Vazarin",
+    "Madurai"
+   ],
+   "Guandao Prime": [
+    "Vazarin",
+    "Madurai",
+    "Madurai"
+   ],
+   "Gunsen": [
+    "Madurai"
+   ],
+   "Gunsen Prime": [
+    "Madurai",
+    "Madurai"
+   ],
+   "Haalvu": [
+    "Madurai",
+    "Madurai"
+   ],
+   "Halikar": [
+    "Madurai",
+    "Naramon"
+   ],
+   "Halikar Wraith": [
+    "Madurai",
+    "Naramon",
+    "Madurai"
+   ],
+   "Harmony": [
+    "Madurai",
+    "Vazarin"
+   ],
+   "Harpak": [
+    "Madurai"
+   ],
+   "Heat Dagger": [
+    "Naramon"
+   ],
+   "Heat Sword": [
+    "Naramon"
+   ],
+   "Helstrum": [
+    "Madurai"
+   ],
+   "Hema": [
+    "Madurai"
+   ],
+   "Hespar": [
+    "Madurai"
+   ],
+   "Higasa": [
+    "Vazarin"
+   ],
+   "Hikou": [
+    "Madurai",
+    "Madurai"
+   ],
+   "Hikou Prime": [
+    "Madurai",
+    "Madurai"
+   ],
+   "Hind": [
+    "Madurai"
+   ],
+   "Hirudo": [
+    "Madurai"
+   ],
+   "Hystrix": [
+    "Madurai"
+   ],
+   "Hystrix Prime": [
+    "Madurai",
+    "Madurai"
+   ],
+   "Imperator": [
+    "Madurai"
+   ],
+   "Imperator Vandal": [
+    "Madurai"
+   ],
+   "Innodem": [
+    "Madurai",
+    "Madurai"
+   ],
+   "Iron Staff": [
+    "Madurai",
+    "Naramon",
+    "Naramon"
+   ],
+   "Iron Staff Prime": [
+    "Madurai",
+    "Naramon",
+    "Naramon"
+   ],
+   "Ironbride": [
+    "Vazarin"
+   ],
+   "Jat Kittag": [
+    "Madurai",
+    "Naramon"
+   ],
+   "Jat Kusar": [
+    "Madurai",
+    "Madurai"
+   ],
+   "Javlok": [
+    "Madurai",
+    "Madurai"
+   ],
+   "Jaw Sword": [
+    "Madurai"
+   ],
+   "Kama": [
+    "Madurai",
+    "Madurai"
+   ],
+   "Karak": [
+    "Madurai"
+   ],
+   "Karak Wraith": [
+    "Madurai"
+   ],
+   "Karyst": [
+    "Naramon"
+   ],
+   "Karyst Prime": [
+    "Madurai",
+    "Naramon"
+   ],
+   "Kesheg": [
+    "Madurai"
+   ],
+   "Kestrel": [
+    "Madurai",
+    "Naramon"
+   ],
+   "Kestrel Prime": [
+    "Madurai",
+    "Naramon"
+   ],
+   "Knell Prime": [
+    "Madurai",
+    "Madurai"
+   ],
+   "Kogake Prime": [
+    "Madurai",
+    "Madurai",
+    "Madurai"
+   ],
+   "Kohm": [
+    "Vazarin"
+   ],
+   "Kohmak": [
+    "Vazarin"
+   ],
+   "Kompressa": [
+    "Vazarin"
+   ],
+   "Kompressa Prime": [
+    "Vazarin",
+    "Naramon"
+   ],
+   "Korrudo": [
+    "Madurai"
+   ],
+   "Korumm": [
+    "Madurai"
+   ],
+   "Kreska": [
+    "Madurai"
+   ],
+   "Kronen Prime": [
+    "Madurai",
+    "Naramon"
+   ],
+   "Kulstar": [
+    "Vazarin"
+   ],
+   "Kunai": [
+    "Madurai",
+    "Madurai"
+   ],
+   "Kuva Ayanga": [
+    "Naramon"
+   ],
+   "Kuva Brakk": [
+    "Naramon",
+    "Madurai"
+   ],
+   "Kuva Bramma": [
+    "Madurai"
+   ],
+   "Kuva Chakkhurr": [
+    "Madurai",
+    "Madurai"
+   ],
+   "Kuva Ghoulsaw": [
+    "Madurai",
+    "Naramon"
+   ],
+   "Kuva Grattler": [
+    "Madurai",
+    "Madurai",
+    "Madurai"
+   ],
+   "Kuva Hind": [
+    "Madurai"
+   ],
+   "Kuva Karak": [
+    "Madurai"
+   ],
+   "Kuva Kohm": [
+    "Vazarin"
+   ],
+   "Kuva Quartakk": [
+    "Madurai",
+    "Madurai"
+   ],
+   "Kuva Shildeg": [
+    "Madurai"
+   ],
+   "Kuva Twin Stubbas": [
+    "Madurai"
+   ],
+   "Kuva Zarr": [
+    "Madurai",
+    "Madurai",
+    "Madurai"
+   ],
+   "Lacera": [
+    "Naramon"
+   ],
+   "Laetum": [
+    "Madurai"
+   ],
+   "Landslide Fists": [
+    "Madurai",
+    "Madurai"
+   ],
+   "Landslide Fists Prime": [
+    "Madurai",
+    "Madurai"
+   ],
+   "Larkspur": [
+    "Madurai"
+   ],
+   "Larkspur Prime": [
+    "Madurai",
+    "Madurai",
+    "Madurai"
+   ],
+   "Lato Prime": [
+    "Madurai",
+    "Naramon"
+   ],
+   "Lato Vandal": [
+    "Madurai"
+   ],
+   "Latron": [
+    "Madurai"
+   ],
+   "Latron Prime": [
+    "Madurai",
+    "Naramon"
+   ],
+   "Latron Wraith": [
+    "Madurai"
+   ],
+   "Lenz": [
+    "Naramon",
+    "Naramon"
+   ],
+   "Lesion": [
+    "Madurai"
+   ],
+   "Lex": [
+    "Madurai"
+   ],
+   "Lex Prime": [
+    "Madurai"
+   ],
+   "Machete Wraith": [
+    "Madurai",
+    "Madurai"
+   ],
+   "Magnus": [
+    "Madurai"
+   ],
+   "Magnus Prime": [
+    "Madurai"
+   ],
+   "Mandonel": [
+    "Madurai"
+   ],
+   "Marelok": [
+    "Madurai"
+   ],
+   "Masseter Prime": [
+    "Madurai",
+    "Madurai"
+   ],
+   "Mausolon": [
+    "Madurai"
+   ],
+   "Mios": [
+    "Madurai"
+   ],
+   "Miter": [
+    "Naramon"
+   ],
+   "Morgha": [
+    "Madurai"
+   ],
+   "Multron": [
+    "Madurai"
+   ],
+   "Mutalist Cernos": [
+    "Naramon"
+   ],
+   "Mutalist Quanta": [
+    "Vazarin"
+   ],
+   "Nagantaka": [
+    "Madurai"
+   ],
+   "Nagantaka Prime": [
+    "Madurai"
+   ],
+   "Nami Skyla Prime": [
+    "Madurai",
+    "Madurai",
+    "Vazarin"
+   ],
+   "Nami Solo": [
+    "Madurai"
+   ],
+   "Nataruk": [
+    "Madurai",
+    "Madurai",
+    "Madurai",
+    "Madurai"
+   ],
+   "Nepheri": [
+    "Madurai"
+   ],
+   "Neutralizer": [
+    "Madurai",
+    "Naramon"
+   ],
+   "Nikana": [
+    "Madurai",
+    "Vazarin"
+   ],
+   "Nikana Prime": [
+    "Madurai",
+    "Vazarin"
+   ],
+   "Ninkondi Prime": [
+    "Madurai",
+    "Madurai"
+   ],
+   "Noctua": [
+    "Naramon",
+    "Madurai"
+   ],
+   "Nunchasa": [
+    "Madurai",
+    "Madurai"
+   ],
+   "Okina": [
+    "Madurai"
+   ],
+   "Okina Prime": [
+    "Madurai",
+    "Madurai"
+   ],
+   "Onos": [
+    "Madurai"
+   ],
+   "Opticor": [
+    "Madurai"
+   ],
+   "Opticor Vandal": [
+    "Madurai"
+   ],
+   "Orvius": [
+    "Naramon",
+    "Madurai"
+   ],
+   "Pandero Prime": [
+    "Madurai"
+   ],
+   "Pangolin Prime": [
+    "Madurai",
+    "Madurai"
+   ],
+   "Pangolin Sword": [
+    "Madurai"
+   ],
+   "Panthera": [
+    "Naramon"
+   ],
+   "Panthera Prime": [
+    "Madurai",
+    "Naramon"
+   ],
+   "Paracyst": [
+    "Vazarin"
+   ],
+   "Paris": [
+    "Naramon"
+   ],
+   "Paris Prime": [
+    "Naramon",
+    "Madurai"
+   ],
+   "Pathocyst": [
+    "Madurai",
+    "Vazarin"
+   ],
+   "Perigale": [
+    "Madurai",
+    "Madurai"
+   ],
+   "Perigale Prime": [
+    "Madurai",
+    "Madurai",
+    "Madurai"
+   ],
+   "Phaedra": [
+    "Madurai"
+   ],
+   "Phage": [
+    "Naramon"
+   ],
+   "Phantasma": [
+    "Naramon",
+    "Madurai"
+   ],
+   "Phantasma Prime": [
+    "Madurai",
+    "Madurai",
+    "Naramon"
+   ],
+   "Phenmor": [
+    "Madurai",
+    "Naramon"
+   ],
+   "Pox": [
+    "Madurai",
+    "Madurai"
+   ],
+   "Praedos": [
+    "Madurai",
+    "Naramon"
+   ],
+   "Pride": [
+    "Madurai"
+   ],
+   "Prisma Angstrum": [
+    "Vazarin"
+   ],
+   "Prisma Dual Cleavers": [
+    "Madurai"
+   ],
+   "Prisma Dual Decurions": [
+    "Madurai",
+    "Madurai"
+   ],
+   "Prisma Grinlok": [
+    "Madurai"
+   ],
+   "Prisma Lenz": [
+    "Naramon",
+    "Naramon",
+    "Madurai"
+   ],
+   "Prisma Ohma": [
+    "Naramon",
+    "Madurai"
+   ],
+   "Prisma Twin Gremlins": [
+    "Madurai"
+   ],
+   "Proboscis Cernos": [
+    "Naramon",
+    "Naramon"
+   ],
+   "Pulmonars": [
+    "Madurai",
+    "Madurai"
+   ],
+   "Pupacyst": [
+    "Madurai"
+   ],
+   "Pyrana Prime": [
+    "Madurai",
+    "Madurai"
+   ],
+   "Quanta": [
+    "Vazarin"
+   ],
+   "Quanta Vandal": [
+    "Madurai"
+   ],
+   "Quartakk": [
+    "Madurai",
+    "Madurai"
+   ],
+   "Quassus Prime": [
+    "Madurai",
+    "Madurai",
+    "Naramon"
+   ],
+   "Quellor": [
+    "Madurai",
+    "Madurai"
+   ],
+   "Rakta Ballistica": [
+    "Vazarin",
+    "Madurai"
+   ],
+   "Rakta Cernos": [
+    "Madurai",
+    "Madurai",
+    "Naramon"
+   ],
+   "Rakta Dark Dagger": [
+    "Madurai"
+   ],
+   "Rauta": [
+    "Vazarin"
+   ],
+   "Reconifex": [
+    "Vazarin",
+    "Madurai"
+   ],
+   "Redeemer Prime": [
+    "Madurai",
+    "Madurai"
+   ],
+   "Regulators": [
+    "Madurai",
+    "Naramon",
+    "Naramon"
+   ],
+   "Regulators Prime": [
+    "Madurai",
+    "Naramon",
+    "Naramon"
+   ],
+   "Riot-848": [
+    "Madurai"
+   ],
+   "Ripkas": [
+    "Madurai"
+   ],
+   "Rubico Prime": [
+    "Madurai",
+    "Madurai"
+   ],
+   "Ruvox": [
+    "Naramon"
+   ],
+   "Sagek Prime": [
+    "Madurai",
+    "Naramon"
+   ],
+   "Sancti Castanas": [
+    "Madurai",
+    "Madurai",
+    "Vazarin"
+   ],
+   "Sancti Magistar": [
+    "Madurai"
+   ],
+   "Sancti Tigris": [
+    "Vazarin",
+    "Naramon",
+    "Madurai"
+   ],
+   "Sarofang": [
+    "Madurai"
+   ],
+   "Sarofang Prime": [
+    "Naramon"
+   ],
+   "Sarpa": [
+    "Vazarin"
+   ],
+   "Scindo Prime": [
+    "Madurai"
+   ],
+   "Scoliac": [
+    "Madurai"
+   ],
+   "Scourge": [
+    "Naramon",
+    "Madurai"
+   ],
+   "Scourge Prime": [
+    "Naramon",
+    "Madurai",
+    "Madurai",
+    "Madurai"
+   ],
+   "Scyotid": [
+    "Naramon"
+   ],
+   "Secura Dual Cestra": [
+    "Madurai",
+    "Naramon"
+   ],
+   "Secura Lecta": [
+    "Vazarin"
+   ],
+   "Secura Penta": [
+    "Naramon",
+    "Vazarin",
+    "Madurai"
+   ],
+   "Serro": [
+    "Madurai"
+   ],
+   "Shadow Claws Prime": [
+    "Madurai",
+    "Madurai",
+    "Madurai"
+   ],
+   "Shattered Lash": [
+    "Naramon",
+    "Madurai"
+   ],
+   "Shattered Lash Prime": [
+    "Naramon",
+    "Madurai"
+   ],
+   "Shedu": [
+    "Madurai",
+    "Madurai"
+   ],
+   "Sheev": [
+    "Naramon"
+   ],
+   "Sibear": [
+    "Vazarin"
+   ],
+   "Sicarus": [
+    "Madurai"
+   ],
+   "Sicarus Prime": [
+    "Madurai"
+   ],
+   "Silva & Aegis Prime": [
+    "Madurai",
+    "Vazarin",
+    "Vazarin"
+   ],
+   "Simulor": [
+    "Vazarin",
+    "Naramon"
+   ],
+   "Skana Prime": [
+    "Madurai",
+    "Naramon"
+   ],
+   "Skiajati": [
+    "Umbra",
+    "Umbra"
+   ],
+   "Slaytra": [
+    "Madurai",
+    "Madurai"
+   ],
+   "Snipetron": [
+    "Madurai"
+   ],
+   "Snipetron Vandal": [
+    "Madurai"
+   ],
+   "Soma": [
+    "Madurai",
+    "Madurai"
+   ],
+   "Soma Prime": [
+    "Madurai",
+    "Madurai"
+   ],
+   "Sonicor": [
+    "Vazarin"
+   ],
+   "Spinnerex": [
+    "Madurai"
+   ],
+   "Spira": [
+    "Madurai",
+    "Madurai"
+   ],
+   "Spira Prime": [
+    "Madurai",
+    "Madurai"
+   ],
+   "Sporothrix": [
+    "Vazarin"
+   ],
+   "Stahlta": [
+    "Madurai"
+   ],
+   "Staticor": [
+    "Naramon"
+   ],
+   "Steflos": [
+    "Madurai"
+   ],
+   "Steflos Prime": [
+    "Madurai",
+    "Madurai"
+   ],
+   "Stradavar": [
+    "Madurai",
+    "Madurai"
+   ],
+   "Stradavar Prime": [
+    "Madurai",
+    "Madurai",
+    "Madurai"
+   ],
+   "Strun": [
+    "Naramon"
+   ],
+   "Strun Prime": [
+    "Naramon",
+    "Madurai",
+    "Madurai"
+   ],
+   "Strun Wraith": [
+    "Naramon"
+   ],
+   "Stug": [
+    "Vazarin"
+   ],
+   "Supra Vandal": [
+    "Madurai",
+    "Madurai"
+   ],
+   "Sweeper": [
+    "Madurai",
+    "Madurai"
+   ],
+   "Sweeper Prime": [
+    "Madurai",
+    "Madurai"
+   ],
+   "Sybaris Prime": [
+    "Naramon",
+    "Naramon",
+    "Madurai"
+   ],
+   "Synoid Gammacor": [
+    "Vazarin",
+    "Naramon"
+   ],
+   "Synoid Simulor": [
+    "Madurai",
+    "Vazarin",
+    "Naramon"
+   ],
+   "Tak & Lug": [
+    "Vazarin"
+   ],
+   "Talons": [
+    "Madurai",
+    "Madurai"
+   ],
+   "Tatsu Prime": [
+    "Madurai",
+    "Madurai"
+   ],
+   "Tekko": [
+    "Madurai"
+   ],
+   "Tekko Prime": [
+    "Madurai",
+    "Madurai"
+   ],
+   "Telos Akbolto": [
+    "Vazarin",
+    "Naramon"
+   ],
+   "Telos Boltace": [
+    "Naramon"
+   ],
+   "Telos Boltor": [
+    "Vazarin",
+    "Madurai"
+   ],
+   "Tenet Arca Plasmor": [
+    "Madurai",
+    "Madurai"
+   ],
+   "Tenet Cycron": [
+    "Naramon",
+    "Naramon"
+   ],
+   "Tenet Diplos": [
+    "Madurai"
+   ],
+   "Tenet Ferrox": [
+    "Madurai",
+    "Madurai",
+    "Vazarin"
+   ],
+   "Tenet Grigori": [
+    "Madurai"
+   ],
+   "Tenet Plinx": [
+    "Madurai",
+    "Madurai"
+   ],
+   "Tenet Quanta": [
+    "Vazarin",
+    "Madurai",
+    "Naramon"
+   ],
+   "Tenet Spirex": [
+    "Madurai",
+    "Madurai"
+   ],
+   "Tenora Prime": [
+    "Madurai",
+    "Madurai"
+   ],
+   "Thornbak": [
+    "Naramon"
+   ],
+   "Tiberon": [
+    "Madurai"
+   ],
+   "Tiberon Prime": [
+    "Madurai",
+    "Naramon",
+    "Naramon"
+   ],
+   "Tigris Prime": [
+    "Madurai",
+    "Naramon"
+   ],
+   "Tipedo": [
+    "Vazarin"
+   ],
+   "Tipedo Prime": [
+    "Vazarin",
+    "Madurai"
+   ],
+   "Tonbo": [
+    "Madurai"
+   ],
+   "Tonkkatt": [
+    "Madurai"
+   ],
+   "Trumna Prime": [
+    "Vazarin",
+    "Madurai"
+   ],
+   "Twin Basolk": [
+    "Madurai"
+   ],
+   "Twin Grakatas": [
+    "Naramon"
+   ],
+   "Twin Gremlins": [
+    "Madurai"
+   ],
+   "Twin Kohmak": [
+    "Vazarin"
+   ],
+   "Twin Rogga": [
+    "Naramon",
+    "Madurai"
+   ],
+   "Twin Vipers": [
+    "Naramon"
+   ],
+   "Twin Vipers Wraith": [
+    "Naramon"
+   ],
+   "Vadarya Prime": [
+    "Madurai",
+    "Naramon"
+   ],
+   "Valkyr Prime Talons": [
+    "Madurai",
+    "Naramon",
+    "Naramon"
+   ],
+   "Valkyr Talons": [
+    "Madurai",
+    "Naramon",
+    "Naramon"
+   ],
+   "Vasto": [
+    "Madurai"
+   ],
+   "Vasto Prime": [
+    "Madurai",
+    "Madurai"
+   ],
+   "Vaykor Hek": [
+    "Vazarin",
+    "Madurai"
+   ],
+   "Vaykor Marelok": [
+    "Madurai",
+    "Vazarin"
+   ],
+   "Vaykor Sydon": [
+    "Madurai"
+   ],
+   "Vectis": [
+    "Madurai"
+   ],
+   "Vectis Prime": [
+    "Madurai",
+    "Naramon"
+   ],
+   "Veldt": [
+    "Naramon"
+   ],
+   "Velox": [
+    "Madurai",
+    "Madurai"
+   ],
+   "Velox Prime": [
+    "Madurai",
+    "Madurai",
+    "Naramon"
+   ],
+   "Venato Prime": [
+    "Madurai"
+   ],
+   "Venka Prime": [
+    "Naramon",
+    "Madurai"
+   ],
+   "Verglas Prime": [
+    "Naramon"
+   ],
+   "Vericres": [
+    "Madurai",
+    "Madurai"
+   ],
+   "Vesper 77": [
+    "Madurai",
+    "Naramon"
+   ],
+   "Vinquibus": [
+    "Madurai",
+    "Aura"
+   ],
+   "Viper": [
+    "Naramon"
+   ],
+   "Viper Wraith": [
+    "Naramon"
+   ],
+   "Vitrica": [
+    "Madurai",
+    "Madurai"
+   ],
+   "Volnus": [
+    "Madurai"
+   ],
+   "Volnus Prime": [
+    "Madurai",
+    "Madurai"
+   ],
+   "Vulkar Wraith": [
+    "Madurai"
+   ],
+   "War": [
+    "Naramon"
+   ],
+   "War Prime": [
+    "Naramon"
+   ],
+   "Whipclaw": [
+    "Madurai",
+    "Vazarin"
+   ],
+   "Whipclaw Prime": [
+    "Madurai",
+    "Vazarin"
+   ],
+   "Wrath": [
+    "Madurai"
+   ],
+   "Zakti": [
+    "Naramon",
+    "Naramon"
+   ],
+   "Zakti Prime": [
+    "Naramon",
+    "Naramon",
+    "Madurai"
+   ],
+   "Zarr": [
+    "Madurai"
+   ],
+   "Zenistar": [
+    "Madurai"
+   ],
+   "Zenith": [
+    "Naramon",
+    "Madurai"
+   ],
+   "Zhuge": [
+    "Madurai"
+   ],
+   "Zhuge Prime": [
+    "Madurai",
+    "Madurai",
+    "Madurai"
+   ],
+   "Zylok Prime": [
+    "Naramon",
+    "Madurai"
+   ],
+   "Zymos": [
+    "Madurai",
+    "Naramon"
+   ]
+  }
+ },
+ "warframes": {
+  "Ash": "Ash.png",
+  "Ash Prime": "AshPrime.png",
+  "Atlas": "Atlas.png",
+  "Atlas Prime": "AtlasPrime.png",
+  "Banshee": "Banshee.png",
+  "Banshee Prime": "BansheePrime.png",
+  "Baruuk": "Pacifist.png",
+  "Baruuk Prime": "BaruukPrime.png",
+  "Bonewidow": "ThanoMech.png",
+  "Caliban": "Caliban.png",
+  "Caliban Prime": "CalibanPrime.png",
+  "Chroma": "Chroma.png",
+  "Chroma Prime": "ChromaPrime.png",
+  "Citrine": "Citrine.png",
+  "Citrine Prime": "CitrinePrime.png",
+  "Cyte-09": "Frumentarius.png",
+  "Dagath": "Dagath.png",
+  "Dante": "Pagemaster.png",
+  "Ember": "Ember.png",
+  "Ember Prime": "EmberPrime.png",
+  "Equinox": "Equinox.png",
+  "Equinox Prime": "EquinoxPrime.png",
+  "Excalibur": "Excalibur.png",
+  "Excalibur Prime": "ExcaliburPrime.png",
+  "Excalibur Umbra": "ExcaliburUmbra.png",
+  "Follie": "Inkblot.png",
+  "Frost": "Frost.png",
+  "Frost Prime": "FrostPrime.png",
+  "Gara": "Gara.png",
+  "Gara Prime": "GaraPrime.png",
+  "Garuda": "Garuda.png",
+  "Garuda Prime": "GarudaPrime.png",
+  "Gauss": "Gauss.png",
+  "Gauss Prime": "GaussPrime.png",
+  "Grendel": "Grendel.png",
+  "Grendel Prime": "GrendelPrime.png",
+  "Gyre": "Gyre.png",
+  "Gyre Prime": "GyrePrime.png",
+  "Harrow": "Harrow.png",
+  "Harrow Prime": "HarrowPrime.png",
+  "Hildryn": "IronFrame.png",
+  "Hildryn Prime": "HildrynPrime.png",
+  "Hydroid": "Hydroid.png",
+  "Hydroid Prime": "HydroidPrime.png",
+  "Inaros": "Inaros.png",
+  "Inaros Prime": "InarosPrime.png",
+  "Ivara": "Ivara.png",
+  "Ivara Prime": "IvaraPrime.png",
+  "Jade": "Jade.png",
+  "Khora": "Khora.png",
+  "Khora Prime": "KhoraPrime.png",
+  "Koumei": "Koumei.png",
+  "Kullervo": "PaxDuviricus.png",
+  "Lavos": "Lavos.png",
+  "Lavos Prime": "LavosPrime.png",
+  "Limbo": "Limbo.png",
+  "Limbo Prime": "LimboPrime.png",
+  "Loki": "Loki.png",
+  "Loki Prime": "LokiPrime.png",
+  "Mag": "Mag.png",
+  "Mag Prime": "MagPrime.png",
+  "Mesa": "Mesa.png",
+  "Mesa Prime": "MesaPrime.png",
+  "Mirage": "Mirage.png",
+  "Mirage Prime": "MiragePrime.png",
+  "Narin": "Narin.png",
+  "Nekros": "Nekros.png",
+  "Nekros Prime": "NekrosPrime.png",
+  "Nezha": "Nezha.png",
+  "Nezha Prime": "NezhaPrime.png",
+  "Nidus": "Nidus.png",
+  "Nidus Prime": "NidusPrime.png",
+  "Nokko": "Nokko.png",
+  "Nova": "Nova.png",
+  "Nova Prime": "NovaPrime.png",
+  "Nyx": "Nyx.png",
+  "Nyx Prime": "NyxPrime.png",
+  "Oberon": "Oberon.png",
+  "Oberon Prime": "OberonPrime.png",
+  "Octavia": "Octavia.png",
+  "Octavia Prime": "OctaviaPrime.png",
+  "Oraxia": "Oraxia.png",
+  "Orion & Sirius": "OrionSirius.png",
+  "Protea": "Odalisk.png",
+  "Protea Prime": "ProteaPrime.png",
+  "Qorvex": "Qorvex.png",
+  "Revenant": "Revenant.png",
+  "Revenant Prime": "RevenantPrime.png",
+  "Rhino": "Rhino.png",
+  "Rhino Prime": "RhinoPrime.png",
+  "Saryn": "Saryn.png",
+  "Saryn Prime": "SarynPrime.png",
+  "Sevagoth": "Wraith.png",
+  "Sevagoth Prime": "SevagothPrime.png",
+  "Sirius & Orion": "SiriusOrion.png",
+  "Styanax": "Styanax.png",
+  "Styanax Prime": "StyanaxPrime.png",
+  "Temple": "Temple.png",
+  "Titania": "Titania.png",
+  "Titania Prime": "TitaniaPrime.png",
+  "Trinity": "Trinity.png",
+  "Trinity Prime": "TrinityPrime.png",
+  "Uriel": "Demonframe.png",
+  "Valkyr": "Valkyr.png",
+  "Valkyr Prime": "ValkyrPrime.png",
+  "Vauban": "Vauban.png",
+  "Vauban Prime": "VaubanPrime.png",
+  "Voidrig": "NechroMech.png",
+  "Volt": "Volt.png",
+  "Volt Prime": "VoltPrime.png",
+  "Voruna": "Voruna.png",
+  "Voruna Prime": "VorunaPrime.png",
+  "Wisp": "Wisp.png",
+  "Wisp Prime": "WispPrime.png",
+  "Wukong": "Wukong.png",
+  "Wukong Prime": "WukongPrime.png",
+  "Xaku": "BrokenFrame.png",
+  "Xaku Prime": "XakuPrime.png",
+  "Yareli": "Yareli.png",
+  "Yareli Prime": "YareliPrime.png",
+  "Zephyr": "Zephyr.png",
+  "Zephyr Prime": "ZephyrPrime.png"
+ },
+ "weapons": {
+  "<ARCHWING> Agkuza": "Agkuza.png",
+  "<ARCHWING> Centaur": "Centaur.png",
+  "<ARCHWING> Kaszas": "Kaszas.png",
+  "<ARCHWING> Knux": "Knux.png",
+  "<ARCHWING> Onorix": "Onorix.png",
+  "<ARCHWING> Prisma Veritux": "PrismaVeritux.png",
+  "<ARCHWING> Rathbone": "Rathbone.png",
+  "<ARCHWING> Veritux": "Veritux.png",
+  "AX-52": "AK47Weapon.png",
+  "Acceltra": "SapientPrimaryWeapon.png",
+  "Acceltra Prime": "AcceltraPrime.png",
+  "Ack & Brunt": "AckAndBrunt.png",
+  "Acrid": "Acrid.png",
+  "Aegrit": "GrnVorStickyBomb.png",
+  "Aeolak": "TnRifleErsatzWeapon.png",
+  "Afentis": "TnHopliteSpear.png",
+  "Afentis Prime": "AfentisPrime.png",
+  "Afuris": "Afuris.png",
+  "Afuris Prime": "AfurisPrime.png",
+  "Akarius": "SapientPistol.png",
+  "Akarius Prime": "AkariusPrime.png",
+  "Akaten": "ZanukaPetMeleeWeaponPS.png",
+  "Akbolto": "Akbolto.png",
+  "Akbolto Prime": "AkboltoPrime.png",
+  "Akbronco": "Akbronco.png",
+  "Akbronco Prime": "AkbroncoPrime.png",
+  "Akjagara": "Akjagara.png",
+  "Akjagara Prime": "AkjagaraPrime.png",
+  "Aklato": "Aklato.png",
+  "Aklex": "Aklex.png",
+  "Aklex Prime": "AklexPrime.png",
+  "Akmagnus": "Akmagnus.png",
+  "Akmagnus Prime": "AkmagnusPrime.png",
+  "Aksomati": "Aksomati.png",
+  "Aksomati Prime": "AksomatiPrime.png",
+  "Aksondol": "DuelistPistols.png",
+  "Akstiletto": "Akstileto.png",
+  "Akstiletto Prime": "AkstiletoPrime.png",
+  "Akvasto": "Akvasto.png",
+  "Akvasto Prime": "AkvastoPrime.png",
+  "Akzani": "Akzani.png",
+  "Alternox": "GyreRifleWeapon.png",
+  "Alternox Prime": "AlternoxPrime.png",
+  "Amanata": "NaginataWeapon.png",
+  "Ambassador": "CrpArSniper.png",
+  "Amphis": "AmphisMelee.png",
+  "Amprex": "Amprex.png",
+  "Angstrum": "Angstrum.png",
+  "Anku": "Anku.png",
+  "Ankyros": "Ankyros.png",
+  "Ankyros Prime": "AnkyrosPrime.png",
+  "Arbucep": "NokkoArchGun.png",
+  "Arca Plasmor": "ArcaPlasmor.png",
+  "Arca Scisco": "ArcaScisco.png",
+  "Arca Titron": "ArcaTitron.png",
+  "Argonak": "Argonak.png",
+  "Arquebex": "ExaltedArtilleryWeapon.png",
+  "Artax": "Artax.png",
+  "Artemis Bow": "ExaltedBow.png",
+  "Artemis Bow Prime": "ArtemisBowPrime.png",
+  "Arum Spinosa": "InfWarfanWeapon.png",
+  "Astilla": "Astilla.png",
+  "Astilla Prime": "AstillaPrime.png",
+  "Athodai": "TnJetTurbinePistolWeapon.png",
+  "Athodai Prime": "AthodaiPrime.png",
+  "Atomos": "Atomos.png",
+  "Atterax": "Atterax.png",
+  "Attica": "Attica.png",
+  "Azima": "Azima.png",
+  "Ballistica": "Ballistica.png",
+  "Ballistica Prime": "BallisticaPrime.png",
+  "Basmu": "SentRifleNewWarGun.png",
+  "Batoten": "ZanukaPetMeleeWeaponIP.png",
+  "Battacor": "CrpSentExperimentRifle.png",
+  "Baza": "Baza.png",
+  "Baza Prime": "BazaPrime.png",
+  "Bo": "Bo.png",
+  "Bo Prime": "BoPrime.png",
+  "Boar": "Boar.png",
+  "Boar Prime": "BoarPrime.png",
+  "Boltace": "Boltace.png",
+  "Bolto": "Bolto.png",
+  "Boltor": "Boltor.png",
+  "Boltor Prime": "BoltorPrime.png",
+  "Brakk": "Brakk.png",
+  "Braton": "Braton.png",
+  "Braton Prime": "BratonPrime.png",
+  "Braton Vandal": "BratonVandal.png",
+  "Broken Scepter": "BrokenScepter.png",
+  "Broken War": "BrokenWar.png",
+  "Bronco": "Bronco.png",
+  "Bronco Prime": "BroncoPrime.png",
+  "Bubonico": "InfArmCannon.png",
+  "Burst Laser": "BurstLaser.png",
+  "Burst Laser Prime": "PrimeLaserRifle.png",
+  "Burston": "Burston.png",
+  "Burston Prime": "BurstonPrime.png",
+  "Buzlok": "Buzlok.png",
+  "Cadus": "Cadus.png",
+  "Cantare": "TnChoirframeKunai.png",
+  "Carmine Penta": "PentaCarmine.png",
+  "Cassowar": "Cassowar.png",
+  "Castanas": "Castanas.png",
+  "Catabolyst": "InfBeamPistol.png",
+  "Caustacyst": "Caustacyst.png",
+  "Cedo": "Cedo.png",
+  "Cedo Prime": "CedoPrime.png",
+  "Ceramic Dagger": "CeramicDagger.png",
+  "Cerata": "Cerata.png",
+  "Cernos": "Cernos.png",
+  "Cernos Prime": "CernosPrime.png",
+  "Cestra": "Cestra.png",
+  "Ceti Lacera": "OperationsLacera.png",
+  "Cinta": "DaxDuviriAsymmetricalLongBow.png",
+  "Cobra & Crane": "PacifistShieldSword.png",
+  "Cobra & Crane Prime": "CobraCranePrime.png",
+  "Coda Bassocyst": "1999InfShotgunWeapon.png",
+  "Coda Bubonico": "CodaBubonico.png",
+  "Coda Catabolyst": "CodaCatabolyst.png",
+  "Coda Caustacyst": "CodaCaustacyst.png",
+  "Coda Hema": "CodaHema.png",
+  "Coda Hirudo": "CodaHirudo.png",
+  "Coda Mire": "CodaMire.png",
+  "Coda Motovore": "InfLichHammerWeapon.png",
+  "Coda Pathocyst": "CodaPathocyst.png",
+  "Coda Pox": "CodaPox.png",
+  "Coda Sporothrix": "CodaSporothrix.png",
+  "Coda Synapse": "CodaSynapse.png",
+  "Coda Tysis": "CodaTysis.png",
+  "Convectrix": "Convectrix.png",
+  "Corinth": "Corinth.png",
+  "Corinth Prime": "CorinthPrime.png",
+  "Cortege": "ThanotechArchGun.png",
+  "Corufell": "ExaltedAWScytheWeapon.png",
+  "Corufell Prime": "CorufellPrime.png",
+  "Corvas": "Corvas.png",
+  "Corvas Prime": "CorvasPrime.png",
+  "Cronus": "Cronus.png",
+  "Cryotra": "Cryotra.png",
+  "Cyanex": "CrpSentAmalgPistol.png",
+  "Cycron": "Cycron.png",
+  "Cyngas": "Cyngas.png",
+  "Daikyu": "Daikyu.png",
+  "Daikyu Prime": "DaikyuPrime.png",
+  "Dakra Prime": "DakraPrime.png",
+  "Dark Dagger": "DarkDagger.png",
+  "Dark Split-Sword": "DarkSplitSwordHybrid.png",
+  "Dark Sword": "DarkSword.png",
+  "Deconstructor": "Deconstructor.png",
+  "Deconstructor Prime": "DeconstructorPrime.png",
+  "Dera": "Dera.png",
+  "Dera Vandal": "DeraVandal.png",
+  "Desert Wind": "PacifistFistWeapon.png",
+  "Desert Wind Prime": "PacifistFistWeapon.png",
+  "Despair": "Despair.png",
+  "Destreza": "Destreza.png",
+  "Destreza Prime": "DestrezaPrime.png",
+  "Deth Machine Rifle": "DethMachineRifle.png",
+  "Deth Machine Rifle Prime": "DethMachineRiflePrime.png",
+  "Detron": "Detron.png",
+  "Dex Dakra": "DexDakra.png",
+  "Dex Furis": "DexFuris.png",
+  "Dex Nikana": "Dex2023Nikana.png",
+  "Dex Pixia": "FlightPistols.png",
+  "Dex Pixia Prime": "DexPixiaPrime.png",
+  "Dex Sybaris": "DexSybaris.png",
+  "Diwata": "FlightSword.png",
+  "Diwata Prime": "DiwataPrime.png",
+  "Dorrclave": "Dorrclave.png",
+  "Dragon Nikana": "DragonNikana.png",
+  "Drakgoon": "Drakgoon.png",
+  "Dread": "Dread.png",
+  "Dual Cestra": "DualCestras.png",
+  "Dual Cleavers": "DualCleavers.png",
+  "Dual Coda Torxica": "1999InfSporePistolWeapon.png",
+  "Dual Decurion": "DualDecurion.png",
+  "Dual Ether": "DualEther.png",
+  "Dual Heat Swords": "DualHeatSwords.png",
+  "Dual Ichor": "DualIchor.png",
+  "Dual Kamas": "DualKamas.png",
+  "Dual Kamas Prime": "DualKamasPrime.png",
+  "Dual Keres": "DualKeres.png",
+  "Dual Keres Prime": "DualKeresPrime.png",
+  "Dual Raza": "DualRaza.png",
+  "Dual Skana": "DualSkanas.png",
+  "Dual Toxocyst": "DualToxocyst.png",
+  "Dual Viciss": "LasGooSickle.png",
+  "Dual Zoren": "DualZoren.png",
+  "Dual Zoren Prime": "DualZorenPrime.png",
+  "EFV-5 Jupiter": "LasGooAK.png",
+  "EFV-8 Mars": "LasGooPistolWeapon.png",
+  "Ekhein": "EntSphereHammer.png",
+  "Embolist": "Embolist.png",
+  "Endura": "Endura.png",
+  "Enkaus": "TnInkRifleWeapon.png",
+  "Epitaph": "TnWraithSidearmWeapon.png",
+  "Epitaph Prime": "EpitaphPrime.png",
+  "Ether Daggers": "EtherDaggers.png",
+  "Ether Reaper": "EtherReaper.png",
+  "Ether Sword": "EtherSword.png",
+  "Euphona Prime": "EuphonaPrime.png",
+  "Evensong": "TnChoirBow.png",
+  "Exalted Blade": "ExaltedBlade.png",
+  "Exalted Prime Blade": "ExaltedBladePrime.png",
+  "Exalted Umbra Blade": "ExcaliburUmbraDoomSword.png",
+  "Exergis": "CrpShapeBlastShotgun.png",
+  "Falcor": "CrpGlaive.png",
+  "Fang": "Fang.png",
+  "Fang Prime": "FangPrime.png",
+  "Felarx": "ZarimanPumpShotgun.png",
+  "Ferrox": "Ferrox.png",
+  "Fluctus": "Fluctus.png",
+  "Flux Rifle": "FluxRifle.png",
+  "Fragor": "Fragor.png",
+  "Fragor Prime": "FragorPrime.png",
+  "Fulmin": "TnWispRifle.png",
+  "Fulmin Prime": "FulminPrime.png",
+  "Furax": "Furax.png",
+  "Furax Wraith": "FuraxWraith.png",
+  "Furis": "Furis.png",
+  "Fusilai": "Fusilai.png",
+  "Galariak Prime": "GrnDrillScythe.png",
+  "Galatine": "Galatine.png",
+  "Galatine Prime": "GalatinePrime.png",
+  "Galvacord": "CrpShockWhip.png",
+  "Gammacor": "Gammacor.png",
+  "Garuda Prime Talons": "GarudaPrimeClaws.png",
+  "Garuda Talons": "GarudaMeleeClaws.png",
+  "Gazal Machete": "GazalMachete.png",
+  "Ghoulsaw": "GrnGhoulSawWeapon.png",
+  "Glaive": "Glaive.png",
+  "Glaive Prime": "GlaivePrime.png",
+  "Glaxion": "Glaxion.png",
+  "Glaxion Vandal": "CrpFreezeRayVandal.png",
+  "Glory": "ChoirEruptWeapon.png",
+  "Gorgon": "Gorgon.png",
+  "Gorgon Wraith": "GorgonWraith.png",
+  "Gotva Prime": "GrnOrokinRifle.png",
+  "Grakata": "Grakata.png",
+  "Gram": "Gram.png",
+  "Gram Prime": "GramPrime.png",
+  "Grattler": "Grattler.png",
+  "Grimoire": "Grimoire.png",
+  "Grinlok": "Grinlok.png",
+  "Guandao": "Guandao.png",
+  "Guandao Prime": "GuandaoPrime.png",
+  "Gunsen": "Gunsen.png",
+  "Gunsen Prime": "GunsenPrime.png",
+  "Haalvu": "TnoOctaMiniGun.png",
+  "Halikar": "Halikar.png",
+  "Halikar Wraith": "HalikarWraith.png",
+  "Harmony": "TnChoirScythe.png",
+  "Harpak": "Harpak.png",
+  "Hate": "Hate.png",
+  "Heat Dagger": "HeatDagger.png",
+  "Heat Sword": "HeatSword.png",
+  "Hek": "Hek.png",
+  "Heliocor": "Heliocor.png",
+  "Helstrum": "Helstrum.png",
+  "Hema": "Hema.png",
+  "Hespar": "DuviriHeavyScythe.png",
+  "Higasa": "GunbrellaWeapon.png",
+  "Hikou": "Hikou.png",
+  "Hikou Prime": "HikouPrime.png",
+  "Hind": "Hind.png",
+  "Hirudo": "Hirudo.png",
+  "Hystrix": "Hystrix.png",
+  "Hystrix Prime": "HystrixPrime.png",
+  "Ignis": "Ignis.png",
+  "Ignis Wraith": "IgnisWraith.png",
+  "Imperator": "Imperator.png",
+  "Imperator Vandal": "ImperatorVandal.png",
+  "Innodem": "ZarimanDaggerWeapon.png",
+  "Iron Staff": "MonkeyKingStaff.png",
+  "Iron Staff Prime": "WukongPrimeStaff.png",
+  "Ironbride": "ThanoTechAbilitySword.png",
+  "Jat Kittag": "JatKittag.png",
+  "Jat Kusar": "JatKusar.png",
+  "Javlok": "Javlok.png",
+  "Jaw Sword": "JawSword.png",
+  "Kama": "Kama.png",
+  "Karak": "Karak.png",
+  "Karak Wraith": "KarakWraith.png",
+  "Karyst": "Karyst.png",
+  "Karyst Prime": "KarystPrime.png",
+  "Keratinos": "InfTransformClaws.png",
+  "Kesheg": "Kesheg.png",
+  "Kestrel": "Kestrel.png",
+  "Kestrel Prime": "KestrelPrime.png",
+  "Knell": "Knell.png",
+  "Knell Prime": "KnellPrime.png",
+  "Kogake": "Kogake.png",
+  "Kogake Prime": "KogakePrime.png",
+  "Kohm": "Kohm.png",
+  "Kohmak": "Kohmak.png",
+  "Komorex": "CrpSentAmalgSniper.png",
+  "Kompressa": "YareliPistol.png",
+  "Kompressa Prime": "KompressaPrime.png",
+  "Korrudo": "GrnSpiderSparring.png",
+  "Korumm": "ArchonTrident.png",
+  "Kraken": "Kraken.png",
+  "Kreska": "CrpVenusHatchet.png",
+  "Krohkur": "Krohkur.png",
+  "Kronen": "Kronen.png",
+  "Kronen Prime": "KronenPrime.png",
+  "Kulstar": "Kulstar.png",
+  "Kunai": "Kunai.png",
+  "Kuva Ayanga": "GrnHeavyGrenadeLauncher.png",
+  "Kuva Brakk": "KuvaLichBrakkSkin.png",
+  "Kuva Bramma": "KuvaGrnBow.png",
+  "Kuva Chakkhurr": "GrnKuvaLichRifleWeapon.png",
+  "Kuva Drakgoon": "KuvaLichDrakgoonSkin.png",
+  "Kuva Ghoulsaw": "KuvaGhoulSaw.png",
+  "Kuva Grattler": "KuvaGrattler.png",
+  "Kuva Hek": "KuvaHek.png",
+  "Kuva Hind": "KuvaHind.png",
+  "Kuva Karak": "KuvaLichKarakSkin.png",
+  "Kuva Kohm": "KuvaLichKohmSkin.png",
+  "Kuva Kraken": "KuvaLichKrakenSkin.png",
+  "Kuva Nukor": "KuvaNukor.png",
+  "Kuva Ogris": "KuvaLichOgrisSkin.png",
+  "Kuva Quartakk": "KuvaLichQuartakkSkin.png",
+  "Kuva Seer": "KuvaLichSeerSkin.png",
+  "Kuva Shildeg": "GrnKuvaLichScytheWeapon.png",
+  "Kuva Sobek": "KuvaSobek.png",
+  "Kuva Tonkor": "KuvaLichTonkorSkin.png",
+  "Kuva Twin Stubbas": "KuvaLichStubbaSkin.png",
+  "Kuva Zarr": "KuvaZarr.png",
+  "Lacera": "Lacera.png",
+  "Lacerten": "ZanukaPetMeleeWeaponIS.png",
+  "Laetum": "ZarimanHeavyPistol.png",
+  "Landslide Fists": "AtlasRockPunch.png",
+  "Landslide Fists Prime": "AtlasRockPunch.png",
+  "Lanka": "Lanka.png",
+  "Larkspur": "ShieldFrameArchGun.png",
+  "Larkspur Prime": "LarkspurPrime.png",
+  "Laser Rifle": "LaserRifle.png",
+  "Lato": "Lato.png",
+  "Lato Prime": "LatoPrime.png",
+  "Lato Vandal": "LatoVandal.png",
+  "Latron": "Latron.png",
+  "Latron Prime": "LatronPrime.png",
+  "Latron Wraith": "LatronWraith.png",
+  "Lecta": "Lecta.png",
+  "Lenz": "Lenz.png",
+  "Lesion": "Lesion.png",
+  "Lex": "Lex.png",
+  "Lex Prime": "LexPrime.png",
+  "MK1-Bo": "Bo.png",
+  "MK1-Braton": "Braton.png",
+  "MK1-Furax": "Furax.png",
+  "MK1-Furis": "Furis.png",
+  "MK1-Kunai": "Kunai.png",
+  "MK1-Paris": "Paris.png",
+  "MK1-Strun": "MK1-Strun.png",
+  "Machete": "Machete.png",
+  "Machete Wraith": "MacheteWraith.png",
+  "Magistar": "Magistar.png",
+  "Magnus": "Magnus.png",
+  "Magnus Prime": "MagnusPrime.png",
+  "Mandonel": "TnConcreteArchgun.png",
+  "Mara Detron": "MaraDetron.png",
+  "Marelok": "Marelok.png",
+  "Masseter": "TnChiselKanabo.png",
+  "Masseter Prime": "MasseterPrime.png",
+  "Mausolon": "ThanotechLongGun.png",
+  "Mios": "Mios.png",
+  "Mire": "Mire.png",
+  "Miter": "Miter.png",
+  "Morgha": "ThanoTechGrenadeLauncher.png",
+  "Multron": "Multron.png",
+  "Mutalist Cernos": "MutalistCernos.png",
+  "Mutalist Quanta": "MutalistQuanta.png",
+  "Nagantaka": "GarudaCrossbow.png",
+  "Nagantaka Prime": "NagantakaPrime.png",
+  "Nami Skyla": "NamiSkyla.png",
+  "Nami Skyla Prime": "NamiSkylaPrime.png",
+  "Nami Solo": "NamiSolo.png",
+  "Nataruk": "OmicrusBow.png",
+  "Nepheri": "ArchonDualDaggers.png",
+  "Neutralizer": "FrumentariusExaltedSniper.png",
+  "Nikana": "Nikana.png",
+  "Nikana Prime": "NikanaPrime.png",
+  "Ninkondi": "Ninkondi.png",
+  "Ninkondi Prime": "NinkondiPrime.png",
+  "Noctua": "ExaltedTome.png",
+  "Nukor": "Nukor.png",
+  "Nunchasa": "DuelistBow.png",
+  "Obex": "Obex.png",
+  "Ocucor": "CrpSentExperimentPistol.png",
+  "Ogris": "Ogris.png",
+  "Ohma": "Ohma.png",
+  "Okina": "Okina.png",
+  "Okina Prime": "OkinaPrime.png",
+  "Onos": "EntratiWristGun.png",
+  "Opticor": "Opticor.png",
+  "Opticor Vandal": "OpticorVandal.png",
+  "Orthos": "Orthos.png",
+  "Orthos Prime": "OrthosPrime.png",
+  "Orvius": "Orvius.png",
+  "Pandero": "Pandero.png",
+  "Pandero Prime": "PanderoPrime.png",
+  "Pangolin Prime": "PangolinPrime.png",
+  "Pangolin Sword": "PangolinSword.png",
+  "Panthera": "Panthera.png",
+  "Panthera Prime": "PantheraPrime.png",
+  "Paracesis": "BallasSword.png",
+  "Paracyst": "Paracyst.png",
+  "Paris": "Paris.png",
+  "Paris Prime": "ParisPrime.png",
+  "Pathocyst": "InfBoomerang.png",
+  "Pennant": "TnRailjackGreatKatana.png",
+  "Penta": "Penta.png",
+  "Perigale": "TnQuadSniperRifle.png",
+  "Perigale Prime": "PerigalePrime.png",
+  "Phaedra": "Phaedra.png",
+  "Phage": "Phage.png",
+  "Phantasma": "Phantasma.png",
+  "Phantasma Prime": "PhantasmaPrime.png",
+  "Phenmor": "ZarimanSemiAutoRifle.png",
+  "Plasma Sword": "PlasmaSword.png",
+  "Plinx": "CrpBlastorWeapon.png",
+  "Pox": "Pox.png",
+  "Praedos": "ZarimanTonfa.png",
+  "Pride": "TnSiriusScytheWeapon.png",
+  "Prime Laser Rifle": "PrimeLaserRifle.png",
+  "Prisma Angstrum": "PrismaAngstrum.png",
+  "Prisma Burst Laser": "PrismaBurstLaser.png",
+  "Prisma Dual Cleavers": "PrismaDualCleavers.png",
+  "Prisma Dual Decurions": "PrismaDualDecurion.png",
+  "Prisma Gorgon": "PrismaGorgon.png",
+  "Prisma Grakata": "PrismaGrakata.png",
+  "Prisma Grinlok": "PrismaGrinlok.png",
+  "Prisma Lenz": "PrismaLenz.png",
+  "Prisma Machete": "PrismaMachete.png",
+  "Prisma Obex": "PrismaObex.png",
+  "Prisma Ohma": "PrismaOhma.png",
+  "Prisma Skana": "PrismaSkana.png",
+  "Prisma Tetra": "PrismaTetra.png",
+  "Prisma Twin Gremlins": "PrismaTwinGremlins.png",
+  "Proboscis Cernos": "DerelictCernos.png",
+  "Prova": "Prova.png",
+  "Prova Vandal": "ProvaVandal.png",
+  "Pulmonars": "InfNunchuck.png",
+  "Pupacyst": "InfStaff.png",
+  "Purgator 1": "LasrianNox.png",
+  "Pyrana": "Pyrana.png",
+  "Pyrana Prime": "PyranaPrime.png",
+  "Quanta": "Quanta.png",
+  "Quanta Vandal": "QuantaVandal.png",
+  "Quartakk": "Quartakk.png",
+  "Quassus": "BrokenFrameWarfan.png",
+  "Quassus Prime": "QuassusPrime.png",
+  "Quatz": "Amphis.png",
+  "Quellor": "RailjackRifle.png",
+  "Rakta Ballistica": "RaktaBallistica.png",
+  "Rakta Cernos": "RaktaCernos.png",
+  "Rakta Dark Dagger": "RaktaDarkDagger.png",
+  "Rauta": "PaxDuviricusShotgun.png",
+  "Reaper Prime": "ReaperPrime.png",
+  "Reconifex": "TnBeltFedRifle.png",
+  "Redeemer": "Redeemer.png",
+  "Redeemer Prime": "RedeemerPrime.png",
+  "Regulators": "SlingerPistols.png",
+  "Regulators Prime": "PrimeSlingerPistols.png",
+  "Riot-848": "1999EntHybridPistol.png",
+  "Ripkas": "Ripkas.png",
+  "Rubico": "Rubico.png",
+  "Rubico Prime": "RubicoPrime.png",
+  "Rumblejack": "DrifterTazer.png",
+  "Ruvox": "EntFistIncarnon.png",
+  "Sagek Prime": "GrnOrokinPistol.png",
+  "Sancti Castanas": "SanctiCastanas.png",
+  "Sancti Magistar": "SanctiMagistar.png",
+  "Sancti Tigris": "SanctiTigris.png",
+  "Sarofang": "WolfFrameAxeWeapon.png",
+  "Sarofang Prime": "SarofangPrime.png",
+  "Sarpa": "Sarpa.png",
+  "Scindo": "Scindo.png",
+  "Scindo Prime": "ScindoPrime.png",
+  "Scoliac": "Scoliac.png",
+  "Scourge": "Scourge.png",
+  "Scourge Prime": "ScourgePrime.png",
+  "Scyotid": "TnOraxiaFlechette.png",
+  "Secura Dual Cestra": "SecuraDualCestra.png",
+  "Secura Lecta": "SecuraLecta.png",
+  "Secura Penta": "SecuraPenta.png",
+  "Seer": "Seer.png",
+  "Sepulcrum": "ThanotechPistol.png",
+  "Serro": "Serro.png",
+  "Shadow Claws": "WraithReaperClaws.png",
+  "Shadow Claws Prime": "SevagothShadowPrimeClaws.png",
+  "Shaku": "Shaku.png",
+  "Shattered Lash": "GlassShank.png",
+  "Shattered Lash Prime": "GlassShank.png",
+  "Shedu": "Shedu.png",
+  "Sheev": "Sheev.png",
+  "Sibear": "Sibear.png",
+  "Sicarus": "Sicarus.png",
+  "Sicarus Prime": "SicarusPrime.png",
+  "Sigma & Octantis": "SigmaOctantis.png",
+  "Silva & Aegis": "SilvaAegis.png",
+  "Silva & Aegis Prime": "SilvaAegisPrime.png",
+  "Simulor": "Simulor.png",
+  "Sirocco": "DrifterPistol.png",
+  "Skana": "Skana.png",
+  "Skana Prime": "SkanaPrime.png",
+  "Skiajati": "Skiajati.png",
+  "Slaytra": "GrnSharbolaWeapon.png",
+  "Snipetron": "Snipetron.png",
+  "Snipetron Vandal": "SnipetronVandal.png",
+  "Sobek": "Sobek.png",
+  "Soma": "Soma.png",
+  "Soma Prime": "SomaPrime.png",
+  "Sonicor": "Sonicor.png",
+  "Spectra": "Spectra.png",
+  "Spectra Vandal": "CorpusLaserPistolVandal.png",
+  "Spinnerex": "SpiderWhip.png",
+  "Spira": "Spira.png",
+  "Spira Prime": "SpiraPrime.png",
+  "Sporothrix": "InfSniperRifle.png",
+  "Stahlta": "CrpRubanRifle.png",
+  "Staticor": "Staticor.png",
+  "Steflos": "TnoLotusPodShotgun.png",
+  "Steflos Prime": "SteflosPrime.png",
+  "Stinger": "Stinger.png",
+  "Stradavar": "Stradavar.png",
+  "Stradavar Prime": "StradavarPrime.png",
+  "Stropha": "CrpGunBladeWeapon.png",
+  "Strun": "Strun.png",
+  "Strun Prime": "StrunPrime.png",
+  "Strun Wraith": "StrunWraith.png",
+  "Stubba": "Stubba.png",
+  "Stug": "Stug.png",
+  "Supra": "Supra.png",
+  "Supra Vandal": "SupraVandal.png",
+  "Sweeper": "Sweeper.png",
+  "Sweeper Prime": "SweeperPrime.png",
+  "Sybaris": "Sybaris.png",
+  "Sybaris Prime": "SybarisPrime.png",
+  "Sydon": "Sydon.png",
+  "Synapse": "Synapse.png",
+  "Synoid Gammacor": "SynoidGammacor.png",
+  "Synoid Heliocor": "Heliocor.png",
+  "Synoid Simulor": "SynoidSimulor.png",
+  "Tak & Lug": "MortiforShieldAndSword.png",
+  "Talons": "Talons.png",
+  "Tatsu": "TnTwoHandedKatana.png",
+  "Tatsu Prime": "TatsuPrime.png",
+  "Tazicor": "Tazicor.png",
+  "Tekko": "Tekko.png",
+  "Tekko Prime": "TekkoPrime.png",
+  "Telos Akbolto": "TelosAkbolto.png",
+  "Telos Boltace": "Boltace.png",
+  "Telos Boltor": "TelosBoltor.png",
+  "Tenet Agendus": "CrpHammerShield.png",
+  "Tenet Arca Plasmor": "CrpBEArcaPlasmor.png",
+  "Tenet Cycron": "CrpBECycron.png",
+  "Tenet Detron": "CrpBEDetron.png",
+  "Tenet Diplos": "CrpBriefcaseAkimboGun.png",
+  "Tenet Envoy": "CrpBriefcaseLauncher.png",
+  "Tenet Exec": "CrpBigSlash.png",
+  "Tenet Ferrox": "TenetFerrox.png",
+  "Tenet Flux Rifle": "CrpBEFluxRifle.png",
+  "Tenet Glaxion": "CrpBEGlaxion.png",
+  "Tenet Grigori": "CrpBriefcaseScythe.png",
+  "Tenet Livia": "CrpBriefcase2HKatana.png",
+  "Tenet Plinx": "TenetPlinx.png",
+  "Tenet Quanta": "TenetQuanta.png",
+  "Tenet Spirex": "CrpIgniterPistol.png",
+  "Tenet Tetra": "CrpBETetra.png",
+  "Tenora": "Tenora.png",
+  "Tenora Prime": "TenoraPrime.png",
+  "Tetra": "Tetra.png",
+  "Thalys": "ZarimanHeavyScythe.png",
+  "Thornbak": "ModQuestRifle.png",
+  "Tiberon": "Tiberon.png",
+  "Tiberon Prime": "TiberonPrime.png",
+  "Tigris": "Tigris.png",
+  "Tigris Prime": "TigrisPrime.png",
+  "Tipedo": "Tipedo.png",
+  "Tipedo Prime": "TipedoPrime.png",
+  "Tonbo": "Tonbo.png",
+  "Tonkkatt": "GrnChainSawTonfa.png",
+  "Tonkor": "Tonkor.png",
+  "Torid": "Torid.png",
+  "Trumna": "ThanotechRifle.png",
+  "Trumna Prime": "TrumnaPrime.png",
+  "Twin Basolk": "TwinBasolk.png",
+  "Twin Grakatas": "TwinGrakatas.png",
+  "Twin Gremlins": "TwinGremlin.png",
+  "Twin Kohmak": "TwinKohmak.png",
+  "Twin Krohkur": "TwinKrohkur.png",
+  "Twin Rogga": "TwinRogga.png",
+  "Twin Vipers": "TwinVipers.png",
+  "Twin Vipers Wraith": "TwinViperWraith.png",
+  "Tysis": "Tysis.png",
+  "Vadarya Prime": "VadaryaPrime.png",
+  "Valkyr Prime Talons": "BerskerMelee.png",
+  "Valkyr Talons": "BerskerMelee.png",
+  "Vastilok": "GrnGunblade.png",
+  "Vasto": "Vasto.png",
+  "Vasto Prime": "VastoPrime.png",
+  "Vaykor Hek": "VaykorHek.png",
+  "Vaykor Marelok": "VaykorMarelok.png",
+  "Vaykor Sydon": "Sydon.png",
+  "Vectis": "Vectis.png",
+  "Vectis Prime": "VectisPrime.png",
+  "Veldt": "Veldt.png",
+  "Velocitus": "Velocitus.png",
+  "Velox": "OdaliskSmgWeapon.png",
+  "Velox Prime": "VeloxPrime.png",
+  "Venato": "SentJointedScytheWeapon.png",
+  "Venato Prime": "VenatoPrime.png",
+  "Venka": "Venka.png",
+  "Venka Prime": "VenkaPrime.png",
+  "Verdilac": "ArchonWhip.png",
+  "Verglas": "SentinelFreezeRayRifle.png",
+  "Verglas Prime": "VerglasPrime.png",
+  "Vericres": "MoonWarfan.png",
+  "Vesper 77": "LasSilencedPistolWeapon.png",
+  "Vinquibus": "TnBayonetRifle.png",
+  "Viper": "Viper.png",
+  "Viper Wraith": "ViperWraith.png",
+  "Vitrica": "NWOrokinSword.png",
+  "Volnus": "Volnus.png",
+  "Volnus Prime": "VolnusPrime.png",
+  "Vulcax": "Vulcax.png",
+  "Vulkar": "Vulkar.png",
+  "Vulkar Wraith": "VulkarWraith.png",
+  "Vulklok": "Vulklok.png",
+  "War": "War.png",
+  "War Prime": "WarPrime.png",
+  "Whipclaw": "KhoraCrack.png",
+  "Whipclaw Prime": "KhoraCrack.png",
+  "Wolf Sledge": "WolfHammerSkin.png",
+  "Wrath": "TnOrionScytheWeapon.png",
+  "Xoris": "ProteaPolarizerCrpGlaive.png",
+  "Zakti": "Zakti.png",
+  "Zakti Prime": "ZaktiPrime.png",
+  "Zarr": "Zarr.png",
+  "Zenistar": "Zenistar.png",
+  "Zenith": "Zenith.png",
+  "Zhuge": "Zhuge.png",
+  "Zhuge Prime": "ZhugePrime.png",
+  "Zylok": "ConclaveLeverPistol.png",
+  "Zylok Prime": "ZylokPrime.png",
+  "Zymos": "InfUziWeapon.png"
+ }
+}
