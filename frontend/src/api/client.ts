@@ -1,6 +1,6 @@
 import type {
   AmpCatalogue, BuffInfo, CalculateRequest, CalculationResult, CompanionInfo, EnemyDetail,
-  EnemySummary, ModDetail, ScaledEnemy, SurvivabilityRequest, SurvivabilityResult, WarframeCatalogue,
+  EnemySummary, HelminthCatalogue, ModDetail, ScaledEnemy, SurvivabilityRequest, SurvivabilityResult, WarframeCatalogue,
   WeaponArcane, WeaponDetail, WeaponSummary,
 } from '../types'
 
@@ -80,6 +80,8 @@ export const getBuffs = () => request<BuffInfo[]>('/buffs')
 export const getWeaponArcanes = () => request<WeaponArcane[]>('/weapon-arcanes')
 
 export const getWarframes = () => request<WarframeCatalogue>('/warframes')
+
+export const getHelminth = () => request<HelminthCatalogue>('/helminth')
 
 export const survivability = (body: SurvivabilityRequest) =>
   request<SurvivabilityResult>('/survivability', {

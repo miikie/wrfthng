@@ -49,10 +49,21 @@ export interface Build {
   warframeExilusMods: (ModInput | null)[]
   /** Weapon arcane slots. Display only: the calculator has no weapon arcanes. */
   weaponArcanes: string[]
+  /** The Helminth ability infused into the Warframe and the slot (1-4) it replaces. Both tabs use it. */
+  helminth: Infusion | null
+  /** Damage dealt tab: the Warframe's ability and passive buffs by effect id. Missing = the effect's default. */
+  abilityBuffs: Record<string, Partial<AbilityState>>
+}
+
+export interface Infusion {
+  ability: string
+  slot: number
 }
 
 export interface SurvivalSettings {
   abilities: Record<string, AbilityState>
+  /** Passive effects by name: toggles for conditional ones, stacks / level for any. */
+  passive: Record<string, AbilityState>
   arcanes: ModInput[]
   /** 'custom' = the amount is one hit; 'enemy' = the amount is the build's enemy's base damage per hit. */
   source: 'custom' | 'enemy'
@@ -64,7 +75,7 @@ export interface SurvivalSettings {
 }
 
 export const DEFAULT_SURVIVAL: SurvivalSettings = {
-  abilities: {}, arcanes: [], source: 'custom', amount: 1000, type: 'Slash', hitsPerSecond: 2, extraStrength: 0,
+  abilities: {}, passive: {}, arcanes: [], source: 'custom', amount: 1000, type: 'Slash', hitsPerSecond: 2, extraStrength: 0,
 }
 
 export interface Preset {
@@ -109,6 +120,8 @@ export const DEFAULT_BUILD: Build = {
   auraMods: [null],
   warframeExilusMods: [null],
   weaponArcanes: [],
+  helminth: null,
+  abilityBuffs: {},
 }
 
 export const DEFAULT_AMP: AmpBuild = {
@@ -214,6 +227,9 @@ interface BuildState {
   setWarframe: (i: BuildIndex, name: string) => void
   updateSurvival: (i: BuildIndex, patch: Partial<SurvivalSettings>) => void
   setAbility: (i: BuildIndex, name: string, patch: Partial<AbilityState>) => void
+  setPassive: (i: BuildIndex, name: string, patch: Partial<AbilityState>) => void
+  setHelminth: (i: BuildIndex, infusion: Infusion | null) => void
+  setAbilityBuff: (i: BuildIndex, id: string, patch: Partial<AbilityState>) => void
   setSharedEnemy: (on: boolean) => void
   savePreset: (name: string, i: BuildIndex) => void
   deletePreset: (name: string) => void
@@ -328,9 +344,17 @@ export const useBuildStore = create<BuildState>()(
         setCompare: (on) => set({ compare: on }),
         setView: (view) => set({ view }),
 
-        // Abilities belong to one Warframe, so their settings reset with it.
+        // Abilities, the passive and the infusion belong to one Warframe, so they reset with it.
         setWarframe: (i, name) =>
-          patchBuild(i, (b) => ({ warframe: name, survival: { ...b.survival, abilities: {} } })),
+          patchBuild(i, (b) => ({
+            warframe: name, helminth: null, abilityBuffs: {},
+            survival: { ...b.survival, abilities: {}, passive: {} },
+          })),
+
+        setHelminth: (i, infusion) => patchBuild(i, () => ({ helminth: infusion })),
+
+        setAbilityBuff: (i, id, patch) =>
+          patchBuild(i, (b) => ({ abilityBuffs: { ...b.abilityBuffs, [id]: { ...b.abilityBuffs[id], ...patch } } })),
 
         updateSurvival: (i, patch) =>
           patchBuild(i, (b) => ({ survival: { ...b.survival, ...patch } })),
@@ -342,6 +366,16 @@ export const useBuildStore = create<BuildState>()(
               abilities: {
                 ...b.survival.abilities,
                 [name]: { ...(b.survival.abilities[name] ?? { active: false }), ...patch },
+              },
+            },
+          })),
+        setPassive: (i, name, patch) =>
+          patchBuild(i, (b) => ({
+            survival: {
+              ...b.survival,
+              passive: {
+                ...b.survival.passive,
+                [name]: { ...(b.survival.passive[name] ?? { active: false }), ...patch },
               },
             },
           })),
@@ -361,7 +395,7 @@ export const useBuildStore = create<BuildState>()(
     },
     {
       name: 'simulacrum',
-      version: 4,
+      version: 5,
       // Version 1 builds predate companions, amps and buffs.
       migrate: (persisted) => {
         const s = persisted as Partial<BuildState>
@@ -396,8 +430,13 @@ export function normalizeBuild(partial: Partial<Build>): Build {
     conditionalStacks: partial.conditionalStacks ?? {},
     buffs: partial.buffs ?? [],
     amp: partial.amp ?? null,
+    helminth: partial.helminth ?? null,
+    abilityBuffs: partial.abilityBuffs ?? {},
   }
 }
+
+const warframeRack = (b: Build) =>
+  [...b.warframeMods, ...b.auraMods, ...b.warframeExilusMods].filter((m): m is ModInput => m !== null)
 
 /** Build B borrows Build A's enemy while comparing against a shared enemy. */
 export function effectiveBuild(
@@ -440,15 +479,23 @@ export function toRequest(b: Build): CalculateRequest {
       : null,
     sentinelAttackPrecept: b.sentinelAttack,
     amp: b.amp,
+    // the Damage taken tab's Warframe: its mods set the strength of its ability buffs
+    warframe: b.warframe,
+    warframeMods: warframeRack(b),
+    extraAbilityStrength: b.survival.extraStrength,
+    helminthAbility: b.helminth?.ability ?? null,
+    helminthSlot: b.helminth?.slot ?? null,
+    abilityBuffs: b.abilityBuffs,
   }
 }
 
 export function toSurvivabilityRequest(b: Build): SurvivabilityRequest {
   return {
     warframe: b.warframe,
-    mods: [...b.warframeMods, ...b.auraMods, ...b.warframeExilusMods].filter((m): m is ModInput => m !== null),
+    mods: warframeRack(b),
     conditionalStacks: b.conditionalStacks,
     abilities: b.survival.abilities,
+    passive: b.survival.passive,
     arcanes: b.survival.arcanes,
     incoming: {
       source: b.survival.source,
@@ -460,6 +507,8 @@ export function toSurvivabilityRequest(b: Build): SurvivabilityRequest {
       steelPath: b.steelPath,
     },
     extraAbilityStrength: b.survival.extraStrength,
+    helminthAbility: b.helminth?.ability ?? null,
+    helminthSlot: b.helminth?.slot ?? null,
   }
 }
 

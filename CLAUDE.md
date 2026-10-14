@@ -275,10 +275,13 @@ python scripts/build_core_mods.py --write      # general weapon mods with damage
 python scripts/extra_core_mods.py              # weapon-specific / special mods; removes entries that aren't real mods
 python scripts/tag_conditional_mods.py         # suffix stats -> {"condition": ..., "max_stacks": ...}
 python scripts/build_warframe_data.py          # Warframe/aura mods + warframe_survivability.json
+python scripts/build_passives.py               # passives -> warframe_survivability.json (after build_warframe_data)
 python scripts/build_slot_data.py              # Exilus flags + weapon_arcanes.json (after build_warframe_data)
 python scripts/build_operator_companion_data.py  # wiki -> data/raw/{operator,amps,companions,companion_mods}
 python scripts/build_app_data.py               # data/raw -> companions, amps, buffs for the app
 python scripts/build_image_map.py              # artwork names + slot polarities (run last of the app data)
+python scripts/build_ability_buffs.py          # ability / passive weapon buffs -> ability_buffs.json
+python scripts/build_helminth_data.py          # Helminth table + rules -> helminth.json (after the two above)
 python scripts/scrape_wiki_abilities.py        # wiki.warframe.com -> data/raw/wiki_abilities (slow; cached)
 ```
 
@@ -325,3 +328,37 @@ Phases 0-6 of `portable.md` are built. Phase 7 (stretch goals) is not started.
 Known data limitation: no primary weapon in weapons.json carries a SHOTGUN tag, so `WeaponData.mod_type`
 reports primary shotguns (Tigris, Hek) as PRIMARY and secondary shotguns (Bronco) as SHOTGUN. The mod picker
 defaults to that type but lets the user switch mod class.
+
+## Passives, Helminth and Ability Buffs
+
+- Every number comes from a wiki page via a regex in the build script; a pattern that stops matching stops the
+  script (no silent stale values). Pages are cached in `data/raw/wiki_cache_current/`.
+- `scripts/build_passives.py` adds `passive: {name, description, effects}` to each frame in
+  `warframe_survivability.json`. Effect kinds: `dr`, `armor` (flat after mods), `health` (`flat` / `energy`),
+  `resistance` (Caliban; the higher of it and Adaptation applies), `regen` (shown, not EHP), `shield_gate`,
+  `revive` / `note` (text). An effect with a `condition` is a toggle; the rest are always on. Meters and stacks
+  default to the mission-start state (Restraint 0%, Garuda 0 kills).
+- `scripts/build_ability_buffs.py` -> `ability_buffs.json`: 42 effects (own abilities, passives, Helminth) with
+  `value`, `subsumed` (number, "same" or null = not infusable), `subsumedCap`. Weapon kinds and where they apply:
+  `base_damage_add` (with Serration), `faction_add` (with Bane; twice on DoTs: Roar), `damage_mult` /
+  `enemy_vulnerability` / `hit_multiplier` (one product, once on hits and DoTs), `elemental_add` (beside the
+  weapon's elements, never combining), `extra_hit` (share of the hit incl. faction, faction again, weak points
+  twice), `crit_chance_add`, `crit_chance_flat`, `fire_rate_add`, `armor_strip`, `slash_dot_mult`.
+- `scripts/build_helminth_data.py` -> `helminth.json`: 65 subsumable abilities (keyed by ability), 13 Helminth
+  abilities, `restrictions` (Eclipse / Roar / Xata's Whisper can only replace the named ability on 9 frames).
+  Survivability effects of infused abilities are copied from the donor with the wiki's subsumed caps.
+- `engine/ability_buffs.py`: `AbilityBuffCatalogue.loadout()` = own ability effects (minus the replaced slot) +
+  passive + infused (subsumed values); `resolve()` -> `Buffs`, armor strip, strength (incl. Empower).
+  `check_infusion()` enforces the placement rule and blocks a second copy of an ability the frame has.
+- `engine/survivability.py`: `calculate(passive=..., replaced_slot=..., infused=...)`; Parasitic Armor (armor
+  mode `shields`) turns max shields into armor and disables shields.
+- API: `GET /api/helminth`, `GET /api/ability-buffs`. `POST /api/calculate` takes `warframe`, `warframeMods`,
+  `extraAbilityStrength`, `helminthAbility`, `helminthSlot`, `abilityBuffs` and returns `abilityStrength`,
+  `abilityEffects` (every effect of the loadout, on or off, with `applies` / `reason`), `helminth`.
+  `POST /api/survivability` takes `passive`, `helminthAbility`, `helminthSlot`.
+- Cross-tab: the build's `warframe`, Warframe mods, `survival.extraStrength` and `helminth` are shared. The damage
+  route runs the survivability engine on the Warframe's mods to get Ability Strength (and shields for Styanax).
+- Frontend: `components/Helminth.tsx` (`HelminthAbilityBar` with a badge per slot, `HelminthPicker`,
+  `infusionBlocked` mirrors the server rule), `components/AbilityBuffs.tsx` (Damage dealt panel). Build fields
+  `helminth`, `abilityBuffs` (share link keys `hm`, `ab`); passive state in `survival.passive`.
+

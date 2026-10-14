@@ -7,9 +7,10 @@ from typing import Dict, List, Optional
 from fastapi import APIRouter, HTTPException
 from pydantic import Field
 
-from api.deps import DATA, enemy_scaler, image_map, mod_resolver, survivability
+from api.deps import DATA, ability_buffs, enemy_scaler, image_map, mod_resolver, survivability
 from api.schemas import CamelModel, ModInput
 from engine.constants import STEEL_PATH_LEVEL_BONUS
+from engine.modding import ResolvedMod
 from engine.survivability import AbilityState, enemy_damage_multiplier
 
 router = APIRouter(prefix="/api", tags=["survivability"])
@@ -44,6 +45,19 @@ class AbilityInfo(CamelModel):
     image_name: str = ""
 
 
+class PassiveEffect(AbilityInfo):
+    # kinds: dr, armor, health, resistance, regen, shield_gate, revive, note
+    value: Optional[float] = None
+    scales_with_strength: bool = False
+    condition: str = ""            # non-empty: a toggle; empty: always on
+
+
+class PassiveInfo(CamelModel):
+    name: str = ""
+    description: str = ""
+    effects: List[PassiveEffect] = Field(default_factory=list)
+
+
 class AbilityIcon(CamelModel):
     name: str
     image_name: str = ""
@@ -57,6 +71,7 @@ class WarframeInfo(CamelModel):
     rank30: StatBlock
     stats_note: str
     abilities: List[AbilityInfo]
+    passive: PassiveInfo = Field(default_factory=PassiveInfo)
     special: List[str]
     image_name: str = ""
     # innate mod slot polarities and the aura slot's polarity
@@ -101,10 +116,21 @@ class SurvivabilityRequest(CamelModel):
     mods: List[ModInput] = Field(default_factory=list, max_length=10)
     conditional_stacks: Dict[str, int] = Field(default_factory=dict)
     abilities: Dict[str, AbilityInput] = Field(default_factory=dict)
+    # passive effects by name: conditional ones count when active; any effect takes stacks / level
+    passive: Dict[str, AbilityInput] = Field(default_factory=dict)
     arcanes: List[ModInput] = Field(default_factory=list, max_length=2)
     incoming: IncomingDamage = Field(default_factory=IncomingDamage)
     # Ability Strength from outside the mods (shards, squad buffs), as a fraction: 0.3 = +30%
     extra_ability_strength: float = Field(default=0.0, ge=-1, le=10)
+    # Helminth: the infused ability and the slot (1-4) it replaces
+    helminth_ability: Optional[str] = None
+    helminth_slot: Optional[int] = Field(default=None, ge=1, le=4)
+
+
+class HelminthOut(CamelModel):
+    ability: str
+    slot: int
+    replaced: str
 
 
 class LayerOut(CamelModel):
@@ -119,6 +145,13 @@ class PoolOut(CamelModel):
     name: str
     points: float
     ehp: Optional[float]
+
+
+class PassiveEffectOut(CamelModel):
+    name: str
+    kind: str
+    active: bool
+    value: Optional[float] = None
 
 
 class SurvivabilityResponse(CamelModel):
@@ -148,6 +181,9 @@ class SurvivabilityResponse(CamelModel):
     shield_gate_seconds: float
     enemy_damage_multiplier: float
     enemy_name: str = ""
+    health_regen: float = 0.0
+    passive_effects: List[PassiveEffectOut] = Field(default_factory=list)
+    helminth: Optional[HelminthOut] = None
     notes: List[str]
 
 
@@ -182,14 +218,12 @@ def list_warframes():
     )
 
 
-@router.post("/survivability", response_model=SurvivabilityResponse)
-def calculate_survivability(req: SurvivabilityRequest):
-    if req.warframe not in survivability.warframes:
-        raise HTTPException(status_code=404, detail=f"Warframe not found: {req.warframe}")
-
-    stacks = {name.lower(): n for name, n in req.conditional_stacks.items()}
-    mods, ranks, mod_stacks, seen = [], {}, {}, set()
-    for m in req.mods:
+def resolve_warframe_mods(inputs: List[ModInput], conditional_stacks: Dict[str, int]):
+    """Warframe and aura mods -> (resolved mods, rank by name, active stacks by name). 404 / 422 on bad input."""
+    stacks = {name.lower(): n for name, n in conditional_stacks.items()}
+    mods: List[ResolvedMod] = []
+    ranks, mod_stacks, seen = {}, {}, set()
+    for m in inputs:
         try:
             resolved = mod_resolver.resolve(m.name, m.rank, stacks=stacks.get(m.name.lower(), 0))
         except ValueError as e:
@@ -206,6 +240,28 @@ def calculate_survivability(req: SurvivabilityRequest):
     for m in mods:
         if m.name == "Adaptation" and mod_stacks[m.name] > 0 and not any(s.value > 0 for s in m.stats):
             m.stats[0].value = 0.01
+    return mods, ranks, mod_stacks
+
+
+def infusion(warframe: str, ability: Optional[str], slot: Optional[int]):
+    """The infused ability as the survivability engine wants it, or None. 422 if the Helminth can't do it."""
+    if not ability:
+        return None, None
+    if slot is None:
+        raise HTTPException(status_code=422, detail="helminthSlot is needed with helminthAbility")
+    reason = ability_buffs.check_infusion(warframe, ability, slot)
+    if reason:
+        raise HTTPException(status_code=422, detail=reason)
+    info = ability_buffs.infusable(ability)
+    return slot, {"name": ability, "effects": info["survivabilityEffects"]}
+
+
+@router.post("/survivability", response_model=SurvivabilityResponse)
+def calculate_survivability(req: SurvivabilityRequest):
+    if req.warframe not in survivability.warframes:
+        raise HTTPException(status_code=404, detail=f"Warframe not found: {req.warframe}")
+    mods, ranks, mod_stacks = resolve_warframe_mods(req.mods, req.conditional_stacks)
+    slot, infused = infusion(req.warframe, req.helminth_ability, req.helminth_slot)
 
     for name in req.arcanes:
         if name.name not in survivability.arcanes:
@@ -225,10 +281,11 @@ def calculate_survivability(req: SurvivabilityRequest):
     r = survivability.calculate(
         req.warframe, mods=mods,
         abilities={k: AbilityState(active=v.active, stacks=v.stacks, level=v.level) for k, v in req.abilities.items()},
+        passive={k: AbilityState(active=v.active, stacks=v.stacks, level=v.level) for k, v in req.passive.items()},
         arcanes=[(a.name, a.rank) for a in req.arcanes],
         incoming=inc.amount, damage_type=inc.type, hits_per_second=inc.hits_per_second,
         strength_bonus=req.extra_ability_strength, mod_ranks=ranks, mod_stacks=mod_stacks,
-        enemy_multiplier=multiplier,
+        enemy_multiplier=multiplier, replaced_slot=slot, infused=infused,
     )
     if inc.source == "enemy":
         r.notes.insert(0, f"{enemy_name} at level {inc.enemy_level}{' on the Steel Path' if inc.steel_path else ''}: "
@@ -252,4 +309,26 @@ def calculate_survivability(req: SurvivabilityRequest):
         pools=[PoolOut(name=p["name"], points=p["points"], ehp=finite(p["ehp"])) for p in r.pools],
         time_to_kill=finite(r.time_to_kill), shield_gate_seconds=r.shield_gate_seconds,
         enemy_damage_multiplier=r.enemy_damage_multiplier, enemy_name=enemy_name, notes=r.notes,
+        health_regen=r.health_regen, passive_effects=[PassiveEffectOut(**e) for e in r.passive_effects],
+        helminth=HelminthOut(**r.helminth) if r.helminth else None,
     )
+
+
+@router.get("/helminth")
+def helminth_catalogue():
+    """What the Helminth can infuse: every subsumable ability, the Helminth's own, and the
+    damage-buff placement rule. Survivability effects carry the infused version's values."""
+    def with_image(entries: Dict[str, dict]) -> List[dict]:
+        return [{**v, "imageName": image_map["abilities"].get(name, "")} for name, v in entries.items()]
+
+    return {
+        "subsumable": with_image(ability_buffs.subsumable),
+        "helminthAbilities": with_image(ability_buffs.helminth_abilities),
+        "restrictions": ability_buffs.restrictions,
+    }
+
+
+@router.get("/ability-buffs")
+def ability_buff_catalogue():
+    """Every ability and passive effect the calculator models, with its wiki values (max rank)."""
+    return list(ability_buffs.effects.values())

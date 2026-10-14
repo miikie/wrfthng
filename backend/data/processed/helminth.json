@@ -1,0 +1,2237 @@
+{
+  "_about": "Built by scripts/build_helminth_data.py from wiki.warframe.com (Helminth page). Survivability effects carry the values of the infused version.",
+  "subsumable": {
+    "Airburst": {
+      "ability": "Airburst",
+      "warframe": "Zephyr",
+      "slot": 2,
+      "description": "Launch a burst of massively dense air. Hold to send enemies flying, tap to pull them toward the burst. Damage increases per enemy hit. Energy Discount while Airborne: 25\"Drain\"",
+      "augments": [
+        "Airburst Rounds"
+      ],
+      "roles": [
+        "Crowd Control",
+        "Damage Buff"
+      ],
+      "damageTypes": [
+        "Impact",
+        "Puncture",
+        "Slash",
+        "Knockdown",
+        "Ragdoll"
+      ],
+      "notes": "Base ability includes tap-cast for wind vacuum, hold-cast for wind explosion.",
+      "scaling": {
+        "strength": true,
+        "duration": false,
+        "range": true
+      },
+      "augmentScaling": {
+        "Airburst Rounds": {
+          "strength": true,
+          "duration": true,
+          "range": true
+        }
+      },
+      "tags": [],
+      "category": "Damage",
+      "weaponEffects": [],
+      "survivabilityEffects": []
+    },
+    "Aquablades": {
+      "ability": "Aquablades",
+      "warframe": "Yareli",
+      "slot": 3,
+      "description": "Tear through foes with a trio of orbiting aquatic blades.",
+      "augments": [
+        "Surging Blades"
+      ],
+      "roles": [
+        "Crowd Control",
+        "Damage"
+      ],
+      "damageTypes": [
+        "Slash",
+        "Stagger"
+      ],
+      "notes": "",
+      "scaling": {
+        "strength": true,
+        "duration": true,
+        "range": false
+      },
+      "augmentScaling": {},
+      "tags": [],
+      "category": "Damage",
+      "weaponEffects": [],
+      "survivabilityEffects": []
+    },
+    "Banish": {
+      "ability": "Banish",
+      "warframe": "Limbo",
+      "slot": 1,
+      "description": "Casts a wave of Rift energy that damages hostiles while pushing enemies and allies out of Limbo’s current plane of existence.",
+      "augments": [
+        "Rift Haven"
+      ],
+      "roles": [
+        "Crowd Control",
+        "Support"
+      ],
+      "damageTypes": [
+        "Impact"
+      ],
+      "notes": "Base ability includes hold-cast to cancel the ability, releasing all affected targets from the Rift.",
+      "scaling": {
+        "strength": true,
+        "duration": true,
+        "range": true
+      },
+      "augmentScaling": {},
+      "tags": [],
+      "category": "Crowd control",
+      "weaponEffects": [],
+      "survivabilityEffects": []
+    },
+    "Blood Altar": {
+      "ability": "Blood Altar",
+      "warframe": "Garuda",
+      "slot": 2,
+      "description": "Impale an enemy on an altar of talons and siphon health for Garuda and her allies.",
+      "augments": [],
+      "roles": [
+        "Healing"
+      ],
+      "damageTypes": [],
+      "notes": "",
+      "scaling": {
+        "strength": true,
+        "duration": true,
+        "range": true
+      },
+      "augmentScaling": {},
+      "tags": [],
+      "category": "Survivability",
+      "weaponEffects": [],
+      "survivabilityEffects": []
+    },
+    "Breach Surge": {
+      "ability": "Breach Surge",
+      "warframe": "Wisp",
+      "slot": 3,
+      "description": "Open a dimensional breach to overwhelm nearby enemies and cause them to release aggressive Surge sparks when damaged. Wisp may also target a Reservoir to teleport to it and double the range of the surge.",
+      "augments": [
+        "Critical Surge"
+      ],
+      "roles": [
+        "Damage",
+        "Crowd Control"
+      ],
+      "damageTypes": [
+        "Radiation",
+        "Blind"
+      ],
+      "notes": "Other Warframes cannot benefit from the Critical Surge augment, due to their inability to cast Reservoirs.",
+      "scaling": {
+        "strength": true,
+        "duration": true,
+        "range": true
+      },
+      "augmentScaling": {},
+      "tags": [],
+      "category": "Damage",
+      "weaponEffects": [],
+      "survivabilityEffects": []
+    },
+    "Brightbonnet": {
+      "ability": "Brightbonnet",
+      "warframe": "Nokko",
+      "slot": 2,
+      "description": "Release a rejuvenating mushroom that emits a radial pulse, increasing Nokko and his allies’ Energy and applying a buff to Ability Strength that lasts for a short time.",
+      "augments": [],
+      "roles": [
+        "Energy Restore",
+        "Strength Buff"
+      ],
+      "damageTypes": [
+        "Stagger"
+      ],
+      "notes": "ALTERED: Reduced Strength buff and Energy Restoration. Ability Strength bonus reduced to 10% / 13% / 17% / 20% and energy restore reduced to 6.67 / 8 / 8.67 / 10.",
+      "scaling": {
+        "strength": true,
+        "duration": true,
+        "range": true
+      },
+      "augmentScaling": {},
+      "tags": [],
+      "category": "Utility",
+      "weaponEffects": [],
+      "survivabilityEffects": []
+    },
+    "Chyrinka Pillar": {
+      "ability": "Chyrinka Pillar",
+      "warframe": "Qorvex",
+      "slot": 1,
+      "description": "",
+      "augments": [],
+      "roles": [
+        "Damage",
+        "Crowd Control"
+      ],
+      "damageTypes": [
+        "Radiation",
+        "Stagger",
+        "Ragdoll"
+      ],
+      "notes": "",
+      "scaling": {
+        "strength": true,
+        "duration": true,
+        "range": true
+      },
+      "augmentScaling": {},
+      "tags": [],
+      "category": "Damage",
+      "weaponEffects": [],
+      "survivabilityEffects": []
+    },
+    "Coil Horizon": {
+      "ability": "Coil Horizon",
+      "warframe": "Gyre",
+      "slot": 2,
+      "description": "Throw forward a Gyratory Sphere that will implode after a few seconds or can be manually triggered.",
+      "augments": [
+        "Coil Recharge"
+      ],
+      "roles": [
+        "Damage",
+        "Crowd Control"
+      ],
+      "damageTypes": [
+        "Electricity"
+      ],
+      "notes": "",
+      "scaling": {
+        "strength": true,
+        "duration": false,
+        "range": true
+      },
+      "augmentScaling": {},
+      "tags": [],
+      "category": "Damage",
+      "weaponEffects": [],
+      "survivabilityEffects": []
+    },
+    "Condemn": {
+      "ability": "Condemn",
+      "warframe": "Harrow",
+      "slot": 1,
+      "description": "Cast a wave of energy that chains them where they stand. Each enemy held reinforces Harrow’s shields.",
+      "augments": [
+        "Tribunal"
+      ],
+      "roles": [
+        "Crowd Control",
+        "Shield Restore"
+      ],
+      "damageTypes": [],
+      "notes": "Other Warframes cannot benefit from the Tribunal augment, due to their inability to cast Penance and Thurible.",
+      "scaling": {
+        "strength": true,
+        "duration": true,
+        "range": true
+      },
+      "augmentScaling": {},
+      "tags": [],
+      "category": "Survivability",
+      "weaponEffects": [],
+      "survivabilityEffects": []
+    },
+    "Dark Verse": {
+      "ability": "Dark Verse",
+      "warframe": "Dante",
+      "slot": 3,
+      "description": "",
+      "augments": [],
+      "roles": [
+        "Damage"
+      ],
+      "damageTypes": [
+        "Slash",
+        "Stagger"
+      ],
+      "notes": "",
+      "scaling": {
+        "strength": true,
+        "duration": false,
+        "range": true
+      },
+      "augmentScaling": {},
+      "tags": [],
+      "category": "Damage",
+      "weaponEffects": [],
+      "survivabilityEffects": []
+    },
+    "Decoy": {
+      "ability": "Decoy",
+      "warframe": "Loki",
+      "slot": 1,
+      "description": "Loki deploys a holographic copy of himself that draws enemy fire and absorbs a portion of enemy health and shields.",
+      "augments": [
+        "Damage Decoy",
+        "Deceptive Bond",
+        "Savior Decoy"
+      ],
+      "roles": [
+        "Crowd Control"
+      ],
+      "damageTypes": [],
+      "notes": "",
+      "scaling": {
+        "strength": true,
+        "duration": true,
+        "range": true
+      },
+      "augmentScaling": {},
+      "tags": [],
+      "category": "Crowd control",
+      "weaponEffects": [],
+      "survivabilityEffects": []
+    },
+    "Defy": {
+      "ability": "Defy",
+      "warframe": "Wukong",
+      "slot": 3,
+      "description": "Wukong and his twin become invulnerable and defy enemies to attack. All damage is captured, stored, and dealt back in a single furious strike of Wukong's staff. Bonus Armor is then granted relative to the damage captured.",
+      "augments": [],
+      "roles": [
+        "Invulnerability",
+        "Armor Bonus",
+        "Status Cleanse"
+      ],
+      "damageTypes": [
+        "Impact",
+        "Ragdoll"
+      ],
+      "notes": "ALTERED: Diminished Max Armor Armor bonus cap reduced to 750.",
+      "scaling": {
+        "strength": true,
+        "duration": true,
+        "range": true
+      },
+      "augmentScaling": {},
+      "tags": [
+        "Armor"
+      ],
+      "category": "Survivability",
+      "weaponEffects": [],
+      "survivabilityEffects": [
+        {
+          "kind": "armor",
+          "name": "Defy",
+          "value": 1500,
+          "mode": "flat",
+          "cap": 750.0,
+          "scalesWithStrength": false,
+          "stacks": null,
+          "perStack": null,
+          "level": {
+            "label": "Damage absorbed",
+            "default": 1.0
+          },
+          "low": null,
+          "note": "100 to 1,500 armor depending on damage taken during the 2s stance. Infused: capped at 750.",
+          "applies": "all"
+        }
+      ]
+    },
+    "Desiccation": {
+      "ability": "Desiccation",
+      "warframe": "Inaros",
+      "slot": 1,
+      "description": "Blast enemies with a wave of cursed sand that blinds them and steals their health.",
+      "augments": [
+        "Desiccation's Curse"
+      ],
+      "roles": [
+        "Crowd Control"
+      ],
+      "damageTypes": [],
+      "notes": "",
+      "scaling": {
+        "strength": true,
+        "duration": true,
+        "range": true
+      },
+      "augmentScaling": {},
+      "tags": [],
+      "category": "Crowd control",
+      "weaponEffects": [],
+      "survivabilityEffects": []
+    },
+    "Dispensary": {
+      "ability": "Dispensary",
+      "warframe": "Protea",
+      "slot": 3,
+      "description": "Deploys a device that generates 3 pickups after a short delay: empowered health orb, universal ammo pack and energy orb.",
+      "augments": [
+        "Repair Dispensary"
+      ],
+      "roles": [
+        "Healing",
+        "Energy Restore"
+      ],
+      "damageTypes": [],
+      "notes": "ALTERED: Diminished Duration Duration reduced to 5 / 7.5 / 10 / 12.5 seconds.",
+      "scaling": {
+        "strength": true,
+        "duration": true,
+        "range": false
+      },
+      "augmentScaling": {},
+      "tags": [],
+      "category": "Survivability",
+      "weaponEffects": [],
+      "survivabilityEffects": []
+    },
+    "Eclipse": {
+      "ability": "Eclipse",
+      "warframe": "Mirage",
+      "slot": 3,
+      "description": "(TAP) Temporarily reduce the damage Mirage takes from enemies. (HOLD) Temporarily increase Mirage's weapon damage.",
+      "augments": [
+        "Total Eclipse"
+      ],
+      "roles": [
+        "Damage Buff",
+        "Damage Reduction"
+      ],
+      "damageTypes": [],
+      "notes": "ALTERED: Diminished Effectiveness Damage bonus reduced to 2% / 9% / 15% / 30% and Damage Reduction cap reduced to 75%. Limited to 1 damage buffing ability per Warframe.",
+      "scaling": {
+        "strength": true,
+        "duration": true,
+        "range": false
+      },
+      "augmentScaling": {
+        "Total Eclipse": {
+          "strength": true,
+          "duration": true,
+          "range": true
+        }
+      },
+      "tags": [
+        "Damage buff",
+        "DR"
+      ],
+      "category": "Damage",
+      "weaponEffects": [
+        "Eclipse (Solar)"
+      ],
+      "survivabilityEffects": [
+        {
+          "kind": "dr",
+          "name": "Eclipse (Lunar)",
+          "value": 0.75,
+          "cap": 0.75,
+          "scalesWithStrength": true,
+          "stacks": null,
+          "perStack": null,
+          "level": null,
+          "low": null,
+          "note": "Tap cast. The hold cast gives a damage bonus instead. Infused: capped at 75%.",
+          "applies": "all"
+        }
+      ]
+    },
+    "Elemental Ward": {
+      "ability": "Elemental Ward",
+      "warframe": "Chroma",
+      "slot": 2,
+      "description": "Depending on Chroma's elemental alignment, an offensive area-of-effect is created. Chroma and his nearby allies are imbued with defensive energy.",
+      "augments": [
+        "Everlasting Ward"
+      ],
+      "roles": [
+        "Health Bonus",
+        "Shield Bonus",
+        "Reload Speed Bonus",
+        "Armor Bonus"
+      ],
+      "damageTypes": [
+        "Heat",
+        "Electricity",
+        "Toxin",
+        "Cold"
+      ],
+      "notes": "Elemental Ward versions of the ability are determined by the chosen Warframe Primary Emission Color.",
+      "scaling": {
+        "strength": true,
+        "duration": true,
+        "range": true
+      },
+      "augmentScaling": {},
+      "tags": [
+        "Armor"
+      ],
+      "category": "Survivability",
+      "weaponEffects": [],
+      "survivabilityEffects": [
+        {
+          "kind": "armor",
+          "name": "Elemental Ward (Cold)",
+          "value": 1.45,
+          "mode": "percent",
+          "cap": null,
+          "scalesWithStrength": true,
+          "stacks": null,
+          "perStack": null,
+          "level": null,
+          "low": null,
+          "note": "Cold energy colour only.",
+          "applies": "all"
+        }
+      ]
+    },
+    "Ensnare": {
+      "ability": "Ensnare",
+      "warframe": "Khora",
+      "slot": 2,
+      "description": "Bind a helpless target in living metal, entangling others who stray too close. Whipclaw will refresh the trap allowing it to capture more enemies.",
+      "augments": [],
+      "roles": [
+        "Crowd Control"
+      ],
+      "damageTypes": [],
+      "notes": "",
+      "scaling": {
+        "strength": false,
+        "duration": true,
+        "range": true
+      },
+      "augmentScaling": {},
+      "tags": [],
+      "category": "Crowd control",
+      "weaponEffects": [],
+      "survivabilityEffects": []
+    },
+    "Evade": {
+      "ability": "Evade",
+      "warframe": "Cyte-09",
+      "slot": 3,
+      "description": "Jump backwards and become invisible for a short duration. Killing enemies extends the duration and heals Cyte-09.",
+      "augments": [],
+      "roles": [
+        "Healing",
+        "Invisibility"
+      ],
+      "damageTypes": [],
+      "notes": "ALTERED: Maximum Duration capped to 25 seconds. Base maximum duration is reduced to 15 seconds and is capped at 25 seconds.",
+      "scaling": {
+        "strength": true,
+        "duration": true,
+        "range": false
+      },
+      "augmentScaling": {},
+      "tags": [],
+      "category": "Survivability",
+      "weaponEffects": [],
+      "survivabilityEffects": []
+    },
+    "Fire Blast": {
+      "ability": "Fire Blast",
+      "warframe": "Ember",
+      "slot": 3,
+      "description": "Slam the ground to create a wave of incinerating plasma that knocks back enemies and strips their armor.",
+      "augments": [
+        "Healing Flame",
+        "Purifying Flames"
+      ],
+      "roles": [
+        "Crowd Control",
+        "Armor Strip",
+        "Healing"
+      ],
+      "damageTypes": [
+        "Heat"
+      ],
+      "notes": "ALTERED: No Overguard From Healing Flames Augment Armor reduction per cast is capped at 75%. Healing Flame heals for 37 health for each enemy hit and does not grant Overguard.",
+      "scaling": {
+        "strength": true,
+        "duration": true,
+        "range": true
+      },
+      "augmentScaling": {},
+      "tags": [
+        "Armor strip"
+      ],
+      "category": "Armor strip",
+      "weaponEffects": [
+        "Fire Blast"
+      ],
+      "survivabilityEffects": []
+    },
+    "Fire Walker": {
+      "ability": "Fire Walker",
+      "warframe": "Nezha",
+      "slot": 1,
+      "description": "Blaze a trail of flames, scorching enemies and cleansing allies. Teleporting blasts the landing area with a ring of fire.",
+      "augments": [
+        "Pyroclastic Flow"
+      ],
+      "roles": [
+        "Crowd Control",
+        "Movement Speed",
+        "Status Cleanse"
+      ],
+      "damageTypes": [
+        "Heat"
+      ],
+      "notes": "",
+      "scaling": {
+        "strength": true,
+        "duration": true,
+        "range": true
+      },
+      "augmentScaling": {},
+      "tags": [],
+      "category": "Crowd control",
+      "weaponEffects": [],
+      "survivabilityEffects": []
+    },
+    "Fractured Blast": {
+      "ability": "Fractured Blast",
+      "warframe": "Citrine",
+      "slot": 1,
+      "description": "Slash and stagger enemies with a crystal blast that inflicts Bleed. Enemies afflicted with this Status Effect have an increased chance of dropping Health and Energy Orbs.",
+      "augments": [],
+      "roles": [
+        "Crowd Control",
+        "Healing",
+        "Energy Restore"
+      ],
+      "damageTypes": [
+        "Slash",
+        "Impact"
+      ],
+      "notes": "ALTERED: Diminished Strength Damage reduced to 125 / 150 / 200 / 250, Health Orb drop chance reduced to 25%, and Energy Orb drop chance reduced to 10%.",
+      "scaling": {
+        "strength": true,
+        "duration": false,
+        "range": true
+      },
+      "augmentScaling": {},
+      "tags": [],
+      "category": "Survivability",
+      "weaponEffects": [],
+      "survivabilityEffects": []
+    },
+    "Gloom": {
+      "ability": "Gloom",
+      "warframe": "Sevagoth",
+      "slot": 3,
+      "description": "Summon a radial pulse wave that ensnares and slows enemies, siphoning their lifeforce for the Death Well. Allies within the wave steal health with each attack. Energy drain: 0.75 (base), 7.5 (max) s-1",
+      "augments": [],
+      "roles": [
+        "Crowd Control",
+        "Healing"
+      ],
+      "damageTypes": [
+        "Slow"
+      ],
+      "notes": "",
+      "scaling": {
+        "strength": true,
+        "duration": true,
+        "range": true
+      },
+      "augmentScaling": {},
+      "tags": [],
+      "category": "Survivability",
+      "weaponEffects": [],
+      "survivabilityEffects": []
+    },
+    "Ice Wave": {
+      "ability": "Ice Wave",
+      "warframe": "Frost",
+      "slot": 2,
+      "description": "Sends a wave of razor sharp, crystallized ice toward an enemy, dealing heavy damage.",
+      "augments": [
+        "Ice Wave Impedance"
+      ],
+      "roles": [
+        "Crowd Control"
+      ],
+      "damageTypes": [
+        "Cold"
+      ],
+      "notes": "",
+      "scaling": {
+        "strength": true,
+        "duration": true,
+        "range": true
+      },
+      "augmentScaling": {},
+      "tags": [],
+      "category": "Crowd control",
+      "weaponEffects": [],
+      "survivabilityEffects": []
+    },
+    "Larva": {
+      "ability": "Larva",
+      "warframe": "Nidus",
+      "slot": 2,
+      "description": "Spawn an Infested pod that erupts with tendrils, latches onto nearby enemies and pulls them in. Enemies killed while held have a chance of generating a Mutation stack.",
+      "augments": [
+        "Larva Burst"
+      ],
+      "roles": [
+        "Crowd Control"
+      ],
+      "damageTypes": [
+        "Toxin"
+      ],
+      "notes": "ALTERED: Diminished Range Radius reduced to 5.33 / 6 / 6.67 / 8 meters.",
+      "scaling": {
+        "strength": false,
+        "duration": true,
+        "range": true
+      },
+      "augmentScaling": {
+        "Larva Burst": {
+          "strength": true,
+          "duration": true,
+          "range": true
+        }
+      },
+      "tags": [],
+      "category": "Crowd control",
+      "weaponEffects": [],
+      "survivabilityEffects": []
+    },
+    "Lull": {
+      "ability": "Lull",
+      "warframe": "Baruuk",
+      "slot": 2,
+      "description": "A calming wave slows enemies until they fall into a slumber. Enemies woken by damage will be confused and disoriented. Short-term amnesia means all waking enemies forget anything that happened before the lull.",
+      "augments": [
+        "Endless Lullaby"
+      ],
+      "roles": [
+        "Crowd Control",
+        "Stealth"
+      ],
+      "damageTypes": [
+        "Sleep"
+      ],
+      "notes": "",
+      "scaling": {
+        "strength": false,
+        "duration": true,
+        "range": true
+      },
+      "augmentScaling": {},
+      "tags": [],
+      "category": "Crowd control",
+      "weaponEffects": [],
+      "survivabilityEffects": []
+    },
+    "Lycath's Hunt": {
+      "ability": "Lycath's Hunt",
+      "warframe": "Voruna",
+      "slot": 3,
+      "description": "(TAP) Lycath hunts to sustain the pack. There is a chance for enemies killed by melee attacks to drop health orbs and enemies killed by headshots to supply energy orbs. Increase the duration of Lycath's hunt by killing enemies affected by 5 or more Status Effects. (HOLD) Lycath guards Voruna with increased Heavy Attack efficiency.",
+      "augments": [],
+      "roles": [
+        "Healing",
+        "Energy Restore"
+      ],
+      "damageTypes": [],
+      "notes": "ALTERED: Passive Removed Health and Energy Orb drop chance reduced to 50% and cannot activate the Heavy Attack Efficiency passive.",
+      "scaling": {
+        "strength": false,
+        "duration": true,
+        "range": false
+      },
+      "augmentScaling": {},
+      "tags": [],
+      "category": "Survivability",
+      "weaponEffects": [],
+      "survivabilityEffects": []
+    },
+    "Mind Control": {
+      "ability": "Mind Control",
+      "warframe": "Nyx",
+      "slot": 1,
+      "description": "Nyx seizes control of a target's mind, compelling them to fight for the Tenno cause. Controlled enemies have increased Radiation Status Chance. When Nyx shoots them, they also have an increased Damage Multiplier.",
+      "augments": [
+        "Mind Freak"
+      ],
+      "roles": [
+        "Crowd Control",
+        "Support"
+      ],
+      "damageTypes": [
+        "Radiation"
+      ],
+      "notes": "",
+      "scaling": {
+        "strength": false,
+        "duration": true,
+        "range": true
+      },
+      "augmentScaling": {
+        "Mind Freak": {
+          "strength": true,
+          "duration": true,
+          "range": true
+        }
+      },
+      "tags": [],
+      "category": "Crowd control",
+      "weaponEffects": [],
+      "survivabilityEffects": []
+    },
+    "Molt": {
+      "ability": "Molt",
+      "warframe": "Saryn",
+      "slot": 2,
+      "description": "Shedding her skin like a snake, Saryn leaves a decoy behind to draw fire from enemies.",
+      "augments": [
+        "Regenerative Molt"
+      ],
+      "roles": [
+        "Crowd Control",
+        "Healing"
+      ],
+      "damageTypes": [
+        "Toxin"
+      ],
+      "notes": "",
+      "scaling": {
+        "strength": true,
+        "duration": true,
+        "range": true
+      },
+      "augmentScaling": {},
+      "tags": [],
+      "category": "Survivability",
+      "weaponEffects": [],
+      "survivabilityEffects": []
+    },
+    "Neote": {
+      "ability": "Neote",
+      "warframe": "Narin",
+      "slot": 1,
+      "description": "",
+      "augments": [],
+      "roles": [
+        "Crowd Control",
+        "Support"
+      ],
+      "damageTypes": [
+        "Cold",
+        "Puncture"
+      ],
+      "notes": "",
+      "scaling": {
+        "strength": false,
+        "duration": false,
+        "range": false
+      },
+      "augmentScaling": {},
+      "tags": [],
+      "category": "Crowd control",
+      "weaponEffects": [],
+      "survivabilityEffects": []
+    },
+    "Nourish": {
+      "ability": "Nourish",
+      "warframe": "Grendel",
+      "slot": 2,
+      "description": "Regenerate health as Grendel absorbs nourishment from enemies in his gut. While he digests, enemies that attack or are attacked by Grendel suffer Viral Damage and energy sources provide more energy. These buffs extend to squad mates. Activation prerequisite: 1 eaten enemy",
+      "augments": [
+        "Hearty Nourishment"
+      ],
+      "roles": [
+        "Crowd Control",
+        "Damage Buff",
+        "Energy Restore"
+      ],
+      "damageTypes": [
+        "Viral"
+      ],
+      "notes": "ALTERED: Self-Heal Removed and Effect Reduced No self healing, armor applies only 1 Viral stack, energy multiplier is reduced to 1.3 / 1.39 / 1.48 / 1.6x, and Viral weapon bonus damage is reduced to +24% / +30% / +36% / +45%. Does not have a swallowed enemy requirement, as other Warframes cannot cast Feast.",
+      "scaling": {
+        "strength": true,
+        "duration": true,
+        "range": true
+      },
+      "augmentScaling": {},
+      "tags": [
+        "Damage buff"
+      ],
+      "category": "Damage",
+      "weaponEffects": [
+        "Nourish"
+      ],
+      "survivabilityEffects": []
+    },
+    "Null Star": {
+      "ability": "Null Star",
+      "warframe": "Nova",
+      "slot": 1,
+      "description": "Creates anti-matter particles that orbit Nova and attack nearby targets. Each active particle reduces damage to Nova's Health and Shields.",
+      "augments": [
+        "Neutron Star"
+      ],
+      "roles": [
+        "Damage Reduction"
+      ],
+      "damageTypes": [
+        "Blast",
+        "Heat"
+      ],
+      "notes": "ALTERED: Damage Reduction capped at 75%.",
+      "scaling": {
+        "strength": true,
+        "duration": true,
+        "range": true
+      },
+      "augmentScaling": {},
+      "tags": [
+        "DR"
+      ],
+      "category": "Survivability",
+      "weaponEffects": [],
+      "survivabilityEffects": [
+        {
+          "kind": "dr",
+          "name": "Null Star",
+          "value": 0.0,
+          "cap": 0.9,
+          "scalesWithStrength": true,
+          "stacks": {
+            "label": "Particles",
+            "max": 18,
+            "default": 12
+          },
+          "perStack": 0.05,
+          "level": null,
+          "low": null,
+          "note": "5% per orbiting particle (scaled by Ability Strength), 12 particles at base.",
+          "applies": "all"
+        }
+      ]
+    },
+    "Omamori": {
+      "ability": "Omamori",
+      "warframe": "Koumei",
+      "slot": 3,
+      "description": "",
+      "augments": [],
+      "roles": [
+        "Healing"
+      ],
+      "damageTypes": [],
+      "notes": "ALTERED: Gain between 10 to 20 Omamori Charms but cannot gain the invulnerability.",
+      "scaling": {
+        "strength": true,
+        "duration": false,
+        "range": false
+      },
+      "augmentScaling": {},
+      "tags": [],
+      "category": "Survivability",
+      "weaponEffects": [],
+      "survivabilityEffects": []
+    },
+    "Ophanim Eyes": {
+      "ability": "Ophanim Eyes",
+      "warframe": "Jade",
+      "slot": 3,
+      "description": "Jade summons an accusatory gaze that slows nearby enemies and dissolves their Shields and Armor. When the gaze falls upon allies, they can be revived from a distance.",
+      "augments": [],
+      "roles": [
+        "Crowd Control",
+        "Defense Strip"
+      ],
+      "damageTypes": [
+        "Heat",
+        "Slow"
+      ],
+      "notes": "ALTERED: Cannot revive allies.",
+      "scaling": {
+        "strength": true,
+        "duration": true,
+        "range": true
+      },
+      "augmentScaling": {},
+      "tags": [],
+      "category": "Crowd control",
+      "weaponEffects": [],
+      "survivabilityEffects": []
+    },
+    "Petrify": {
+      "ability": "Petrify",
+      "warframe": "Atlas",
+      "slot": 3,
+      "description": "",
+      "augments": [
+        "Ore Gaze"
+      ],
+      "roles": [
+        "Crowd Control",
+        "Farming"
+      ],
+      "damageTypes": [],
+      "notes": "Petrified enemies do not drop Rubble.",
+      "scaling": {
+        "strength": true,
+        "duration": true,
+        "range": true
+      },
+      "augmentScaling": {},
+      "tags": [],
+      "category": "Crowd control",
+      "weaponEffects": [],
+      "survivabilityEffects": []
+    },
+    "Pillage": {
+      "ability": "Pillage",
+      "warframe": "Hildryn",
+      "slot": 2,
+      "description": "Pillage a percentage of Shields and Armor of nearby enemies to replenish Hildryn's own Shields and Overshields.",
+      "augments": [
+        "Blazing Pillage"
+      ],
+      "roles": [
+        "Defense Strip",
+        "Shield Restore",
+        "Status Cleanse"
+      ],
+      "damageTypes": [],
+      "notes": "Costs 50 Energy instead of consuming Shields. Does not generate shields for Inaros, Kullervo and Nidus. Other Warframes cannot benefit from the Blazing Pillage augment, due to their inability to cast Haven.",
+      "scaling": {
+        "strength": true,
+        "duration": true,
+        "range": true
+      },
+      "augmentScaling": {},
+      "tags": [
+        "Armor strip"
+      ],
+      "category": "Armor strip",
+      "weaponEffects": [
+        "Pillage"
+      ],
+      "survivabilityEffects": []
+    },
+    "Pull": {
+      "ability": "Pull",
+      "warframe": "Mag",
+      "slot": 1,
+      "description": "Mag stuns enemies as she manifests a magnetic vortex. The vortex pulls in Polarize Shards and stunned enemies to place them directly in front of her.",
+      "augments": [
+        "Greedy Pull"
+      ],
+      "roles": [
+        "Crowd Control"
+      ],
+      "damageTypes": [
+        "Magnetic"
+      ],
+      "notes": "ALTERED: Diminished Range Range reduced to 7.5 / 10 / 11 / 12.5 meters.",
+      "scaling": {
+        "strength": true,
+        "duration": false,
+        "range": true
+      },
+      "augmentScaling": {},
+      "tags": [],
+      "category": "Crowd control",
+      "weaponEffects": [],
+      "survivabilityEffects": []
+    },
+    "Pyrotechnics": {
+      "ability": "Pyrotechnics",
+      "warframe": "Temple",
+      "slot": 1,
+      "description": "Blast targeted enemies with pillars of Heat Damage Backbeat Timing: Ignite even more pillars. Increases the Duration and Heat Damage of Ripper's Wail when it deals damage.",
+      "augments": [],
+      "roles": [
+        "Damage"
+      ],
+      "damageTypes": [
+        "Impact",
+        "Puncture",
+        "Slash",
+        "Heat"
+      ],
+      "notes": "ALTERED: Backbeat synergy is unavailable.",
+      "scaling": {
+        "strength": true,
+        "duration": false,
+        "range": true
+      },
+      "augmentScaling": {},
+      "tags": [],
+      "category": "Damage",
+      "weaponEffects": [],
+      "survivabilityEffects": []
+    },
+    "Quiver": {
+      "ability": "Quiver",
+      "warframe": "Ivara",
+      "slot": 1,
+      "description": "Cycle through and shoot one of four tactical arrows. Cloak creates a stationary bubble that cloaks Ivara and allies. Dashwire creates a traversable zipline. Noise emits a high-pitched sound that attracts enemies to it. Sleep temporarily puts nearby enemies into a deep slumber.",
+      "augments": [
+        "Empowered Quiver",
+        "Power of Three"
+      ],
+      "roles": [
+        "Stealth"
+      ],
+      "damageTypes": [
+        "Sleep"
+      ],
+      "notes": "Tap-cast for Cloak, hold-cast for Noise. Sleep and Dashwire arrows not available. Tap/hold cast inversion in Settings menu still applies.",
+      "scaling": {
+        "strength": false,
+        "duration": true,
+        "range": true
+      },
+      "augmentScaling": {
+        "Empowered Quiver": {
+          "strength": true,
+          "duration": true,
+          "range": true
+        }
+      },
+      "tags": [],
+      "category": "Utility",
+      "weaponEffects": [],
+      "survivabilityEffects": []
+    },
+    "Radial Blind": {
+      "ability": "Radial Blind",
+      "warframe": "Excalibur",
+      "slot": 2,
+      "description": "Emits a bright flash of light, blinding all enemies in a small radius for several seconds.",
+      "augments": [
+        "Radiant Finish"
+      ],
+      "roles": [
+        "Crowd Control"
+      ],
+      "damageTypes": [
+        "Blind"
+      ],
+      "notes": "",
+      "scaling": {
+        "strength": false,
+        "duration": true,
+        "range": true
+      },
+      "augmentScaling": {
+        "Radiant Finish": {
+          "strength": true,
+          "duration": true,
+          "range": true
+        }
+      },
+      "tags": [],
+      "category": "Crowd control",
+      "weaponEffects": [],
+      "survivabilityEffects": []
+    },
+    "Reave": {
+      "ability": "Reave",
+      "warframe": "Revenant",
+      "slot": 3,
+      "description": "Dash through enemies as a wall of Sentient energy, leeching shields and health from any encountered, enhanced for thralls. Energy Cost (Danse Macabre active): 25",
+      "augments": [
+        "Blinding Reave"
+      ],
+      "roles": [
+        "Healing",
+        "Shield Restore",
+        "Invulnerability"
+      ],
+      "damageTypes": [],
+      "notes": "",
+      "scaling": {
+        "strength": true,
+        "duration": true,
+        "range": true
+      },
+      "augmentScaling": {},
+      "tags": [],
+      "category": "Survivability",
+      "weaponEffects": [],
+      "survivabilityEffects": []
+    },
+    "Remedium": {
+      "ability": "Remedium",
+      "warframe": "Uriel",
+      "slot": 2,
+      "description": "Uriel heals himself and his demons. If his demons are dead, they are resurrected.",
+      "augments": [],
+      "roles": [
+        "Healing",
+        "Shield Restore",
+        "Status Cleanse",
+        "Invulnerability"
+      ],
+      "damageTypes": [],
+      "notes": "ALTERED: Reduced Healing and Gulphagor is removed Healing is reduced to 24% / 28% / 31% / 35% and does not come with Gulphagor.",
+      "scaling": {
+        "strength": true,
+        "duration": true,
+        "range": true
+      },
+      "augmentScaling": {},
+      "tags": [],
+      "category": "Survivability",
+      "weaponEffects": [],
+      "survivabilityEffects": []
+    },
+    "Resonator": {
+      "ability": "Resonator",
+      "warframe": "Octavia",
+      "slot": 2,
+      "description": "Launches a rollerball that charms foes to follow it. Combines with the Mallet to create a roving ball of sonic destruction.",
+      "augments": [
+        "Conductor"
+      ],
+      "roles": [
+        "Damage",
+        "Crowd Control"
+      ],
+      "damageTypes": [
+        "Blast",
+        "Stagger"
+      ],
+      "notes": "Uses the default Mandachord song.",
+      "scaling": {
+        "strength": true,
+        "duration": true,
+        "range": true
+      },
+      "augmentScaling": {},
+      "tags": [],
+      "category": "Damage",
+      "weaponEffects": [],
+      "survivabilityEffects": []
+    },
+    "Rest & Rage": {
+      "ability": "Rest & Rage",
+      "warframe": "Equinox",
+      "slot": 2,
+      "description": "In Night Form targets are put to sleep. In Day Form targets become more vulnerable to damage. <!--",
+      "augments": [
+        "Calm & Frenzy"
+      ],
+      "roles": [
+        "Crowd Control",
+        "Damage Debuff",
+        "Stealth"
+      ],
+      "damageTypes": [],
+      "notes": "Rest or Rage versions of the ability are determined by the chosen Warframe Primary Emission Color.",
+      "scaling": {
+        "strength": true,
+        "duration": true,
+        "range": true
+      },
+      "augmentScaling": {},
+      "tags": [
+        "Damage buff"
+      ],
+      "category": "Damage",
+      "weaponEffects": [
+        "Rage"
+      ],
+      "survivabilityEffects": []
+    },
+    "Roar": {
+      "ability": "Roar",
+      "warframe": "Rhino",
+      "slot": 3,
+      "description": "Grants all nearby Warframes increased damage to any faction for a short duration.",
+      "augments": [
+        "Piercing Roar"
+      ],
+      "roles": [
+        "Damage Buff"
+      ],
+      "damageTypes": [
+        "Puncture",
+        "Knockdown"
+      ],
+      "notes": "ALTERED: Diminished Damage Increase Damage bonus reduced to 2% / 9% / 15% / 30%. Limited to 1 damage buffing ability per Warframe.",
+      "scaling": {
+        "strength": true,
+        "duration": true,
+        "range": true
+      },
+      "augmentScaling": {},
+      "tags": [
+        "Damage buff"
+      ],
+      "category": "Damage",
+      "weaponEffects": [
+        "Roar"
+      ],
+      "survivabilityEffects": []
+    },
+    "Self Portrait": {
+      "ability": "Self Portrait",
+      "warframe": "Follie",
+      "slot": 3,
+      "description": "Draw an ink effigy to absorb the damage dealt to Follie and allies. Below, a pool of ink spreads Inkblot. Kill enemies inside the pool to grow Follie's effigy and its ink puddle.",
+      "augments": [],
+      "roles": [
+        "Damage Reduction"
+      ],
+      "damageTypes": [
+        "Corrosive"
+      ],
+      "notes": "ALTERED: Damage Reduction cap at 75%, and Inkblot will not be applied on enemies.",
+      "scaling": {
+        "strength": true,
+        "duration": true,
+        "range": true
+      },
+      "augmentScaling": {},
+      "tags": [
+        "DR"
+      ],
+      "category": "Survivability",
+      "weaponEffects": [],
+      "survivabilityEffects": [
+        {
+          "kind": "dr",
+          "name": "Self Portrait",
+          "value": 0.5,
+          "cap": 0.75,
+          "scalesWithStrength": true,
+          "stacks": null,
+          "perStack": null,
+          "level": {
+            "label": "Effigy growth",
+            "default": 1.0
+          },
+          "low": 0.1,
+          "note": "Starts at 10% and grows to its maximum as the effigy grows. Infused: capped at 75%.",
+          "applies": "all"
+        }
+      ]
+    },
+    "Sentient Wrath": {
+      "ability": "Sentient Wrath",
+      "warframe": "Caliban",
+      "slot": 2,
+      "description": "Smash the ground sending out a radial wave of destruction. Those not killed by the initial blast are helplessly raised into the air, where they take amplified damage for a short time.",
+      "augments": [],
+      "roles": [
+        "Crowd Control",
+        "Damage Debuff"
+      ],
+      "damageTypes": [
+        "Tau"
+      ],
+      "notes": "ALTERED: Frontal cast only and Tau Status Effect removed. Range reduced to a frontal cone spanning ? degrees and cannot inflict Tau status.",
+      "scaling": {
+        "strength": true,
+        "duration": true,
+        "range": true
+      },
+      "augmentScaling": {},
+      "tags": [],
+      "category": "Crowd control",
+      "weaponEffects": [],
+      "survivabilityEffects": []
+    },
+    "Shock": {
+      "ability": "Shock",
+      "warframe": "Volt",
+      "slot": 1,
+      "description": "Launch a voltaic projectile that stuns and damages its target. A chain of electricity extends from the target to shock nearby enemies.",
+      "augments": [
+        "Shock Trooper"
+      ],
+      "roles": [
+        "Crowd Control",
+        "Damage Buff"
+      ],
+      "damageTypes": [
+        "Electricity"
+      ],
+      "notes": "",
+      "scaling": {
+        "strength": true,
+        "duration": false,
+        "range": true
+      },
+      "augmentScaling": {
+        "Shock Trooper": {
+          "strength": true,
+          "duration": true,
+          "range": true
+        }
+      },
+      "tags": [
+        "Damage buff"
+      ],
+      "category": "Damage",
+      "weaponEffects": [
+        "Shock Trooper"
+      ],
+      "survivabilityEffects": []
+    },
+    "Shooting Gallery": {
+      "ability": "Shooting Gallery",
+      "warframe": "Mesa",
+      "slot": 2,
+      "description": "Gives an ally extra damage while jamming the guns of nearby enemies. This power shifts between team members.",
+      "augments": [
+        "Muzzle Flash"
+      ],
+      "roles": [
+        "Damage Buff",
+        "Crowd Control"
+      ],
+      "damageTypes": [
+        "Blind"
+      ],
+      "notes": "",
+      "scaling": {
+        "strength": true,
+        "duration": true,
+        "range": true
+      },
+      "augmentScaling": {},
+      "tags": [
+        "Damage buff"
+      ],
+      "category": "Damage",
+      "weaponEffects": [
+        "Shooting Gallery"
+      ],
+      "survivabilityEffects": []
+    },
+    "Shuriken": {
+      "ability": "Shuriken",
+      "warframe": "Ash",
+      "slot": 1,
+      "description": "Launches a spinning blade of pain, dealing high damage and impaling enemies to walls.",
+      "augments": [
+        "Seeking Shuriken"
+      ],
+      "roles": [
+        "Armor Strip"
+      ],
+      "damageTypes": [
+        "Slash"
+      ],
+      "notes": "",
+      "scaling": {
+        "strength": true,
+        "duration": false,
+        "range": false
+      },
+      "augmentScaling": {
+        "Seeking Shuriken": {
+          "strength": true,
+          "duration": true,
+          "range": false
+        }
+      },
+      "tags": [
+        "Armor strip"
+      ],
+      "category": "Armor strip",
+      "weaponEffects": [
+        "Seeking Shuriken"
+      ],
+      "survivabilityEffects": []
+    },
+    "Silence": {
+      "ability": "Silence",
+      "warframe": "Banshee",
+      "slot": 3,
+      "description": "Using Silence surrounds Banshee in an aura that stuns enemies, limits their perception and tactical response to gunfire and Warframe attacks, and renders them unable to activate their abilities.",
+      "augments": [
+        "Savage Silence"
+      ],
+      "roles": [
+        "Damage Debuff",
+        "Disable Enemy Abilities",
+        "Stealth"
+      ],
+      "damageTypes": [
+        "Silence"
+      ],
+      "notes": "",
+      "scaling": {
+        "strength": false,
+        "duration": true,
+        "range": true
+      },
+      "augmentScaling": {
+        "Savage Silence": {
+          "strength": true,
+          "duration": true,
+          "range": true
+        }
+      },
+      "tags": [],
+      "category": "Utility",
+      "weaponEffects": [],
+      "survivabilityEffects": []
+    },
+    "Smite": {
+      "ability": "Smite",
+      "warframe": "Oberon",
+      "slot": 1,
+      "description": "Focuses deadly energy within a target, dealing massive damage and removing all its defenses, including Overguard. Enemies near the target also take a portion of the damage.",
+      "augments": [
+        "Smite Infusion"
+      ],
+      "roles": [
+        "Armor Strip",
+        "Crowd Control",
+        "Damage Buff"
+      ],
+      "damageTypes": [
+        "Radiation",
+        "Stun",
+        "Stagger"
+      ],
+      "notes": "ALTERED: Reduced maximum Strength Percentage damage cap reduced to 50%.",
+      "scaling": {
+        "strength": true,
+        "duration": false,
+        "range": true
+      },
+      "augmentScaling": {
+        "Smite Infusion": {
+          "strength": true,
+          "duration": true,
+          "range": true
+        }
+      },
+      "tags": [
+        "Damage buff"
+      ],
+      "category": "Damage",
+      "weaponEffects": [
+        "Smite Infusion"
+      ],
+      "survivabilityEffects": []
+    },
+    "Spectrorage": {
+      "ability": "Spectrorage",
+      "warframe": "Gara",
+      "slot": 3,
+      "description": "Trap enemies in a carousel of mirrors, forcing them to attack visions of their true selves. Destroyed mirrors damage their attackers, as does the collapse of the carousel.",
+      "augments": [
+        "Spectrosiphon"
+      ],
+      "roles": [
+        "Crowd Control",
+        "Energy Restore"
+      ],
+      "damageTypes": [
+        "Impact",
+        "Puncture",
+        "Slash"
+      ],
+      "notes": "",
+      "scaling": {
+        "strength": true,
+        "duration": true,
+        "range": true
+      },
+      "augmentScaling": {},
+      "tags": [],
+      "category": "Crowd control",
+      "weaponEffects": [],
+      "survivabilityEffects": []
+    },
+    "Spellbind": {
+      "ability": "Spellbind",
+      "warframe": "Titania",
+      "slot": 1,
+      "description": "Enemies fumble their weapons as they tumble into the air. Nearby allies become immune to Status Effects. Hold the ability to cast the immunity onto Titania.",
+      "augments": [
+        "Spellbound Harvest"
+      ],
+      "roles": [
+        "Crowd Control",
+        "Status Cleanse"
+      ],
+      "damageTypes": [
+        "Disarmed",
+        "Ragdoll"
+      ],
+      "notes": "Spellbound Harvest augment grants 50 shields if used on HildrynConfirmation needed",
+      "scaling": {
+        "strength": false,
+        "duration": true,
+        "range": true
+      },
+      "augmentScaling": {
+        "Spellbound Harvest": {
+          "strength": true,
+          "duration": true,
+          "range": true
+        }
+      },
+      "tags": [],
+      "category": "Crowd control",
+      "weaponEffects": [],
+      "survivabilityEffects": []
+    },
+    "Tempest Barrage": {
+      "ability": "Tempest Barrage",
+      "warframe": "Hydroid",
+      "slot": 1,
+      "description": "",
+      "augments": [
+        "Viral Tempest"
+      ],
+      "roles": [
+        "Crowd Control",
+        "Armor Strip"
+      ],
+      "damageTypes": [
+        "Corrosive",
+        "Stagger",
+        "Viral"
+      ],
+      "notes": "",
+      "scaling": {
+        "strength": true,
+        "duration": true,
+        "range": true
+      },
+      "augmentScaling": {},
+      "tags": [],
+      "category": "Survivability",
+      "weaponEffects": [],
+      "survivabilityEffects": []
+    },
+    "Terrify": {
+      "ability": "Terrify",
+      "warframe": "Nekros",
+      "slot": 2,
+      "description": "Casts fear into the hearts of nearby enemies, causing them to run away in terror.",
+      "augments": [
+        "Creeping Terrify"
+      ],
+      "roles": [
+        "Armor Strip",
+        "Crowd Control"
+      ],
+      "damageTypes": [],
+      "notes": "",
+      "scaling": {
+        "strength": true,
+        "duration": true,
+        "range": true
+      },
+      "augmentScaling": {},
+      "tags": [
+        "Armor strip"
+      ],
+      "category": "Armor strip",
+      "weaponEffects": [
+        "Terrify"
+      ],
+      "survivabilityEffects": []
+    },
+    "Tesla Nervos": {
+      "ability": "Tesla Nervos",
+      "warframe": "Vauban",
+      "slot": 1,
+      "description": "Deploy a roller drone that attaches itself to enemies and delivers bursts of arcing electricity to anything in the immediate area. Hold cast energy cost: 25",
+      "augments": [
+        "Tesla Bank"
+      ],
+      "roles": [
+        "Crowd Control"
+      ],
+      "damageTypes": [
+        "Blast",
+        "Electricity"
+      ],
+      "notes": "",
+      "scaling": {
+        "strength": true,
+        "duration": true,
+        "range": true
+      },
+      "augmentScaling": {},
+      "tags": [],
+      "category": "Crowd control",
+      "weaponEffects": [],
+      "survivabilityEffects": []
+    },
+    "Tharros Strike": {
+      "ability": "Tharros Strike",
+      "warframe": "Styanax",
+      "slot": 2,
+      "description": "Summon Tharros, the shield of Styanax. Swing Tharros to repel enemies and reduce their shields and armor. Styanax regenerates health for every enemy struck.",
+      "augments": [
+        "Tharros Lethality"
+      ],
+      "roles": [
+        "Crowd Control",
+        "Defense Strip",
+        "Healing"
+      ],
+      "damageTypes": [
+        "Impact",
+        "Stun"
+      ],
+      "notes": "",
+      "scaling": {
+        "strength": true,
+        "duration": false,
+        "range": true
+      },
+      "augmentScaling": {
+        "Tharros Lethality": {
+          "strength": true,
+          "duration": true,
+          "range": true
+        }
+      },
+      "tags": [],
+      "category": "Survivability",
+      "weaponEffects": [],
+      "survivabilityEffects": []
+    },
+    "Thermal Sunder": {
+      "ability": "Thermal Sunder",
+      "warframe": "Gauss",
+      "slot": 3,
+      "description": "Siphon Kinetic energy from the area, charging the battery and inflicting Cold Status on nearby enemies. Hold reverses the process, draining the battery and inflicting Heat Status on nearby enemies.",
+      "augments": [
+        "Thermal Transfer"
+      ],
+      "roles": [
+        "Crowd Control",
+        "Nuking",
+        "Damage Buff"
+      ],
+      "damageTypes": [
+        "Cold",
+        "Heat"
+      ],
+      "notes": "ALTERED: Scaling from Heat Status on enemies capped to 10x Ability Damage. Damage is equivalent to 50% of Gauss's battery; 225 / 300 / 375 / 450 Cold damage and 450 / 600 / 750 / 900 Heat damage.",
+      "scaling": {
+        "strength": true,
+        "duration": true,
+        "range": true
+      },
+      "augmentScaling": {},
+      "tags": [
+        "Damage buff"
+      ],
+      "category": "Damage",
+      "weaponEffects": [
+        "Thermal Transfer"
+      ],
+      "survivabilityEffects": []
+    },
+    "Vial Rush": {
+      "ability": "Vial Rush",
+      "warframe": "Lavos",
+      "slot": 2,
+      "description": "Dash forward, crashing through enemies and leaving an icy trail of broken vials. Hold to imbue the next ability cast with Cold damage.",
+      "augments": [],
+      "roles": [
+        "Crowd Control",
+        "Damage Buff"
+      ],
+      "damageTypes": [
+        "Cold"
+      ],
+      "notes": "Costs 0 energy with a 5 second cooldown.",
+      "scaling": {
+        "strength": true,
+        "duration": true,
+        "range": true
+      },
+      "augmentScaling": {},
+      "tags": [],
+      "category": "Damage",
+      "weaponEffects": [],
+      "survivabilityEffects": []
+    },
+    "Warcry": {
+      "ability": "Warcry",
+      "warframe": "Valkyr",
+      "slot": 2,
+      "description": "Valkyr lets out a rallying cry that bolsters Armor and Attack Speed for allies in Affinity Range",
+      "augments": [
+        "Eternal War"
+      ],
+      "roles": [
+        "Attack Speed Buff",
+        "Armor Bonus"
+      ],
+      "damageTypes": [],
+      "notes": "ALTERED: Diminished Speed Increase Attack Speed bonus reduced to 9% / 12% / 15% / 30%.",
+      "scaling": {
+        "strength": true,
+        "duration": true,
+        "range": false
+      },
+      "augmentScaling": {},
+      "tags": [
+        "Damage buff",
+        "Armor"
+      ],
+      "category": "Damage",
+      "weaponEffects": [
+        "Warcry (attack speed)"
+      ],
+      "survivabilityEffects": [
+        {
+          "kind": "armor",
+          "name": "Warcry",
+          "value": 0.5,
+          "mode": "percent",
+          "cap": null,
+          "scalesWithStrength": true,
+          "stacks": null,
+          "perStack": null,
+          "level": null,
+          "low": null,
+          "note": "Tripled while Hysteria is active (not modelled).",
+          "applies": "all"
+        }
+      ]
+    },
+    "Webbed Embrace": {
+      "ability": "Webbed Embrace",
+      "warframe": "Oraxia",
+      "slot": 2,
+      "description": "Oraxia throws a creeping web to ensnare her prey. Enemies caught within the widening radius are trapped inside a cocoon that increases their Damage Vulnerability.",
+      "augments": [],
+      "roles": [
+        "Crowd Control",
+        "Damage Buff"
+      ],
+      "damageTypes": [
+        "Toxin"
+      ],
+      "notes": "ALTERED: Diminished Range Range reduced to ? / ? / ? / 6.67 meters.",
+      "scaling": {
+        "strength": true,
+        "duration": true,
+        "range": true
+      },
+      "augmentScaling": {},
+      "tags": [
+        "Damage buff"
+      ],
+      "category": "Damage",
+      "weaponEffects": [
+        "Webbed Embrace"
+      ],
+      "survivabilityEffects": []
+    },
+    "Well of Life": {
+      "ability": "Well of Life",
+      "warframe": "Trinity",
+      "slot": 1,
+      "description": "Create a well of life on an enemy who will absorb Status Effect damage intended for nearby allies. Allies gain additional Health when they attack the target. If allies die, enemies in the well of life die in their stead.",
+      "augments": [
+        "Pool of Life"
+      ],
+      "roles": [
+        "Healing",
+        "Crowd Control"
+      ],
+      "damageTypes": [],
+      "notes": "ALTERED: Increased the Immortality Cooldown to 120 seconds.",
+      "scaling": {
+        "strength": true,
+        "duration": true,
+        "range": true
+      },
+      "augmentScaling": {},
+      "tags": [],
+      "category": "Survivability",
+      "weaponEffects": [],
+      "survivabilityEffects": []
+    },
+    "Wrathful Advance": {
+      "ability": "Wrathful Advance",
+      "warframe": "Kullervo",
+      "slot": 1,
+      "description": "",
+      "augments": [],
+      "roles": [
+        "Damage Buff",
+        "Movement"
+      ],
+      "damageTypes": [],
+      "notes": "ALTERED: Diminished Range and Melee Critical Chance Range reduced to 10 / 11 / 11.5 / 12.5 meters and melee critical chance reduced to 25% / 50% / 75% / 100%.",
+      "scaling": {
+        "strength": true,
+        "duration": true,
+        "range": true
+      },
+      "augmentScaling": {},
+      "tags": [],
+      "category": "Damage",
+      "weaponEffects": [],
+      "survivabilityEffects": []
+    },
+    "Wyrd Scythes": {
+      "ability": "Wyrd Scythes",
+      "warframe": "Dagath",
+      "slot": 1,
+      "description": "",
+      "augments": [],
+      "roles": [
+        "Crowd Control",
+        "Damage"
+      ],
+      "damageTypes": [
+        "Viral"
+      ],
+      "notes": "ALTERED: Diminished Slow. Slow is reduced to 15% / 18% / 22% / 26%.",
+      "scaling": {
+        "strength": true,
+        "duration": true,
+        "range": true
+      },
+      "augmentScaling": {},
+      "tags": [],
+      "category": "Damage",
+      "weaponEffects": [],
+      "survivabilityEffects": []
+    },
+    "Xata's Whisper": {
+      "ability": "Xata's Whisper",
+      "warframe": "Xaku",
+      "slot": 1,
+      "description": "Wield Void damage for all attacks from equipped weapons when activated.",
+      "augments": [],
+      "roles": [
+        "Damage Buff"
+      ],
+      "damageTypes": [
+        "Void"
+      ],
+      "notes": "Limited to 1 damage buffing ability per Warframe.",
+      "scaling": {
+        "strength": true,
+        "duration": true,
+        "range": false
+      },
+      "augmentScaling": {},
+      "tags": [
+        "Damage buff"
+      ],
+      "category": "Damage",
+      "weaponEffects": [
+        "Xata's Whisper"
+      ],
+      "survivabilityEffects": []
+    }
+  },
+  "helminthAbilities": {
+    "Empower": {
+      "ability": "Empower",
+      "warframe": "Helminth",
+      "description": "Increase the strength of your next ability use.",
+      "values": {
+        "misc": "+ 20 / 30 / 40 / 50 % (strength bonus) &infin; (bonus duration)"
+      },
+      "scaling": {
+        "strength": false,
+        "duration": false,
+        "range": false
+      },
+      "tags": [
+        "Strength"
+      ],
+      "category": "Helminth",
+      "weaponEffects": [],
+      "survivabilityEffects": [
+        {
+          "kind": "strength",
+          "name": "Empower",
+          "value": 0.5,
+          "cap": null,
+          "scalesWithStrength": false,
+          "stacks": null,
+          "perStack": null,
+          "level": null,
+          "low": null,
+          "mode": null,
+          "note": "Ability Strength for the next ability cast.",
+          "applies": "all"
+        }
+      ]
+    },
+    "Infested Mobility": {
+      "ability": "Infested Mobility",
+      "warframe": "Helminth",
+      "description": "Increase your parkour velocity.",
+      "values": {
+        "strength": "35 / 45 / 50 / 60 % (sprint speed bonus) 15 / 20 / 25 / 30 % (parkour velocity bonus)",
+        "duration": "5 / 6 / 7 / 8 s"
+      },
+      "scaling": {
+        "strength": true,
+        "duration": true,
+        "range": false
+      },
+      "tags": [],
+      "category": "Helminth",
+      "weaponEffects": [],
+      "survivabilityEffects": []
+    },
+    "Master's Summons": {
+      "ability": "Master's Summons",
+      "warframe": "Helminth",
+      "description": "Heal your companion and call it to your side.",
+      "values": {
+        "misc": "25 / 50 / 75 / 100 % (health and shield restore) &infin; (teleport range)"
+      },
+      "scaling": {
+        "strength": false,
+        "duration": false,
+        "range": false
+      },
+      "tags": [],
+      "category": "Helminth",
+      "weaponEffects": [],
+      "survivabilityEffects": []
+    },
+    "Rebuild Shields": {
+      "ability": "Rebuild Shields",
+      "warframe": "Helminth",
+      "description": "Instantly restore your shields.",
+      "values": {
+        "misc": "25 / 50 / 75 / 100 % (shields restored) 12 s (cooldown)"
+      },
+      "scaling": {
+        "strength": false,
+        "duration": false,
+        "range": false
+      },
+      "tags": [],
+      "category": "Helminth",
+      "weaponEffects": [],
+      "survivabilityEffects": []
+    },
+    "Perspicacity": {
+      "ability": "Perspicacity",
+      "warframe": "Helminth",
+      "description": "Your next hack will be automatic.",
+      "values": {
+        "misc": "100% (hack chance) &infin; (chance duration)"
+      },
+      "scaling": {
+        "strength": false,
+        "duration": false,
+        "range": false
+      },
+      "tags": [],
+      "category": "Helminth",
+      "weaponEffects": [],
+      "survivabilityEffects": []
+    },
+    "Energized Munitions": {
+      "ability": "Energized Munitions",
+      "warframe": "Helminth",
+      "description": "Imbue your weapons with ammo efficiency.",
+      "values": {
+        "duration": "3 / 3.5 / 4 / 5 s",
+        "misc": "75 % (ammo efficiency)"
+      },
+      "scaling": {
+        "strength": false,
+        "duration": true,
+        "range": false
+      },
+      "tags": [],
+      "category": "Helminth",
+      "weaponEffects": [],
+      "survivabilityEffects": []
+    },
+    "Marked For Death": {
+      "ability": "Marked For Death",
+      "warframe": "Helminth",
+      "description": "Stuns an enemy; a portion of the next damage you deal to it will be dealt to all enemies around it.",
+      "values": {
+        "strength": "35 / 45 / 60 / 75 % (damage)",
+        "range": "7 / 8 / 9 / 10 m (explosion range) 15 / 20 / 25 / 30 m (cast range)",
+        "misc": "1 (max targets) &infin; (mark duration) 150% (maximum damage)"
+      },
+      "scaling": {
+        "strength": true,
+        "duration": false,
+        "range": true
+      },
+      "tags": [],
+      "category": "Helminth",
+      "weaponEffects": [],
+      "survivabilityEffects": []
+    },
+    "Expedite Suffering": {
+      "ability": "Expedite Suffering",
+      "warframe": "Helminth",
+      "description": "Condense all Slash and Toxin Status Effects into a single damage instance.",
+      "values": {
+        "strength": "1 x (damage multiplier)",
+        "range": "6 / 8 / 10 / 12 m",
+        "misc": "45° (cone angle) 100% (stagger on hit)"
+      },
+      "scaling": {
+        "strength": true,
+        "duration": false,
+        "range": true
+      },
+      "tags": [],
+      "category": "Helminth",
+      "weaponEffects": [],
+      "survivabilityEffects": []
+    },
+    "Parasitic Armor": {
+      "ability": "Parasitic Armor",
+      "warframe": "Helminth",
+      "description": "Sacrifice Shields to reinforce Armor for a period of time",
+      "values": {
+        "strength": "25 / 50 / 75 / 100 % (Shields to Armor conversion)",
+        "duration": "10 s / 15 s / 20 s / 25 s"
+      },
+      "scaling": {
+        "strength": true,
+        "duration": true,
+        "range": false
+      },
+      "tags": [
+        "Armor"
+      ],
+      "category": "Helminth",
+      "weaponEffects": [],
+      "survivabilityEffects": [
+        {
+          "kind": "armor",
+          "name": "Parasitic Armor",
+          "value": 1.0,
+          "cap": null,
+          "scalesWithStrength": true,
+          "stacks": null,
+          "perStack": null,
+          "level": null,
+          "low": null,
+          "mode": "shields",
+          "note": "Turns max shields into flat armor (x Ability Strength); shields are disabled while it lasts.",
+          "applies": "all"
+        }
+      ]
+    },
+    "Hideous Resistance": {
+      "ability": "Hideous Resistance",
+      "warframe": "Helminth",
+      "description": "Grant yourself immunity to Status effects.",
+      "values": {
+        "strength": "4 / 6 / 8 / 10 Charges"
+      },
+      "scaling": {
+        "strength": true,
+        "duration": false,
+        "range": false
+      },
+      "tags": [],
+      "category": "Helminth",
+      "weaponEffects": [],
+      "survivabilityEffects": []
+    },
+    "Voracious Metastasis": {
+      "ability": "Voracious Metastasis",
+      "warframe": "Helminth",
+      "description": "Consume Energy to heal yourself and grant matching Energy to each ally.",
+      "values": {
+        "strength": "200 / 300 / 400 / 500 (health restored)",
+        "duration": "16 / 14 / 12 / 10 s"
+      },
+      "scaling": {
+        "strength": true,
+        "duration": true,
+        "range": false
+      },
+      "tags": [],
+      "category": "Helminth",
+      "weaponEffects": [],
+      "survivabilityEffects": []
+    },
+    "Sickening Pulse": {
+      "ability": "Sickening Pulse",
+      "warframe": "Helminth",
+      "description": "Emit a pulse that adds stacks to Status Effects already afflicting enemies, except Bleed, Heat or Toxin effects which are duplicated with fresh timers.",
+      "values": {
+        "duration": "2 s (expansion duration)",
+        "range": "5 m / 6 m / 7 m / 8 m (pulse initial radius)",
+        "misc": "8 / 12 / 16 / 20 m/s (expansion distance per sec) 10 status stacks / 1 status stack (Heat, Slash, and Toxin)"
+      },
+      "scaling": {
+        "strength": false,
+        "duration": true,
+        "range": true
+      },
+      "tags": [],
+      "category": "Helminth",
+      "weaponEffects": [],
+      "survivabilityEffects": []
+    },
+    "Golden Instinct": {
+      "ability": "Golden Instinct",
+      "warframe": "Helminth",
+      "description": "Send out a short-lived Void Spark that is drawn toward the nearest Medallion, Ayatan Sculpture, rare crate, unscanned Kuria or unscanned Fragment.",
+      "values": {
+        "range": "200m",
+        "misc": "20s (cooldown)"
+      },
+      "scaling": {
+        "strength": false,
+        "duration": false,
+        "range": true
+      },
+      "tags": [],
+      "category": "Helminth",
+      "weaponEffects": [],
+      "survivabilityEffects": []
+    }
+  },
+  "restrictions": {
+    "abilities": [
+      "Eclipse",
+      "Roar",
+      "Xata's Whisper"
+    ],
+    "onlyReplace": {
+      "Chroma": "Vex Armor",
+      "Cyte-09": "Resupply",
+      "Mirage": "Eclipse",
+      "Octavia": "Amp",
+      "Oraxia": "Silken Stride",
+      "Rhino": "Roar",
+      "Temple": "Ripper's Wail",
+      "Uriel": "Demonium",
+      "Xaku": "Xata's Whisper"
+    }
+  }
+}

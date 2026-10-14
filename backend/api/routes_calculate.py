@@ -4,15 +4,17 @@ from typing import Dict, List, Tuple
 from fastapi import APIRouter, HTTPException
 
 from api.deps import (
-    amp_loader, buff_catalogue, calculator, companion_loader, enemy_scaler,
-    mod_resolver, weapon_loader,
+    ability_buffs, amp_loader, buff_catalogue, calculator, companion_loader, enemy_scaler,
+    mod_resolver, survivability, weapon_loader,
 )
 from api.routes_enemies import scaled_to_schema
+from api.routes_survivability import infusion, resolve_warframe_mods
 from api.schemas import (
     CalculateRequest, CalculateResponse, CompareRequest, CompareResponse,
-    ActiveBuff, AmpResult, AveragedDps, CritResponse, InactiveBuff, DamageBreakdownResponse, DoTResponse,
-    DPSResponse, ElementGroup, ElementSource, ModInput, SideResult,
+    AbilityEffectOut, ActiveBuff, AmpResult, AveragedDps, CritResponse, InactiveBuff, DamageBreakdownResponse,
+    DoTResponse, DPSResponse, ElementGroup, ElementSource, HelminthInfo, ModInput, SideResult,
 )
+from engine.ability_buffs import EffectState, merge_buffs
 from engine.constants import (
     BASE_ELEMENTAL_TYPES, COMBINED_ELEMENT_COMPONENTS, ELEMENTAL_COMBINATIONS,
     STAT_TO_ELEMENT,
@@ -188,6 +190,42 @@ def amp_result(req: CalculateRequest, enemy: ScaledEnemy, buffs: Buffs) -> AmpRe
     return AmpResult(primary=primary, alt=alt)
 
 
+def warframe_effects(req: CalculateRequest, weapon: WeaponData):
+    """The Warframe's ability, passive and infused effects on this weapon.
+
+    Returns (Buffs, armor strip, Ability Strength, effects for the response, Helminth info).
+    Ability Strength comes from the Warframe's own mods (the Damage taken tab's rack),
+    worked out by the survivability engine so both tabs agree.
+    """
+    if not req.warframe:
+        return Buffs(), 0.0, None, [], None
+    if req.warframe not in survivability.warframes:
+        raise HTTPException(status_code=404, detail=f"Warframe not found: {req.warframe}")
+    mods, ranks, stacks = resolve_warframe_mods(req.warframe_mods, req.conditional_stacks)
+    slot, _ = infusion(req.warframe, req.helminth_ability, req.helminth_slot)
+    frame = survivability.calculate(req.warframe, mods=mods, strength_bonus=req.extra_ability_strength,
+                                    mod_ranks=ranks, mod_stacks=stacks)
+    states = {k: EffectState(active=v.active, stacks=v.stacks, level=v.level) for k, v in req.ability_buffs.items()}
+    buffs, strip, strength, listed = ability_buffs.resolve(
+        req.warframe, states=states, strength=frame.ability_strength, weapon=weapon, headshot=req.headshot,
+        shields=frame.modded_stats["shields"], infused=req.helminth_ability if slot else None, slot=slot,
+    )
+    effects = [AbilityEffectOut(
+        id=x.effect["id"], label=x.effect["label"], ability=x.effect["ability"],
+        source="Helminth" if x.effect["sourceKind"] == "helminth" else x.effect["source"],
+        variant=x.variant, kind=x.effect["kind"], active=x.active, value=x.value, effect=x.text,
+        applies=x.applies, reason=x.reason, condition=x.effect["condition"], note=x.effect["note"],
+        augment=x.effect["augment"], scales_with_strength=x.effect["scalesWithStrength"],
+        level=x.effect["level"] if not (x.variant == "infused" and x.effect["subsumed"] not in (None, "same")) else None,
+        stacks=x.effect["stacks"],
+    ) for x in listed]
+    helminth = None
+    if slot:
+        helminth = HelminthInfo(ability=req.helminth_ability, slot=slot,
+                                replaced=survivability.slot_ability(req.warframe, slot))
+    return buffs, strip, strength, effects, helminth
+
+
 def run_calculation(req: CalculateRequest) -> CalculateResponse:
     weapon = weapon_loader.get(req.weapon)
     if weapon is None:
@@ -223,7 +261,8 @@ def run_calculation(req: CalculateRequest) -> CalculateResponse:
     for item, b in zip(applied, selected):
         if item.uptime is not None:
             item.uptime = uptime_of(b)
-    armor_strip = min(1.0, req.armor_strip_pct + buff_strip)
+    frame_buffs, frame_strip, strength, frame_effects, helminth = warframe_effects(req, weapon)
+    armor_strip = min(1.0, req.armor_strip_pct + buff_strip + frame_strip)
 
     enemy = enemy_scaler.scale_enemy(
         req.enemy, req.enemy_level,
@@ -239,7 +278,7 @@ def run_calculation(req: CalculateRequest) -> CalculateResponse:
         viral_stacks=req.viral_stacks,
         status_types_on_target=req.status_types_on_target,
         combo_multiplier=req.combo_multiplier,
-        buffs=buffs["weapon"],
+        buffs=merge_buffs(buffs["weapon"], frame_buffs),
     )
 
     # Average over buff uptime: weigh every on/off combination of the part-time
@@ -256,7 +295,7 @@ def run_calculation(req: CalculateRequest) -> CalculateResponse:
             if weight == 0:
                 continue
             active = always + [b for b, on in zip(part_time, states) if on]
-            combo_buffs = buff_catalogue.resolve(as_selection(active))[0]["weapon"]
+            combo_buffs = merge_buffs(buff_catalogue.resolve(as_selection(active))[0]["weapon"], frame_buffs)
             rr = calculator.calculate(
                 weapon, enemy, mods=mods, headshot=req.headshot, viral_stacks=req.viral_stacks,
                 status_types_on_target=req.status_types_on_target,
@@ -303,6 +342,7 @@ def run_calculation(req: CalculateRequest) -> CalculateResponse:
         companion=companion,
         amp=amp,
         combined_sustained_dps=r.dps.sustained_dps + (companion.sustained_dps if companion else 0.0),
+        ability_strength=strength, ability_effects=frame_effects, helminth=helminth,
     )
 
 

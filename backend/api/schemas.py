@@ -155,6 +155,13 @@ class AmpInput(CamelModel):
     arcanes: List[ArcaneInput] = Field(default_factory=list, max_length=2)
 
 
+class AbilityEffectInput(CamelModel):
+    # None = the default: unconditional passives on, everything else off
+    active: Optional[bool] = None
+    stacks: Optional[float] = Field(default=None, ge=0)
+    level: Optional[float] = Field(default=None, ge=0, le=1)
+
+
 class CalculateRequest(CamelModel):
     weapon: str
     enemy: str
@@ -174,6 +181,15 @@ class CalculateRequest(CamelModel):
     # Sentinels only fire with an attack precept (Assault Mode or their own) equipped
     sentinel_attack_precept: bool = True
     amp: Optional[AmpInput] = None
+    # The Warframe holding the weapon. Its mods set the Ability Strength of its ability buffs.
+    warframe: Optional[str] = None
+    warframe_mods: List[ModInput] = Field(default_factory=list, max_length=10)
+    extra_ability_strength: float = Field(default=0.0, ge=-1, le=10)
+    # Helminth: the infused ability and the slot (1-4) it replaces
+    helminth_ability: Optional[str] = None
+    helminth_slot: Optional[int] = Field(default=None, ge=1, le=4)
+    # Ability and passive effects by effect id (see GET /api/ability-buffs)
+    ability_buffs: Dict[str, AbilityEffectInput] = Field(default_factory=dict)
 
 
 class DamageBreakdownResponse(CamelModel):
@@ -272,6 +288,32 @@ class AmpResult(CamelModel):
     alt: Optional[SideResult]
 
 
+class AbilityEffectOut(CamelModel):
+    id: str
+    label: str
+    ability: str
+    source: str                 # the Warframe it comes from, or "Helminth"
+    variant: str                # "own", "passive" or "infused"
+    kind: str
+    active: bool
+    value: float                # after Ability Strength, caps and stacks
+    effect: str                 # the value in words
+    applies: bool               # False: the weapon can't use it (reason says why)
+    reason: str = ""
+    condition: str = ""
+    note: str = ""
+    augment: str = ""
+    scales_with_strength: bool
+    level: Optional[Dict[str, object]] = None
+    stacks: Optional[Dict[str, object]] = None
+
+
+class HelminthInfo(CamelModel):
+    ability: str
+    slot: int
+    replaced: str
+
+
 class CalculateResponse(CamelModel):
     weapon_name: str
     enemy_name: str
@@ -312,6 +354,11 @@ class CalculateResponse(CamelModel):
     amp: Optional[AmpResult] = None
     # weapon + companion; the amp is excluded because it can't fire at the same time
     combined_sustained_dps: float = 0.0
+    # The Warframe's Ability Strength (mods + extra + Empower) and every ability / passive effect
+    # its loadout has, active or not. Empty without a warframe.
+    ability_strength: Optional[float] = None
+    ability_effects: List[AbilityEffectOut] = Field(default_factory=list)
+    helminth: Optional[HelminthInfo] = None
 
 
 class CompareRequest(CamelModel):

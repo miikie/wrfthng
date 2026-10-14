@@ -1,4 +1,5 @@
 import { useBuildStore } from '../stores/buildStore'
+import { AbilityBuffsPanel } from './AbilityBuffs'
 import type { BuildIndex } from '../stores/buildStore'
 import { AmpPanel } from './AmpPanel'
 import { BuffsPanel } from './BuffsPanel'
@@ -47,6 +48,7 @@ export function BuildEditor({ index, compareWith, results = true }: {
         </div>
         <div className="min-w-0 space-y-4">
           <ModRack index={index} />
+          <AbilityBuffsPanel index={index} />
           <div className="grid gap-4 @4xl:grid-cols-2">
             <CompanionPanel index={index} />
             <AmpPanel index={index} />

@@ -135,6 +135,13 @@ class Buffs:
     status_chance_flat: float = 0.0   # points added after mods (amp braces)
     fire_rate_add: float = 0.0        # added to the fire rate bonus (Reinforced Bond)
     final_multiplier: float = 0.0     # +150% = 1.5; applies once to hits, twice to DoTs (Mecha Empowered)
+    # Warframe abilities and passives (engine/ability_buffs.py)
+    faction_add: float = 0.0          # a Faction Damage Bonus added to Bane mods; twice on DoTs (Roar)
+    crit_chance_add: float = 0.0      # added to the crit chance bonus from mods (Nyx, Zephyr)
+    ability_multiplier: float = 1.0   # product of separate multipliers, once on hits and DoTs (Eclipse, vulnerability)
+    elemental_add: Dict[str, float] = field(default_factory=dict)   # elements beside the weapon's, never combining
+    extra_hits: List[Tuple[str, float]] = field(default_factory=list)  # (type, share of the hit) (Xata's Whisper)
+    slash_dot_mult: float = 1.0       # multiplies Slash status damage (Ash)
 
 
 @dataclass
@@ -276,6 +283,11 @@ class DamageCalculator:
             else:
                 damage_types[elem_type] = elem_val
 
+        # Ability elements (Nourish, Smite Infusion, Shock Trooper...) sit beside the weapon's
+        # elements as a share of modded base damage and never combine with them
+        for elem_type, share in buffs.elemental_add.items():
+            damage_types[elem_type] = damage_types.get(elem_type, 0.0) + modded_base * share
+
         # --- Step 5: Quantize ---
         damage_types = quantize_damage(damage_types, modded_base)
 
@@ -288,7 +300,7 @@ class DamageCalculator:
         result.modded_multishot = modded_multishot
 
         # --- Step 7: Crit ---
-        cc_bonus = modded_stats.crit_chance_bonus
+        cc_bonus = modded_stats.crit_chance_bonus + buffs.crit_chance_add
         if weapon.is_melee and combo_multiplier > 1.0:
             cc_bonus += buffs.crit_per_combo * (combo_multiplier - 1.0)
         modded_cc = weapon.crit_chance * (1 + cc_bonus) + buffs.crit_chance_flat
@@ -312,7 +324,7 @@ class DamageCalculator:
         result.crit = crit
 
         # --- Step 8: Faction damage modifier ---
-        faction_mult = 1.0 + modded_stats.faction_bonus
+        faction_mult = 1.0 + modded_stats.faction_bonus + buffs.faction_add
 
         # --- Step 9: Inflicted damage per type (vs enemy) ---
         inflicted = {}
@@ -333,7 +345,19 @@ class DamageCalculator:
             inflicted_dmg = dmg * type_mod * armor_mult * faction_mult
             inflicted[dtype] = inflicted_dmg
 
-        total_inflicted = sum(inflicted.values())
+        main_inflicted = sum(inflicted.values())
+
+        # Extra Hits (Xata's Whisper, Toxic Lash): a share of the hit's damage, faction mods
+        # included, as a separate instance of one type. Faction mods count on it again.
+        armor_mult = enemy.armor_dm if enemy.armor > 0 else 1.0
+        extra_inflicted = 0.0
+        for dtype, share in buffs.extra_hits:
+            hit = (total_modded * faction_mult * share
+                   * enemy.faction_modifiers.get(dtype, 1.0) * armor_mult * faction_mult)
+            inflicted[dtype] = inflicted.get(dtype, 0.0) + hit
+            extra_inflicted += hit
+
+        total_inflicted = main_inflicted + extra_inflicted
         result.damage.per_type_inflicted = inflicted
         result.damage.total_inflicted = total_inflicted
 
@@ -355,13 +379,11 @@ class DamageCalculator:
         result.condition_overload_mult = co_mult
 
         # --- Step 12: Per-shot damage ---
-        per_shot = total_inflicted * viral_mult * co_mult * (1.0 + buffs.final_multiplier)
-
         # --- Step 13: Headshot ---
-        if headshot and not weapon.is_melee:
-            # Default weak point multiplier is 2.0 for most weapons
-            wp_mult = 2.0 + weak_point_bonus
-            per_shot *= wp_mult
+        # Default weak point multiplier is 2.0 for most weapons. Extra Hits count it twice.
+        wp_mult = 2.0 + weak_point_bonus if headshot and not weapon.is_melee else 1.0
+        per_shot = ((main_inflicted + extra_inflicted * wp_mult) * viral_mult * co_mult
+                    * (1.0 + buffs.final_multiplier) * buffs.ability_multiplier * wp_mult)
 
         # --- Step 14: Average shot (with crit) ---
         average_shot = per_shot * crit.average_mult * modded_multishot
@@ -415,14 +437,16 @@ class DamageCalculator:
         # --- Step 18: DoTs ---
         result.dots = self._calc_dots(
             weapon, modded_base, modded_multishot, faction_mult,
-            modded_stats, enemy,
+            modded_stats, enemy, buffs.elemental_add,
         )
 
-        if buffs.final_multiplier:
-            twice = (1.0 + buffs.final_multiplier) ** 2
-            for dot in result.dots:
-                dot.damage_per_tick *= twice
-                dot.total_damage *= twice
+        for dot in result.dots:
+            # final multipliers count twice on DoTs; ability multipliers and vulnerability once
+            scale = (1.0 + buffs.final_multiplier) ** 2 * buffs.ability_multiplier
+            if dot.dot_type == "Slash":
+                scale *= buffs.slash_dot_mult
+            dot.damage_per_tick *= scale
+            dot.total_damage *= scale
 
         # --- Step 19: Arsenal total damage ---
         result.arsenal_total_damage = self._arsenal_total(weapon, modded_stats)
@@ -484,6 +508,7 @@ class DamageCalculator:
         faction_mult: float,
         ms: ModdedStats,
         enemy: ScaledEnemy,
+        ability_elements: Optional[Dict[str, float]] = None,
     ) -> List[DoTResult]:
         """Calculate DoT damage for each relevant status type.
 
@@ -504,7 +529,8 @@ class DamageCalculator:
             # (weapon has this element, or mods add it)
 
             # Determine if weapon can proc this type
-            has_type = dot_type in weapon.damage
+            ability_elements = ability_elements or {}
+            has_type = dot_type in weapon.damage or dot_type in ability_elements
             if not has_type:
                 # Check if mods add this element (as part of a combined element)
                 for elem, _ in ms.elemental_mods:
@@ -518,7 +544,8 @@ class DamageCalculator:
             # Elemental bonus for elemental DoTs
             elem_bonus = 0.0
             if dot_type == "Heat":
-                elem_bonus = sum(v for e, v in ms.elemental_mods if e == "Heat")
+                # an ability's Heat bonus adds to Heat mods for status damage (Thermal Transfer)
+                elem_bonus = sum(v for e, v in ms.elemental_mods if e == "Heat") + ability_elements.get("Heat", 0.0)
             elif dot_type == "Electricity":
                 elem_bonus = sum(v for e, v in ms.elemental_mods if e == "Electricity")
             elif dot_type == "Toxin":

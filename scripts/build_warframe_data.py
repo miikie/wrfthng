@@ -221,19 +221,13 @@ ABILITIES = {
 ABILITIES["Kullervo"].append(pool("Recompense Overguard", 10000, scales=True, note="Overguard cap; 350 per dagger hit."))
 del ABILITIES["Kullervo "]
 
+# Passives are added by build_passives.py, so they are not listed here.
 SPECIAL = {
     "Revenant": ["Mesmer Skin: 6 charges at base (x Ability Strength, rounded up). Each charge blocks one hit completely, so damage reduction doesn't describe it."],
-    "Nidus": ["Passive: dying with 15 Mutation stacks consumes them for 5s of invulnerability and 50% health."],
-    "Inaros": ["Passive: lethal damage puts Inaros in a sarcophagus from which he can revive himself."],
-    "Valkyr": ["Passive: fatal damage with the Rage meter above 150% is prevented and gives 5s of invulnerability."],
-    "Wukong": ["Passive: survives fatal damage three times per mission."],
-    "Hildryn": ["Passive: full shield gate lasts 3.5s. Abilities spend shields, not energy."],
-    "Harrow": ["Covenant: 6s of invulnerability for the squad (x Ability Duration). Passive: overshield capacity doubled."],
+    "Harrow": ["Covenant: 6s of invulnerability for the squad (x Ability Duration)."],
     "Baruuk": ["Elude: 100% dodge chance against projectiles and melee within a 180° arc in front, only while not attacking. It is evasion, not damage reduction."],
     "Octavia": ["Metronome's Nocturne grants invisibility, which stops most damage at the source."],
     "Protea": ["Temporal Anchor rewinds health, shields and energy. Shield Satellites restore shields."],
-    "Sevagoth": ["Passive: on death, fight as the Shadow to revive."],
-    "Oberon": ["Passive: Health Orbs grant charges that each block one instance of damage (up to 3)."],
     "Xaku": ["The Vast Untime: 75% dodge chance and area damage reduction while active."],
     "Garuda": ["Dread Mirror blocks frontal damage while held."],
     "Frost": ["Snow Globe blocks ranged fire from outside; it protects an area, not Frost's own health pool."],

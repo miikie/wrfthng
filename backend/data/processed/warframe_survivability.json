@@ -17,7 +17,12 @@
       },
       "statsNote": "",
       "abilities": [],
-      "special": []
+      "special": [],
+      "passive": {
+        "name": "",
+        "description": "Bleed effects inflicted on enemies do 25% increased damage and last 50% longer.",
+        "effects": []
+      }
     },
     "Ash Prime": {
       "name": "Ash Prime",
@@ -35,7 +40,12 @@
       },
       "statsNote": "",
       "abilities": [],
-      "special": []
+      "special": [],
+      "passive": {
+        "name": "",
+        "description": "Bleed effects inflicted on enemies do 25% increased damage and last 50% longer.",
+        "effects": []
+      }
     },
     "Atlas": {
       "name": "Atlas",
@@ -53,7 +63,47 @@
       },
       "statsNote": "",
       "abilities": [],
-      "special": []
+      "special": [],
+      "passive": {
+        "name": "Rubble",
+        "description": "Becomes immune to Knockdown effects while on the ground.",
+        "effects": [
+          {
+            "kind": "armor",
+            "name": "Rubble armor",
+            "value": 0,
+            "cap": 1500.0,
+            "stacks": {
+              "label": "Rubble picked up at full health",
+              "max": 30,
+              "default": 10
+            },
+            "perStack": 50.0,
+            "level": null,
+            "low": null,
+            "mode": "flat",
+            "scalesWithStrength": false,
+            "condition": "Rubble picked up while at full health",
+            "note": "50 armor per piece of Rubble picked up at full health, up to 1,500. Decays at 5 armor/s. Counted as flat armor added after armor mods.",
+            "applies": "all"
+          },
+          {
+            "kind": "note",
+            "name": "Immovable",
+            "value": null,
+            "cap": null,
+            "stacks": null,
+            "perStack": null,
+            "level": null,
+            "low": null,
+            "mode": null,
+            "scalesWithStrength": false,
+            "condition": "",
+            "note": "Immune to knockdown while on the ground.",
+            "applies": "all"
+          }
+        ]
+      }
     },
     "Atlas Prime": {
       "name": "Atlas Prime",
@@ -71,7 +121,47 @@
       },
       "statsNote": "",
       "abilities": [],
-      "special": []
+      "special": [],
+      "passive": {
+        "name": "Rubble",
+        "description": "Becomes immune to Knockdown effects while on the ground.",
+        "effects": [
+          {
+            "kind": "armor",
+            "name": "Rubble armor",
+            "value": 0,
+            "cap": 1500.0,
+            "stacks": {
+              "label": "Rubble picked up at full health",
+              "max": 30,
+              "default": 10
+            },
+            "perStack": 50.0,
+            "level": null,
+            "low": null,
+            "mode": "flat",
+            "scalesWithStrength": false,
+            "condition": "Rubble picked up while at full health",
+            "note": "50 armor per piece of Rubble picked up at full health, up to 1,500. Decays at 5 armor/s. Counted as flat armor added after armor mods.",
+            "applies": "all"
+          },
+          {
+            "kind": "note",
+            "name": "Immovable",
+            "value": null,
+            "cap": null,
+            "stacks": null,
+            "perStack": null,
+            "level": null,
+            "low": null,
+            "mode": null,
+            "scalesWithStrength": false,
+            "condition": "",
+            "note": "Immune to knockdown while on the ground.",
+            "applies": "all"
+          }
+        ]
+      }
     },
     "Banshee": {
       "name": "Banshee",
@@ -89,7 +179,12 @@
       },
       "statsNote": "",
       "abilities": [],
-      "special": []
+      "special": [],
+      "passive": {
+        "name": "",
+        "description": "Banshee pierces the ears of enemies within a 20m radius when casting Abilities, applying max Puncture Status Effect. Additionally, Banshee's weapon noise is hushed.",
+        "effects": []
+      }
     },
     "Banshee Prime": {
       "name": "Banshee Prime",
@@ -107,7 +202,12 @@
       },
       "statsNote": "",
       "abilities": [],
-      "special": []
+      "special": [],
+      "passive": {
+        "name": "",
+        "description": "Banshee pierces the ears of enemies within a 20m radius when casting Abilities, applying max Puncture Status Effect. Additionally, Banshee's weapon noise is hushed.",
+        "effects": []
+      }
     },
     "Baruuk": {
       "name": "Baruuk",
@@ -158,7 +258,31 @@
       ],
       "special": [
         "Elude: 100% dodge chance against projectiles and melee within a 180° arc in front, only while not attacking. It is evasion, not damage reduction."
-      ]
+      ],
+      "passive": {
+        "name": "Restraint",
+        "description": "Each projectile dodged, each enemy lulled or disarmed, erodes Baruuk's restraint and fuels the storm within. As Baruuk's restraint is diminished he becomes up to 50% more resistant to damage.",
+        "effects": [
+          {
+            "kind": "dr",
+            "name": "Restraint",
+            "value": 0.5,
+            "cap": null,
+            "stacks": null,
+            "perStack": null,
+            "level": {
+              "label": "Restraint eroded",
+              "default": 0.0
+            },
+            "low": 0.0,
+            "mode": null,
+            "scalesWithStrength": false,
+            "condition": "",
+            "note": "Up to 50% as the Restraint meter is eroded by Elude, Lull and Desolate Hands. Not affected by Ability Strength.",
+            "applies": "all"
+          }
+        ]
+      }
     },
     "Baruuk Prime": {
       "name": "Baruuk Prime",
@@ -209,7 +333,31 @@
       ],
       "special": [
         "Elude: 100% dodge chance against projectiles and melee within a 180° arc in front, only while not attacking. It is evasion, not damage reduction."
-      ]
+      ],
+      "passive": {
+        "name": "Restraint",
+        "description": "Each projectile dodged, each enemy lulled or disarmed, erodes Baruuk's restraint and fuels the storm within. As Baruuk's restraint is diminished he becomes up to 50% more resistant to damage.",
+        "effects": [
+          {
+            "kind": "dr",
+            "name": "Restraint",
+            "value": 0.5,
+            "cap": null,
+            "stacks": null,
+            "perStack": null,
+            "level": {
+              "label": "Restraint eroded",
+              "default": 0.0
+            },
+            "low": 0.0,
+            "mode": null,
+            "scalesWithStrength": false,
+            "condition": "",
+            "note": "Up to 50% as the Restraint meter is eroded by Elude, Lull and Desolate Hands. Not affected by Ability Strength.",
+            "applies": "all"
+          }
+        ]
+      }
     },
     "Bonewidow": {
       "name": "Bonewidow",
@@ -227,7 +375,12 @@
       },
       "statsNote": "Rank 30 stats are not on the wiki for this unit; the game export's base values are used.",
       "abilities": [],
-      "special": []
+      "special": [],
+      "passive": {
+        "name": "",
+        "description": "",
+        "effects": []
+      }
     },
     "Caliban": {
       "name": "Caliban",
@@ -245,7 +398,32 @@
       },
       "statsNote": "",
       "abilities": [],
-      "special": []
+      "special": [],
+      "passive": {
+        "name": "Adaptive Armor",
+        "description": "Allies within Affinity range gain increased resistance to the types of damage they are currently taking.",
+        "effects": [
+          {
+            "kind": "resistance",
+            "name": "Adaptive Armor",
+            "value": 0,
+            "cap": 0.5,
+            "stacks": {
+              "label": "Hits of this damage type",
+              "max": 10,
+              "default": 10
+            },
+            "perStack": 0.05,
+            "level": null,
+            "low": null,
+            "mode": null,
+            "scalesWithStrength": false,
+            "condition": "Recently hit by this damage type",
+            "note": "5% resistance per hit of a damage type, up to 50%. Does not stack with Adaptation: the higher of the two applies.",
+            "applies": "all"
+          }
+        ]
+      }
     },
     "Caliban Prime": {
       "name": "Caliban Prime",
@@ -263,7 +441,32 @@
       },
       "statsNote": "",
       "abilities": [],
-      "special": []
+      "special": [],
+      "passive": {
+        "name": "Adaptive Armor",
+        "description": "Allies within Affinity range gain increased resistance to the types of damage they are currently taking.",
+        "effects": [
+          {
+            "kind": "resistance",
+            "name": "Adaptive Armor",
+            "value": 0,
+            "cap": 0.5,
+            "stacks": {
+              "label": "Hits of this damage type",
+              "max": 10,
+              "default": 10
+            },
+            "perStack": 0.05,
+            "level": null,
+            "low": null,
+            "mode": null,
+            "scalesWithStrength": false,
+            "condition": "Recently hit by this damage type",
+            "note": "5% resistance per hit of a damage type, up to 50%. Does not stack with Adaptation: the higher of the two applies.",
+            "applies": "all"
+          }
+        ]
+      }
     },
     "Chroma": {
       "name": "Chroma",
@@ -313,7 +516,12 @@
           "applies": "all"
         }
       ],
-      "special": []
+      "special": [],
+      "passive": {
+        "name": "",
+        "description": "Wings sprout for an additional jump and bullet jump.",
+        "effects": []
+      }
     },
     "Chroma Prime": {
       "name": "Chroma Prime",
@@ -363,7 +571,12 @@
           "applies": "all"
         }
       ],
-      "special": []
+      "special": [],
+      "passive": {
+        "name": "",
+        "description": "Wings sprout for an additional jump and bullet jump.",
+        "effects": []
+      }
     },
     "Citrine": {
       "name": "Citrine",
@@ -399,7 +612,32 @@
           "applies": "all"
         }
       ],
-      "special": []
+      "special": [],
+      "passive": {
+        "name": "Geoluminesence",
+        "description": "Citrine grants nearby allies 5 health regeneration per second. Pick up a Health Orb to increase regeneration by 0.1, up to a maximum of 25.",
+        "effects": [
+          {
+            "kind": "regen",
+            "name": "Geoluminesence",
+            "value": 5.0,
+            "cap": 25.0,
+            "stacks": {
+              "label": "Health Orbs collected",
+              "max": 200,
+              "default": 0
+            },
+            "perStack": 0.1,
+            "level": null,
+            "low": null,
+            "mode": null,
+            "scalesWithStrength": false,
+            "condition": "",
+            "note": "5 health/s, plus 0.1 per Health Orb collected, up to 25/s.",
+            "applies": "all"
+          }
+        ]
+      }
     },
     "Citrine Prime": {
       "name": "Citrine Prime",
@@ -435,7 +673,32 @@
           "applies": "all"
         }
       ],
-      "special": []
+      "special": [],
+      "passive": {
+        "name": "Geoluminesence",
+        "description": "Citrine grants nearby allies 5 health regeneration per second. Pick up a Health Orb to increase regeneration by 0.1, up to a maximum of 25.",
+        "effects": [
+          {
+            "kind": "regen",
+            "name": "Geoluminesence",
+            "value": 5.0,
+            "cap": 25.0,
+            "stacks": {
+              "label": "Health Orbs collected",
+              "max": 200,
+              "default": 0
+            },
+            "perStack": 0.1,
+            "level": null,
+            "low": null,
+            "mode": null,
+            "scalesWithStrength": false,
+            "condition": "",
+            "note": "5 health/s, plus 0.1 per Health Orb collected, up to 25/s.",
+            "applies": "all"
+          }
+        ]
+      }
     },
     "Cyte-09": {
       "name": "Cyte-09",
@@ -453,7 +716,12 @@
       },
       "statsNote": "",
       "abilities": [],
-      "special": []
+      "special": [],
+      "passive": {
+        "name": "",
+        "description": "Weak Point Kills increase Cyte-09's Weak Point Critical Chance by 1% up to 300% for the duration of the current mission.",
+        "effects": []
+      }
     },
     "Dagath": {
       "name": "Dagath",
@@ -471,7 +739,28 @@
       },
       "statsNote": "",
       "abilities": [],
-      "special": []
+      "special": [],
+      "passive": {
+        "name": "Abundant Abyss",
+        "description": "There is a 35% chance that Energy and Health Orbs will be 300% more effective on Dagath.",
+        "effects": [
+          {
+            "kind": "note",
+            "name": "Abundant Abyss",
+            "value": null,
+            "cap": null,
+            "stacks": null,
+            "perStack": null,
+            "level": null,
+            "low": null,
+            "mode": null,
+            "scalesWithStrength": false,
+            "condition": "",
+            "note": "35% chance for Health and Energy Orbs to give 300% more.",
+            "applies": "all"
+          }
+        ]
+      }
     },
     "Dante": {
       "name": "Dante",
@@ -504,7 +793,12 @@
           "applies": "all"
         }
       ],
-      "special": []
+      "special": [],
+      "passive": {
+        "name": "",
+        "description": "Noctua scans targets, recording information for your Codex. Status Chance increases by 50% on fully scanned targets.",
+        "effects": []
+      }
     },
     "Ember": {
       "name": "Ember",
@@ -539,7 +833,12 @@
           "applies": "all"
         }
       ],
-      "special": []
+      "special": [],
+      "passive": {
+        "name": "",
+        "description": "Receive 5% Ability Strength for every enemy within Affinity Range affected by Heat.",
+        "effects": []
+      }
     },
     "Ember Prime": {
       "name": "Ember Prime",
@@ -574,7 +873,12 @@
           "applies": "all"
         }
       ],
-      "special": []
+      "special": [],
+      "passive": {
+        "name": "",
+        "description": "Receive 5% Ability Strength for every enemy within Affinity Range affected by Heat.",
+        "effects": []
+      }
     },
     "Equinox": {
       "name": "Equinox",
@@ -592,7 +896,12 @@
       },
       "statsNote": "",
       "abilities": [],
-      "special": []
+      "special": [],
+      "passive": {
+        "name": "",
+        "description": "10% of Health Orbs are converted into Energy, and 10% of Energy Orbs are converted into Health.",
+        "effects": []
+      }
     },
     "Equinox Prime": {
       "name": "Equinox Prime",
@@ -610,7 +919,12 @@
       },
       "statsNote": "",
       "abilities": [],
-      "special": []
+      "special": [],
+      "passive": {
+        "name": "",
+        "description": "10% of Health Orbs are converted into Energy, and 10% of Energy Orbs are converted into Health.",
+        "effects": []
+      }
     },
     "Excalibur": {
       "name": "Excalibur",
@@ -628,7 +942,12 @@
       },
       "statsNote": "",
       "abilities": [],
-      "special": []
+      "special": [],
+      "passive": {
+        "name": "",
+        "description": "Excalibur deals 10% increased damage and attacks 10% faster when wielding swords.",
+        "effects": []
+      }
     },
     "Excalibur Prime": {
       "name": "Excalibur Prime",
@@ -646,7 +965,12 @@
       },
       "statsNote": "",
       "abilities": [],
-      "special": []
+      "special": [],
+      "passive": {
+        "name": "",
+        "description": "Excalibur deals 10% increased damage and attacks 10% faster when wielding swords.",
+        "effects": []
+      }
     },
     "Excalibur Umbra": {
       "name": "Excalibur Umbra",
@@ -664,7 +988,12 @@
       },
       "statsNote": "",
       "abilities": [],
-      "special": []
+      "special": [],
+      "passive": {
+        "name": "",
+        "description": "Excalibur deals 10% increased damage and attacks 10% faster when wielding swords.",
+        "effects": []
+      }
     },
     "Follie": {
       "name": "Follie",
@@ -699,7 +1028,12 @@
           "applies": "all"
         }
       ],
-      "special": []
+      "special": [],
+      "passive": {
+        "name": "",
+        "description": "INKBLOT: Follie's abilities coat enemies in ink that slows their movement by 50% for 10s. Afflicted enemies have a 20% chance to drop Health and Energy Orbs.",
+        "effects": []
+      }
     },
     "Frost": {
       "name": "Frost",
@@ -719,7 +1053,32 @@
       "abilities": [],
       "special": [
         "Snow Globe blocks ranged fire from outside; it protects an area, not Frost's own health pool."
-      ]
+      ],
+      "passive": {
+        "name": "Fortifying Freeze",
+        "description": "Cold Status Effects from Frost's Abilities last 100% longer. Frost gains 50 Armor per enemy afflicted with Cold Status within Affinity Range.",
+        "effects": [
+          {
+            "kind": "armor",
+            "name": "Fortifying Freeze",
+            "value": 0,
+            "cap": null,
+            "stacks": {
+              "label": "Enemies with Cold status nearby",
+              "max": 40,
+              "default": 0
+            },
+            "perStack": 50.0,
+            "level": null,
+            "low": null,
+            "mode": "flat",
+            "scalesWithStrength": false,
+            "condition": "",
+            "note": "50 armor per enemy with a Cold status within Affinity Range.",
+            "applies": "all"
+          }
+        ]
+      }
     },
     "Frost Prime": {
       "name": "Frost Prime",
@@ -739,7 +1098,32 @@
       "abilities": [],
       "special": [
         "Snow Globe blocks ranged fire from outside; it protects an area, not Frost's own health pool."
-      ]
+      ],
+      "passive": {
+        "name": "Fortifying Freeze",
+        "description": "Cold Status Effects from Frost's Abilities last 100% longer. Frost gains 50 Armor per enemy afflicted with Cold Status within Affinity Range.",
+        "effects": [
+          {
+            "kind": "armor",
+            "name": "Fortifying Freeze",
+            "value": 0,
+            "cap": null,
+            "stacks": {
+              "label": "Enemies with Cold status nearby",
+              "max": 40,
+              "default": 0
+            },
+            "perStack": 50.0,
+            "level": null,
+            "low": null,
+            "mode": "flat",
+            "scalesWithStrength": false,
+            "condition": "",
+            "note": "50 armor per enemy with a Cold status within Affinity Range.",
+            "applies": "all"
+          }
+        ]
+      }
     },
     "Gara": {
       "name": "Gara",
@@ -771,7 +1155,12 @@
           "applies": "all"
         }
       ],
-      "special": []
+      "special": [],
+      "passive": {
+        "name": "",
+        "description": "A chance to create a radial blind lasting 10s when Gara casts abilities.",
+        "effects": []
+      }
     },
     "Gara Prime": {
       "name": "Gara Prime",
@@ -803,7 +1192,12 @@
           "applies": "all"
         }
       ],
-      "special": []
+      "special": [],
+      "passive": {
+        "name": "",
+        "description": "A chance to create a radial blind lasting 10s when Gara casts abilities.",
+        "effects": []
+      }
     },
     "Garuda": {
       "name": "Garuda",
@@ -823,7 +1217,12 @@
       "abilities": [],
       "special": [
         "Dread Mirror blocks frontal damage while held."
-      ]
+      ],
+      "passive": {
+        "name": "",
+        "description": "Garuda's damage temporarily increases with each enemy she kills, to a maximum of 100%.\r\nSlashes with her talons if no melee weapon is equipped.",
+        "effects": []
+      }
     },
     "Garuda Prime": {
       "name": "Garuda Prime",
@@ -843,7 +1242,12 @@
       "abilities": [],
       "special": [
         "Dread Mirror blocks frontal damage while held."
-      ]
+      ],
+      "passive": {
+        "name": "",
+        "description": "Garuda's damage temporarily increases with each enemy she kills, to a maximum of 100%.\r\nSlashes with her talons if no melee weapon is equipped.",
+        "effects": []
+      }
     },
     "Gauss": {
       "name": "Gauss",
@@ -878,7 +1282,28 @@
           "applies": "kinetic"
         }
       ],
-      "special": []
+      "special": [],
+      "passive": {
+        "name": "",
+        "description": "Moving generates an electrical current that fills Gauss' battery. Shields recharge up to 120% faster while the Recharge Delay is up to 80% shorter, based on the battery level.",
+        "effects": [
+          {
+            "kind": "note",
+            "name": "Battery",
+            "value": null,
+            "cap": null,
+            "stacks": null,
+            "perStack": null,
+            "level": null,
+            "low": null,
+            "mode": null,
+            "scalesWithStrength": false,
+            "condition": "",
+            "note": "Shields recharge up to 120% faster with up to 80% shorter delay, by battery level. Shield recharge is not part of the numbers.",
+            "applies": "all"
+          }
+        ]
+      }
     },
     "Gauss Prime": {
       "name": "Gauss Prime",
@@ -913,7 +1338,28 @@
           "applies": "kinetic"
         }
       ],
-      "special": []
+      "special": [],
+      "passive": {
+        "name": "",
+        "description": "Moving generates an electrical current that fills Gauss' battery. Shields recharge up to 120% faster while the Recharge Delay is up to 80% shorter, based on the battery level.",
+        "effects": [
+          {
+            "kind": "note",
+            "name": "Battery",
+            "value": null,
+            "cap": null,
+            "stacks": null,
+            "perStack": null,
+            "level": null,
+            "low": null,
+            "mode": null,
+            "scalesWithStrength": false,
+            "condition": "",
+            "note": "Shields recharge up to 120% faster with up to 80% shorter delay, by battery level. Shield recharge is not part of the numbers.",
+            "applies": "all"
+          }
+        ]
+      }
     },
     "Grendel": {
       "name": "Grendel",
@@ -931,7 +1377,32 @@
       },
       "statsNote": "",
       "abilities": [],
-      "special": []
+      "special": [],
+      "passive": {
+        "name": "",
+        "description": "Each enemy consumed grants 250 bonus armor.",
+        "effects": [
+          {
+            "kind": "armor",
+            "name": "Swallowed enemies",
+            "value": 0,
+            "cap": 1250.0,
+            "stacks": {
+              "label": "Enemies in his belly",
+              "max": 5,
+              "default": 0
+            },
+            "perStack": 250.0,
+            "level": null,
+            "low": null,
+            "mode": "flat",
+            "scalesWithStrength": false,
+            "condition": "",
+            "note": "250 armor per enemy swallowed by Feast, up to 5 enemies. Added after armor mods.",
+            "applies": "all"
+          }
+        ]
+      }
     },
     "Grendel Prime": {
       "name": "Grendel Prime",
@@ -949,7 +1420,32 @@
       },
       "statsNote": "",
       "abilities": [],
-      "special": []
+      "special": [],
+      "passive": {
+        "name": "",
+        "description": "Each enemy consumed grants 250 bonus armor.",
+        "effects": [
+          {
+            "kind": "armor",
+            "name": "Swallowed enemies",
+            "value": 0,
+            "cap": 1250.0,
+            "stacks": {
+              "label": "Enemies in his belly",
+              "max": 5,
+              "default": 0
+            },
+            "perStack": 250.0,
+            "level": null,
+            "low": null,
+            "mode": "flat",
+            "scalesWithStrength": false,
+            "condition": "",
+            "note": "250 armor per enemy swallowed by Feast, up to 5 enemies. Added after armor mods.",
+            "applies": "all"
+          }
+        ]
+      }
     },
     "Gyre": {
       "name": "Gyre",
@@ -967,7 +1463,12 @@
       },
       "statsNote": "",
       "abilities": [],
-      "special": []
+      "special": [],
+      "passive": {
+        "name": "",
+        "description": "Gyre's abilities have a 10% chance to deal critical damage for each Electrical status that affects the enemy.",
+        "effects": []
+      }
     },
     "Gyre Prime": {
       "name": "Gyre Prime",
@@ -985,7 +1486,12 @@
       },
       "statsNote": "",
       "abilities": [],
-      "special": []
+      "special": [],
+      "passive": {
+        "name": "",
+        "description": "Gyre's abilities have a 10% chance to deal critical damage for each Electrical status that affects the enemy.",
+        "effects": []
+      }
     },
     "Harrow": {
       "name": "Harrow",
@@ -1004,8 +1510,29 @@
       "statsNote": "",
       "abilities": [],
       "special": [
-        "Covenant: 6s of invulnerability for the squad (x Ability Duration). Passive: overshield capacity doubled."
-      ]
+        "Covenant: 6s of invulnerability for the squad (x Ability Duration)."
+      ],
+      "passive": {
+        "name": "",
+        "description": "Overshield capacity doubled.\r\nStart missions at maximum energy.",
+        "effects": [
+          {
+            "kind": "note",
+            "name": "Overshield capacity",
+            "value": null,
+            "cap": null,
+            "stacks": null,
+            "perStack": null,
+            "level": null,
+            "low": null,
+            "mode": null,
+            "scalesWithStrength": false,
+            "condition": "",
+            "note": "Overshield cap 2,400 (200% of normal). Overshields are not part of the numbers.",
+            "applies": "all"
+          }
+        ]
+      }
     },
     "Harrow Prime": {
       "name": "Harrow Prime",
@@ -1024,8 +1551,29 @@
       "statsNote": "",
       "abilities": [],
       "special": [
-        "Covenant: 6s of invulnerability for the squad (x Ability Duration). Passive: overshield capacity doubled."
-      ]
+        "Covenant: 6s of invulnerability for the squad (x Ability Duration)."
+      ],
+      "passive": {
+        "name": "",
+        "description": "Overshield capacity doubled.\r\nStart missions at maximum energy.",
+        "effects": [
+          {
+            "kind": "note",
+            "name": "Overshield capacity",
+            "value": null,
+            "cap": null,
+            "stacks": null,
+            "perStack": null,
+            "level": null,
+            "low": null,
+            "mode": null,
+            "scalesWithStrength": false,
+            "condition": "",
+            "note": "Overshield cap 2,400 (200% of normal). Overshields are not part of the numbers.",
+            "applies": "all"
+          }
+        ]
+      }
     },
     "Hildryn": {
       "name": "Hildryn",
@@ -1043,9 +1591,28 @@
       },
       "statsNote": "",
       "abilities": [],
-      "special": [
-        "Passive: full shield gate lasts 3.5s. Abilities spend shields, not energy."
-      ]
+      "special": [],
+      "passive": {
+        "name": "Advanced Shielding",
+        "description": "Hildryn's full Shield Gate is high. After her Shields are depleted, she is invulnerable to damage up to 3.5s.",
+        "effects": [
+          {
+            "kind": "shield_gate",
+            "name": "Advanced Shielding",
+            "value": 3.5,
+            "cap": null,
+            "stacks": null,
+            "perStack": null,
+            "level": null,
+            "low": null,
+            "mode": null,
+            "scalesWithStrength": false,
+            "condition": "",
+            "note": "Full shield gate lasts 3.5s. Overshields also protect her health from Toxin.",
+            "applies": "all"
+          }
+        ]
+      }
     },
     "Hildryn Prime": {
       "name": "Hildryn Prime",
@@ -1063,9 +1630,28 @@
       },
       "statsNote": "",
       "abilities": [],
-      "special": [
-        "Passive: full shield gate lasts 3.5s. Abilities spend shields, not energy."
-      ]
+      "special": [],
+      "passive": {
+        "name": "Advanced Shielding",
+        "description": "Hildryn's full Shield Gate is high. After her Shields are depleted, she is invulnerable to damage up to 3.5s.",
+        "effects": [
+          {
+            "kind": "shield_gate",
+            "name": "Advanced Shielding",
+            "value": 3.5,
+            "cap": null,
+            "stacks": null,
+            "perStack": null,
+            "level": null,
+            "low": null,
+            "mode": null,
+            "scalesWithStrength": false,
+            "condition": "",
+            "note": "Full shield gate lasts 3.5s. Overshields also protect her health from Toxin.",
+            "applies": "all"
+          }
+        ]
+      }
     },
     "Hydroid": {
       "name": "Hydroid",
@@ -1102,7 +1688,12 @@
           "applies": "all"
         }
       ],
-      "special": []
+      "special": [],
+      "passive": {
+        "name": "",
+        "description": "Enemies damaged by Hydroid are more vulnerable to Corrosion Status, with initial status reducing armor by 50%.",
+        "effects": []
+      }
     },
     "Hydroid Prime": {
       "name": "Hydroid Prime",
@@ -1139,7 +1730,12 @@
           "applies": "all"
         }
       ],
-      "special": []
+      "special": [],
+      "passive": {
+        "name": "",
+        "description": "Enemies damaged by Hydroid are more vulnerable to Corrosion Status, with initial status reducing armor by 50%.",
+        "effects": []
+      }
     },
     "Inaros": {
       "name": "Inaros",
@@ -1175,9 +1771,43 @@
           "applies": "all"
         }
       ],
-      "special": [
-        "Passive: lethal damage puts Inaros in a sarcophagus from which he can revive himself."
-      ]
+      "special": [],
+      "passive": {
+        "name": "Undying",
+        "description": "When Inaros takes lethal damage, he entombs himself in a sarcophagus and incarnates as sand to attack enemies, draining their lifeforce to revive himself.",
+        "effects": [
+          {
+            "kind": "revive",
+            "name": "Sarcophagus",
+            "value": null,
+            "cap": null,
+            "stacks": null,
+            "perStack": null,
+            "level": null,
+            "low": null,
+            "mode": null,
+            "scalesWithStrength": false,
+            "condition": "",
+            "note": "On lethal damage Inaros enters a sarcophagus and revives himself with melee attacks.",
+            "applies": "all"
+          },
+          {
+            "kind": "note",
+            "name": "Melee Finisher Heal",
+            "value": null,
+            "cap": null,
+            "stacks": null,
+            "perStack": null,
+            "level": null,
+            "low": null,
+            "mode": null,
+            "scalesWithStrength": false,
+            "condition": "",
+            "note": "Finisher kills restore 20% of max health.",
+            "applies": "all"
+          }
+        ]
+      }
     },
     "Inaros Prime": {
       "name": "Inaros Prime",
@@ -1213,9 +1843,43 @@
           "applies": "all"
         }
       ],
-      "special": [
-        "Passive: lethal damage puts Inaros in a sarcophagus from which he can revive himself."
-      ]
+      "special": [],
+      "passive": {
+        "name": "Undying",
+        "description": "When Inaros takes lethal damage, he entombs himself in a sarcophagus and incarnates as sand to attack enemies, draining their lifeforce to revive himself.",
+        "effects": [
+          {
+            "kind": "revive",
+            "name": "Sarcophagus",
+            "value": null,
+            "cap": null,
+            "stacks": null,
+            "perStack": null,
+            "level": null,
+            "low": null,
+            "mode": null,
+            "scalesWithStrength": false,
+            "condition": "",
+            "note": "On lethal damage Inaros enters a sarcophagus and revives himself with melee attacks.",
+            "applies": "all"
+          },
+          {
+            "kind": "note",
+            "name": "Melee Finisher Heal",
+            "value": null,
+            "cap": null,
+            "stacks": null,
+            "perStack": null,
+            "level": null,
+            "low": null,
+            "mode": null,
+            "scalesWithStrength": false,
+            "condition": "",
+            "note": "Finisher kills restore 20% of max health.",
+            "applies": "all"
+          }
+        ]
+      }
     },
     "Ivara": {
       "name": "Ivara",
@@ -1233,7 +1897,12 @@
       },
       "statsNote": "",
       "abilities": [],
-      "special": []
+      "special": [],
+      "passive": {
+        "name": "",
+        "description": "Senses nearby enemies within 50m.",
+        "effects": []
+      }
     },
     "Ivara Prime": {
       "name": "Ivara Prime",
@@ -1251,7 +1920,12 @@
       },
       "statsNote": "",
       "abilities": [],
-      "special": []
+      "special": [],
+      "passive": {
+        "name": "",
+        "description": "Senses nearby enemies within 50m.",
+        "effects": []
+      }
     },
     "Jade": {
       "name": "Jade",
@@ -1283,7 +1957,12 @@
           "applies": "all"
         }
       ],
-      "special": []
+      "special": [],
+      "passive": {
+        "name": "",
+        "description": "Jade's profound understanding of the relationship between life and death grants her two Aura Mod Slots. Some of her Abilities apply Judgments, increasing enemy damage vulnerability by 50% for 10s.",
+        "effects": []
+      }
     },
     "Khora": {
       "name": "Khora",
@@ -1301,7 +1980,12 @@
       },
       "statsNote": "",
       "abilities": [],
-      "special": []
+      "special": [],
+      "passive": {
+        "name": "",
+        "description": "The ferocious kavat, Venari, fights by Khora's side and provides her with a 15% speed boost while active. If killed, Venari will reappear after 45s.",
+        "effects": []
+      }
     },
     "Khora Prime": {
       "name": "Khora Prime",
@@ -1319,7 +2003,12 @@
       },
       "statsNote": "",
       "abilities": [],
-      "special": []
+      "special": [],
+      "passive": {
+        "name": "",
+        "description": "The ferocious kavat, Venari, fights by Khora's side and provides her with a 15% speed boost while active. If killed, Venari will reappear after 45s.",
+        "effects": []
+      }
     },
     "Koumei": {
       "name": "Koumei",
@@ -1337,7 +2026,12 @@
       },
       "statsNote": "",
       "abilities": [],
-      "special": []
+      "special": [],
+      "passive": {
+        "name": "",
+        "description": "Every 60 seconds, one of Koumei's weapons will inflict random Status Effects for 60 seconds",
+        "effects": []
+      }
     },
     "Kullervo": {
       "name": "Kullervo",
@@ -1383,7 +2077,12 @@
           "applies": "all"
         }
       ],
-      "special": []
+      "special": [],
+      "passive": {
+        "name": "",
+        "description": "Kullervo boasts +75% Heavy Attack Efficiency and +100% Heavy Attack Wind Up Speed on all melee weapons.",
+        "effects": []
+      }
     },
     "Lavos": {
       "name": "Lavos",
@@ -1401,7 +2100,28 @@
       },
       "statsNote": "",
       "abilities": [],
-      "special": []
+      "special": [],
+      "passive": {
+        "name": "Valence Block",
+        "description": "Energy and Universal Orbs give Lavos status immunity for 10s.\r\n\r\nHold any ability to imbue the next cast with additional Elemental Damage and Status.",
+        "effects": [
+          {
+            "kind": "note",
+            "name": "Valence Block",
+            "value": null,
+            "cap": null,
+            "stacks": null,
+            "perStack": null,
+            "level": null,
+            "low": null,
+            "mode": null,
+            "scalesWithStrength": false,
+            "condition": "",
+            "note": "Energy and Universal Orbs cleanse status effects and give 10s of status immunity.",
+            "applies": "all"
+          }
+        ]
+      }
     },
     "Lavos Prime": {
       "name": "Lavos Prime",
@@ -1419,7 +2139,28 @@
       },
       "statsNote": "",
       "abilities": [],
-      "special": []
+      "special": [],
+      "passive": {
+        "name": "Valence Block",
+        "description": "Energy and Universal Orbs give Lavos status immunity for 10s.\r\n\r\nHold any ability to imbue the next cast with additional Elemental Damage and Status.",
+        "effects": [
+          {
+            "kind": "note",
+            "name": "Valence Block",
+            "value": null,
+            "cap": null,
+            "stacks": null,
+            "perStack": null,
+            "level": null,
+            "low": null,
+            "mode": null,
+            "scalesWithStrength": false,
+            "condition": "",
+            "note": "Energy and Universal Orbs cleanse status effects and give 10s of status immunity.",
+            "applies": "all"
+          }
+        ]
+      }
     },
     "Limbo": {
       "name": "Limbo",
@@ -1437,7 +2178,12 @@
       },
       "statsNote": "",
       "abilities": [],
-      "special": []
+      "special": [],
+      "passive": {
+        "name": "",
+        "description": "Dodge to enter and exit the Rift. Entering leaves behind a small Rift portal lasting 5s. Energy slowly recharges in the Rift, and each enemy killed in there also gives 10 Energy.",
+        "effects": []
+      }
     },
     "Limbo Prime": {
       "name": "Limbo Prime",
@@ -1455,7 +2201,12 @@
       },
       "statsNote": "",
       "abilities": [],
-      "special": []
+      "special": [],
+      "passive": {
+        "name": "",
+        "description": "Dodge to enter and exit the Rift. Entering leaves behind a small Rift portal lasting 5s. Energy slowly recharges in the Rift, and each enemy killed in there also gives 10 Energy.",
+        "effects": []
+      }
     },
     "Loki": {
       "name": "Loki",
@@ -1473,7 +2224,12 @@
       },
       "statsNote": "",
       "abilities": [],
-      "special": []
+      "special": [],
+      "passive": {
+        "name": "",
+        "description": "Able to hang from walls 10x longer than normal.",
+        "effects": []
+      }
     },
     "Loki Prime": {
       "name": "Loki Prime",
@@ -1491,7 +2247,12 @@
       },
       "statsNote": "",
       "abilities": [],
-      "special": []
+      "special": [],
+      "passive": {
+        "name": "",
+        "description": "Able to hang from walls 10x longer than normal.",
+        "effects": []
+      }
     },
     "Mag": {
       "name": "Mag",
@@ -1509,7 +2270,12 @@
       },
       "statsNote": "",
       "abilities": [],
-      "special": []
+      "special": [],
+      "passive": {
+        "name": "",
+        "description": "Nearby items gravitate towards Mag for easy collection.",
+        "effects": []
+      }
     },
     "Mag Prime": {
       "name": "Mag Prime",
@@ -1527,7 +2293,12 @@
       },
       "statsNote": "",
       "abilities": [],
-      "special": []
+      "special": [],
+      "passive": {
+        "name": "",
+        "description": "Nearby items gravitate towards Mag for easy collection.",
+        "effects": []
+      }
     },
     "Mesa": {
       "name": "Mesa",
@@ -1561,7 +2332,28 @@
       ],
       "special": [
         "Shatter Shield does nothing against melee or area damage."
-      ]
+      ],
+      "passive": {
+        "name": "",
+        "description": "Shoot dual-wielded sidearms 15% faster and reload single-handed sidearms 25% more rapidly. Gain 50 Bonus Health when not using Melee Weapons.",
+        "effects": [
+          {
+            "kind": "health",
+            "name": "No melee weapon",
+            "value": 50.0,
+            "cap": null,
+            "stacks": null,
+            "perStack": null,
+            "level": null,
+            "low": null,
+            "mode": "flat",
+            "scalesWithStrength": false,
+            "condition": "No melee weapon equipped",
+            "note": "+50 health without a melee weapon.",
+            "applies": "all"
+          }
+        ]
+      }
     },
     "Mesa Prime": {
       "name": "Mesa Prime",
@@ -1595,7 +2387,28 @@
       ],
       "special": [
         "Shatter Shield does nothing against melee or area damage."
-      ]
+      ],
+      "passive": {
+        "name": "",
+        "description": "Shoot dual-wielded sidearms 15% faster and reload single-handed sidearms 25% more rapidly. Gain 50 Bonus Health when not using Melee Weapons.",
+        "effects": [
+          {
+            "kind": "health",
+            "name": "No melee weapon",
+            "value": 50.0,
+            "cap": null,
+            "stacks": null,
+            "perStack": null,
+            "level": null,
+            "low": null,
+            "mode": "flat",
+            "scalesWithStrength": false,
+            "condition": "No melee weapon equipped",
+            "note": "+50 health without a melee weapon.",
+            "applies": "all"
+          }
+        ]
+      }
     },
     "Mirage": {
       "name": "Mirage",
@@ -1627,7 +2440,12 @@
           "applies": "all"
         }
       ],
-      "special": []
+      "special": [],
+      "passive": {
+        "name": "",
+        "description": "Sliding lasts 85% longer and acrobatic maneuvers are 50% faster.",
+        "effects": []
+      }
     },
     "Mirage Prime": {
       "name": "Mirage Prime",
@@ -1659,7 +2477,12 @@
           "applies": "all"
         }
       ],
-      "special": []
+      "special": [],
+      "passive": {
+        "name": "",
+        "description": "Sliding lasts 85% longer and acrobatic maneuvers are 50% faster.",
+        "effects": []
+      }
     },
     "Narin": {
       "name": "Narin",
@@ -1692,7 +2515,12 @@
           "applies": "all"
         }
       ],
-      "special": []
+      "special": [],
+      "passive": {
+        "name": "",
+        "description": "Each stack of Cold Status Effect on enemies increase chance to spawn Sangodae pickup by 1%, granting Extra Cold Damage on Primary and Secondary weapons for 10s. Narin also gains Cold Damage for her abilities.",
+        "effects": []
+      }
     },
     "Nekros": {
       "name": "Nekros",
@@ -1710,7 +2538,32 @@
       },
       "statsNote": "",
       "abilities": [],
-      "special": []
+      "special": [],
+      "passive": {
+        "name": "",
+        "description": "Restore 5 Health with every enemy death within 10m.",
+        "effects": [
+          {
+            "kind": "regen",
+            "name": "Health from nearby deaths",
+            "value": 0,
+            "cap": null,
+            "stacks": {
+              "label": "Enemy deaths within 10 m per second",
+              "max": 10,
+              "default": 0
+            },
+            "perStack": 5.0,
+            "level": null,
+            "low": null,
+            "mode": null,
+            "scalesWithStrength": false,
+            "condition": "",
+            "note": "5 health for each enemy that dies within 10 m.",
+            "applies": "all"
+          }
+        ]
+      }
     },
     "Nekros Prime": {
       "name": "Nekros Prime",
@@ -1728,7 +2581,32 @@
       },
       "statsNote": "",
       "abilities": [],
-      "special": []
+      "special": [],
+      "passive": {
+        "name": "",
+        "description": "Restore 5 Health with every enemy death within 10m.",
+        "effects": [
+          {
+            "kind": "regen",
+            "name": "Health from nearby deaths",
+            "value": 0,
+            "cap": null,
+            "stacks": {
+              "label": "Enemy deaths within 10 m per second",
+              "max": 10,
+              "default": 0
+            },
+            "perStack": 5.0,
+            "level": null,
+            "low": null,
+            "mode": null,
+            "scalesWithStrength": false,
+            "condition": "",
+            "note": "5 health for each enemy that dies within 10 m.",
+            "applies": "all"
+          }
+        ]
+      }
     },
     "Nezha": {
       "name": "Nezha",
@@ -1774,7 +2652,12 @@
           "applies": "all"
         }
       ],
-      "special": []
+      "special": [],
+      "passive": {
+        "name": "",
+        "description": "Slide 60% faster and go 35% farther.",
+        "effects": []
+      }
     },
     "Nezha Prime": {
       "name": "Nezha Prime",
@@ -1820,7 +2703,12 @@
           "applies": "all"
         }
       ],
-      "special": []
+      "special": [],
+      "passive": {
+        "name": "",
+        "description": "Slide 60% faster and go 35% farther.",
+        "effects": []
+      }
     },
     "Nidus": {
       "name": "Nidus",
@@ -1852,9 +2740,28 @@
           "applies": "all"
         }
       ],
-      "special": [
-        "Passive: dying with 15 Mutation stacks consumes them for 5s of invulnerability and 50% health."
-      ]
+      "special": [],
+      "passive": {
+        "name": "Undying",
+        "description": "If Nidus is killed with at least 15 stacks of Mutation, those 15 stacks are consumed; this grants 5s of invulnerability and restores Health to 50%.",
+        "effects": [
+          {
+            "kind": "revive",
+            "name": "Undying",
+            "value": null,
+            "cap": null,
+            "stacks": null,
+            "perStack": null,
+            "level": null,
+            "low": null,
+            "mode": null,
+            "scalesWithStrength": false,
+            "condition": "",
+            "note": "Lethal damage with 15+ Mutation stacks consumes 15 for 5s of invulnerability and 50% health.",
+            "applies": "all"
+          }
+        ]
+      }
     },
     "Nidus Prime": {
       "name": "Nidus Prime",
@@ -1886,9 +2793,28 @@
           "applies": "all"
         }
       ],
-      "special": [
-        "Passive: dying with 15 Mutation stacks consumes them for 5s of invulnerability and 50% health."
-      ]
+      "special": [],
+      "passive": {
+        "name": "Undying",
+        "description": "If Nidus is killed with at least 15 stacks of Mutation, those 15 stacks are consumed; this grants 5s of invulnerability and restores Health to 50%.",
+        "effects": [
+          {
+            "kind": "revive",
+            "name": "Undying",
+            "value": null,
+            "cap": null,
+            "stacks": null,
+            "perStack": null,
+            "level": null,
+            "low": null,
+            "mode": null,
+            "scalesWithStrength": false,
+            "condition": "",
+            "note": "Lethal damage with 15+ Mutation stacks consumes 15 for 5s of invulnerability and 50% health.",
+            "applies": "all"
+          }
+        ]
+      }
     },
     "Nokko": {
       "name": "Nokko",
@@ -1906,7 +2832,28 @@
       },
       "statsNote": "",
       "abilities": [],
-      "special": []
+      "special": [],
+      "passive": {
+        "name": "Vital Decay",
+        "description": "Upon receiving fatal damage, Nokko reverts to his Sprodling form and his active mushrooms will glow, reviving Nokko when touched. Orbs spawned will grant a speed boost but not healing. If a glowing mushroom is not reached in time, Nokko will automatically use a self-revive.",
+        "effects": [
+          {
+            "kind": "revive",
+            "name": "Vital Decay",
+            "value": null,
+            "cap": null,
+            "stacks": null,
+            "perStack": null,
+            "level": null,
+            "low": null,
+            "mode": null,
+            "scalesWithStrength": false,
+            "condition": "",
+            "note": "With a mushroom placed, lethal damage turns Nokko into a Sprodling that revives by reaching it within 15s.",
+            "applies": "all"
+          }
+        ]
+      }
     },
     "Nova": {
       "name": "Nova",
@@ -1942,7 +2889,12 @@
           "applies": "all"
         }
       ],
-      "special": []
+      "special": [],
+      "passive": {
+        "name": "",
+        "description": "Enemies killed while slowed down have 15% to drop health orbs. Enemies killed while sped up have 15% to drop energy orbs.",
+        "effects": []
+      }
     },
     "Nova Prime": {
       "name": "Nova Prime",
@@ -1978,7 +2930,12 @@
           "applies": "all"
         }
       ],
-      "special": []
+      "special": [],
+      "passive": {
+        "name": "",
+        "description": "Enemies killed while slowed down have 15% to drop health orbs. Enemies killed while sped up have 15% to drop energy orbs.",
+        "effects": []
+      }
     },
     "Nyx": {
       "name": "Nyx",
@@ -2011,7 +2968,12 @@
           "applies": "all"
         }
       ],
-      "special": []
+      "special": [],
+      "passive": {
+        "name": "",
+        "description": "Nyx gains +40% Critical Chance on Primary and Secondary weapons per confused enemy within Affinity Range, up to +200%.",
+        "effects": []
+      }
     },
     "Nyx Prime": {
       "name": "Nyx Prime",
@@ -2044,7 +3006,12 @@
           "applies": "all"
         }
       ],
-      "special": []
+      "special": [],
+      "passive": {
+        "name": "",
+        "description": "Nyx gains +40% Critical Chance on Primary and Secondary weapons per confused enemy within Affinity Range, up to +200%.",
+        "effects": []
+      }
     },
     "Oberon": {
       "name": "Oberon",
@@ -2081,9 +3048,28 @@
           "applies": "all"
         }
       ],
-      "special": [
-        "Passive: Health Orbs grant charges that each block one instance of damage (up to 3)."
-      ]
+      "special": [],
+      "passive": {
+        "name": "Righteous Negation",
+        "description": "Oberon grants Righteous Negation to himself and his allies in Affinity Range when he collects Health Orbs, protecting players against the next instance of damage. Stacks up to 3 times.",
+        "effects": [
+          {
+            "kind": "note",
+            "name": "Righteous Negation",
+            "value": null,
+            "cap": null,
+            "stacks": null,
+            "perStack": null,
+            "level": null,
+            "low": null,
+            "mode": null,
+            "scalesWithStrength": false,
+            "condition": "",
+            "note": "Health Orbs give charges (up to 3) that each block one instance of damage.",
+            "applies": "all"
+          }
+        ]
+      }
     },
     "Oberon Prime": {
       "name": "Oberon Prime",
@@ -2120,9 +3106,28 @@
           "applies": "all"
         }
       ],
-      "special": [
-        "Passive: Health Orbs grant charges that each block one instance of damage (up to 3)."
-      ]
+      "special": [],
+      "passive": {
+        "name": "Righteous Negation",
+        "description": "Oberon grants Righteous Negation to himself and his allies in Affinity Range when he collects Health Orbs, protecting players against the next instance of damage. Stacks up to 3 times.",
+        "effects": [
+          {
+            "kind": "note",
+            "name": "Righteous Negation",
+            "value": null,
+            "cap": null,
+            "stacks": null,
+            "perStack": null,
+            "level": null,
+            "low": null,
+            "mode": null,
+            "scalesWithStrength": false,
+            "condition": "",
+            "note": "Health Orbs give charges (up to 3) that each block one instance of damage.",
+            "applies": "all"
+          }
+        ]
+      }
     },
     "Octavia": {
       "name": "Octavia",
@@ -2157,7 +3162,12 @@
       ],
       "special": [
         "Metronome's Nocturne grants invisibility, which stops most damage at the source."
-      ]
+      ],
+      "passive": {
+        "name": "",
+        "description": "Replenish 30 energy over 30s for Octavia and allies within 15m when abilities are activated.",
+        "effects": []
+      }
     },
     "Octavia Prime": {
       "name": "Octavia Prime",
@@ -2192,7 +3202,12 @@
       ],
       "special": [
         "Metronome's Nocturne grants invisibility, which stops most damage at the source."
-      ]
+      ],
+      "passive": {
+        "name": "",
+        "description": "Replenish 30 energy over 30s for Octavia and allies within 15m when abilities are activated.",
+        "effects": []
+      }
     },
     "Oraxia": {
       "name": "Oraxia",
@@ -2210,7 +3225,28 @@
       },
       "statsNote": "",
       "abilities": [],
-      "special": []
+      "special": [],
+      "passive": {
+        "name": "Predator's Lurk",
+        "description": "Wall Latching grants Predator's Lurk, rendering Oraxia invisible for 8s.",
+        "effects": [
+          {
+            "kind": "note",
+            "name": "Predator's Lurk",
+            "value": null,
+            "cap": null,
+            "stacks": null,
+            "perStack": null,
+            "level": null,
+            "low": null,
+            "mode": null,
+            "scalesWithStrength": false,
+            "condition": "",
+            "note": "Wall latching makes Oraxia invisible for 8s.",
+            "applies": "all"
+          }
+        ]
+      }
     },
     "Orion & Sirius": {
       "name": "Orion & Sirius",
@@ -2245,7 +3281,12 @@
           "applies": "all"
         }
       ],
-      "special": []
+      "special": [],
+      "passive": {
+        "name": "",
+        "description": "",
+        "effects": []
+      }
     },
     "Protea": {
       "name": "Protea",
@@ -2265,7 +3306,12 @@
       "abilities": [],
       "special": [
         "Temporal Anchor rewinds health, shields and energy. Shield Satellites restore shields."
-      ]
+      ],
+      "passive": {
+        "name": "",
+        "description": "Every 4th Power Cast is granted +100% Ability Strength.",
+        "effects": []
+      }
     },
     "Protea Prime": {
       "name": "Protea Prime",
@@ -2285,7 +3331,12 @@
       "abilities": [],
       "special": [
         "Temporal Anchor rewinds health, shields and energy. Shield Satellites restore shields."
-      ]
+      ],
+      "passive": {
+        "name": "",
+        "description": "Every 4th Power Cast is granted +100% Ability Strength.",
+        "effects": []
+      }
     },
     "Qorvex": {
       "name": "Qorvex",
@@ -2303,7 +3354,12 @@
       },
       "statsNote": "",
       "abilities": [],
-      "special": []
+      "special": [],
+      "passive": {
+        "name": "",
+        "description": "Weapons wield by Qorvex have an additional +3 Punch Through.",
+        "effects": []
+      }
     },
     "Revenant": {
       "name": "Revenant",
@@ -2323,7 +3379,12 @@
       "abilities": [],
       "special": [
         "Mesmer Skin: 6 charges at base (x Ability Strength, rounded up). Each charge blocks one hit completely, so damage reduction doesn't describe it."
-      ]
+      ],
+      "passive": {
+        "name": "",
+        "description": "Shield depletion smashes enemies within 7.5m with a 100 Damage knockdown shockwave.",
+        "effects": []
+      }
     },
     "Revenant Prime": {
       "name": "Revenant Prime",
@@ -2343,7 +3404,12 @@
       "abilities": [],
       "special": [
         "Mesmer Skin: 6 charges at base (x Ability Strength, rounded up). Each charge blocks one hit completely, so damage reduction doesn't describe it."
-      ]
+      ],
+      "passive": {
+        "name": "",
+        "description": "Shield depletion smashes enemies within 7.5m with a 100 Damage knockdown shockwave.",
+        "effects": []
+      }
     },
     "Rhino": {
       "name": "Rhino",
@@ -2378,7 +3444,12 @@
       ],
       "special": [
         "While Iron Skin's Overguard holds, health and shields are untouched and status effects are blocked."
-      ]
+      ],
+      "passive": {
+        "name": "",
+        "description": "Emit a shockwave dealing 100 damage after landing from a great height.",
+        "effects": []
+      }
     },
     "Rhino Prime": {
       "name": "Rhino Prime",
@@ -2413,7 +3484,12 @@
       ],
       "special": [
         "While Iron Skin's Overguard holds, health and shields are untouched and status effects are blocked."
-      ]
+      ],
+      "passive": {
+        "name": "",
+        "description": "Emit a shockwave dealing 100 damage after landing from a great height.",
+        "effects": []
+      }
     },
     "Saryn": {
       "name": "Saryn",
@@ -2431,7 +3507,12 @@
       },
       "statsNote": "",
       "abilities": [],
-      "special": []
+      "special": [],
+      "passive": {
+        "name": "",
+        "description": "Status Effects inflicted upon enemies last 25% longer.",
+        "effects": []
+      }
     },
     "Saryn Prime": {
       "name": "Saryn Prime",
@@ -2449,7 +3530,12 @@
       },
       "statsNote": "",
       "abilities": [],
-      "special": []
+      "special": [],
+      "passive": {
+        "name": "",
+        "description": "Status Effects inflicted upon enemies last 25% longer.",
+        "effects": []
+      }
     },
     "Sevagoth": {
       "name": "Sevagoth",
@@ -2467,9 +3553,28 @@
       },
       "statsNote": "",
       "abilities": [],
-      "special": [
-        "Passive: on death, fight as the Shadow to revive."
-      ]
+      "special": [],
+      "passive": {
+        "name": "Tombstone",
+        "description": "On death, become Sevagoth's Shadow and fight to resurrect him by collecting the souls needed to rebuild his tombstone.",
+        "effects": [
+          {
+            "kind": "revive",
+            "name": "Tombstone",
+            "value": null,
+            "cap": null,
+            "stacks": null,
+            "perStack": null,
+            "level": null,
+            "low": null,
+            "mode": null,
+            "scalesWithStrength": false,
+            "condition": "",
+            "note": "On death his Shadow revives him by collecting 5 souls.",
+            "applies": "all"
+          }
+        ]
+      }
     },
     "Sevagoth Prime": {
       "name": "Sevagoth Prime",
@@ -2487,9 +3592,28 @@
       },
       "statsNote": "",
       "abilities": [],
-      "special": [
-        "Passive: on death, fight as the Shadow to revive."
-      ]
+      "special": [],
+      "passive": {
+        "name": "Tombstone",
+        "description": "On death, become Sevagoth's Shadow and fight to resurrect him by collecting the souls needed to rebuild his tombstone.",
+        "effects": [
+          {
+            "kind": "revive",
+            "name": "Tombstone",
+            "value": null,
+            "cap": null,
+            "stacks": null,
+            "perStack": null,
+            "level": null,
+            "low": null,
+            "mode": null,
+            "scalesWithStrength": false,
+            "condition": "",
+            "note": "On death his Shadow revives him by collecting 5 souls.",
+            "applies": "all"
+          }
+        ]
+      }
     },
     "Sirius & Orion": {
       "name": "Sirius & Orion",
@@ -2524,7 +3648,12 @@
           "applies": "all"
         }
       ],
-      "special": []
+      "special": [],
+      "passive": {
+        "name": "",
+        "description": "",
+        "effects": []
+      }
     },
     "Styanax": {
       "name": "Styanax",
@@ -2542,7 +3671,12 @@
       },
       "statsNote": "",
       "abilities": [],
-      "special": []
+      "special": [],
+      "passive": {
+        "name": "",
+        "description": "Styanax's critical chance increases with his shields and doubles for spearguns.",
+        "effects": []
+      }
     },
     "Styanax Prime": {
       "name": "Styanax Prime",
@@ -2560,7 +3694,12 @@
       },
       "statsNote": "",
       "abilities": [],
-      "special": []
+      "special": [],
+      "passive": {
+        "name": "",
+        "description": "Styanax's critical chance increases with his shields and doubles for spearguns.",
+        "effects": []
+      }
     },
     "Temple": {
       "name": "Temple",
@@ -2578,7 +3717,12 @@
       },
       "statsNote": "",
       "abilities": [],
-      "special": []
+      "special": [],
+      "passive": {
+        "name": "",
+        "description": "Play abilities in sync with the Backbeat metronome to invigorate ability effects while increasing Ability Efficiency by 50%.",
+        "effects": []
+      }
     },
     "Titania": {
       "name": "Titania",
@@ -2596,7 +3740,28 @@
       },
       "statsNote": "",
       "abilities": [],
-      "special": []
+      "special": [],
+      "passive": {
+        "name": "Upsurge",
+        "description": "Titania generates Health for herself and nearby allies every time she casts an Ability.",
+        "effects": [
+          {
+            "kind": "regen",
+            "name": "Upsurge",
+            "value": 4.0,
+            "cap": null,
+            "stacks": null,
+            "perStack": null,
+            "level": null,
+            "low": null,
+            "mode": null,
+            "scalesWithStrength": false,
+            "condition": "Within 20 s of casting an ability",
+            "note": "4 health/s for 20s after each ability cast.",
+            "applies": "all"
+          }
+        ]
+      }
     },
     "Titania Prime": {
       "name": "Titania Prime",
@@ -2614,7 +3779,28 @@
       },
       "statsNote": "",
       "abilities": [],
-      "special": []
+      "special": [],
+      "passive": {
+        "name": "Upsurge",
+        "description": "Titania generates Health for herself and nearby allies every time she casts an Ability.",
+        "effects": [
+          {
+            "kind": "regen",
+            "name": "Upsurge",
+            "value": 4.0,
+            "cap": null,
+            "stacks": null,
+            "perStack": null,
+            "level": null,
+            "low": null,
+            "mode": null,
+            "scalesWithStrength": false,
+            "condition": "Within 20 s of casting an ability",
+            "note": "4 health/s for 20s after each ability cast.",
+            "applies": "all"
+          }
+        ]
+      }
     },
     "Trinity": {
       "name": "Trinity",
@@ -2659,7 +3845,28 @@
           "applies": "all"
         }
       ],
-      "special": []
+      "special": [],
+      "passive": {
+        "name": "Lifegiver",
+        "description": "Allies in Affinity Range gain 50% of Trinity's Max Energy as Health.",
+        "effects": [
+          {
+            "kind": "health",
+            "name": "Lifegiver",
+            "value": 0.5,
+            "cap": null,
+            "stacks": null,
+            "perStack": null,
+            "level": null,
+            "low": null,
+            "mode": "energy",
+            "scalesWithStrength": false,
+            "condition": "",
+            "note": "+50% of max energy as health. Uses rank 30 energy; energy mods are not counted.",
+            "applies": "all"
+          }
+        ]
+      }
     },
     "Trinity Prime": {
       "name": "Trinity Prime",
@@ -2704,7 +3911,28 @@
           "applies": "all"
         }
       ],
-      "special": []
+      "special": [],
+      "passive": {
+        "name": "Lifegiver",
+        "description": "Allies in Affinity Range gain 50% of Trinity's Max Energy as Health.",
+        "effects": [
+          {
+            "kind": "health",
+            "name": "Lifegiver",
+            "value": 0.5,
+            "cap": null,
+            "stacks": null,
+            "perStack": null,
+            "level": null,
+            "low": null,
+            "mode": "energy",
+            "scalesWithStrength": false,
+            "condition": "",
+            "note": "+50% of max energy as health. Uses rank 30 energy; energy mods are not counted.",
+            "applies": "all"
+          }
+        ]
+      }
     },
     "Uriel": {
       "name": "Uriel",
@@ -2722,7 +3950,12 @@
       },
       "statsNote": "",
       "abilities": [],
-      "special": []
+      "special": [],
+      "passive": {
+        "name": "",
+        "description": "Uriel commands, empowers, and protects three unique demons.\r\n\r\nCATENACH: Snares and slows enemies chaining them together. Damage dealt to any target in the chain is inflicted on all snared enemies. (Unlocks with Infernalis)\r\n\r\nGULPHAGOR : Latches onto foes dealing damage over time. If killed, a circle of pain is spawned. (Unlocks with Remedium)\r\n\r\nVYTHELAS: Inscribes demonic runes upon fallen foes that add Fire Rate and Heat Damage when collected. (Unlocks with Demonium)",
+        "effects": []
+      }
     },
     "Valkyr": {
       "name": "Valkyr",
@@ -2755,9 +3988,28 @@
           "applies": "all"
         }
       ],
-      "special": [
-        "Passive: fatal damage with the Rage meter above 150% is prevented and gives 5s of invulnerability."
-      ]
+      "special": [],
+      "passive": {
+        "name": "Rage",
+        "description": "Valkyr accumulates Rage when hitting or killing enemies with melee weapons, increasing her Melee Damage up to 300%. Taking fatal damage when the Rage meter is above 150% consumes the meter, preventing death and granting 5s of invulnerability.",
+        "effects": [
+          {
+            "kind": "revive",
+            "name": "Rage",
+            "value": null,
+            "cap": null,
+            "stacks": null,
+            "perStack": null,
+            "level": null,
+            "low": null,
+            "mode": null,
+            "scalesWithStrength": false,
+            "condition": "",
+            "note": "Fatal damage at 150%+ Rage is prevented: 5s of invulnerability and 100% health.",
+            "applies": "all"
+          }
+        ]
+      }
     },
     "Valkyr Prime": {
       "name": "Valkyr Prime",
@@ -2790,9 +4042,28 @@
           "applies": "all"
         }
       ],
-      "special": [
-        "Passive: fatal damage with the Rage meter above 150% is prevented and gives 5s of invulnerability."
-      ]
+      "special": [],
+      "passive": {
+        "name": "Rage",
+        "description": "Valkyr accumulates Rage when hitting or killing enemies with melee weapons, increasing her Melee Damage up to 300%. Taking fatal damage when the Rage meter is above 150% consumes the meter, preventing death and granting 5s of invulnerability.",
+        "effects": [
+          {
+            "kind": "revive",
+            "name": "Rage",
+            "value": null,
+            "cap": null,
+            "stacks": null,
+            "perStack": null,
+            "level": null,
+            "low": null,
+            "mode": null,
+            "scalesWithStrength": false,
+            "condition": "",
+            "note": "Fatal damage at 150%+ Rage is prevented: 5s of invulnerability and 100% health.",
+            "applies": "all"
+          }
+        ]
+      }
     },
     "Vauban": {
       "name": "Vauban",
@@ -2828,7 +4099,12 @@
           "applies": "all"
         }
       ],
-      "special": []
+      "special": [],
+      "passive": {
+        "name": "",
+        "description": "Deal 25% Extra Damage to incapacitated enemies.",
+        "effects": []
+      }
     },
     "Vauban Prime": {
       "name": "Vauban Prime",
@@ -2864,7 +4140,12 @@
           "applies": "all"
         }
       ],
-      "special": []
+      "special": [],
+      "passive": {
+        "name": "",
+        "description": "Deal 25% Extra Damage to incapacitated enemies.",
+        "effects": []
+      }
     },
     "Voidrig": {
       "name": "Voidrig",
@@ -2882,7 +4163,12 @@
       },
       "statsNote": "Rank 30 stats are not on the wiki for this unit; the game export's base values are used.",
       "abilities": [],
-      "special": []
+      "special": [],
+      "passive": {
+        "name": "",
+        "description": "",
+        "effects": []
+      }
     },
     "Volt": {
       "name": "Volt",
@@ -2900,7 +4186,12 @@
       },
       "statsNote": "",
       "abilities": [],
-      "special": []
+      "special": [],
+      "passive": {
+        "name": "",
+        "description": "Grounded movement generates an electrical charge building up 1000 Damage per meter that is unleashed with the next attack.",
+        "effects": []
+      }
     },
     "Volt Prime": {
       "name": "Volt Prime",
@@ -2918,7 +4209,12 @@
       },
       "statsNote": "",
       "abilities": [],
-      "special": []
+      "special": [],
+      "passive": {
+        "name": "",
+        "description": "Grounded movement generates an electrical charge building up 1000 Damage per meter that is unleashed with the next attack.",
+        "effects": []
+      }
     },
     "Voruna": {
       "name": "Voruna",
@@ -2936,7 +4232,12 @@
       },
       "statsNote": "",
       "abilities": [],
-      "special": []
+      "special": [],
+      "passive": {
+        "name": "",
+        "description": "Voruna never fights alone. In mission, hold Abilities to call upon each wolf's unique Passive power.",
+        "effects": []
+      }
     },
     "Voruna Prime": {
       "name": "Voruna Prime",
@@ -2954,7 +4255,12 @@
       },
       "statsNote": "",
       "abilities": [],
-      "special": []
+      "special": [],
+      "passive": {
+        "name": "",
+        "description": "Voruna never fights alone. In mission, hold Abilities to call upon each wolf's unique Passive power.",
+        "effects": []
+      }
     },
     "Wisp": {
       "name": "Wisp",
@@ -2972,7 +4278,28 @@
       },
       "statsNote": "",
       "abilities": [],
-      "special": []
+      "special": [],
+      "passive": {
+        "name": "",
+        "description": "Flowing between dimensions Wisp becomes invisible to enemies while in the air.",
+        "effects": [
+          {
+            "kind": "note",
+            "name": "Airborne invisibility",
+            "value": null,
+            "cap": null,
+            "stacks": null,
+            "perStack": null,
+            "level": null,
+            "low": null,
+            "mode": null,
+            "scalesWithStrength": false,
+            "condition": "",
+            "note": "Invisible while airborne until she fires a weapon.",
+            "applies": "all"
+          }
+        ]
+      }
     },
     "Wisp Prime": {
       "name": "Wisp Prime",
@@ -2990,7 +4317,28 @@
       },
       "statsNote": "",
       "abilities": [],
-      "special": []
+      "special": [],
+      "passive": {
+        "name": "",
+        "description": "Flowing between dimensions Wisp becomes invisible to enemies while in the air.",
+        "effects": [
+          {
+            "kind": "note",
+            "name": "Airborne invisibility",
+            "value": null,
+            "cap": null,
+            "stacks": null,
+            "perStack": null,
+            "level": null,
+            "low": null,
+            "mode": null,
+            "scalesWithStrength": false,
+            "condition": "",
+            "note": "Invisible while airborne until she fires a weapon.",
+            "applies": "all"
+          }
+        ]
+      }
     },
     "Wukong": {
       "name": "Wukong",
@@ -3026,9 +4374,28 @@
           "applies": "all"
         }
       ],
-      "special": [
-        "Passive: survives fatal damage three times per mission."
-      ]
+      "special": [],
+      "passive": {
+        "name": "",
+        "description": "After taking fatal damage Wukong automatically uses one of his mastered survival techniques. These techniques can only be invoked three times per mission.",
+        "effects": [
+          {
+            "kind": "revive",
+            "name": "Survival techniques",
+            "value": null,
+            "cap": null,
+            "stacks": null,
+            "perStack": null,
+            "level": null,
+            "low": null,
+            "mode": null,
+            "scalesWithStrength": false,
+            "condition": "",
+            "note": "Survives fatal damage 3 times per mission: 2s of invulnerability and 50% health, plus a random buff.",
+            "applies": "all"
+          }
+        ]
+      }
     },
     "Wukong Prime": {
       "name": "Wukong Prime",
@@ -3064,9 +4431,28 @@
           "applies": "all"
         }
       ],
-      "special": [
-        "Passive: survives fatal damage three times per mission."
-      ]
+      "special": [],
+      "passive": {
+        "name": "",
+        "description": "After taking fatal damage Wukong automatically uses one of his mastered survival techniques. These techniques can only be invoked three times per mission.",
+        "effects": [
+          {
+            "kind": "revive",
+            "name": "Survival techniques",
+            "value": null,
+            "cap": null,
+            "stacks": null,
+            "perStack": null,
+            "level": null,
+            "low": null,
+            "mode": null,
+            "scalesWithStrength": false,
+            "condition": "",
+            "note": "Survives fatal damage 3 times per mission: 2s of invulnerability and 50% health, plus a random buff.",
+            "applies": "all"
+          }
+        ]
+      }
     },
     "Xaku": {
       "name": "Xaku",
@@ -3086,7 +4472,43 @@
       "abilities": [],
       "special": [
         "The Vast Untime: 75% dodge chance and area damage reduction while active."
-      ]
+      ],
+      "passive": {
+        "name": "",
+        "description": "25% Damage Reduction on AOE attacks and chance to avoid incoming weapon damage.",
+        "effects": [
+          {
+            "kind": "dr",
+            "name": "Area damage reduction",
+            "value": 0.25,
+            "cap": null,
+            "stacks": null,
+            "perStack": null,
+            "level": null,
+            "low": null,
+            "mode": null,
+            "scalesWithStrength": false,
+            "condition": "The hit is area-of-effect damage (an explosion)",
+            "note": "25% against explosions, 75% while The Vast Untime is active.",
+            "applies": "all"
+          },
+          {
+            "kind": "note",
+            "name": "Dodge",
+            "value": null,
+            "cap": null,
+            "stacks": null,
+            "perStack": null,
+            "level": null,
+            "low": null,
+            "mode": null,
+            "scalesWithStrength": false,
+            "condition": "",
+            "note": "25% chance to dodge enemy weapon attacks. Evasion is not part of the numbers.",
+            "applies": "all"
+          }
+        ]
+      }
     },
     "Xaku Prime": {
       "name": "Xaku Prime",
@@ -3106,7 +4528,43 @@
       "abilities": [],
       "special": [
         "The Vast Untime: 75% dodge chance and area damage reduction while active."
-      ]
+      ],
+      "passive": {
+        "name": "",
+        "description": "25% Damage Reduction on AOE attacks and chance to avoid incoming weapon damage.",
+        "effects": [
+          {
+            "kind": "dr",
+            "name": "Area damage reduction",
+            "value": 0.25,
+            "cap": null,
+            "stacks": null,
+            "perStack": null,
+            "level": null,
+            "low": null,
+            "mode": null,
+            "scalesWithStrength": false,
+            "condition": "The hit is area-of-effect damage (an explosion)",
+            "note": "25% against explosions, 75% while The Vast Untime is active.",
+            "applies": "all"
+          },
+          {
+            "kind": "note",
+            "name": "Dodge",
+            "value": null,
+            "cap": null,
+            "stacks": null,
+            "perStack": null,
+            "level": null,
+            "low": null,
+            "mode": null,
+            "scalesWithStrength": false,
+            "condition": "",
+            "note": "25% chance to dodge enemy weapon attacks. Evasion is not part of the numbers.",
+            "applies": "all"
+          }
+        ]
+      }
     },
     "Yareli": {
       "name": "Yareli",
@@ -3138,7 +4596,12 @@
           "applies": "all"
         }
       ],
-      "special": []
+      "special": [],
+      "passive": {
+        "name": "",
+        "description": "Yareli gains +200% Critical Chance for Secondary weapons when she has been moving for at least 1.5s.",
+        "effects": []
+      }
     },
     "Yareli Prime": {
       "name": "Yareli Prime",
@@ -3170,7 +4633,12 @@
           "applies": "all"
         }
       ],
-      "special": []
+      "special": [],
+      "passive": {
+        "name": "",
+        "description": "Yareli gains +200% Critical Chance for Secondary weapons when she has been moving for at least 1.5s.",
+        "effects": []
+      }
     },
     "Zephyr": {
       "name": "Zephyr",
@@ -3188,7 +4656,12 @@
       },
       "statsNote": "",
       "abilities": [],
-      "special": []
+      "special": [],
+      "passive": {
+        "name": "",
+        "description": "Zephyr moves faster and falls slower while airborne. Also gain 150% Critical Hit chance with weapons while airborne.",
+        "effects": []
+      }
     },
     "Zephyr Prime": {
       "name": "Zephyr Prime",
@@ -3206,7 +4679,12 @@
       },
       "statsNote": "",
       "abilities": [],
-      "special": []
+      "special": [],
+      "passive": {
+        "name": "",
+        "description": "Zephyr moves faster and falls slower while airborne. Also gain 150% Critical Hit chance with weapons while airborne.",
+        "effects": []
+      }
     }
   },
   "arcanes": [

@@ -350,3 +350,158 @@ def test_warframe_catalogue_and_mod_type_check():
     assert len(cat["warframes"]) == 122 and len(cat["arcanes"]) == 6
     r = client.post("/api/survivability", json={"warframe": "Rhino", "mods": [{"name": "Serration"}]})
     assert r.status_code == 422
+
+
+# --- Passives -------------------------------------------------------------
+
+def _layer(r, name):
+    return next((l for l in r["layers"] if l["name"] == name), None)
+
+
+def test_every_frame_has_a_passive_and_restraint_scales_with_erosion():
+    cat = client.get("/api/warframes").json()["warframes"]
+    assert all("passive" in w for w in cat)
+    assert next(w for w in cat if w["name"] == "Baruuk Prime")["passive"]["name"] == "Restraint"
+    half = _surv({"warframe": "Baruuk", "passive": {"Restraint": {"active": True, "level": 0.5}}})
+    assert abs(_layer(half, "Restraint (passive)")["reduction"] - 0.25) < 1e-6
+    # unconditional, but Restraint starts each mission full: no reduction until it is eroded
+    assert _layer(_surv({"warframe": "Baruuk"}), "Restraint (passive)") is None
+    full = _surv({"warframe": "Baruuk", "passive": {"Restraint": {"level": 1}}})
+    assert abs(_layer(full, "Restraint (passive)")["reduction"] - 0.5) < 1e-6
+
+
+def test_passive_flat_armor_and_health_from_energy():
+    grendel = _surv({"warframe": "Grendel", "passive": {"Swallowed enemies": {"stacks": 2}}})
+    assert abs(grendel["moddedStats"]["armor"] - (370 + 2 * 250)) < 0.01   # added after armor mods
+    trinity = _surv({"warframe": "Trinity"})
+    assert abs(trinity["moddedStats"]["health"] - (370 + 0.5 * 225)) < 0.01
+
+
+def test_conditional_passive_is_off_until_switched_on():
+    off = _surv({"warframe": "Mesa"})
+    on = _surv({"warframe": "Mesa", "passive": {"No melee weapon": {"active": True}}})
+    assert on["moddedStats"]["health"] - off["moddedStats"]["health"] == 50
+    xaku = _surv({"warframe": "Xaku", "passive": {"Area damage reduction": {"active": True}}})
+    assert abs(_layer(xaku, "Area damage reduction (passive)")["reduction"] - 0.25) < 1e-6
+
+
+def test_adaptive_armor_and_adaptation_take_the_higher():
+    body = {"warframe": "Caliban", "passive": {"Adaptive Armor": {"active": True, "stacks": 10}},
+            "mods": [{"name": "Adaptation", "rank": 10}], "conditionalStacks": {"Adaptation": 2}}
+    r = _surv(body)
+    names = [l["name"] for l in r["layers"]]
+    assert "Adaptive Armor (passive, Slash)" in names and "Adaptation (Slash)" not in names
+    r = _surv({**body, "conditionalStacks": {"Adaptation": 9}})
+    assert [l["name"] for l in r["layers"]][-1] == "Adaptation (Slash)"
+
+
+def test_hildryn_shield_gate_and_regen_is_reported_not_counted():
+    assert _surv({"warframe": "Hildryn"})["shieldGateSeconds"] == 3.5
+    citrine = _surv({"warframe": "Citrine", "passive": {"Geoluminesence": {"stacks": 300}}})
+    assert citrine["healthRegen"] == 25          # 5 + 0.1 x orbs, capped at 25
+    plain = _surv({"warframe": "Citrine"})
+    assert citrine["totalEhp"] == plain["totalEhp"]
+
+
+# --- Helminth and ability buffs ---------------------------------------------
+
+def _frame_calc(**body):
+    r = client.post("/api/calculate", json=body)
+    assert r.status_code == 200, r.text
+    return r.json()
+
+
+def _tick(r, kind):
+    return next(d for d in r["dots"] if d["dotType"] == kind)["damagePerTick"]
+
+
+BANE = dict(weapon="Soma Prime", enemy=GUNNER,
+            mods=[{"name": "Serration", "rank": 10}, {"name": "Bane of Grineer", "rank": 5}])
+INTENSIFY = [{"name": "Intensify", "rank": 5}]
+
+
+def test_helminth_catalogue_and_restrictions():
+    cat = client.get("/api/helminth").json()
+    names = {a["ability"] for a in cat["subsumable"]}
+    assert {"Roar", "Eclipse", "Xata's Whisper", "Terrify", "Shuriken"} <= names
+    assert "Jade Stars" not in names          # Sirius & Orion can't be subsumed
+    assert len(cat["helminthAbilities"]) == 13
+    assert cat["restrictions"]["onlyReplace"]["Chroma"] == "Vex Armor"
+    bad = client.post("/api/calculate", json={**BANE, "warframe": "Chroma", "helminthAbility": "Roar",
+                                              "helminthSlot": 1})
+    assert bad.status_code == 422 and "Vex Armor" in bad.json()["detail"]
+    dup = client.post("/api/survivability", json={"warframe": "Mag", "helminthAbility": "Pull", "helminthSlot": 2})
+    assert dup.status_code == 422
+
+
+def test_roar_is_a_faction_bonus_counted_twice_on_dots():
+    # wiki: (1 + 0.5 x 1.3 + 0.3) on hits with Intensify and Bane, squared on Slash ticks
+    off = _frame_calc(**BANE)
+    on = _frame_calc(**BANE, warframe="Rhino", warframeMods=INTENSIFY, abilityBuffs={"Roar": {"active": True}})
+    ratio = (1 + 0.5 * 1.3 + 0.3) / 1.3
+    assert abs(on["dps"]["averageShot"] / off["dps"]["averageShot"] - ratio) < 1e-5
+    assert abs(_tick(on, "Slash") / _tick(off, "Slash") - ratio ** 2) < 1e-5
+    assert abs(on["abilityStrength"] - 1.3) < 1e-6
+
+
+def test_subsumed_roar_uses_its_reduced_value_and_replaces_the_slot():
+    off = _frame_calc(**BANE)
+    on = _frame_calc(**BANE, warframe="Chroma", warframeMods=INTENSIFY, helminthAbility="Roar", helminthSlot=3,
+               abilityBuffs={"Roar": {"active": True}})
+    assert abs(on["dps"]["averageShot"] / off["dps"]["averageShot"] - (1 + 0.3 * 1.3 + 0.3) / 1.3) < 1e-5
+    ids = {e["id"]: e["variant"] for e in on["abilityEffects"]}
+    assert ids == {"Roar": "infused"}         # Vex Armor (slot 3) is gone
+    assert on["helminth"] == {"ability": "Roar", "slot": 3, "replaced": "Vex Armor"}
+
+
+def test_solar_eclipse_is_its_own_multiplier_once_on_dots():
+    off = _frame_calc(**BANE)
+    on = _frame_calc(**BANE, warframe="Mirage", warframeMods=INTENSIFY, abilityBuffs={"Eclipse (Solar)": {"active": True}})
+    assert abs(on["dps"]["averageShot"] / off["dps"]["averageShot"] - (1 + 2 * 1.3)) < 1e-5
+    assert abs(_tick(on, "Slash") / _tick(off, "Slash") - (1 + 2 * 1.3)) < 1e-5
+
+
+def test_xatas_whisper_adds_a_void_extra_hit_that_double_dips_weak_points():
+    off, off_head = _frame_calc(**BANE), _frame_calc(**BANE, headshot=True)
+    on = _frame_calc(**BANE, warframe="Xaku", abilityBuffs={"Xata's Whisper": {"active": True}})
+    on_head = _frame_calc(**BANE, headshot=True, warframe="Xaku", abilityBuffs={"Xata's Whisper": {"active": True}})
+    void = on["damage"]["perTypeInflicted"]["Void"]
+    assert void > 0
+    main = off["damage"]["totalInflicted"]
+    assert abs(on["dps"]["averageShot"] / off["dps"]["averageShot"] - (main + void) / main) < 1e-6
+    assert abs(on_head["dps"]["averageShot"] / off_head["dps"]["averageShot"] - (main + 2 * void) / main) < 1e-6
+
+
+def test_parallel_elements_and_effects_the_weapon_cannot_use():
+    r = _frame_calc(**BANE, warframe="Grendel", abilityBuffs={"Nourish": {"active": True}})
+    assert abs(r["damage"]["perType"]["Viral"] - r["moddedBaseDamage"] * 0.75) < 1e-6
+    melee_only = _frame_calc(**BANE, warframe="Valkyr", abilityBuffs={"Valkyr passive": {"active": True}})
+    rage = next(e for e in melee_only["abilityEffects"] if e["id"] == "Valkyr passive")
+    assert not rage["applies"] and rage["reason"] == "Melee weapons only"
+    assert melee_only["dps"]["averageShot"] == _frame_calc(**BANE)["dps"]["averageShot"]
+
+
+def test_unconditional_passive_buffs_default_on_and_ability_strip_adds_up():
+    # on by default, but kill stacks start at zero
+    assert _frame_calc(**BANE, warframe="Garuda")["dps"]["averageShot"] == _frame_calc(**BANE)["dps"]["averageShot"]
+    garuda = _frame_calc(**BANE, warframe="Garuda", abilityBuffs={"Garuda passive": {"stacks": 20}})
+    assert abs(garuda["dps"]["averageShot"] / _frame_calc(**BANE)["dps"]["averageShot"] - 2.0) < 1e-6
+    r = _frame_calc(**BANE, warframe="Nekros", warframeMods=INTENSIFY, armorStripPct=0.2,
+              abilityBuffs={"Terrify": {"active": True}})
+    stripped = _frame_calc(**BANE, armorStripPct=min(1.0, 0.2 + 0.6 * 1.3))
+    assert abs(r["enemy"]["armor"] - stripped["enemy"]["armor"]) < 1e-3
+
+
+def test_infused_survivability_effects_use_subsumed_caps():
+    r = _surv({"warframe": "Excalibur", "mods": INTENSIFY, "helminthAbility": "Eclipse", "helminthSlot": 2,
+               "abilities": {"Eclipse (Lunar)": {"active": True}}})
+    assert abs(_layer(r, "Eclipse (Lunar)")["reduction"] - 0.75) < 1e-6     # 0.75 x 1.3 capped at 75%
+    own = _surv({"warframe": "Mirage", "mods": INTENSIFY, "abilities": {"Eclipse (Lunar)": {"active": True}}})
+    assert abs(_layer(own, "Eclipse (Lunar)")["reduction"] - 0.9) < 1e-6
+    para = _surv({"warframe": "Rhino", "helminthAbility": "Parasitic Armor", "helminthSlot": 1,
+                  "abilities": {"Parasitic Armor": {"active": True}}})
+    assert para["moddedStats"]["armor"] == 240 + 555 and para["moddedStats"]["shields"] == 0
+    # Defy in Eclipse's slot: Mirage loses Lunar Eclipse
+    defy = _surv({"warframe": "Mirage", "helminthAbility": "Defy", "helminthSlot": 3,
+                  "abilities": {"Eclipse (Lunar)": {"active": True}, "Defy": {"active": True}}})
+    assert _layer(defy, "Eclipse (Lunar)") is None and defy["moddedStats"]["armor"] == 105 + 750

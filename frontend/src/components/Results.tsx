@@ -359,7 +359,9 @@ function SideCard({ title, side }: { title: string; side: SideResult }) {
 
 /** Companion and amp damage, the combined total and the buffs that were applied. */
 export function ExtrasDisplay({ result: r }: Shared) {
-  if (!r.companion && !r.amp && r.activeBuffs.length === 0 && r.inactiveBuffs.length === 0) return null
+  const frameEffects = r.abilityEffects.filter((e) => e.active && e.applies && e.kind !== 'strength')
+  const anyBuffs = r.activeBuffs.length > 0 || r.inactiveBuffs.length > 0 || frameEffects.length > 0
+  if (!r.companion && !r.amp && !anyBuffs) return null
   return (
     <>
       {r.companion && (
@@ -391,10 +393,20 @@ export function ExtrasDisplay({ result: r }: Shared) {
           <SideCard title="Amp: alternate fire" side={r.amp.alt} />
         </div>
       )}
-      {(r.activeBuffs.length > 0 || r.inactiveBuffs.length > 0) && (
+      {anyBuffs && (
         <div className="grid @2xl:col-span-2 @6xl:col-span-12">
           <Section title="Buffs applied">
             <ul className="grid gap-x-8 gap-y-1 text-sm @2xl:grid-cols-2">
+              {frameEffects.map((e) => (
+                <li key={e.id} className="flex flex-wrap items-baseline gap-x-2">
+                  <span className="font-medium text-ink">{e.label}</span>
+                  <span className="text-mute">{e.effect}</span>
+                  <span className="text-[13px] text-mute">
+                    {e.variant === 'infused' ? 'Helminth' : e.variant === 'passive' ? `${e.source} passive` : e.source}
+                    {e.scalesWithStrength && r.abilityStrength !== null && `, ${pct(r.abilityStrength, 0)} strength`}
+                  </span>
+                </li>
+              ))}
               {r.activeBuffs.map((b) => (
                 <li key={b.id} className="flex flex-wrap items-baseline gap-x-2">
                   <span className="font-medium text-ink">{b.name}</span>

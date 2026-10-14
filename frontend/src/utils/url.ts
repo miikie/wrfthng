@@ -54,6 +54,8 @@ function writeBuild(q: URLSearchParams, b: Build, prefix: string) {
   writeMods('wa', b.auraMods)
   writeMods('wx', b.warframeExilusMods)
   set('sv', JSON.stringify(b.survival))
+  if (b.helminth) set('hm', `${b.helminth.ability}:${b.helminth.slot}`)
+  if (Object.keys(b.abilityBuffs).length > 0) set('ab', JSON.stringify(b.abilityBuffs))
   if (b.amp) {
     set('amp', [b.amp.prism, b.amp.scaffold, b.amp.brace].join('|'))
     for (const a of b.amp.arcanes) q.append(prefix + 'aa', `${a.name}:${a.rank}`)
@@ -105,6 +107,18 @@ function readBuild(q: URLSearchParams, prefix: string): Build | null {
     survival = undefined
   }
 
+  let abilityBuffs: Build['abilityBuffs'] | undefined
+  try {
+    const raw = get('ab')
+    if (raw) abilityBuffs = JSON.parse(raw)
+  } catch {
+    abilityBuffs = undefined
+  }
+  const infusion = get('hm')
+  const cut = infusion ? infusion.lastIndexOf(':') : -1
+  const slot = cut > 0 ? Math.floor(Number(infusion!.slice(cut + 1))) : NaN
+  const helminth = cut > 0 && slot >= 1 && slot <= 4 ? { ability: infusion!.slice(0, cut), slot } : null
+
   const ampParts = get('amp')?.split('|')
   const amp = ampParts && ampParts[0]
     ? {
@@ -141,6 +155,8 @@ function readBuild(q: URLSearchParams, prefix: string): Build | null {
     warframeExilusMods: readMods('wx'),
     weaponArcanes: q.getAll(prefix + 'wpa').slice(0, 2),
     survival: survival as Build['survival'] | undefined,
+    helminth,
+    abilityBuffs,
   })
 }
 

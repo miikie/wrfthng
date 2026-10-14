@@ -107,6 +107,9 @@ class SurvivabilityResult:
     time_to_kill: float = 0.0             # seconds, ignoring shield gating and regeneration
     shield_gate_seconds: float = 0.0
     enemy_damage_multiplier: float = 1.0
+    health_regen: float = 0.0             # health per second from the passive (not part of effective health)
+    passive_effects: List[Dict[str, object]] = field(default_factory=list)   # {name, kind, active, value}
+    helminth: Optional[Dict[str, object]] = None    # {ability, slot, replaced}
     notes: List[str] = field(default_factory=list)
 
 
@@ -119,6 +122,10 @@ class SurvivabilityCalculator:
             data = json.load(f)
         self.warframes: Dict[str, dict] = data["warframes"]
         self.arcanes: Dict[str, dict] = {a["name"]: a for a in data["arcanes"]}
+        # each Warframe's four ability names in slot order (from the game export)
+        with open(p.parent / "warframes.json", encoding="utf-8") as f:
+            self.ability_names: Dict[str, List[str]] = {
+                name: [a["name"] for a in w.get("abilities", [])] for name, w in json.load(f).items()}
 
     # ------------------------------------------------------------------
     def ability_value(self, ability: dict, state: AbilityState, strength: float) -> float:
@@ -141,6 +148,15 @@ class SurvivabilityCalculator:
         return value
 
     @staticmethod
+    def belongs_to(effect: dict, ability: str) -> bool:
+        """Effects are named after their ability, sometimes with a suffix: "Eclipse (Lunar)", "Warding Halo ring"."""
+        return effect["name"] == ability or effect["name"].startswith(ability + " ")
+
+    def slot_ability(self, warframe: str, slot: int) -> str:
+        names = self.ability_names.get(warframe, [])
+        return names[slot - 1] if 1 <= slot <= len(names) else ""
+
+    @staticmethod
     def applies(ability: dict, damage_type: str) -> bool:
         if ability["applies"] == "kinetic":
             return damage_type in KINETIC
@@ -161,10 +177,18 @@ class SurvivabilityCalculator:
         mod_stacks: Optional[Dict[str, int]] = None,
         extra_armor: float = 0.0,
         enemy_multiplier: float = 1.0,
+        passive: Optional[Dict[str, AbilityState]] = None,
+        replaced_slot: Optional[int] = None,             # 1-4: the slot an infused ability replaces
+        infused: Optional[Dict[str, object]] = None,     # {name, effects: [ability-format effects]}
     ) -> SurvivabilityResult:
+        """`passive` holds the state of each passive effect by name: conditional effects
+        count only when switched on, the rest always count. `infused` is a Helminth
+        ability put in `replaced_slot`: that slot's own effects are dropped and the
+        infused ability's survivability effects (if any) take their place."""
         frame = self.warframes[warframe]
         mods = mods or []
         abilities = abilities or {}
+        passive = passive or {}
         base = frame["rank30"]
         result = SurvivabilityResult(warframe=warframe, base_stats=dict(base), damage_type=damage_type,
                                      hits_per_second=hits_per_second, enemy_damage_multiplier=enemy_multiplier)
@@ -193,8 +217,35 @@ class SurvivabilityCalculator:
         if umbral >= 2:
             notes.append(f"Umbral set: {umbral} Umbral mods equipped, each worth x{umbral_mult:g}.")
 
-        strength = max(0.0, f32(1.0 + totals.get("ABILITY_STRENGTH", 0.0) + strength_bonus))
+        # --- Abilities, with an infused one in place of the ability it replaces
+        own = frame["abilities"]
+        if infused is not None and replaced_slot is not None:
+            replaced = self.slot_ability(warframe, replaced_slot)
+            own = [a for a in own if not (replaced and self.belongs_to(a, replaced))]
+            own = own + list(infused.get("effects", []))
+            result.helminth = {"ability": infused["name"], "slot": replaced_slot, "replaced": replaced}
+        active = [(a, abilities.get(a["name"], AbilityState(active=False))) for a in own]
+        active = [(a, s) for a, s in active if s.active]
+
+        # Empower adds Ability Strength to the next cast; here it counts for every active ability
+        empower = sum(a["value"] for a, _ in active if a["kind"] == "strength")
+        strength = max(0.0, f32(1.0 + totals.get("ABILITY_STRENGTH", 0.0) + strength_bonus + empower))
         result.ability_strength = strength
+        if empower:
+            notes.append(f"Empower: +{empower:.0%} Ability Strength, counted for every active ability here. "
+                         "In the game it applies to the next cast only.")
+
+        # --- Passive: unconditional effects always count, conditional ones when switched on
+        live_passive: List[tuple] = []
+        for e in frame.get("passive", {}).get("effects", []):
+            state = passive.get(e["name"], AbilityState(active=False))
+            on = state.active or not e["condition"]
+            value = None if e["kind"] in ("note", "revive") else self.ability_value(e, state, strength)
+            if e["kind"] == "health" and e["mode"] == "energy":
+                value = f32(value * base.get("energy", 0))
+            result.passive_effects.append({"name": e["name"], "kind": e["kind"], "active": on, "value": value})
+            if on:
+                live_passive.append((e, value))
 
         # --- Arcanes
         flat_armor = totals.get("ARMOR_FLAT", 0.0) + extra_armor
@@ -208,26 +259,41 @@ class SurvivabilityCalculator:
                 flat_health += arcane["perRank"][rank]
             notes.append(f"{name}: {arcane['note']} Counted as active.")
 
-        # --- Abilities: armor bonuses first, then reductions and pools
-        armor_pct = totals.get("ARMOR", 0.0)
-        active = [(a, abilities.get(a["name"], AbilityState(active=False))) for a in frame["abilities"]]
-        active = [(a, s) for a, s in active if s.active]
-        for a, state in active:
-            if a["kind"] != "armor":
-                continue
-            value = self.ability_value(a, state, strength)
-            if a["mode"] == "percent":
-                armor_pct += value
-            else:
-                flat_armor += value
+        for e, value in live_passive:
+            if e["kind"] == "health":
+                flat_health += value
+            elif e["kind"] == "regen":
+                result.health_regen += value
+            elif e["kind"] in ("revive", "note"):
+                notes.append(f"Passive, {e['name']}: {e['note']}")
 
-        health = f32(f32(base["health"] * f32(1.0 + totals.get("HEALTH", 0.0))) + flat_health)
         shields = f32(base["shields"] * f32(1.0 + totals.get("SHIELDS", 0.0)))
         if catalyzing is not None:
             # x0.80 / 0.60 / 0.40 / 0.20 max shields by rank
             shields = f32(shields * f32(1.0 - 0.2 * (catalyzing.rank + 1)))
             notes.append("Catalyzing Shields: max shields cut, full shield gate fixed at "
                          f"{[0.33, 0.67, 1.0, 1.33][min(catalyzing.rank, 3)]:.2f}s.")
+
+        # --- Armor bonuses from abilities and the passive: percent bonuses add to the armor
+        # mods, flat ones are added after them. Parasitic Armor turns max shields into armor.
+        armor_pct = totals.get("ARMOR", 0.0)
+        bonuses = [(a, self.ability_value(a, s, strength)) for a, s in active if a["kind"] == "armor"]
+        bonuses += [(e, v) for e, v in live_passive if e["kind"] == "armor"]
+        shields_disabled = False
+        for a, value in bonuses:
+            if a["mode"] == "percent":
+                armor_pct += value
+            elif a["mode"] == "shields":
+                flat_armor += f32(value * shields)
+                shields_disabled = True
+            else:
+                flat_armor += value
+        if shields_disabled:
+            notes.append(f"Parasitic Armor: {shields:,.0f} max shields become armor x the ability's value; shields "
+                         "are disabled while it lasts.")
+            shields = 0.0
+
+        health = f32(f32(base["health"] * f32(1.0 + totals.get("HEALTH", 0.0))) + flat_health)
         armor = max(0.0, f32(f32(base["armor"] * f32(1.0 + armor_pct)) + flat_armor))
         result.modded_stats = {"health": health, "shields": shields, "armor": armor,
                                "energy": base.get("energy", 0)}
@@ -249,18 +315,29 @@ class SurvivabilityCalculator:
                 shared.append((a["name"], min(value, 1.0), a["note"]))
             if a["applies"] == "ranged":
                 notes.append(f"{a['name']}: {a['note']}")
+        for e, value in live_passive:
+            if e["kind"] == "dr" and value > 0:
+                shared.append((f"{e['name']} (passive)", min(value, 1.0), e["note"]))
+
+        # Adaptation and Caliban's Adaptive Armor don't stack: the higher one applies
+        adaptive = [(f"{e['name']} (passive, {damage_type})", value, e["note"])
+                    for e, value in live_passive if e["kind"] == "resistance" and value > 0]
         for name, value in flat_dr:
             if name == "Adaptation":
                 # 5% per hit at rank 0 up to 10% at rank 10, to a 90% cap
                 rank = (mod_ranks or {}).get(name, 10)
                 stacks = (mod_stacks or {}).get(name, 0)
                 value = min(0.9, f32((0.05 + 0.005 * rank) * stacks))
-                if value <= 0:
-                    continue
-                shared.append((f"Adaptation ({damage_type})", value,
-                               f"{stacks} hit(s) of {damage_type} taken. Other damage types build their own stacks."))
+                if value > 0:
+                    adaptive.append((f"Adaptation ({damage_type})", value,
+                                     f"{stacks} hit(s) of {damage_type} taken. Other damage types build their own stacks."))
             else:
                 shared.append((name, min(value, 1.0), ""))
+        if adaptive:
+            best = max(adaptive, key=lambda x: x[1])
+            shared.append(best)
+            if len(adaptive) > 1:
+                notes.append(f"Adaptation and Adaptive Armor don't stack; {best[0].split(' (')[0]} is the higher here.")
         resist_keys = ["RESIST_" + damage_type.upper()] + (["RESIST_PHYSICAL"] if damage_type in PHYSICAL else [])
         for key in resist_keys:
             if totals.get(key, 0) > 0:
@@ -307,6 +384,9 @@ class SurvivabilityCalculator:
         dps = incoming * hits_per_second
         result.time_to_kill = result.total_ehp / dps if dps > 0 else float("inf")
         result.shield_gate_seconds = shield_gate_seconds(shields)
+        for e, value in live_passive:
+            if e["kind"] == "shield_gate" and shields > 0:
+                result.shield_gate_seconds = value
         if shields > 0 and not bypass_shields:
             notes.append(f"Shield gate: about {result.shield_gate_seconds:.2f}s of invulnerability each time full shields "
                          "break. Not included in the time to kill.")

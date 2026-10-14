@@ -108,6 +108,14 @@ export interface CalculateRequest {
   companion: { name: string; weapon: string; mods: ModInput[] } | null
   sentinelAttackPrecept: boolean
   amp: AmpBuild | null
+  /** The Warframe holding the weapon; its mods set the Ability Strength of its ability buffs. */
+  warframe: string
+  warframeMods: ModInput[]
+  extraAbilityStrength: number
+  helminthAbility: string | null
+  helminthSlot: number | null
+  /** Ability and passive effects by effect id. A missing entry is the effect's default. */
+  abilityBuffs: Record<string, Partial<AbilityState>>
 }
 
 export interface BuffSelection {
@@ -307,6 +315,71 @@ export interface CalculationResult {
   companion: SideResult | null
   amp: { primary: SideResult; alt: SideResult | null } | null
   combinedSustainedDps: number
+  /** The Warframe's Ability Strength (its mods, extra and Empower); null without a Warframe. */
+  abilityStrength: number | null
+  /** Every ability and passive effect the Warframe's loadout has, on or off. */
+  abilityEffects: AbilityEffect[]
+  helminth: HelminthInfusion | null
+}
+
+/** A Warframe ability or passive effect on the weapon, as the calculator applied it. */
+export interface AbilityEffect {
+  id: string
+  label: string
+  ability: string
+  /** The Warframe it comes from, or "Helminth". */
+  source: string
+  variant: 'own' | 'passive' | 'infused'
+  kind: string
+  active: boolean
+  /** After Ability Strength, caps and stacks. */
+  value: number
+  /** The value in words. */
+  effect: string
+  /** False when this weapon can't use it; `reason` says why. */
+  applies: boolean
+  reason: string
+  condition: string
+  note: string
+  augment: string
+  scalesWithStrength: boolean
+  level: { label: string; default: number } | null
+  stacks: { label: string; max: number; default: number } | null
+}
+
+export interface HelminthInfusion {
+  ability: string
+  slot: number
+  /** The ability it replaces. */
+  replaced: string
+}
+
+/** An ability the Helminth can infuse: a Warframe's subsumable one or the Helminth's own. */
+export interface HelminthAbility {
+  ability: string
+  /** The Warframe it comes from, or "Helminth". */
+  warframe: string
+  description: string
+  roles?: string[]
+  augments?: string[]
+  notes?: string
+  scaling: { strength: boolean; duration: boolean; range: boolean }
+  /** Calculator-relevant tags: "Damage buff", "Armor strip", "DR", "Armor", "Strength". */
+  tags: string[]
+  category: string
+  weaponEffects: string[]
+  survivabilityEffects: WarframeAbility[]
+  imageName: string
+}
+
+export interface HelminthCatalogue {
+  subsumable: HelminthAbility[]
+  helminthAbilities: HelminthAbility[]
+  restrictions: {
+    /** These can only replace the named ability on the Warframes in `onlyReplace`. */
+    abilities: string[]
+    onlyReplace: Record<string, string>
+  }
 }
 
 // ---- Survivability (damage taken) ----
@@ -319,7 +392,7 @@ export interface StatBlock {
 }
 
 export interface WarframeAbility {
-  kind: 'dr' | 'armor' | 'pool'
+  kind: 'dr' | 'armor' | 'pool' | 'strength'
   name: string
   value: number
   cap: number | null
@@ -328,11 +401,35 @@ export interface WarframeAbility {
   perStack: number | null
   level: { label: string; default: number } | null
   low: number | null
-  mode: 'percent' | 'flat' | null
+  mode: 'percent' | 'flat' | 'shields' | null
   armorMultiplier: number | null
   note: string
   applies: string
   imageName: string
+}
+
+/** One effect of a Warframe's passive. Same value fields as an ability effect. */
+export interface PassiveEffect {
+  kind: 'dr' | 'armor' | 'health' | 'resistance' | 'regen' | 'shield_gate' | 'revive' | 'note'
+  name: string
+  value: number | null
+  cap: number | null
+  stacks: { label: string; max: number; default: number } | null
+  perStack: number | null
+  level: { label: string; default: number } | null
+  low: number | null
+  mode: 'percent' | 'flat' | 'energy' | null
+  /** Non-empty: the effect is a toggle that counts only when this holds. Empty: always on. */
+  condition: string
+  note: string
+}
+
+export interface WarframePassive {
+  /** The passive's name where the wiki gives one; often empty. */
+  name: string
+  /** The in-game passive text. */
+  description: string
+  effects: PassiveEffect[]
 }
 
 export interface WarframeInfo {
@@ -343,6 +440,7 @@ export interface WarframeInfo {
   abilities: WarframeAbility[]
   /** All four abilities in slot order, including ones with no effect on damage taken. */
   allAbilities: { name: string; imageName: string }[]
+  passive: WarframePassive
   special: string[]
   imageName: string
   polarities: string[]
@@ -374,6 +472,7 @@ export interface SurvivabilityRequest {
   mods: ModInput[]
   conditionalStacks: Record<string, number>
   abilities: Record<string, AbilityState>
+  passive: Record<string, AbilityState>
   arcanes: ModInput[]
   incoming: {
     source: 'custom' | 'enemy'
@@ -385,6 +484,8 @@ export interface SurvivabilityRequest {
     steelPath: boolean
   }
   extraAbilityStrength: number
+  helminthAbility: string | null
+  helminthSlot: number | null
 }
 
 export interface DrLayer {
@@ -421,6 +522,11 @@ export interface SurvivabilityResult {
   shieldGateSeconds: number
   enemyDamageMultiplier: number
   enemyName: string
+  /** Health per second from the passive. Shown only; not part of effective health. */
+  healthRegen: number
+  /** Each passive effect: whether it counts, and its value (DR fraction, armor, health, health/s or seconds). */
+  passiveEffects: { name: string; kind: PassiveEffect['kind']; active: boolean; value: number | null }[]
+  helminth: HelminthInfusion | null
   notes: string[]
 }
 

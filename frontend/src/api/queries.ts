@@ -6,7 +6,7 @@ import type { BuildIndex } from '../stores/buildStore'
 import { useDebounced } from '../utils/hooks'
 import {
   calculate, getAllWeapons, getAmpParts, getBuffs, getCompanions, getEnemies, getEnemyScaled, getMod, getMods,
-  getWarframes, getWeapon, getWeaponArcanes, getWeapons, survivability,
+  getHelminth, getWarframes, getWeapon, getWeaponArcanes, getWeapons, survivability,
 } from './client'
 
 // The three catalogues are small and never change while the server runs, so
@@ -87,6 +87,9 @@ export const useWeaponArcanes = () =>
 
 export const useWarframes = () =>
   useQuery({ queryKey: ['warframes'], queryFn: getWarframes, ...STATIC })
+
+export const useHelminth = () =>
+  useQuery({ queryKey: ['helminth'], queryFn: getHelminth, ...STATIC })
 
 /** Damage taken by the build's Warframe; recalculates 300 ms after the last change. */
 export function useSurvivability(i: BuildIndex) {

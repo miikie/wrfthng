@@ -3,6 +3,7 @@
 import json
 from pathlib import Path
 
+from engine.ability_buffs import AbilityBuffCatalogue
 from engine.amps import AmpLoader
 from engine.buffs import BuffCatalogue
 from engine.companions import CompanionLoader
@@ -46,3 +47,6 @@ companion_loader = CompanionLoader("data/processed/companions.json")
 amp_loader = AmpLoader("data/processed/amps.json")
 buff_catalogue = BuffCatalogue("data/processed/buffs.json")
 survivability = SurvivabilityCalculator("data/processed/warframe_survivability.json")
+# Warframe ability / passive buffs and Helminth infusions (scripts/build_ability_buffs.py, build_helminth_data.py)
+ability_buffs = AbilityBuffCatalogue("data/processed/ability_buffs.json", "data/processed/helminth.json",
+                                     ability_names=survivability.ability_names)

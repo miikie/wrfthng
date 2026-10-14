@@ -47,6 +47,23 @@ Updated 2026-10-14. Items closed in the last pass are listed at the bottom so th
 - Fixed here: Agility Drift's 12% damage reduction was being applied all the time; it is now a
   "while airborne" toggle like Aviator.
 
+### Passives, Helminth, ability buffs (added 2026-10-14)
+
+- Faction mods (Bane) apply whatever the enemy's faction: `damage.py` never checks `faction_target`. Roar now
+  adds to the same bonus, so this pre-existing issue matters more. Not changed.
+- Xata's Whisper / Toxic Lash Extra Hits are based on the hit before the enemy's per-type modifiers (the wiki's
+  "before health and armor resistances"); the Extra Hit page wasn't checked. Toxic Lash's Toxin status DoT is not
+  modelled.
+- Ability buffs reach only the main weapon, not companions, amps or abilities. Squad buffs from other players'
+  frames are not offered.
+- Not modelled: Resupply (element choice), Ember / Protea strength passives, Wukong's Primal Forces, Mesa's
+  dual-sidearm fire rate, Cyte-09 and Dante passives, overshields (Harrow), evasion (Xaku dodge), shield recharge.
+- Empower is counted for every active ability, not just the next cast.
+- Atlas's Rubble armor is assumed flat (added after mods); the wiki doesn't say.
+- No in-game check of any of the new effects; values and stacking rules are from the wiki only.
+- The Helminth picker and ability toggles were checked by screenshot from share links; clicking through the
+  picker dialog was not exercised.
+
 ### Waiting on the game export
 
 - The export (`warframe-public-export-plus`) is still at 43.5.4. Update 44 weapons and frames come from

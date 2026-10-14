@@ -3,11 +3,13 @@ import type { ReactNode } from 'react'
 import { useEnemies, useSurvivability, useWarframes } from '../api/queries'
 import { useBuildStore } from '../stores/buildStore'
 import type { BuildIndex } from '../stores/buildStore'
-import type { DrLayer, StatBlock, SurvivabilityResult, WarframeAbility, WarframeInfo } from '../types'
+import type { DrLayer, PassiveEffect, StatBlock, SurvivabilityResult, WarframeAbility, WarframeInfo } from '../types'
 import { DAMAGE_ORDER } from '../utils/damageTypes'
 import { num, pct, seconds } from '../utils/format'
 import { BUILD_NAMES } from './BuildEditor'
 import { Combobox } from './Combobox'
+import { HelminthAbilityBar, useSlotAbilities } from './Helminth'
+import type { SlotAbility } from './Helminth'
 import { GridPicker, ItemButton, ItemImage } from './ItemImage'
 import { ModRack } from './ModRack'
 import { PresetMenu } from './PresetMenu'
@@ -33,7 +35,12 @@ function abilityEffect(a: WarframeAbility, strength: number, stacks: number, lev
   else value = a.value * scale
   if (a.cap !== null) value = Math.min(value, a.cap)
   if (a.kind === 'dr') return `${pct(Math.min(value, 1))} damage reduction`
-  if (a.kind === 'armor') return a.mode === 'percent' ? `+${pct(value)} armor` : `+${num(value, 0)} armor`
+  if (a.kind === 'strength') return `+${pct(value)} Ability Strength`
+  if (a.kind === 'armor') {
+    if (a.mode === 'percent') return `+${pct(value)} armor`
+    if (a.mode === 'shields') return `${pct(value)} of max shields as armor`
+    return `+${num(value, 0)} armor`
+  }
   return 'separate pool'
 }
 
@@ -77,6 +84,108 @@ function AbilityRow({ index, ability, strength }: { index: BuildIndex; ability: 
   )
 }
 
+/** A passive effect's current value, in words. */
+function passiveEffectText(kind: PassiveEffect['kind'], value: number | null, damageType: string): string {
+  if (value === null) return ''
+  switch (kind) {
+    case 'dr': return `${pct(Math.min(value, 1))} damage reduction`
+    case 'resistance': return `${pct(Math.min(value, 1))} ${damageType} resistance`
+    case 'armor': return `+${num(value, 0)} armor`
+    case 'health': return `+${num(value, 0)} health`
+    case 'regen': return `${num(value, 1)} health/s`
+    case 'shield_gate': return `${num(value, 1)} s shield gate`
+    default: return ''
+  }
+}
+
+const PASSIVE_TAGS: Partial<Record<PassiveEffect['kind'], string>> = {
+  revive: 'Revive', note: 'Not in the numbers', regen: 'Shown only',
+}
+
+function PassiveEffectRow({ index, effect, live, damageType }: {
+  index: BuildIndex
+  effect: PassiveEffect
+  live: SurvivabilityResult['passiveEffects'][number] | undefined
+  damageType: string
+}) {
+  const state = useBuildStore((s) => s.builds[index].survival.passive[effect.name])
+  const setPassive = useBuildStore((s) => s.setPassive)
+  const conditional = effect.condition !== ''
+  const on = live?.active ?? !conditional
+  const stacks = state?.stacks ?? effect.stacks?.default ?? 0
+  const level = state?.level ?? effect.level?.default ?? 1
+  const descriptive = effect.kind === 'note' || effect.kind === 'revive'
+  const tag = PASSIVE_TAGS[effect.kind]
+
+  return (
+    <li className={`border px-3 py-2 ${on && !descriptive ? 'border-gold/60 bg-gold/5' : 'border-seam'}`}>
+      <div className="flex flex-wrap items-center justify-between gap-x-4 gap-y-1">
+        {conditional ? (
+          <Toggle label={effect.name} checked={on} onChange={(v) => setPassive(index, effect.name, { active: v })}
+            tip={`Counts only when: ${effect.condition}.`} />
+        ) : (
+          <span className="text-sm font-medium text-ink">{effect.name}</span>
+        )}
+        <span className="flex items-center gap-2 text-sm">
+          {tag && <span className="border border-seam px-1.5 text-[11px] uppercase tracking-wide text-mute">{tag}</span>}
+          {on && <span className="font-medium text-ink">{passiveEffectText(effect.kind, live?.value ?? null, damageType)}</span>}
+        </span>
+      </div>
+      <p className="mt-1 text-[13px] leading-snug text-mute">
+        {effect.note}
+        {conditional && <> Only when: {effect.condition.charAt(0).toLowerCase() + effect.condition.slice(1)}.</>}
+      </p>
+      {on && (effect.stacks || effect.level) && (
+        <div className="mt-2 flex flex-wrap gap-x-6 gap-y-2 text-[13px] text-mute">
+          {effect.stacks && (
+            <label className="flex items-center gap-2">
+              <span className="whitespace-nowrap">{effect.stacks.label}: {stacks}</span>
+              <input type="range" min={0} max={effect.stacks.max} value={stacks}
+                onChange={(e) => setPassive(index, effect.name, { stacks: Number(e.target.value) })} />
+            </label>
+          )}
+          {effect.level && (
+            <label className="flex items-center gap-2">
+              <span className="whitespace-nowrap">{effect.level.label}: {pct(level, 0)}</span>
+              <input type="range" min={0} max={100} value={Math.round(level * 100)}
+                onChange={(e) => setPassive(index, effect.name, { level: Number(e.target.value) / 100 })} />
+            </label>
+          )}
+        </div>
+      )}
+    </li>
+  )
+}
+
+/** The Warframe's passive: its in-game text, then each effect it has on damage taken. */
+function PassiveSection({ index, warframe, result }: {
+  index: BuildIndex
+  warframe: WarframeInfo
+  result: SurvivabilityResult | undefined
+}) {
+  const { passive } = warframe
+  const damageType = useBuildStore((s) => s.builds[index].survival.type)
+  if (!passive.description && passive.effects.length === 0) return null
+  return (
+    <div>
+      <h3 className="mb-1 text-[15px] text-gold">Passive{passive.name && `: ${passive.name}`}</h3>
+      {passive.description && (
+        <p className="whitespace-pre-line text-[13px] leading-snug text-mute">{passive.description}</p>
+      )}
+      {passive.effects.length > 0 ? (
+        <ul className="mt-2 grid gap-2">
+          {passive.effects.map((e) => (
+            <PassiveEffectRow key={e.name} index={index} effect={e} damageType={damageType}
+              live={result?.passiveEffects.find((x) => x.name === e.name)} />
+          ))}
+        </ul>
+      ) : (
+        <p className="mt-1 text-[13px] text-mute">No effect on damage taken.</p>
+      )}
+    </div>
+  )
+}
+
 function StatLine({ label, base, modded, color, max }: {
   label: string
   base: number
@@ -99,43 +208,47 @@ function StatLine({ label, base, modded, color, max }: {
   )
 }
 
+/** An ability's damage-taken effects: its own, or the infused version's when the Helminth put it there. */
+function useAbilityEffects(index: BuildIndex, warframe: WarframeInfo | undefined) {
+  const { slots } = useSlotAbilities(index)
+  return useMemo(() => {
+    // an ability can have several effects: "Warding Halo" and "Warding Halo ring", "Eclipse (Lunar)"
+    const belongs = (effect: string, ability: string) => effect === ability || effect.startsWith(ability + ' ')
+    const replaced = slots.find((x) => x.infused)?.original.name
+    const own = (warframe?.abilities ?? []).filter((a) => !(replaced && belongs(a.name, replaced)))
+    const slot = slots.find((x) => x.infused)
+    // infused effects borrow the infused ability's artwork
+    const infused = (slot?.infused?.survivabilityEffects ?? []).map((e) => ({ ...e, imageName: slot!.imageName }))
+    const all = [...own, ...infused]
+    const effectsOf = (slot: SlotAbility) =>
+      slot.infused ? infused : own.filter((a) => belongs(a.name, slot.name))
+    return { all, effectsOf, hasSlots: slots.length > 0 }
+  }, [slots, warframe])
+}
+
 /** The four abilities in slot order. Those that change damage taken toggle; the rest are shown greyed. */
 function AbilityBar({ index, warframe }: { index: BuildIndex; warframe: WarframeInfo }) {
   const states = useBuildStore((s) => s.builds[index].survival.abilities)
   const setAbility = useBuildStore((s) => s.setAbility)
-  // an ability can have several effects: "Warding Halo" and "Warding Halo ring", "Eclipse (Lunar)"
-  const effectsOf = (name: string) =>
-    warframe.abilities.filter((a) => a.name === name || a.name.startsWith(name + ' '))
-  const list = warframe.allAbilities.length > 0
-    ? warframe.allAbilities
-    : [...new Set(warframe.abilities.map((a) => a.name))].map((name) => ({ name, imageName: '' }))
-
+  const { effectsOf } = useAbilityEffects(index, warframe)
   return (
-    <ul className="grid grid-cols-4 gap-2">
-      {list.map((ability, i) => {
-        const effects = effectsOf(ability.name)
-        const active = effects.length > 0 && effects.every((e) => states[e.name]?.active)
+    <HelminthAbilityBar
+      index={index}
+      state={(slot) => {
+        const effects = effectsOf(slot)
         const usable = effects.length > 0
-        return (
-          <li key={ability.name}>
-            <button
-              type="button"
-              disabled={!usable}
-              aria-pressed={usable ? active : undefined}
-              title={usable ? effects.map((e) => e.note).filter(Boolean).join(' ') || undefined : 'No effect on damage taken'}
-              onClick={() => effects.forEach((e) => setAbility(index, e.name, { active: !active }))}
-              className={`flex w-full flex-col items-center gap-1 border p-1.5 text-center transition-colors ${
-                active ? 'border-gold bg-gold/10' : usable ? 'border-seam hover:border-tenno' : 'border-transparent'
-              }`}
-            >
-              <ItemImage name={ability.name} imageName={ability.imageName} fallback={i + 1}
-                className={`size-12 rounded-full ${active ? '' : usable ? 'opacity-70' : 'opacity-30 grayscale'}`} />
-              <span className={`text-[12px] leading-tight ${usable ? 'text-ink' : 'text-mute'}`}>{ability.name}</span>
-            </button>
-          </li>
-        )
-      })}
-    </ul>
+        return {
+          usable,
+          active: usable && effects.every((e) => states[e.name]?.active),
+          title: usable ? effects.map((e) => e.note).filter(Boolean).join(' ') || undefined : 'No effect on damage taken',
+        }
+      }}
+      onToggle={(slot) => {
+        const effects = effectsOf(slot)
+        const on = effects.every((e) => states[e.name]?.active)
+        effects.forEach((e) => setAbility(index, e.name, { active: !on }))
+      }}
+    />
   )
 }
 
@@ -157,6 +270,7 @@ export function WarframePanel({ index }: { index: BuildIndex }) {
   const survival = useBuildStore((s) => s.builds[index].survival)
   const updateSurvival = useBuildStore((s) => s.updateSurvival)
   const warframe = useWarframe(index)
+  const effects = useAbilityEffects(index, warframe)
   const { data: result } = useSurvivability(index)
   const modded: StatBlock | undefined = result?.warframe === selected ? result.moddedStats : undefined
   const current = result?.warframe === selected ? result : undefined
@@ -229,6 +343,12 @@ export function WarframePanel({ index }: { index: BuildIndex }) {
                 <StatLine label="Shields" base={warframe.rank30.shields} modded={modded?.shields} color="var(--color-shield)" max={max} />
                 <StatLine label="Armor" base={warframe.rank30.armor} modded={modded?.armor} color="var(--color-armor)" max={max} />
               </ul>
+              {current && current.healthRegen > 0 && (
+                <p className="mt-2 text-sm text-mute">
+                  Health regeneration <span className="font-medium text-ink">{num(current.healthRegen, 1)}/s</span>{' '}
+                  <span className="text-[13px]">(from the passive; not part of effective health)</span>
+                </p>
+              )}
               {warframe.statsNote && <p className="mt-2 text-[13px] text-mute">{warframe.statsNote}</p>}
             </div>
 
@@ -260,7 +380,7 @@ export function WarframePanel({ index }: { index: BuildIndex }) {
             <div>
               <h3 className="mb-2 text-[15px] text-gold">Abilities</h3>
               <AbilityBar index={index} warframe={warframe} />
-              {warframe.abilities.length === 0 ? (
+              {effects.all.length === 0 ? (
                 <p className="mt-2 text-sm text-mute">
                   None of this Warframe's abilities reduce damage, add armor or add a pool. Its survivability is
                   health, shields, armor and mods.
@@ -268,16 +388,19 @@ export function WarframePanel({ index }: { index: BuildIndex }) {
               ) : (
                 <>
                   <p className="mt-2 text-[13px] text-mute">
-                    Click an ability to switch its effect on. Greyed abilities don't change damage taken.
+                    Click an ability to switch its effect on. Greyed abilities don't change damage taken. The
+                    flower badge infuses a Helminth ability over that slot.
                   </p>
                   <ul className="mt-2 grid gap-2">
-                    {warframe.abilities.filter((a) => activeNames[a.name]?.active).map((a) => (
+                    {effects.all.filter((a) => activeNames[a.name]?.active).map((a) => (
                       <AbilityRow key={a.name} index={index} ability={a} strength={strength} />
                     ))}
                   </ul>
                 </>
               )}
             </div>
+
+            <PassiveSection index={index} warframe={warframe} result={current} />
 
             <div>
               <h3 className="mb-2 text-[15px] text-gold">Arcanes</h3>
